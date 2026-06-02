@@ -37,7 +37,7 @@ export default function RootLayout({
             </Link>
             
             <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center', fontWeight: 500, fontSize: '0.9rem' }}>
-              <Link href="/#tools" style={{ color: 'var(--text-muted)' }}>All Tools</Link>
+              <Link href="/tools" style={{ color: 'var(--text-muted)' }}>All Tools</Link>
               <Link href="/tools/json-formatter" style={{ color: 'var(--text-muted)' }}>JSON Formatter</Link>
               <Link href="/tools/qr-generator" style={{ color: 'var(--text-muted)' }}>QR Generator</Link>
             </div>
