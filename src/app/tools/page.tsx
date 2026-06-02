@@ -11,9 +11,9 @@ export default function ToolsDirectory() {
       tools: [
         { name: "Article Rewriter", path: "#", status: "planned" },
         { name: "Plagiarism Checker", path: "#", status: "planned" },
-        { name: "Word Counter", path: "#", status: "planned" },
+        { name: "Word Counter", path: "/tools/word-counter", status: "live" },
         { name: "Keyword Density Checker", path: "#", status: "planned" },
-        { name: "Emojis Remover", path: "#", status: "planned" },
+        { name: "Emojis Remover", path: "/tools/emojis-remover", status: "live" },
       ]
     },
     {
@@ -77,12 +77,12 @@ export default function ToolsDirectory() {
         { name: "My IP Address", path: "#", status: "planned" },
         { name: "URL Rewriting Tool", path: "#", status: "planned" },
         { name: "www Redirect Checker", path: "#", status: "planned" },
-        { name: "URL Encoder / Decoder", path: "#", status: "planned" },
+        { name: "URL Encoder / Decoder", path: "/tools/url-encoder", status: "live" },
         { name: "Bulk GEO IP Locator", path: "#", status: "planned" },
-        { name: "Color Picker Tool", path: "#", status: "planned" },
-        { name: "RGB to Hex", path: "#", status: "planned" },
+        { name: "Color Picker Tool", path: "/tools/color-picker", status: "live" },
+        { name: "RGB to Hex", path: "/tools/rgb-to-hex", status: "live" },
         { name: "HEX to RGB", path: "#", status: "planned" },
-        { name: "Online Md5 Generator", path: "#", status: "planned" },
+        { name: "Online Md5 Generator", path: "/tools/md5-generator", status: "live" },
         { name: "Code to Text Ratio Checker", path: "#", status: "planned" },
         { name: "What is my Browser", path: "#", status: "planned" },
         { name: "Email Privacy", path: "#", status: "planned" },
