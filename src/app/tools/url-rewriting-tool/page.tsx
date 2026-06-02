@@ -25,23 +25,23 @@ export default function UrlRewritingTool() {
       if (paramKeys.length === 1) {
         // e.g. test.php?id=123 -> test/123
         const cleanPath = path.replace('.php', '').replace('.html', '');
-        newStaticPath = \`\${cleanPath}/\${paramValues[0]}\`;
+        newStaticPath = `${cleanPath}/${paramValues[0]}`;
         
-        rewriteRule = \`RewriteEngine On\\nRewriteRule ^\${cleanPath.substring(1)}/([a-zA-Z0-9_-]+)/?$ \${path.substring(1)}?\${paramKeys[0]}=$1 [NC,L]\`;
+        rewriteRule = `RewriteEngine On\\nRewriteRule ^${cleanPath.substring(1)}/([a-zA-Z0-9_-]+)/?$ ${path.substring(1)}?${paramKeys[0]}=$1 [NC,L]`;
       } 
       else if (paramKeys.length === 2) {
         // e.g. test.php?category=books&id=123 -> test/books/123
         const cleanPath = path.replace('.php', '').replace('.html', '');
-        newStaticPath = \`\${cleanPath}/\${paramValues[0]}/\${paramValues[1]}\`;
+        newStaticPath = `${cleanPath}/${paramValues[0]}/${paramValues[1]}`;
         
-        rewriteRule = \`RewriteEngine On\\nRewriteRule ^\${cleanPath.substring(1)}/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/?$ \${path.substring(1)}?\${paramKeys[0]}=$1&\${paramKeys[1]}=$2 [NC,L]\`;
+        rewriteRule = `RewriteEngine On\\nRewriteRule ^${cleanPath.substring(1)}/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/?$ ${path.substring(1)}?${paramKeys[0]}=$1&${paramKeys[1]}=$2 [NC,L]`;
       }
       else {
          setHtaccess("Error: This basic tool supports generating clean URLs for up to 2 query parameters.");
          return;
       }
 
-      setStaticUrl(\`\${urlObj.protocol}//\${urlObj.host}\${newStaticPath}\`);
+      setStaticUrl(`${urlObj.protocol}//${urlObj.host}${newStaticPath}`);
       setHtaccess(rewriteRule);
     } catch (e) {
       setHtaccess("Please enter a valid URL with HTTP/HTTPS (e.g. https://yoursite.com/page.php?id=12)");

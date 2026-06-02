@@ -9,8 +9,8 @@ export async function checkWwwRedirect(url: string) {
   bareDomain = bareDomain.replace(/^www\./, "");
   bareDomain = bareDomain.split('/')[0];
 
-  const urlNonWww = \`http://\${bareDomain}\`;
-  const urlWww = \`http://www.\${bareDomain}\`;
+  const urlNonWww = `http://${bareDomain}`;
+  const urlWww = `http://www.${bareDomain}`;
 
   try {
     // 1. Check non-WWW

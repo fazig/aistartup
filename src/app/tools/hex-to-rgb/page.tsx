@@ -27,7 +27,7 @@ export default function HexToRgb() {
       const g = parseInt(cleanHex.slice(2, 4), 16);
       const b = parseInt(cleanHex.slice(4, 6), 16);
       
-      setRgb(\`rgb(\${r}, \${g}, \${b})\`);
+      setRgb(`rgb(${r}, ${g}, ${b})`);
     } else {
       setRgb("Invalid HEX");
     }
@@ -72,7 +72,7 @@ export default function HexToRgb() {
                 width: '100%', 
                 height: '120px', 
                 borderRadius: '8px', 
-                background: !error && hex ? \`#\${hex.replace('#', '')}\` : '#f1f5f9',
+                background: !error && hex ? `#${hex.replace('#', '')}` : '#f1f5f9',
                 border: '1px solid var(--border-light)',
                 transition: 'background 0.3s ease'
               }} 

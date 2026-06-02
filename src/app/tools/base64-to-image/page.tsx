@@ -20,7 +20,7 @@ export default function Base64ToImage() {
     
     // If it's raw base64, assume it's a PNG for preview purposes
     // (the browser will often figure it out anyway)
-    return \`data:image/png;base64,\${src}\`;
+    return `data:image/png;base64,${src}`;
   };
 
   const imageSrc = getValidImageSrc();

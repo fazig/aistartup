@@ -23,7 +23,7 @@ export default function DomainIntoIp() {
 
     try {
       // Use Cloudflare DNS over HTTPS (DoH) API to resolve the domain client-side
-      const response = await fetch(\`https://cloudflare-dns.com/dns-query?name=\${cleanDomain}&type=A\`, {
+      const response = await fetch(`https://cloudflare-dns.com/dns-query?name=${cleanDomain}&type=A`, {
         headers: {
           'Accept': 'application/dns-json'
         }

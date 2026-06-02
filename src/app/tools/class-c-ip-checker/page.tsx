@@ -28,7 +28,7 @@ export default function ClassCIpChecker() {
       // Split IP into blocks: A.B.C.D
       const blocks = ip.split('.');
       // The Class C subnet is the first 3 blocks: A.B.C.*
-      const classC = \`\${blocks[0]}.\${blocks[1]}.\${blocks[2]}.\*\`;
+      const classC = `${blocks[0]}.${blocks[1]}.${blocks[2]}.*`;
       
       if (!classCMap[classC]) classCMap[classC] = [];
       classCMap[classC].push(ip);
@@ -96,8 +96,8 @@ export default function ClassCIpChecker() {
           ) : (
              <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', overflowY: 'auto', maxHeight: '500px' }}>
                 {results.map((subnet, idx) => (
-                  <div key={idx} style={{ border: \`1px solid \${subnet.count > 1 ? '#fca5a5' : 'var(--border-light)'}\`, borderRadius: '8px', overflow: 'hidden' }}>
-                    <div style={{ padding: '0.75rem 1rem', background: subnet.count > 1 ? '#fef2f2' : '#f8fafc', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: \`1px solid \${subnet.count > 1 ? '#fca5a5' : 'var(--border-light)'}\` }}>
+                  <div key={idx} style={{ border: `1px solid ${subnet.count > 1 ? '#fca5a5' : 'var(--border-light)'}`, borderRadius: '8px', overflow: 'hidden' }}>
+                    <div style={{ padding: '0.75rem 1rem', background: subnet.count > 1 ? '#fef2f2' : '#f8fafc', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: `1px solid ${subnet.count > 1 ? '#fca5a5' : 'var(--border-light)'}` }}>
                       <strong style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: subnet.count > 1 ? '#dc2626' : 'var(--foreground)' }}>
                         {subnet.count > 1 ? <AlertTriangle size={16} /> : <CheckCircle size={16} color="#16a34a" />}
                         Class C: {subnet.classC}

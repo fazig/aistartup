@@ -116,7 +116,7 @@ export default function WwwRedirectChecker() {
             </div>
 
             {/* SEO Verdict */}
-            <div style={{ padding: '1rem', borderRadius: '8px', background: (result.nonWww.is301 || result.www.is301) && (result.nonWww.status === 200 || result.www.status === 200) ? '#f0fdf4' : '#fef2f2', border: \`1px solid \${(result.nonWww.is301 || result.www.is301) && (result.nonWww.status === 200 || result.www.status === 200) ? '#86efac' : '#fca5a5'}\` }}>
+            <div style={{ padding: '1rem', borderRadius: '8px', background: (result.nonWww.is301 || result.www.is301) && (result.nonWww.status === 200 || result.www.status === 200) ? '#f0fdf4' : '#fef2f2', border: `1px solid ${(result.nonWww.is301 || result.www.is301) && (result.nonWww.status === 200 || result.www.status === 200) ? '#86efac' : '#fca5a5'}` }}>
               <strong style={{ display: 'block', marginBottom: '0.5rem' }}>SEO Verdict</strong>
               {(result.nonWww.status === 200 && result.www.status === 200) ? (
                 <span style={{ color: '#dc2626' }}><strong>Warning! Duplicate Content Detected.</strong> Both the WWW and Non-WWW versions of your site are returning a 200 OK status. This splits your SEO power in half. You must configure your .htaccess file to redirect one to the other!</span>

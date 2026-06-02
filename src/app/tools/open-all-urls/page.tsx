@@ -22,7 +22,7 @@ export default function OpenAllUrls() {
     }
 
     if (urls.length > 30) {
-      const confirmOpen = window.confirm(\`You are about to open \${urls.length} tabs at once. This might crash your browser or be blocked by your popup blocker. Continue?\`);
+      const confirmOpen = window.confirm(`You are about to open ${urls.length} tabs at once. This might crash your browser or be blocked by your popup blocker. Continue?`);
       if (!confirmOpen) return;
     }
 

@@ -61,7 +61,7 @@ export default function ServerStatusChecker() {
 
         {result && result.success && (
           <div>
-            <div style={{ padding: '1.5rem', background: result.status >= 200 && result.status < 400 ? '#f0fdf4' : '#fef2f2', border: \`1px solid \${result.status >= 200 && result.status < 400 ? '#86efac' : '#fca5a5'}\`, borderRadius: '8px', display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
+            <div style={{ padding: '1.5rem', background: result.status >= 200 && result.status < 400 ? '#f0fdf4' : '#fef2f2', border: `1px solid ${result.status >= 200 && result.status < 400 ? '#86efac' : '#fca5a5'}`, borderRadius: '8px', display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
               {result.status >= 200 && result.status < 400 ? (
                 <CheckCircle color="#16a34a" size={32} style={{ flexShrink: 0 }} />
               ) : (
