@@ -52,39 +52,49 @@ export default function Home() {
               <div style={{ fontWeight: 600, color: '#16a34a', fontSize: '0.875rem' }}>Use Tool &rarr;</div>
             </Link>
 
-            {/* Upcoming Tools Placeholders */}
-            <div className="card" style={{ opacity: 0.7 }}>
-              <div style={{ width: 48, height: 48, borderRadius: '12px', background: '#f8fafc', color: 'var(--text-muted)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.5rem' }}>
+            <Link href="/tools/word-counter" className="card" style={{ display: 'block', color: 'inherit' }}>
+              <div style={{ width: 48, height: 48, borderRadius: '12px', background: '#f8fafc', color: 'var(--primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.5rem' }}>
                 <Type size={24} />
               </div>
               <h3 style={{ fontSize: '1.25rem', marginBottom: '0.75rem' }}>Word Counter</h3>
               <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '1.5rem' }}>
-                Count words, characters, and check keyword density. (Coming Soon)
+                Count words, characters, sentences, and check keyword density instantly.
               </p>
-              <div style={{ fontWeight: 600, color: 'var(--text-muted)', fontSize: '0.875rem' }}>Coming Soon</div>
-            </div>
+              <div style={{ fontWeight: 600, color: 'var(--primary)', fontSize: '0.875rem' }}>Use Tool &rarr;</div>
+            </Link>
             
-            <div className="card" style={{ opacity: 0.7 }}>
-              <div style={{ width: 48, height: 48, borderRadius: '12px', background: '#f8fafc', color: 'var(--text-muted)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.5rem' }}>
-                <Code size={24} />
+            <Link href="/tools/whois-checker" className="card" style={{ display: 'block', color: 'inherit' }}>
+              <div style={{ width: 48, height: 48, borderRadius: '12px', background: '#f8fafc', color: 'var(--primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.5rem' }}>
+                <Search size={24} />
               </div>
-              <h3 style={{ fontSize: '1.25rem', marginBottom: '0.75rem' }}>Base64 Encoder</h3>
+              <h3 style={{ fontSize: '1.25rem', marginBottom: '0.75rem' }}>WHOIS Checker</h3>
               <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '1.5rem' }}>
-                Encode or decode strings to Base64 format safely in your browser. (Coming Soon)
+                Discover exactly who owns a domain, when it expires, and its nameservers.
               </p>
-              <div style={{ fontWeight: 600, color: 'var(--text-muted)', fontSize: '0.875rem' }}>Coming Soon</div>
-            </div>
+              <div style={{ fontWeight: 600, color: 'var(--primary)', fontSize: '0.875rem' }}>Use Tool &rarr;</div>
+            </Link>
 
-            <div className="card" style={{ opacity: 0.7 }}>
-              <div style={{ width: 48, height: 48, borderRadius: '12px', background: '#f8fafc', color: 'var(--text-muted)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.5rem' }}>
+            <Link href="/tools/md5-generator" className="card" style={{ display: 'block', color: 'inherit' }}>
+              <div style={{ width: 48, height: 48, borderRadius: '12px', background: '#f8fafc', color: 'var(--primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.5rem' }}>
                 <Hash size={24} />
               </div>
               <h3 style={{ fontSize: '1.25rem', marginBottom: '0.75rem' }}>MD5 Hash Generator</h3>
               <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '1.5rem' }}>
-                Generate MD5, SHA1, and SHA256 hashes instantly. (Coming Soon)
+                Generate a secure, 32-character mathematical MD5 hash of any string.
               </p>
-              <div style={{ fontWeight: 600, color: 'var(--text-muted)', fontSize: '0.875rem' }}>Coming Soon</div>
-            </div>
+              <div style={{ fontWeight: 600, color: 'var(--primary)', fontSize: '0.875rem' }}>Use Tool &rarr;</div>
+            </Link>
+
+            <Link href="/tools/my-ip" className="card" style={{ display: 'block', color: 'inherit' }}>
+              <div style={{ width: 48, height: 48, borderRadius: '12px', background: '#f8fafc', color: 'var(--primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.5rem' }}>
+                <Zap size={24} />
+              </div>
+              <h3 style={{ fontSize: '1.25rem', marginBottom: '0.75rem' }}>What is My IP?</h3>
+              <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '1.5rem' }}>
+                Instantly detect your public IP address, ISP, and geographic location.
+              </p>
+              <div style={{ fontWeight: 600, color: 'var(--primary)', fontSize: '0.875rem' }}>Use Tool &rarr;</div>
+            </Link>
           </div>
         </div>
       </section>
