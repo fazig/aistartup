@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Youtube, Download, TriangleAlert } from "lucide-react";
+import { Video, Download, TriangleAlert } from "lucide-react";
 
 export default function YoutubeThumbnail() {
   const [url, setUrl] = useState("");
@@ -32,7 +32,7 @@ export default function YoutubeThumbnail() {
     <div className="container" style={{ padding: '3rem 1.5rem' }}>
       <div style={{ marginBottom: '2rem' }}>
         <h1 style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.5rem' }}>
-          <Youtube color="#ef4444" /> YouTube Thumbnail Downloader
+          <Video color="#ef4444" /> YouTube Thumbnail Downloader
         </h1>
         <p style={{ color: 'var(--text-muted)' }}>Extract and download the high-resolution thumbnail from any YouTube video instantly.</p>
       </div>
