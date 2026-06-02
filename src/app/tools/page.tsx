@@ -20,7 +20,7 @@ export default function ToolsDirectory() {
       title: "SEO & Keyword Tools",
       icon: <Search size={20} color="var(--primary)" />,
       tools: [
-        { name: "Meta Tag Generator", path: "#", status: "planned" },
+        { name: "Meta Tag Generator", path: "/tools/meta-tag-generator", status: "live" },
         { name: "Meta Tags Analyzer", path: "#", status: "planned" },
         { name: "Keyword Position Checker", path: "#", status: "planned" },
         { name: "Keyword CPC Calculator", path: "#", status: "planned" },
@@ -53,7 +53,7 @@ export default function ToolsDirectory() {
       icon: <Settings size={20} color="var(--primary)" />,
       tools: [
         { name: "Robots.txt Generator", path: "#", status: "planned" },
-        { name: "XML Sitemap Generator", path: "#", status: "planned" },
+        { name: "XML Sitemap Generator", path: "/tools/xml-sitemap-generator", status: "live" },
         { name: "Google Pagespeed Insights", path: "#", status: "planned" },
         { name: "Page Speed Checker", path: "#", status: "planned" },
         { name: "Google Malware Checker", path: "#", status: "planned" },
@@ -94,7 +94,7 @@ export default function ToolsDirectory() {
       icon: <ImageIcon size={20} color="var(--primary)" />,
       tools: [
         { name: "QR Code Generator", path: "/tools/qr-generator", status: "live" },
-        { name: "Privacy Policy Generator", path: "#", status: "planned" },
+        { name: "Privacy Policy Generator", path: "/tools/privacy-policy-generator", status: "live" },
         { name: "Terms & Conditions Generator", path: "#", status: "planned" },
         { name: "QR Code Decoder", path: "#", status: "planned" },
         { name: "Image Placeholder Generator", path: "#", status: "planned" },
