@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { ArrowLeft, Loader2, Sparkles } from "lucide-react";
 import Link from "next/link";
-import ReactMarkdown from 'react-markdown';
 
 export default function IdeaValidator() {
   const [idea, setIdea] = useState("");
