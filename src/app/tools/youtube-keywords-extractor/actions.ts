@@ -19,8 +19,8 @@ export async function extractYoutubeKeywords(url: string) {
     const html = await response.text();
     
     // Extract keywords using regex from the <meta name="keywords" content="..."> tag
-    const keywordsMatch = html.match(/<metas+name="keywords"s+content="([^"]+)">/i);
-    const titleMatch = html.match(/<title>(.*?)</title>/i);
+    const keywordsMatch = html.match(/<meta\s+name="keywords"\s+content="([^"]+)">/i);
+    const titleMatch = html.match(/<title>(.*?)<\/title>/i);
 
     if (!keywordsMatch) {
       return {

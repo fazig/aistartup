@@ -21,9 +21,9 @@ export async function checkCodeToTextRatio(url: string) {
     let textContent = html;
     
     // Remove script blocks
-    textContent = textContent.replace(/<scriptb[^<]*(?:(?!</script>)<[^<]*)*</script>/gi, ' ');
+    textContent = textContent.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, ' ');
     // Remove style blocks
-    textContent = textContent.replace(/<styleb[^<]*(?:(?!</style>)<[^<]*)*</style>/gi, ' ');
+    textContent = textContent.replace(/<style\b[^<]*(?:(?!<\/style>)<[^<]*)*<\/style>/gi, ' ');
     // Remove comments
     textContent = textContent.replace(/<!--[sS]*?-->/g, ' ');
     // Remove HTML tags

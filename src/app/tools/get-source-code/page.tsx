@@ -117,7 +117,7 @@ export default function GetSourceCode() {
           <li><strong>Security Audits:</strong> Find exposed API keys, hidden tracking pixels, or malicious injected scripts.</li>
         </ul>
 
-        <h2>Can't I just use "Right Click -> View Source" in my browser?</h2>
+        <h2>Can't I just use "Right Click -&gt; View Source" in my browser?</h2>
         <p>Yes, but relying on your browser's local view source has a major flaw: Client-Side Rendering (CSR). Many modern websites (built with React or Vue) load a blank HTML page and rely on your browser to execute Javascript to build the page.</p>
         <p>Our tool runs on a remote Node.js server. By fetching the code through our tool, you see the exact, pure HTML that search engine crawlers (like Googlebot) see when they visit the page, without any of your browser's local Javascript execution getting in the way.</p>
       </div>

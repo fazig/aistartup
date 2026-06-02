@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Youtube, AlertTriangle, Hash, Copy, Check } from "lucide-react";
+import { Video, AlertTriangle, Hash, Copy, Check } from "lucide-react";
 import { extractYoutubeKeywords } from "./actions";
 
 export default function YoutubeKeywordsExtractor() {
@@ -43,7 +43,7 @@ export default function YoutubeKeywordsExtractor() {
     <div className="container" style={{ padding: '3rem 1.5rem', maxWidth: '1000px' }}>
       <div style={{ marginBottom: '2rem' }}>
         <h1 style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.5rem' }}>
-          <Youtube color="var(--primary)" /> YouTube Keywords Extractor
+          <Video color="var(--primary)" /> YouTube Keywords Extractor
         </h1>
         <p style={{ color: 'var(--text-muted)' }}>Spy on your competitors by extracting the hidden SEO tags and keywords from any YouTube video.</p>
       </div>
