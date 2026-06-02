@@ -35,8 +35,8 @@ export default function ToolsDirectory() {
       title: "Link & Domain Tools",
       icon: <LinkIcon size={20} color="var(--primary)" />,
       tools: [
-        { name: "Base64 to Image", path: "#", status: "planned" },
-        { name: "Image to Base64", path: "#", status: "planned" },
+        { name: "Base64 to Image", path: "/tools/base64-to-image", status: "live" },
+        { name: "Image to Base64", path: "/tools/image-to-base64", status: "live" },
         { name: "Text to Slug", path: "/tools/text-to-slug", status: "live" },
         { name: "Password Generator", path: "/tools/password-generator", status: "live" },
         { name: "Backlink Maker", path: "#", status: "planned" },
@@ -63,7 +63,7 @@ export default function ToolsDirectory() {
         { name: "Page Speed Checker", path: "#", status: "planned" },
         { name: "Google Malware Checker", path: "#", status: "planned" },
         { name: "Whois Checker", path: "/tools/whois-checker", status: "live" },
-        { name: "Domain into IP", path: "#", status: "planned" },
+        { name: "Domain into IP", path: "/tools/domain-into-ip", status: "live" },
         { name: "Class C Ip Checker", path: "#", status: "planned" },
         { name: "Find DNS records", path: "/tools/dns-records", status: "live" },
         { name: "Htaccess Redirect Generator", path: "/tools/htaccess-generator", status: "live" },
@@ -80,7 +80,7 @@ export default function ToolsDirectory() {
       tools: [
         { name: "JSON Formatter & Validator", path: "/tools/json-formatter", status: "live" },
         { name: "My IP Address", path: "/tools/my-ip", status: "live" },
-        { name: "URL Rewriting Tool", path: "#", status: "planned" },
+        { name: "URL Rewriting Tool", path: "/tools/url-rewriting-tool", status: "live" },
         { name: "www Redirect Checker", path: "#", status: "planned" },
         { name: "URL Encoder / Decoder", path: "/tools/url-encoder", status: "live" },
         { name: "Bulk GEO IP Locator", path: "#", status: "planned" },
@@ -89,7 +89,7 @@ export default function ToolsDirectory() {
         { name: "HEX to RGB", path: "#", status: "planned" },
         { name: "Online Md5 Generator", path: "/tools/md5-generator", status: "live" },
         { name: "Code to Text Ratio Checker", path: "#", status: "planned" },
-        { name: "What is my Browser", path: "#", status: "planned" },
+        { name: "What is my Browser", path: "/tools/what-is-my-browser", status: "live" },
         { name: "Email Privacy", path: "#", status: "planned" },
         { name: "Open All URLs", path: "#", status: "planned" },
       ]
