@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { GoogleAnalytics } from '@next/third-parties/google';
+import Link from "next/link";
+import { Wrench } from "lucide-react";
 import "./globals.css";
 
 const inter = Inter({ 
@@ -9,8 +11,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "StartupAI | The Unified AI Operating System",
-  description: "Enterprise-grade AI solutions for document extraction, marketing scale, and sentiment analysis.",
+  title: "StartupAI Tools | Free Developer & Web Utilities",
+  description: "A comprehensive collection of 100% free, lightning-fast web tools including JSON formatters, QR code generators, and text utilities.",
   verification: {
     google: "PLACEHOLDER_SEARCH_CONSOLE_TAG",
   }
@@ -24,7 +26,68 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.variable}>
-        {children}
+        {/* Global Navigation */}
+        <nav style={{ background: 'var(--bg-card)', borderBottom: '1px solid var(--border-light)', height: 'var(--nav-height)', position: 'sticky', top: 0, zIndex: 100 }}>
+          <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '100%' }}>
+            <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none', color: 'var(--text-main)' }}>
+              <div style={{ background: 'var(--primary)', color: 'white', padding: '0.4rem', borderRadius: '8px' }}>
+                <Wrench size={20} />
+              </div>
+              <span style={{ fontWeight: 800, fontSize: '1.25rem', letterSpacing: '-0.03em' }}>StartupAI Tools</span>
+            </Link>
+            
+            <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center', fontWeight: 500, fontSize: '0.9rem' }}>
+              <Link href="/#tools" style={{ color: 'var(--text-muted)' }}>All Tools</Link>
+              <Link href="/tools/json-formatter" style={{ color: 'var(--text-muted)' }}>JSON Formatter</Link>
+              <Link href="/tools/qr-generator" style={{ color: 'var(--text-muted)' }}>QR Generator</Link>
+            </div>
+          </div>
+        </nav>
+
+        {/* Main Page Content */}
+        <main style={{ minHeight: 'calc(100vh - var(--nav-height) - 250px)' }}>
+          {children}
+        </main>
+
+        {/* Global Footer */}
+        <footer style={{ background: 'var(--bg-card)', borderTop: '1px solid var(--border-light)', padding: '4rem 0 2rem 0', marginTop: 'auto' }}>
+          <div className="container">
+            <div className="grid-4" style={{ marginBottom: '3rem' }}>
+              <div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
+                  <Wrench size={18} color="var(--primary)" />
+                  <span style={{ fontWeight: 700 }}>StartupAI Tools</span>
+                </div>
+                <p style={{ color: 'var(--text-muted)', fontSize: '0.875rem' }}>Your everyday toolkit for web development, formatting, and SEO. 100% free to use.</p>
+              </div>
+              <div>
+                <h4 style={{ marginBottom: '1rem' }}>Developer Tools</h4>
+                <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.5rem', fontSize: '0.875rem' }}>
+                  <li><Link href="/tools/json-formatter" style={{ color: 'var(--text-muted)' }}>JSON Formatter</Link></li>
+                  <li><Link href="/tools/json-formatter" style={{ color: 'var(--text-muted)' }}>JSON Validator</Link></li>
+                </ul>
+              </div>
+              <div>
+                <h4 style={{ marginBottom: '1rem' }}>Web Tools</h4>
+                <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.5rem', fontSize: '0.875rem' }}>
+                  <li><Link href="/tools/qr-generator" style={{ color: 'var(--text-muted)' }}>QR Code Generator</Link></li>
+                </ul>
+              </div>
+              <div>
+                <h4 style={{ marginBottom: '1rem' }}>Legal</h4>
+                <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.5rem', fontSize: '0.875rem' }}>
+                  <li><Link href="/privacy" style={{ color: 'var(--text-muted)' }}>Privacy Policy</Link></li>
+                  <li><Link href="/terms" style={{ color: 'var(--text-muted)' }}>Terms of Service</Link></li>
+                  <li><Link href="/contact" style={{ color: 'var(--text-muted)' }}>Contact Us</Link></li>
+                </ul>
+              </div>
+            </div>
+            <div style={{ textAlign: 'center', borderTop: '1px solid var(--border-light)', paddingTop: '2rem', color: 'var(--text-muted)', fontSize: '0.875rem' }}>
+              &copy; {new Date().getFullYear()} StartupAI Tools. All rights reserved.
+            </div>
+          </div>
+        </footer>
+
       </body>
       <GoogleAnalytics gaId="G-XXXXXXXXXX" />
     </html>
