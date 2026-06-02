@@ -67,7 +67,7 @@ export default function ToolsDirectory() {
         { name: "Class C Ip Checker", path: "/tools/class-c-ip-checker", status: "live" },
         { name: "Find DNS records", path: "/tools/dns-records", status: "live" },
         { name: "Htaccess Redirect Generator", path: "/tools/htaccess-generator", status: "live" },
-        { name: "Server Status Checker", path: "#", status: "planned" },
+        { name: "Server Status Checker", path: "/tools/server-status-checker", status: "live" },
         { name: "Online Ping Website Tool", path: "#", status: "planned" },
         { name: "Google Index Checker", path: "#", status: "planned" },
         { name: "Google Cache Checker", path: "#", status: "planned" },
