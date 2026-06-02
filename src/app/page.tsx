@@ -1,77 +1,122 @@
-import { ArrowRight, Lightbulb, Presentation, Target } from "lucide-react";
+import { ArrowRight, FileText, LineChart, MessageSquare, Shield, Zap } from "lucide-react";
+import Link from "next/link";
 
-export default function Home() {
+export default function LandingPage() {
   return (
-    <div className="container section">
-      {/* Hero Section */}
-      <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 6rem auto' }} className="animate-in">
-        <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'var(--surface)', padding: '0.5rem 1rem', borderRadius: '9999px', border: '1px solid var(--surface-border)', marginBottom: '2rem', fontSize: '0.85rem', fontWeight: 600 }}>
-          <span style={{ display: 'inline-block', width: '8px', height: '8px', borderRadius: '50%', background: 'var(--accent)', boxShadow: '0 0 10px var(--accent)' }}></span>
-          100% Free AI Founder Tools
+    <div style={{ background: 'var(--bg-base)', minHeight: '100vh' }}>
+      <nav style={{ padding: '1.5rem 0', borderBottom: '1px solid var(--border-subtle)', position: 'sticky', top: 0, background: 'rgba(0,0,0,0.8)', backdropFilter: 'blur(12px)', zIndex: 50 }}>
+        <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <div style={{ fontWeight: 700, fontSize: '1.25rem', letterSpacing: '-0.05em' }}>
+            Startup<span style={{ color: 'var(--text-secondary)' }}>AI</span>
+          </div>
+          <div style={{ display: 'flex', gap: '2rem', alignItems: 'center', fontSize: '0.875rem', fontWeight: 500 }} className="text-muted">
+            <a href="#solutions" style={{ color: 'inherit', textDecoration: 'none' }}>Solutions</a>
+            <a href="#enterprise" style={{ color: 'inherit', textDecoration: 'none' }}>Enterprise</a>
+            <Link href="/dashboard/documind" className="btn btn-secondary" style={{ padding: '0.5rem 1rem', fontSize: '0.8rem' }}>Sign In</Link>
+            <Link href="/dashboard/documind" className="btn btn-primary" style={{ padding: '0.5rem 1rem', fontSize: '0.8rem' }}>Get Started</Link>
+          </div>
         </div>
-        <h1 style={{ fontSize: '4.5rem', marginBottom: '1.5rem', lineHeight: 1.1 }}>
-          Build your startup <br/>
-          <span className="text-gradient">at the speed of thought.</span>
-        </h1>
-        <p style={{ fontSize: '1.25rem', color: 'rgba(255,255,255,0.7)', marginBottom: '2.5rem', maxWidth: '600px', margin: '0 auto 2.5rem auto' }}>
-          Stop brainstorming in circles. Use our suite of advanced AI tools to instantly validate ideas, generate pitch decks, and find your target audience.
-        </p>
-        <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
-          <a href="#tools" className="btn btn-primary">
-            Explore Tools <ArrowRight size={18} />
-          </a>
+      </nav>
+
+      <main>
+        <section className="section" style={{ textAlign: 'center', paddingTop: '10rem', paddingBottom: '10rem' }}>
+          <div className="container">
+            <div className="badge" style={{ marginBottom: '2rem' }}>
+              <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--brand-primary)', marginRight: 8 }}></span>
+              StartupAI Platform 2.0
+            </div>
+            <h1 style={{ fontSize: '5rem', lineHeight: 1.1, marginBottom: '2rem', maxWidth: '900px', margin: '0 auto 2rem' }}>
+              The Unified AI Operating <br/><span className="text-muted glow-text">System for Business.</span>
+            </h1>
+            <p style={{ fontSize: '1.25rem', color: 'var(--text-secondary)', maxWidth: '600px', margin: '0 auto 3rem' }}>
+              Automate data extraction, scale your content strategy, and analyze customer sentiment at an enterprise level. One secure platform.
+            </p>
+            <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
+              <Link href="/dashboard/documind" className="btn btn-primary" style={{ padding: '0.875rem 2rem' }}>
+                Start Building <ArrowRight size={16} />
+              </Link>
+              <a href="#solutions" className="btn btn-secondary" style={{ padding: '0.875rem 2rem' }}>
+                Explore Platform
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section id="solutions" className="section" style={{ background: 'var(--bg-surface)' }}>
+          <div className="container">
+            <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem', textAlign: 'center' }}>Enterprise Solutions</h2>
+            <p className="text-muted" style={{ textAlign: 'center', marginBottom: '4rem', fontSize: '1.1rem' }}>Three powerful modules designed to eliminate operational bottlenecks.</p>
+            
+            <div className="grid-3">
+              <div className="card">
+                <div style={{ width: 40, height: 40, borderRadius: 8, background: 'rgba(59, 130, 246, 0.1)', color: 'var(--accent-blue)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.5rem' }}>
+                  <FileText size={20} />
+                </div>
+                <h3 style={{ fontSize: '1.25rem', marginBottom: '1rem' }}>DocuMind AI</h3>
+                <p className="text-muted" style={{ marginBottom: '1.5rem', fontSize: '0.9rem' }}>
+                  Instantly extract structured JSON data from unstructured invoices, contracts, and receipts. Eliminate manual data entry entirely.
+                </p>
+                <Link href="/dashboard/documind" style={{ color: 'var(--text-primary)', textDecoration: 'none', fontSize: '0.875rem', fontWeight: 500, display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                  Try DocuMind <ArrowRight size={14} />
+                </Link>
+              </div>
+
+              <div className="card">
+                <div style={{ width: 40, height: 40, borderRadius: 8, background: 'rgba(139, 92, 246, 0.1)', color: 'var(--accent-purple)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.5rem' }}>
+                  <Zap size={20} />
+                </div>
+                <h3 style={{ fontSize: '1.25rem', marginBottom: '1rem' }}>MarketScale</h3>
+                <p className="text-muted" style={{ marginBottom: '1.5rem', fontSize: '0.9rem' }}>
+                  Scale your marketing efforts programmatically. Generate high-quality, SEO-optimized blog posts and ad copy from a single keyword.
+                </p>
+                <Link href="/dashboard/marketscale" style={{ color: 'var(--text-primary)', textDecoration: 'none', fontSize: '0.875rem', fontWeight: 500, display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                  Try MarketScale <ArrowRight size={14} />
+                </Link>
+              </div>
+
+              <div className="card">
+                <div style={{ width: 40, height: 40, borderRadius: 8, background: 'rgba(16, 185, 129, 0.1)', color: 'var(--accent-emerald)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.5rem' }}>
+                  <MessageSquare size={20} />
+                </div>
+                <h3 style={{ fontSize: '1.25rem', marginBottom: '1rem' }}>Sentiment Engine</h3>
+                <p className="text-muted" style={{ marginBottom: '1.5rem', fontSize: '0.9rem' }}>
+                  Paste thousands of customer reviews and let our AI categorize them by sentiment, extracting key feature requests instantly.
+                </p>
+                <Link href="/dashboard/sentiment" style={{ color: 'var(--text-primary)', textDecoration: 'none', fontSize: '0.875rem', fontWeight: 500, display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                  Try Sentiment Engine <ArrowRight size={14} />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="enterprise" className="section">
+          <div className="container" style={{ textAlign: 'center' }}>
+            <div style={{ width: 48, height: 48, borderRadius: 12, background: 'var(--bg-surface)', border: '1px solid var(--border-strong)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 2rem' }}>
+              <Shield size={24} color="var(--text-secondary)" />
+            </div>
+            <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>Enterprise-Grade Security</h2>
+            <p className="text-muted" style={{ maxWidth: '600px', margin: '0 auto 3rem', fontSize: '1.1rem' }}>
+              We do not train our models on your data. StartupAI uses zero-retention policies via secure API connections to our LLM partners to ensure your proprietary business data remains yours.
+            </p>
+            <Link href="/contact" className="btn btn-secondary">Contact Sales</Link>
+          </div>
+        </section>
+      </main>
+
+      <footer style={{ padding: '4rem 0', borderTop: '1px solid var(--border-subtle)', background: 'var(--bg-base)' }}>
+        <div className="container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem' }}>
+          <div style={{ fontWeight: 700 }}>StartupAI</div>
+          <div style={{ display: 'flex', gap: '2rem', fontSize: '0.875rem' }} className="text-muted">
+            <Link href="/privacy" style={{ color: 'inherit', textDecoration: 'none' }}>Privacy Policy</Link>
+            <Link href="/terms" style={{ color: 'inherit', textDecoration: 'none' }}>Terms of Service</Link>
+            <Link href="/contact" style={{ color: 'inherit', textDecoration: 'none' }}>Contact Us</Link>
+          </div>
+          <div style={{ fontSize: '0.75rem' }} className="text-muted">
+            &copy; {new Date().getFullYear()} StartupAI Inc. All rights reserved.
+          </div>
         </div>
-      </div>
-
-      {/* Tools Grid */}
-      <div id="tools" className="grid-3 animate-in delay-200">
-        
-        <a href="/tools/idea-validator" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
-          <div className="glass-panel" style={{ padding: '2.5rem', height: '100%', display: 'flex', flexDirection: 'column' }}>
-            <div style={{ width: '56px', height: '56px', borderRadius: '16px', background: 'rgba(79, 70, 229, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--primary)', marginBottom: '1.5rem', border: '1px solid rgba(79, 70, 229, 0.2)' }}>
-              <Lightbulb size={28} />
-            </div>
-            <h3 style={{ fontSize: '1.5rem' }}>Idea Validator</h3>
-            <p className="text-muted" style={{ marginBottom: '2rem', flexGrow: 1, fontSize: '1.05rem' }}>
-              Describe your startup idea and our AI will analyze market fit, competitors, and potential pitfalls instantly.
-            </p>
-            <div style={{ fontWeight: 600, color: 'var(--primary)', display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.95rem' }}>
-              Launch Tool <ArrowRight size={16} />
-            </div>
-          </div>
-        </a>
-
-        <a href="/tools/pitch-generator" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
-          <div className="glass-panel" style={{ padding: '2.5rem', height: '100%', display: 'flex', flexDirection: 'column' }}>
-            <div style={{ width: '56px', height: '56px', borderRadius: '16px', background: 'rgba(217, 70, 239, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent)', marginBottom: '1.5rem', border: '1px solid rgba(217, 70, 239, 0.2)' }}>
-              <Presentation size={28} />
-            </div>
-            <h3 style={{ fontSize: '1.5rem' }}>Pitch Generator</h3>
-            <p className="text-muted" style={{ marginBottom: '2rem', flexGrow: 1, fontSize: '1.05rem' }}>
-              Generate a compelling 30-second elevator pitch or a full Y-Combinator style deck outline from your core concept.
-            </p>
-            <div style={{ fontWeight: 600, color: 'var(--accent)', display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.95rem' }}>
-              Launch Tool <ArrowRight size={16} />
-            </div>
-          </div>
-        </a>
-
-        <a href="/tools/lean-canvas" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
-          <div className="glass-panel" style={{ padding: '2.5rem', height: '100%', display: 'flex', flexDirection: 'column' }}>
-            <div style={{ width: '56px', height: '56px', borderRadius: '16px', background: 'rgba(20, 184, 166, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#14b8a6', marginBottom: '1.5rem', border: '1px solid rgba(20, 184, 166, 0.2)' }}>
-              <Target size={28} />
-            </div>
-            <h3 style={{ fontSize: '1.5rem' }}>Lean Canvas AI</h3>
-            <p className="text-muted" style={{ marginBottom: '2rem', flexGrow: 1, fontSize: '1.05rem' }}>
-              Automatically fill out a Lean Canvas framework. Identify unfair advantages, revenue streams, and key metrics.
-            </p>
-            <div style={{ fontWeight: 600, color: '#14b8a6', display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.95rem' }}>
-              Launch Tool <ArrowRight size={16} />
-            </div>
-          </div>
-        </a>
-
-      </div>
+      </footer>
     </div>
   );
 }
