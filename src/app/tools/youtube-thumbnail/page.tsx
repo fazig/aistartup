@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Youtube, Download, AlertTriangle } from "lucide-react";
+import { Youtube, Download, TriangleAlert } from "lucide-react";
 
 export default function YoutubeThumbnail() {
   const [url, setUrl] = useState("");
@@ -55,7 +55,7 @@ export default function YoutubeThumbnail() {
 
         {error && (
           <div style={{ padding: '1rem', background: '#fef2f2', color: '#dc2626', border: '1px solid #fca5a5', borderRadius: '8px', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            <AlertTriangle size={18} /> {error}
+            <TriangleAlert size={18} /> {error}
           </div>
         )}
 

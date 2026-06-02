@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Copy, FileJson, Check, AlertTriangle } from "lucide-react";
+import { Copy, FileJson, Check, TriangleAlert } from "lucide-react";
 import Link from "next/link";
 
 export default function JsonFormatter() {
@@ -80,7 +80,7 @@ export default function JsonFormatter() {
           
           {error ? (
             <div style={{ flexGrow: 1, background: '#fef2f2', border: '1px solid #fca5a5', borderRadius: '8px', padding: '1rem', color: '#dc2626', display: 'flex', gap: '0.5rem', alignItems: 'flex-start' }}>
-              <AlertTriangle size={20} style={{ flexShrink: 0 }} />
+              <TriangleAlert size={20} style={{ flexShrink: 0 }} />
               <div>
                 <strong>Invalid JSON Error:</strong>
                 <p style={{ fontSize: '0.875rem', marginTop: '0.25rem' }}>{error}</p>
