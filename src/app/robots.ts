@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://startupai.tech/sitemap.xml",
+    sitemap: "https://www.aitoolspro.tech/sitemap.xml",
   };
 }
