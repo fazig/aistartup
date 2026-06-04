@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   title: "StartupAI Tools | Free Developer & Web Utilities",
   description: "A comprehensive collection of 100% free, lightning-fast web tools including JSON formatters, QR code generators, and text utilities.",
   verification: {
-    google: "PLACEHOLDER_SEARCH_CONSOLE_TAG",
+    google: "BN8r_18xTXqdWBekHRt95xIe5efvl8gg00Thn4qhMMI",
   }
 };
 
