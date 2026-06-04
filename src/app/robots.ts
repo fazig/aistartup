@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://startupai.tools/sitemap.xml",
+    sitemap: "https://startupai.tech/sitemap.xml",
   };
 }
