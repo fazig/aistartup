@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { 
   Link2, Search, Check, Copy, Trash2, QrCode as QRIcon, 
-  ExternalLink, BarChart3, AlertCircle, Loader2, Sparkles, RefreshCw
+  ExternalLink, BarChart3, AlertCircle, Loader2, Sparkles, RefreshCw, CheckCircle
 } from "lucide-react";
 import { QRCodeSVG } from "qrcode.react";
 
