@@ -52,6 +52,7 @@ export default function RootLayout({
             </Link>
             
             <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center', fontWeight: 500, fontSize: '0.9rem' }}>
+              <Link href="/free-sumo-tools" style={{ color: 'var(--primary)', fontWeight: 700 }}>FreeSumoTools</Link>
               <Link href="/tools" style={{ color: 'var(--text-muted)' }}>All Tools</Link>
               <Link href="/tools/adsense-eligibility-checker" style={{ color: 'var(--text-muted)' }}>AdSense Checker</Link>
               <Link href="/tools/url-shortener" style={{ color: 'var(--text-muted)' }}>URL Shortener</Link>

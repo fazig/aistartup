@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { 
-  FileText, Search, Link as LinkIcon, Settings, Code, Image as ImageIcon, Shield, Database 
+  FileText, Search, Link as LinkIcon, Settings, Code, Image as ImageIcon,
+  Calculator, Sparkles
 } from "lucide-react";
 
 export default function ToolsDirectory() {
@@ -12,8 +13,14 @@ export default function ToolsDirectory() {
         { name: "Article Rewriter", path: "/tools/article-rewriter", status: "live" },
         { name: "Plagiarism Checker", path: "/tools/plagiarism-checker", status: "live" },
         { name: "Word Counter", path: "/tools/word-counter", status: "live" },
-        { name: "Keyword Density Checker", path: "#", status: "planned" },
         { name: "Emojis Remover", path: "/tools/emojis-remover", status: "live" },
+        { name: "Lorem Ipsum Generator", path: "/tools/lorem-ipsum-generator", status: "live" },
+        { name: "Case Converter", path: "/tools/case-converter", status: "live" },
+        { name: "Remove Line Breaks", path: "/tools/remove-line-breaks", status: "live" },
+        { name: "Text Repeater", path: "/tools/text-repeater", status: "live" },
+        { name: "Text Sorter", path: "/tools/text-sorter", status: "live" },
+        { name: "Comma Separator", path: "/tools/comma-separator", status: "live" },
+        { name: "Random Word Generator", path: "/tools/random-word-generator", status: "live" },
       ]
     },
     {
@@ -55,6 +62,22 @@ export default function ToolsDirectory() {
       ]
     },
     {
+      title: "Calculators & Finance Tools",
+      icon: <Calculator size={20} color="var(--primary)" />,
+      tools: [
+        { name: "Age Calculator", path: "/tools/age-calculator", status: "live" },
+        { name: "Percentage Calculator", path: "/tools/percentage-calculator", status: "live" },
+        { name: "Discount Calculator", path: "/tools/discount-calculator", status: "live" },
+        { name: "Sales Tax Calculator", path: "/tools/sales-tax-calculator", status: "live" },
+        { name: "Loan Calculator", path: "/tools/loan-calculator", status: "live" },
+        { name: "PayPal Fee Calculator", path: "/tools/paypal-fee-calculator", status: "live" },
+        { name: "Average Calculator", path: "#", status: "planned" },
+        { name: "Confidence Interval Calculator", path: "#", status: "planned" },
+        { name: "Margin Calculator", path: "#", status: "planned" },
+        { name: "GST Calculator", path: "#", status: "planned" },
+      ]
+    },
+    {
       title: "Web Management Tools",
       icon: <Settings size={20} color="var(--primary)" />,
       tools: [
@@ -75,6 +98,7 @@ export default function ToolsDirectory() {
         { name: "Google Index Checker", path: "#", status: "planned" },
         { name: "Google Cache Checker", path: "#", status: "planned" },
         { name: "Search Engine Spider Simulator", path: "#", status: "planned" },
+        { name: "UTM Builder", path: "/tools/utm-builder", status: "live" },
       ]
     },
     {
@@ -95,6 +119,7 @@ export default function ToolsDirectory() {
         { name: "What is my Browser", path: "/tools/what-is-my-browser", status: "live" },
         { name: "Email Privacy", path: "#", status: "planned" },
         { name: "Open All URLs", path: "/tools/open-all-urls", status: "live" },
+        { name: "UUID Generator", path: "/tools/uuid-generator", status: "live" },
       ]
     },
     {
@@ -121,14 +146,25 @@ export default function ToolsDirectory() {
     }
   ];
 
+  const totalLive = categories.reduce((acc, cat) => acc + cat.tools.filter(t => t.status === "live").length, 0);
+
   return (
     <div className="container" style={{ padding: '4rem 1.5rem' }}>
       <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+        <div style={{
+          display: "inline-flex", alignItems: "center", gap: "0.5rem",
+          background: "var(--bg-card)",
+          padding: "0.5rem 1.25rem", borderRadius: "100px", fontSize: "0.9rem",
+          marginBottom: "1.5rem", border: "1px solid var(--border-light)",
+          color: "var(--primary)", fontWeight: 600
+        }}>
+          <Sparkles size={16} /> {totalLive} Free Web Tools Available
+        </div>
         <h1 style={{ fontSize: '3rem', marginBottom: '1rem', letterSpacing: '-0.02em' }}>
           All Web Tools Directory
         </h1>
         <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', maxWidth: '600px', margin: '0 auto' }}>
-          Browse our complete collection of 70+ free utility tools for developers, SEO professionals, and content creators.
+          Browse our complete collection of free utility tools for developers, SEO professionals, and content creators.
         </p>
       </div>
 
