@@ -71,10 +71,15 @@ export default function ToolsDirectory() {
         { name: "Sales Tax Calculator", path: "/tools/sales-tax-calculator", status: "live" },
         { name: "Loan Calculator", path: "/tools/loan-calculator", status: "live" },
         { name: "PayPal Fee Calculator", path: "/tools/paypal-fee-calculator", status: "live" },
-        { name: "Average Calculator", path: "#", status: "planned" },
+        { name: "Average Calculator", path: "/tools/average-calculator", status: "live" },
         { name: "Confidence Interval Calculator", path: "#", status: "planned" },
-        { name: "Margin Calculator", path: "#", status: "planned" },
-        { name: "GST Calculator", path: "#", status: "planned" },
+        { name: "Margin Calculator", path: "/tools/margin-calculator", status: "live" },
+        { name: "GST Calculator", path: "/tools/gst-calculator", status: "live" },
+        { name: "CPM Calculator", path: "/tools/cpm-calculator", status: "live" },
+        { name: "Probability Calculator", path: "/tools/probability-calculator", status: "live" },
+        { name: "Days Calculator", path: "/tools/days-calculator", status: "live" },
+        { name: "Hours Calculator", path: "/tools/hours-calculator", status: "live" },
+        { name: "Stripe Fee Calculator", path: "/tools/stripe-fee-calculator", status: "live" },
       ]
     },
     {
@@ -87,8 +92,8 @@ export default function ToolsDirectory() {
         { name: "Time Converter", path: "/tools/time-converter", status: "live" },
         { name: "Speed Converter", path: "/tools/speed-converter", status: "live" },
         { name: "Digital Storage Converter", path: "/tools/digital-storage-converter", status: "live" },
-        { name: "Area Converter", path: "#", status: "planned" },
-        { name: "Volume Converter", path: "#", status: "planned" },
+        { name: "Area Converter", path: "/tools/area-converter", status: "live" },
+        { name: "Volume Converter", path: "/tools/volume-converter", status: "live" },
       ]
     },
     {
@@ -173,6 +178,11 @@ export default function ToolsDirectory() {
         { name: "Page Size Checker", path: "/tools/page-size-checker", status: "live" },
         { name: "Website Screenshot Generator", path: "#", status: "planned" },
         { name: "Get Source Code of Webpage", path: "/tools/get-source-code", status: "live" },
+        { name: "Flip Image", path: "/tools/flip-image", status: "live" },
+        { name: "Rotate Image", path: "/tools/rotate-image", status: "live" },
+        { name: "Image Resizer", path: "/tools/image-resizer", status: "live" },
+        { name: "Image Cropper", path: "/tools/image-cropper", status: "live" },
+        { name: "Image Converter", path: "/tools/image-converter", status: "live" },
       ]
     }
   ];
