@@ -94,6 +94,8 @@ export default function RootLayout({
                 <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.5rem', fontSize: '0.875rem' }}>
                   <li><Link href="/privacy" style={{ color: 'var(--text-muted)' }}>Privacy Policy</Link></li>
                   <li><Link href="/terms" style={{ color: 'var(--text-muted)' }}>Terms of Service</Link></li>
+                  <li><Link href="/cookie-policy" style={{ color: 'var(--text-muted)' }}>Cookie Policy</Link></li>
+                  <li><Link href="/disclaimer" style={{ color: 'var(--text-muted)' }}>Disclaimer</Link></li>
                   <li><Link href="/contact" style={{ color: 'var(--text-muted)' }}>Contact Us</Link></li>
                 </ul>
               </div>
