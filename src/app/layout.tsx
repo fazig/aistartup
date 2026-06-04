@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { GoogleAnalytics } from '@next/third-parties/google';
+import Script from "next/script";
 import Link from "next/link";
 import { Wrench } from "lucide-react";
 import "./globals.css";
@@ -25,6 +25,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Google tag (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-L0D1YKGN2H"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-L0D1YKGN2H');
+          `}
+        </Script>
+      </head>
       <body className={inter.variable}>
         {/* Global Navigation */}
         <nav style={{ background: 'var(--bg-card)', borderBottom: '1px solid var(--border-light)', height: 'var(--nav-height)', position: 'sticky', top: 0, zIndex: 100 }}>
@@ -90,7 +105,6 @@ export default function RootLayout({
         </footer>
 
       </body>
-      <GoogleAnalytics gaId="G-L0D1YKGN2H" />
     </html>
   );
 }
