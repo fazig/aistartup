@@ -21,6 +21,7 @@ export default function ToolsDirectory() {
       icon: <Search size={20} color="var(--primary)" />,
       tools: [
         { name: "Meta Tag Generator", path: "/tools/meta-tag-generator", status: "live" },
+        { name: "Schema Markup Generator", path: "/tools/schema-generator", status: "live" },
         { name: "Meta Tags Analyzer", path: "#", status: "planned" },
         { name: "Keyword Position Checker", path: "#", status: "planned" },
         { name: "Keyword Density Checker", path: "/tools/keyword-density-checker", status: "live" },
