@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { 
   FileText, Search, Link as LinkIcon, Settings, Code, Image as ImageIcon,
-  Calculator, Sparkles
+  Calculator, Sparkles, ArrowLeftRight, Binary
 } from "lucide-react";
 
 export default function ToolsDirectory() {
@@ -78,6 +78,36 @@ export default function ToolsDirectory() {
       ]
     },
     {
+      title: "Unit Converter Tools",
+      icon: <ArrowLeftRight size={20} color="var(--primary)" />,
+      tools: [
+        { name: "Length Converter", path: "/tools/length-converter", status: "live" },
+        { name: "Weight Converter", path: "/tools/weight-converter", status: "live" },
+        { name: "Temperature Converter", path: "/tools/temperature-converter", status: "live" },
+        { name: "Time Converter", path: "/tools/time-converter", status: "live" },
+        { name: "Speed Converter", path: "/tools/speed-converter", status: "live" },
+        { name: "Digital Storage Converter", path: "/tools/digital-storage-converter", status: "live" },
+        { name: "Area Converter", path: "#", status: "planned" },
+        { name: "Volume Converter", path: "#", status: "planned" },
+      ]
+    },
+    {
+      title: "Binary & Number Converters",
+      icon: <Binary size={20} color="var(--primary)" />,
+      tools: [
+        { name: "Text to Binary", path: "/tools/text-to-binary", status: "live" },
+        { name: "Binary to Text", path: "/tools/binary-to-text", status: "live" },
+        { name: "Decimal to Binary", path: "/tools/decimal-to-binary", status: "live" },
+        { name: "Binary to Decimal", path: "/tools/binary-to-decimal", status: "live" },
+        { name: "Text to ASCII", path: "/tools/text-to-ascii", status: "live" },
+        { name: "ASCII to Text", path: "/tools/ascii-to-text", status: "live" },
+        { name: "Text to HEX", path: "/tools/text-to-hex", status: "live" },
+        { name: "HEX to Text", path: "/tools/hex-to-text", status: "live" },
+        { name: "HEX to Decimal", path: "#", status: "planned" },
+        { name: "Decimal to HEX", path: "#", status: "planned" },
+      ]
+    },
+    {
       title: "Web Management Tools",
       icon: <Settings size={20} color="var(--primary)" />,
       tools: [
@@ -129,10 +159,11 @@ export default function ToolsDirectory() {
         { name: "QR Code Generator", path: "/tools/qr-generator", status: "live" },
         { name: "Privacy Policy Generator", path: "/tools/privacy-policy-generator", status: "live" },
         { name: "Terms & Conditions Generator", path: "/tools/terms-conditions-generator", status: "live" },
+        { name: "Disclaimer Generator", path: "/tools/disclaimer-generator", status: "live" },
         { name: "QR Code Decoder", path: "#", status: "planned" },
         { name: "Image Placeholder Generator", path: "/tools/image-placeholder-generator", status: "live" },
         { name: "YouTube Keywords Extractor", path: "/tools/youtube-keywords-extractor", status: "live" },
-        { name: "YouTube Thumbnail Downloader", path: "/tools/youtube-thumbnail", status: "live" },
+        { name: "YouTube Thumbnail Downloader", status: "live", path: "/tools/youtube-thumbnail" },
         { name: "EXIF Data Viewer", path: "/tools/exif-data-viewer", status: "live" },
         { name: "EXIF Data Remover", path: "#", status: "planned" },
         { name: "Bank to IFSC Code", path: "#", status: "planned" },
