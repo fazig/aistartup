@@ -38,9 +38,8 @@ export default function RootLayout({
             
             <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center', fontWeight: 500, fontSize: '0.9rem' }}>
               <Link href="/tools" style={{ color: 'var(--text-muted)' }}>All Tools</Link>
-              <Link href="/tools/json-formatter" style={{ color: 'var(--text-muted)' }}>JSON Formatter</Link>
-              <Link href="/tools/qr-generator" style={{ color: 'var(--text-muted)' }}>QR Generator</Link>
               <Link href="/tools/adsense-eligibility-checker" style={{ color: 'var(--text-muted)' }}>AdSense Checker</Link>
+              <Link href="/tools/url-shortener" style={{ color: 'var(--text-muted)' }}>URL Shortener</Link>
             </div>
           </div>
         </nav>
@@ -72,6 +71,7 @@ export default function RootLayout({
                 <h4 style={{ marginBottom: '1rem' }}>Web Tools</h4>
                 <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.5rem', fontSize: '0.875rem' }}>
                   <li><Link href="/tools/qr-generator" style={{ color: 'var(--text-muted)' }}>QR Code Generator</Link></li>
+                  <li><Link href="/tools/url-shortener" style={{ color: 'var(--text-muted)' }}>URL Shortener</Link></li>
                 </ul>
               </div>
               <div>

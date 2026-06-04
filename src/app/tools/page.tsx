@@ -58,6 +58,7 @@ export default function ToolsDirectory() {
       icon: <Settings size={20} color="var(--primary)" />,
       tools: [
         { name: "AdSense Eligibility Checker", path: "/tools/adsense-eligibility-checker", status: "live" },
+        { name: "URL Shortener", path: "/tools/url-shortener", status: "live" },
         { name: "Robots.txt Generator", path: "/tools/robots-txt-generator", status: "live" },
         { name: "XML Sitemap Generator", path: "/tools/xml-sitemap-generator", status: "live" },
         { name: "Google Pagespeed Insights", path: "#", status: "planned" },
