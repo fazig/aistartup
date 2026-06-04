@@ -72,7 +72,7 @@ export default function ToolsDirectory() {
         { name: "Loan Calculator", path: "/tools/loan-calculator", status: "live" },
         { name: "PayPal Fee Calculator", path: "/tools/paypal-fee-calculator", status: "live" },
         { name: "Average Calculator", path: "/tools/average-calculator", status: "live" },
-        { name: "Confidence Interval Calculator", path: "#", status: "planned" },
+        { name: "Confidence Interval Calculator", path: "/tools/confidence-interval-calculator", status: "live" },
         { name: "Margin Calculator", path: "/tools/margin-calculator", status: "live" },
         { name: "GST Calculator", path: "/tools/gst-calculator", status: "live" },
         { name: "CPM Calculator", path: "/tools/cpm-calculator", status: "live" },
@@ -80,6 +80,8 @@ export default function ToolsDirectory() {
         { name: "Days Calculator", path: "/tools/days-calculator", status: "live" },
         { name: "Hours Calculator", path: "/tools/hours-calculator", status: "live" },
         { name: "Stripe Fee Calculator", path: "/tools/stripe-fee-calculator", status: "live" },
+        { name: "Calorie Calculator", path: "/tools/calorie-calculator", status: "live" },
+        { name: "TDEE Calculator", path: "/tools/tdee-calculator", status: "live" },
       ]
     },
     {
@@ -94,6 +96,11 @@ export default function ToolsDirectory() {
         { name: "Digital Storage Converter", path: "/tools/digital-storage-converter", status: "live" },
         { name: "Area Converter", path: "/tools/area-converter", status: "live" },
         { name: "Volume Converter", path: "/tools/volume-converter", status: "live" },
+        { name: "Pressure Converter", path: "/tools/pressure-converter", status: "live" },
+        { name: "Power Converter", path: "/tools/power-converter", status: "live" },
+        { name: "Voltage Converter", path: "/tools/voltage-converter", status: "live" },
+        { name: "Current Converter", path: "/tools/current-converter", status: "live" },
+        { name: "Pace Converter", path: "/tools/pace-converter", status: "live" },
       ]
     },
     {
@@ -108,8 +115,12 @@ export default function ToolsDirectory() {
         { name: "ASCII to Text", path: "/tools/ascii-to-text", status: "live" },
         { name: "Text to HEX", path: "/tools/text-to-hex", status: "live" },
         { name: "HEX to Text", path: "/tools/hex-to-text", status: "live" },
-        { name: "HEX to Decimal", path: "#", status: "planned" },
-        { name: "Decimal to HEX", path: "#", status: "planned" },
+        { name: "HEX to Decimal", path: "/tools/hex-to-decimal", status: "live" },
+        { name: "Decimal to HEX", path: "/tools/decimal-to-hex", status: "live" },
+        { name: "Octal to Binary", path: "/tools/octal-to-binary", status: "live" },
+        { name: "Binary to Octal", path: "/tools/binary-to-octal", status: "live" },
+        { name: "Text to Decimal", path: "/tools/text-to-decimal", status: "live" },
+        { name: "Decimal to Text", path: "/tools/decimal-to-text", status: "live" },
       ]
     },
     {
@@ -134,6 +145,7 @@ export default function ToolsDirectory() {
         { name: "Google Cache Checker", path: "#", status: "planned" },
         { name: "Search Engine Spider Simulator", path: "#", status: "planned" },
         { name: "UTM Builder", path: "/tools/utm-builder", status: "live" },
+        { name: "HTML Minifier", path: "/tools/html-minifier", status: "live" },
       ]
     },
     {
