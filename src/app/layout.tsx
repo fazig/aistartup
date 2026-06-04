@@ -40,6 +40,7 @@ export default function RootLayout({
               <Link href="/tools" style={{ color: 'var(--text-muted)' }}>All Tools</Link>
               <Link href="/tools/json-formatter" style={{ color: 'var(--text-muted)' }}>JSON Formatter</Link>
               <Link href="/tools/qr-generator" style={{ color: 'var(--text-muted)' }}>QR Generator</Link>
+              <Link href="/tools/adsense-eligibility-checker" style={{ color: 'var(--text-muted)' }}>AdSense Checker</Link>
             </div>
           </div>
         </nav>
