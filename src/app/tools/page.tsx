@@ -146,6 +146,12 @@ export default function ToolsDirectory() {
         { name: "Search Engine Spider Simulator", path: "#", status: "planned" },
         { name: "UTM Builder", path: "/tools/utm-builder", status: "live" },
         { name: "HTML Minifier", path: "/tools/html-minifier", status: "live" },
+        { name: "HTML Beautifier", path: "/tools/html-beautifier", status: "live" },
+        { name: "CSS Beautifier", path: "/tools/css-beautifier", status: "live" },
+        { name: "CSS Minifier", path: "/tools/css-minifier", status: "live" },
+        { name: "JavaScript Beautifier", path: "/tools/javascript-beautifier", status: "live" },
+        { name: "JavaScript Minifier", path: "/tools/javascript-minifier", status: "live" },
+        { name: "URL Parser", path: "/tools/url-parser", status: "live" },
       ]
     },
     {
@@ -177,7 +183,7 @@ export default function ToolsDirectory() {
         { name: "Privacy Policy Generator", path: "/tools/privacy-policy-generator", status: "live" },
         { name: "Terms & Conditions Generator", path: "/tools/terms-conditions-generator", status: "live" },
         { name: "Disclaimer Generator", path: "/tools/disclaimer-generator", status: "live" },
-        { name: "QR Code Decoder", path: "#", status: "planned" },
+        { name: "QR Code Decoder", path: "/tools/qr-decoder", status: "live" },
         { name: "Image Placeholder Generator", path: "/tools/image-placeholder-generator", status: "live" },
         { name: "YouTube Keywords Extractor", path: "/tools/youtube-keywords-extractor", status: "live" },
         { name: "YouTube Thumbnail Downloader", status: "live", path: "/tools/youtube-thumbnail" },
@@ -195,6 +201,14 @@ export default function ToolsDirectory() {
         { name: "Image Resizer", path: "/tools/image-resizer", status: "live" },
         { name: "Image Cropper", path: "/tools/image-cropper", status: "live" },
         { name: "Image Converter", path: "/tools/image-converter", status: "live" },
+        { name: "ICO to PNG", path: "/tools/ico-to-png", status: "live" },
+        { name: "ICO Converter", path: "/tools/ico-converter", status: "live" },
+        { name: "Image Enlarger", path: "/tools/image-enlarger", status: "live" },
+        { name: "JPG to PNG", path: "/tools/jpg-to-png", status: "live" },
+        { name: "PNG to JPG", path: "/tools/png-to-jpg", status: "live" },
+        { name: "WebP to JPG", path: "/tools/webp-to-jpg", status: "live" },
+        { name: "PNG to WebP", path: "/tools/png-to-webp", status: "live" },
+        { name: "JPG to WebP", path: "/tools/jpg-to-webp", status: "live" },
       ]
     }
   ];
