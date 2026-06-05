@@ -6,7 +6,7 @@ import { BLOG_POSTS } from "@/data/posts";
 export default function sitemap(): MetadataRoute.Sitemap {
   // We can default this to a placeholder or detect the deployment URL,
   // but a static domain configuration is standard for production builds.
-  const baseUrl = "https://adsenseapprovalchecker.net"; 
+  const baseUrl = "https://www.aitoolspro.tech"; 
 
   // Read all directories inside src/app/tools to dynamically list every tool page
   const toolsDir = path.join(process.cwd(), "src/app/tools");

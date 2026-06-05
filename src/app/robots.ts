@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://adsenseapprovalchecker.net/sitemap.xml",
+    sitemap: "https://www.aitoolspro.tech/sitemap.xml",
   };
 }

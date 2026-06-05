@@ -27,12 +27,12 @@ export default function SchemaGenerator() {
   const [articleData, setArticleData] = useState({
     title: "How to Bootstrap a Software Startup in 2026",
     description: "A complete step-by-step guide to building and launching a software startup without outside funding.",
-    url: "https://www.adsenseapprovalchecker.net/blog/bootstrap-software-startup",
-    imageUrl: "https://www.adsenseapprovalchecker.net/images/bootstrap-startup.jpg",
+    url: "https://www.aitoolspro.tech/blog/bootstrap-software-startup",
+    imageUrl: "https://www.aitoolspro.tech/images/bootstrap-startup.jpg",
     authorName: "John Doe",
     authorType: "Person", // "Person" | "Organization"
     publisherName: "StartupAI Tools",
-    publisherLogo: "https://www.adsenseapprovalchecker.net/logo.png",
+    publisherLogo: "https://www.aitoolspro.tech/logo.png",
     datePublished: new Date().toISOString().split("T")[0],
     dateModified: new Date().toISOString().split("T")[0]
   });
@@ -73,9 +73,9 @@ export default function SchemaGenerator() {
 
   // 5. Breadcrumb Schema State
   const [breadcrumbItems, setBreadcrumbItems] = useState([
-    { name: "Home", url: "https://www.adsenseapprovalchecker.net" },
-    { name: "Tools", url: "https://www.adsenseapprovalchecker.net/tools" },
-    { name: "Schema Generator", url: "https://www.adsenseapprovalchecker.net/tools/schema-generator" }
+    { name: "Home", url: "https://www.aitoolspro.tech" },
+    { name: "Tools", url: "https://www.aitoolspro.tech/tools" },
+    { name: "Schema Generator", url: "https://www.aitoolspro.tech/tools/schema-generator" }
   ]);
 
   // --- DYNAMIC FAQ LOGIC ---
@@ -990,7 +990,7 @@ export default function SchemaGenerator() {
                     {activeTab === "breadcrumbs" ? (
                       breadcrumbItems.filter(item => item.name).map(item => item.name).join(" › ")
                     ) : (
-                      activeTab === "article" ? articleData.url : "https://www.adsenseapprovalchecker.net"
+                      activeTab === "article" ? articleData.url : "https://www.aitoolspro.tech"
                     )}
                   </div>
                 </div>

@@ -909,7 +909,7 @@ If you have not started yet, download a tool like Cursor, spin up a workspace on
     readTime: "10 min read",
     category: "SEO & Writing",
     author: "Faizan Arif",
-    image: "/small_qr_code_guide.webp", // reusing an existing optimized webp image
+    image: "/word_counter_guide.webp",
     content: `When you sit down to draft an essay, compose a blog post, refine a newsletter, or write a social media status, one question almost always arises: how long is this piece of text? Keeping track of your word count is not just a habit of tidy writers; it is a critical requirement across many professional and academic fields. Whether you are trying to meet an academic essay constraint, optimize your website\'s search visibility, or write within strict social media character limits, the ability to **count number of words online** is a necessity.
 
 In this comprehensive guide, we will explore why you need to count number of words online, how word length requirements vary across different fields, how text counting tools work, and how you can optimize your writing workflow.
@@ -944,7 +944,7 @@ Let\'s look at typical word boundaries for common academic works:
 4.  **Master\'s Thesis:** 10,000 to 20,000 words. A comprehensive research project demonstrating mastery of a subject.
 5.  **Doctoral Dissertation:** 60,000 to 100,000 words. An original contribution to human knowledge.
 
-When writing these papers, you cannot just guess the length based on page count. Font choices, margin settings, and paragraph spacing can easily make a 400-word essay look like 600 words. To ensure your grades are not docked for formatting tricks, copy and paste your drafts into our [Word Counter](https://adsenseapprovalchecker.net/tools/word-counter) tool to count number of words online with absolute precision.
+When writing these papers, you cannot just guess the length based on page count. Font choices, margin settings, and paragraph spacing can easily make a 400-word essay look like 600 words. To ensure your grades are not docked for formatting tricks, copy and paste your drafts into our [Word Counter](https://www.aitoolspro.tech/tools/word-counter) tool to count number of words online with absolute precision.
 
 ---
 
@@ -978,7 +978,7 @@ According to research on search trends and Google ranking behaviors:
 
 When drafting SEO assets, you must check word metrics to ensure you are meeting the expectations of search engines. Google\'s core updates are designed to penalize \"thin content\"—pages that have very little text copy and offer no real value. By using a utility to count number of words online, you can audit your content depth and compare it to competing domains ranking on page one.
 
-Additionally, when publishing blog posts, make sure to verify text readability using our [Grammarly Free](https://adsenseapprovalchecker.net/tools/grammarly-free) tool to correct grammar, agreement, and phrasing before indexing. If you need to rewrite competitor outlines or rewrite outdated copy, run the text through the [Article Rewriter](https://adsenseapprovalchecker.net/tools/article-rewriter) to generate clean, unique phrasing.
+Additionally, when publishing blog posts, make sure to verify text readability using our [Grammarly Free](https://www.aitoolspro.tech/tools/grammarly-free) tool to correct grammar, agreement, and phrasing before indexing. If you need to rewrite competitor outlines or rewrite outdated copy, run the text through the [Article Rewriter](https://www.aitoolspro.tech/tools/article-rewriter) to generate clean, unique phrasing.
 
 ---
 
@@ -1021,7 +1021,7 @@ There are hundreds of tools on the web, but they are not all built equal. To fin
 3.  **Clean User Interface:** Avoid tools that clutter the page with video advertisements, popups, or auto-refreshing banners. You need a clean text area where you can write without distraction.
 4.  **No Limits:** Ensure the tool has no daily limits or word caps (e.g. \"upgrade to count more than 1,000 words\").
 
-Our custom utility at [StartupAI Word Counter](https://adsenseapprovalchecker.net/tools/word-counter) meets all of these guidelines. It is completely free, secure, runs locally in your browser worker thread, and displays detailed parameters in a dashboard.
+Our custom utility at [StartupAI Word Counter](https://www.aitoolspro.tech/tools/word-counter) meets all of these guidelines. It is completely free, secure, runs locally in your browser worker thread, and displays detailed parameters in a dashboard.
 
 ---
 
