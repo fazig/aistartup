@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import Script from "next/script";
 import Link from "next/link";
 import { Wrench } from "lucide-react";
+import Header from "@/components/Header";
 import "./globals.css";
 
 const inter = Inter({ 
@@ -41,24 +42,7 @@ export default function RootLayout({
         </Script>
       </head>
       <body className={inter.variable}>
-        {/* Global Navigation */}
-        <nav style={{ background: 'var(--bg-card)', borderBottom: '1px solid var(--border-light)', height: 'var(--nav-height)', position: 'sticky', top: 0, zIndex: 100 }}>
-          <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '100%' }}>
-            <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none', color: 'var(--text-main)' }}>
-              <div style={{ background: 'var(--primary)', color: 'white', padding: '0.4rem', borderRadius: '8px' }}>
-                <Wrench size={20} />
-              </div>
-              <span style={{ fontWeight: 800, fontSize: '1.25rem', letterSpacing: '-0.03em' }}>StartupAI Tools</span>
-            </Link>
-            
-            <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center', fontWeight: 500, fontSize: '0.9rem' }}>
-              <Link href="/free-sumo-tools" style={{ color: 'var(--primary)', fontWeight: 700 }}>FreeSumoTools</Link>
-              <Link href="/tools" style={{ color: 'var(--text-muted)' }}>All Tools</Link>
-              <Link href="/tools/adsense-eligibility-checker" style={{ color: 'var(--text-muted)' }}>AdSense Checker</Link>
-              <Link href="/tools/url-shortener" style={{ color: 'var(--text-muted)' }}>URL Shortener</Link>
-            </div>
-          </div>
-        </nav>
+        <Header />
 
         {/* Main Page Content */}
         <main style={{ minHeight: 'calc(100vh - var(--nav-height) - 250px)' }}>

@@ -5,16 +5,16 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="section" style={{ background: 'var(--bg-card)', borderBottom: '1px solid var(--border-light)', padding: '6rem 0' }}>
+      <section className="section" style={{ background: 'var(--bg-card)', borderBottom: '1px solid var(--border-light)', padding: 'clamp(3rem, 8vw, 6rem) 0' }}>
         <div className="container" style={{ textAlign: 'center' }}>
-          <h1 style={{ fontSize: '3.5rem', marginBottom: '1.5rem', letterSpacing: '-0.03em' }}>
+          <h1 style={{ fontSize: 'clamp(2.25rem, 5vw, 3.5rem)', marginBottom: '1.5rem', letterSpacing: '-0.03em', lineHeight: 1.15 }}>
             The Ultimate Web <span style={{ color: 'var(--primary)' }}>Utility Toolkit</span>
           </h1>
-          <p style={{ fontSize: '1.25rem', color: 'var(--text-muted)', maxWidth: '700px', margin: '0 auto 2.5rem auto' }}>
+          <p style={{ fontSize: 'clamp(1rem, 2vw, 1.25rem)', color: 'var(--text-muted)', maxWidth: '700px', margin: '0 auto 2.5rem auto', lineHeight: 1.5 }}>
             100% free, lightning-fast tools for developers, content creators, and SEO professionals. No registration required. All processing happens safely in your browser.
           </p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
-            <Link href="#tools" className="btn btn-primary" style={{ padding: '1rem 2rem', fontSize: '1.1rem' }}>
+            <Link href="#tools" className="btn btn-primary" style={{ padding: '0.85rem 1.75rem', fontSize: '1.05rem' }}>
               Explore All Tools
             </Link>
           </div>
