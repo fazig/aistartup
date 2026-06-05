@@ -10,6 +10,7 @@ export default function ToolsDirectory() {
       title: "Text & Content Tools",
       icon: <FileText size={20} color="var(--primary)" />,
       tools: [
+        { name: "Grammarly Free", path: "/tools/grammarly-free", status: "live" },
         { name: "Article Rewriter", path: "/tools/article-rewriter", status: "live" },
         { name: "Plagiarism Checker", path: "/tools/plagiarism-checker", status: "live" },
         { name: "Word Counter", path: "/tools/word-counter", status: "live" },

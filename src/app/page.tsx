@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Code, FileJson, Hash, QrCode, Settings, Type, Zap, Search, ShieldCheck } from "lucide-react";
+import { Code, FileJson, Sparkles, QrCode, Settings, Type, Zap, Search, ShieldCheck } from "lucide-react";
 
 export default function Home() {
   return (
@@ -74,13 +74,13 @@ export default function Home() {
               <div style={{ fontWeight: 600, color: 'var(--primary)', fontSize: '0.875rem' }}>Use Tool &rarr;</div>
             </Link>
 
-            <Link href="/tools/md5-generator" className="card" style={{ display: 'block', color: 'inherit' }}>
-              <div style={{ width: 48, height: 48, borderRadius: '12px', background: '#f8fafc', color: 'var(--primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.5rem' }}>
-                <Hash size={24} />
+            <Link href="/tools/grammarly-free" className="card" style={{ display: 'block', color: 'inherit' }}>
+              <div style={{ width: 48, height: 48, borderRadius: '12px', background: '#eff6ff', color: 'var(--primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.5rem' }}>
+                <Sparkles size={24} />
               </div>
-              <h3 style={{ fontSize: '1.25rem', marginBottom: '0.75rem' }}>MD5 Hash Generator</h3>
+              <h3 style={{ fontSize: '1.25rem', marginBottom: '0.75rem' }}>Grammarly Free</h3>
               <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '1.5rem' }}>
-                Generate a secure, 32-character mathematical MD5 hash of any string.
+                Analyze texts, correct spelling mistakes, optimize syntax, and improve readability instantly.
               </p>
               <div style={{ fontWeight: 600, color: 'var(--primary)', fontSize: '0.875rem' }}>Use Tool &rarr;</div>
             </Link>

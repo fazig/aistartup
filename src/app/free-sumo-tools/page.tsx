@@ -19,6 +19,7 @@ export default function FreeSumoToolsPage() {
       color: "#10b981",
       bg: "#ecfdf5",
       tools: [
+        { name: "Grammarly Free", path: "/tools/grammarly-free", live: true },
         { name: "Text to Slug", path: "/tools/text-to-slug", live: true },
         { name: "Lorem Ipsum Generator", path: "/tools/lorem-ipsum-generator", live: true },
         { name: "Case Converter", path: "/tools/case-converter", live: true },

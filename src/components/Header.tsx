@@ -53,6 +53,9 @@ export default function Header() {
           <Link href="/tools/url-shortener" className="nav-link">
             URL Shortener
           </Link>
+          <Link href="/tools/grammarly-free" className="nav-link">
+            Grammarly Free
+          </Link>
         </nav>
       </div>
 
@@ -73,6 +76,9 @@ export default function Header() {
           </Link>
           <Link href="/tools/url-shortener" className="mobile-nav-link" onClick={closeMenu}>
             URL Shortener
+          </Link>
+          <Link href="/tools/grammarly-free" className="mobile-nav-link" onClick={closeMenu}>
+            Grammarly Free
           </Link>
         </nav>
       </div>
