@@ -45,6 +45,7 @@ export default function GrammarlyFree() {
   const [copied, setCopied] = useState(false);
   const [mode, setMode] = useState<"edit" | "review">("edit");
   const [activeErrorIdx, setActiveErrorIdx] = useState<number | null>(null);
+  const [hoveredErrorIdx, setHoveredErrorIdx] = useState<number | null>(null);
   const [errorMsg, setErrorMsg] = useState("");
   const [rateLimited, setRateLimited] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState("en-US");
@@ -255,23 +256,33 @@ export default function GrammarlyFree() {
 
       // Categorize underline color
       let underlineColor = "#ef4444"; // red: typos
+      let categoryLabel = "Spelling";
       let bgColor = "rgba(239, 68, 68, 0.08)";
       const categoryId = rule?.category?.id;
       if (categoryId === "GRAMMAR" || categoryId === "MISC") {
         underlineColor = "#3b82f6"; // blue: grammar
+        categoryLabel = "Grammar";
         bgColor = "rgba(59, 130, 246, 0.08)";
       } else if (categoryId === "STYLE" || categoryId === "REDUNDANCY") {
         underlineColor = "#8b5cf6"; // purple: style
+        categoryLabel = "Style";
         bgColor = "rgba(139, 92, 246, 0.08)";
       }
 
       const isActive = activeErrorIdx === idx;
+      const isHovered = hoveredErrorIdx === idx;
+      const showTooltip = isHovered || isActive;
       const errorText = text.substring(offset, offset + length);
 
       elements.push(
         <span
           key={`error-${idx}-${offset}`}
-          onClick={() => setActiveErrorIdx(idx)}
+          onMouseEnter={() => setHoveredErrorIdx(idx)}
+          onMouseLeave={() => setHoveredErrorIdx(null)}
+          onClick={(e) => {
+            e.stopPropagation();
+            setActiveErrorIdx(idx);
+          }}
           style={{
             borderBottom: `2.5px ${isActive ? "solid" : "dashed"} ${underlineColor}`,
             backgroundColor: isActive ? bgColor.replace("0.08", "0.2") : bgColor,
@@ -282,9 +293,125 @@ export default function GrammarlyFree() {
             fontWeight: isActive ? 600 : "normal",
             transition: "all 0.2s"
           }}
-          title={err.message}
         >
           {errorText}
+
+          {/* Floating Tooltip */}
+          {showTooltip && (
+            <span
+              onClick={(e) => e.stopPropagation()} // prevent triggering outer click
+              style={{
+                position: "absolute",
+                bottom: "100%",
+                left: "50%",
+                transform: "translate(-50%, -8px)",
+                background: "#ffffff",
+                border: "1px solid var(--border-light)",
+                borderRadius: "8px",
+                padding: "0.75rem 1rem",
+                boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+                width: "260px",
+                zIndex: 100,
+                display: "block",
+                cursor: "default",
+                fontWeight: "normal",
+                fontSize: "0.825rem",
+                lineHeight: "1.4",
+                color: "var(--text-main)",
+                whiteSpace: "normal"
+              }}
+            >
+              {/* Tooltip Arrow */}
+              <span style={{
+                position: "absolute",
+                top: "100%",
+                left: "50%",
+                transform: "translateX(-50%)",
+                width: 0,
+                height: 0,
+                borderLeft: "6px solid transparent",
+                borderRight: "6px solid transparent",
+                borderTop: "6px solid #ffffff",
+                display: "block"
+              }} />
+              <span style={{
+                position: "absolute",
+                top: "100%",
+                left: "50%",
+                transform: "translateX(-50%)",
+                width: 0,
+                height: 0,
+                borderLeft: "7px solid transparent",
+                borderRight: "7px solid transparent",
+                borderTop: "7px solid var(--border-light)",
+                zIndex: -1,
+                display: "block"
+              }} />
+
+              {/* Message */}
+              <div style={{ fontWeight: 700, color: underlineColor, marginBottom: "0.25rem", fontSize: "0.85rem" }}>
+                {categoryLabel} suggestion
+              </div>
+              <div style={{ marginBottom: "0.5rem", color: "var(--text-muted)", fontSize: "0.8rem" }}>
+                {err.message}
+              </div>
+
+              {/* Corrections Buttons */}
+              {err.replacements && err.replacements.length > 0 ? (
+                <div style={{ display: "flex", gap: "0.35rem", flexWrap: "wrap", marginTop: "0.5rem" }}>
+                  {err.replacements.slice(0, 3).map((rep, rIdx) => (
+                    <button
+                      key={rIdx}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        applyCorrection(offset, length, rep.value, idx);
+                      }}
+                      className="btn btn-secondary"
+                      style={{
+                        padding: "0.25rem 0.5rem",
+                        fontSize: "0.75rem",
+                        borderRadius: "6px",
+                        border: "1px solid #bfdbfe",
+                        background: "#eff6ff",
+                        color: "#1d4ed8",
+                        cursor: "pointer",
+                        fontWeight: 700,
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "0.25rem"
+                      }}
+                    >
+                      {rep.value}
+                    </button>
+                  ))}
+                </div>
+              ) : (
+                <div style={{ fontSize: "0.75rem", color: "var(--text-muted)", fontStyle: "italic" }}>
+                  No corrections available
+                </div>
+              )}
+
+              {/* Ignore link */}
+              <div style={{ display: "flex", justifyContent: "flex-end", marginTop: "0.5rem" }}>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    ignoreError(idx);
+                  }}
+                  style={{
+                    border: "none",
+                    background: "transparent",
+                    color: "var(--text-muted)",
+                    fontSize: "0.7rem",
+                    cursor: "pointer",
+                    textDecoration: "underline"
+                  }}
+                >
+                  Ignore
+                </button>
+              </div>
+            </span>
+          )}
         </span>
       );
 
