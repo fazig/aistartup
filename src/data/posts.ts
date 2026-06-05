@@ -675,7 +675,7 @@ By working through these variables step-by-step, you can identify whether the fa
     readTime: "22 min read",
     category: "Development",
     author: "Faizan Arif",
-    image: "/vibe_coding_intro.png",
+    image: "/vibe_coding_intro.webp",
     content: `If you have spent any time in developer circles recently, you have likely run into the phrase **"vibe coding"**. Coined jokingly by AI researchers and developers on tech forums, the term has quickly evolved from a lighthearted meme into a legitimate description of a massive paradigm shift in software engineering. 
 
 But what exactly is vibe coding, and why is it transforming how software is conceptualized, designed, and deployed?
@@ -690,7 +690,7 @@ This guide provides a comprehensive, deep technical overview of **vibe coding to
 
 For decades, the primary barrier to entry for software engineering was syntax. To build an app, you had to learn the exact vocabulary, structures, and quirks of languages like C++, Java, Python, or JavaScript. If you forgot a curly brace or misconfigured a web framework, the system threw a cryptic compilation error and refused to run. Coding was a slow, granular process of translation: translating human desires into syntax that machines could execute.
 
-![Vibe Coding Introduction](/vibe_coding_intro.png)
+![Vibe Coding Introduction](/vibe_coding_intro.webp)
 
 With the rise of large language models (LLMs) and advanced agentic architectures, the syntax barrier is dissolving. Vibe coding represents a shift from **manual instruction typing** to **intent specification**. 
 
@@ -723,7 +723,7 @@ This iterative loop dramatically reduces the time between a feature idea and a w
 
 The vibe coding ecosystem has exploded, with tools catering to different experience levels, workflows, and deployment targets. Let's review the leading platforms in detail.
 
-![Vibe Coding Tools Comparison](/vibe_coding_tools_comparison.png)
+![Vibe Coding Tools Comparison](/vibe_coding_tools_comparison.webp)
 
 ### A. Cursor IDE: The Power-User Editor
 [Cursor](https://www.cursor.com/) is a native fork of VS Code, making it the most seamless transition tool for traditional developers. It inherits all VS Code extensions, themes, and keymaps, while replacing the core editor logic with deep AI integration.
@@ -788,7 +788,7 @@ Vibe coding is incredibly fast, but if you do not follow a structured approach, 
 
 Here is the professional workflow to ensure successful projects:
 
-![Vibe Coding Workflow](/vibe_coding_workflow.png)
+![Vibe Coding Workflow](/vibe_coding_workflow.webp)
 
 ### Step 1: Architectural Scaffolding
 Do not start by prompting "Build me a social media app." The context window is too small, and the AI will get overwhelmed. 
@@ -852,7 +852,7 @@ Use this comparison table to decide which tool fits your experience level and pr
 
 While vibe coding feels like magic, it has technical limitations. If you are not careful, you can create bloated, insecure, or unmaintainable codebases.
 
-![Vibe Coding Developer Setup](/vibe_coding_developer.png)
+![Vibe Coding Developer Setup](/vibe_coding_developer.webp)
 
 ### Pitfall A: The Context Bleed
 As your project grows, your codebase contains hundreds of files. If you pass all these files to the AI agent, the prompt context window fills up. The AI starts forgetting instructions, gets confused, and writes buggy code.
@@ -893,7 +893,7 @@ We are moving towards a future of **multi-agent orchestration**.
 
 Instead of a single AI assistant editing one file at a time, you will manage a team of specialized AI agents. One agent will write the frontend components, another will generate the backend API routes, a third will write automated unit tests, and a fourth will continuously scan the codebase for security leaks and SEO optimizations.
 
-![Vibe Coding Future Network](/vibe_coding_future.png)
+![Vibe Coding Future Network](/vibe_coding_future.webp)
 
 Software development is transitioning from a mechanical craft of typing code to a conceptual craft of directing intent. The developers of tomorrow will not be typing instructions on a keyboard; they will be orchestrating flows, checking diffs, and vibing.
 

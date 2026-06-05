@@ -202,6 +202,32 @@ function parseMarkdownToJSX(content: string) {
       if (line.trim() === "") continue;
     }
 
+    // Image check: e.g. ![Alt Text](/path/to/image.webp)
+    if (line.trim().startsWith("![")) {
+      const match = line.match(/^!\[(.*?)\]\((.*?)\)$/);
+      if (match) {
+        const alt = match[1];
+        const src = match[2];
+        jsxElements.push(
+          <div key={`img-${i}`} style={{ 
+            borderRadius: '12px', 
+            overflow: 'hidden', 
+            margin: '2.5rem auto', 
+            border: '1px solid var(--border-light)',
+            boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.05)',
+            maxWidth: '100%'
+          }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={src} alt={alt} style={{ width: '100%', height: 'auto', display: 'block', maxHeight: '420px', objectFit: 'cover' }} />
+            <div style={{ padding: '0.6rem 1rem', background: '#f8fafc', fontSize: '0.8rem', color: 'var(--text-muted)', borderTop: '1px solid var(--border-light)', textAlign: 'center', fontWeight: 500 }}>
+              {alt}
+            </div>
+          </div>
+        );
+        continue;
+      }
+    }
+
     // Headers
     if (line.startsWith("### ")) {
       jsxElements.push(<h3 key={`h3-${i}`} style={{ fontSize: '1.4rem', marginTop: '1.75rem', marginBottom: '0.75rem', fontWeight: 700, color: 'var(--text-main)' }} dangerouslySetInnerHTML={{ __html: parseInlineMarkdown(line.substring(4)) }} />);
