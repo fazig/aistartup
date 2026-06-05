@@ -71,7 +71,7 @@ The scraper counts the words on this page and sees **less than 50 words**. In Go
 ### How to Solve the Paradox
 The secret is to wrap every programmatic tool in a rich, educational article template. You must explain *why* the tool is used, *how* the underlying technology works, and provide real-world context or troubleshooting guides.
 
-For instance, when we built our [Free Word & Character Counter](file:///c:/Users/window%2010/Pictures/startupai/src/app/tools/word-counter/page.tsx), we didn't just stop at the calculator boxes. We added a structured \`<div className="prose">\` block at the bottom containing detailed sections:
+For instance, when we built our [Free Word & Character Counter](/tools/word-counter), we didn't just stop at the calculator boxes. We added a structured \`<div className="prose">\` block at the bottom containing detailed sections:
 * *Why use a word counter?*
 * *How are words and characters actually counted?*
 * *Is it safe to paste private documents here? (Highlighting client-side privacy)*
@@ -102,7 +102,7 @@ Google AdSense utilizes cookies (specifically the DoubleClick DART cookie) to se
 
 If you do not have a dedicated cookie clause, your site will be rejected instantly during Phase 1. 
 
-Here is the exact code snippet we implemented on our [Privacy Policy Page](file:///c:/Users/window%2010/Pictures/startupai/src/app/privacy/page.tsx) to satisfy this requirement:
+Here is the exact code snippet we implemented on our [Privacy Policy Page](/privacy) to satisfy this requirement:
 
 \`\`\`tsx
 // Privacy Policy Section 3: Cookie Disclosure
@@ -134,7 +134,7 @@ Before Google’s ads team will approve your site, **Googlebot must have success
 Here is the exact technical workflow to verify and force indexation:
 
 ### Step 1: Submit your dynamic sitemap
-You must register your domain in [Google Search Console](https://search.google.com/search-console). Once verified, submit your sitemap. For our Next.js project, we created a dynamic sitemap generator at [sitemap.ts](file:///c:/Users/window%2010/Pictures/startupai/src/app/sitemap.ts) that outputs a clean index.
+You must register your domain in [Google Search Console](https://search.google.com/search-console). Once verified, submit your sitemap. For our Next.js project, we created a dynamic sitemap generator at [sitemap.xml](/sitemap.xml) that outputs a clean index.
 
 Submit this path in your console:
 \`\`\`http
