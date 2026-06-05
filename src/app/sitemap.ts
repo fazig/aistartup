@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 import fs from "fs";
 import path from "path";
+import { BLOG_POSTS } from "@/data/posts";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // We can default this to a placeholder or detect the deployment URL,
@@ -37,6 +38,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/free-sumo-tools`,
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/blog`,
       lastModified: new Date(),
       changeFrequency: "daily",
       priority: 0.9,
@@ -79,6 +86,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     ...toolRoutes.map(route => ({
       url: `${baseUrl}/tools/${route}`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    })),
+    ...BLOG_POSTS.map(post => ({
+      url: `${baseUrl}/blog/${post.slug}`,
       lastModified: new Date(),
       changeFrequency: "weekly" as const,
       priority: 0.8,

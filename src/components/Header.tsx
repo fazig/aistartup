@@ -44,6 +44,9 @@ export default function Header() {
           <Link href="/tools" className="nav-link">
             All Tools
           </Link>
+          <Link href="/blog" className="nav-link">
+            Blog
+          </Link>
           <Link href="/tools/adsense-eligibility-checker" className="nav-link">
             AdSense Checker
           </Link>
@@ -61,6 +64,9 @@ export default function Header() {
           </Link>
           <Link href="/tools" className="mobile-nav-link" onClick={closeMenu}>
             All Tools
+          </Link>
+          <Link href="/blog" className="mobile-nav-link" onClick={closeMenu}>
+            Blog
           </Link>
           <Link href="/tools/adsense-eligibility-checker" className="mobile-nav-link" onClick={closeMenu}>
             AdSense Checker

@@ -63,6 +63,7 @@ export default function RootLayout({
               <div>
                 <h4 style={{ marginBottom: '1rem' }}>Developer Tools</h4>
                 <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.5rem', fontSize: '0.875rem' }}>
+                  <li><Link href="/blog" style={{ color: 'var(--text-muted)' }}>Blog Insights</Link></li>
                   <li><Link href="/tools/json-formatter" style={{ color: 'var(--text-muted)' }}>JSON Formatter</Link></li>
                   <li><Link href="/tools/json-formatter" style={{ color: 'var(--text-muted)' }}>JSON Validator</Link></li>
                 </ul>
