@@ -329,3 +329,39 @@ textarea.input-field {
   }
 }
 
+/* Custom Directory Styles */
+.category-item-link {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.925rem;
+  font-weight: 500;
+  color: var(--text-main);
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+}
+
+.category-item-link:hover {
+  background: var(--bg-main);
+  color: var(--primary);
+  text-decoration: none;
+  transform: translateX(4px);
+}
+
+.category-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  transition: transform 0.2s ease;
+}
+
+.category-item-link:hover .category-badge {
+  transform: scale(1.1);
+}
+

@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Code, FileJson, Sparkles, QrCode, Settings, Type, Zap, Search, ShieldCheck } from "lucide-react";
+import { 
+  Code, FileJson, Sparkles, QrCode, Settings, Type, Zap, Search, 
+  ShieldCheck, Calculator, ArrowLeftRight, Binary, FileText, 
+  Link as LinkIcon, Image as ImageIcon, Landmark, FileCode, CheckCircle
+} from "lucide-react";
 
 export const metadata: Metadata = {
   title: "StartupAI Tools | Free Developer, Content & Web Utilities",
@@ -101,6 +105,325 @@ export default function Home() {
               </p>
               <div style={{ fontWeight: 600, color: 'var(--primary)', fontSize: '0.875rem' }}>Use Tool &rarr;</div>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Directory / What the Site Has Section */}
+      <section className="section" style={{ 
+        background: 'linear-gradient(to bottom, var(--bg-main), #f1f5f9)', 
+        borderTop: '1px solid var(--border-light)',
+        borderBottom: '1px solid var(--border-light)',
+        padding: '5rem 0'
+      }}>
+        <div className="container">
+          <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+            <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem', letterSpacing: '-0.02em' }}>What Our Site Has</h2>
+            <p style={{ color: 'var(--text-muted)', maxWidth: '600px', margin: '0 auto', fontSize: '1.05rem', lineHeight: '1.5' }}>
+              Explore our comprehensive, professional utility ecosystem. Access over 100 free tools in one unified directory.
+            </p>
+          </div>
+
+          <div className="grid-3">
+            {/* Category 1: Text & Content Tools */}
+            <div className="card" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.25rem', borderBottom: '1px solid var(--border-light)', paddingBottom: '1rem' }}>
+                <div style={{ width: 42, height: 42, borderRadius: '10px', background: 'rgba(37, 99, 235, 0.08)', color: 'var(--primary)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <FileText size={20} />
+                </div>
+                <h3 style={{ fontSize: '1.25rem' }}>Text & Content</h3>
+              </div>
+              <p style={{ color: 'var(--text-muted)', fontSize: '0.875rem', marginBottom: '1.5rem', lineHeight: '1.5' }}>
+                Analyze, rewrite, and optimize copy for readability and search visibility.
+              </p>
+              <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 2rem 0', display: 'flex', flexDirection: 'column', gap: '0.5rem', flexGrow: 1 }}>
+                <li>
+                  <Link href="/tools/grammarly-free" className="category-item-link">
+                    <span className="category-badge" style={{ background: 'rgba(37, 99, 235, 0.06)', color: 'var(--primary)' }}>
+                      <Sparkles size={12} />
+                    </span>
+                    <span>Grammarly Free</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/tools/article-rewriter" className="category-item-link">
+                    <span className="category-badge" style={{ background: 'rgba(37, 99, 235, 0.06)', color: 'var(--primary)' }}>
+                      <FileText size={12} />
+                    </span>
+                    <span>Article Rewriter</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/tools/word-counter" className="category-item-link">
+                    <span className="category-badge" style={{ background: 'rgba(37, 99, 235, 0.06)', color: 'var(--primary)' }}>
+                      <Type size={12} />
+                    </span>
+                    <span>Word Counter</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/tools/plagiarism-checker" className="category-item-link">
+                    <span className="category-badge" style={{ background: 'rgba(37, 99, 235, 0.06)', color: 'var(--primary)' }}>
+                      <CheckCircle size={12} />
+                    </span>
+                    <span>Plagiarism Checker</span>
+                  </Link>
+                </li>
+              </ul>
+              <Link href="/tools" style={{ fontWeight: 600, color: 'var(--primary)', fontSize: '0.875rem', display: 'inline-flex', alignItems: 'center', gap: '0.25rem' }}>
+                Explore category &rarr;
+              </Link>
+            </div>
+
+            {/* Category 2: SEO & Webmasters */}
+            <div className="card" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.25rem', borderBottom: '1px solid var(--border-light)', paddingBottom: '1rem' }}>
+                <div style={{ width: 42, height: 42, borderRadius: '10px', background: 'rgba(22, 163, 74, 0.08)', color: '#16a34a', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <Search size={20} />
+                </div>
+                <h3 style={{ fontSize: '1.25rem' }}>SEO & Webmasters</h3>
+              </div>
+              <p style={{ color: 'var(--text-muted)', fontSize: '0.875rem', marginBottom: '1.5rem', lineHeight: '1.5' }}>
+                Boost rankings with automated schema, tag generators, and index verification.
+              </p>
+              <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 2rem 0', display: 'flex', flexDirection: 'column', gap: '0.5rem', flexGrow: 1 }}>
+                <li>
+                  <Link href="/tools/adsense-eligibility-checker" className="category-item-link">
+                    <span className="category-badge" style={{ background: 'rgba(22, 163, 74, 0.06)', color: '#16a34a' }}>
+                      <ShieldCheck size={12} />
+                    </span>
+                    <span>AdSense Checker</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/tools/schema-generator" className="category-item-link">
+                    <span className="category-badge" style={{ background: 'rgba(22, 163, 74, 0.06)', color: '#16a34a' }}>
+                      <FileCode size={12} />
+                    </span>
+                    <span>Schema Generator</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/tools/robots-txt-generator" className="category-item-link">
+                    <span className="category-badge" style={{ background: 'rgba(22, 163, 74, 0.06)', color: '#16a34a' }}>
+                      <Search size={12} />
+                    </span>
+                    <span>Robots.txt Generator</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/tools/xml-sitemap-generator" className="category-item-link">
+                    <span className="category-badge" style={{ background: 'rgba(22, 163, 74, 0.06)', color: '#16a34a' }}>
+                      <LinkIcon size={12} />
+                    </span>
+                    <span>Sitemap Generator</span>
+                  </Link>
+                </li>
+              </ul>
+              <Link href="/tools" style={{ fontWeight: 600, color: '#16a34a', fontSize: '0.875rem', display: 'inline-flex', alignItems: 'center', gap: '0.25rem' }}>
+                Explore category &rarr;
+              </Link>
+            </div>
+
+            {/* Category 3: Developer Utilities */}
+            <div className="card" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.25rem', borderBottom: '1px solid var(--border-light)', paddingBottom: '1rem' }}>
+                <div style={{ width: 42, height: 42, borderRadius: '10px', background: 'rgba(147, 51, 234, 0.08)', color: '#9333ea', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <Code size={20} />
+                </div>
+                <h3 style={{ fontSize: '1.25rem' }}>Developer Utilities</h3>
+              </div>
+              <p style={{ color: 'var(--text-muted)', fontSize: '0.875rem', marginBottom: '1.5rem', lineHeight: '1.5' }}>
+                Beautify code, manage text, generate unique hashes, and encode data in-browser.
+              </p>
+              <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 2rem 0', display: 'flex', flexDirection: 'column', gap: '0.5rem', flexGrow: 1 }}>
+                <li>
+                  <Link href="/tools/json-formatter" className="category-item-link">
+                    <span className="category-badge" style={{ background: 'rgba(147, 51, 234, 0.06)', color: '#9333ea' }}>
+                      <FileJson size={12} />
+                    </span>
+                    <span>JSON Formatter</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/tools/url-shortener" className="category-item-link">
+                    <span className="category-badge" style={{ background: 'rgba(147, 51, 234, 0.06)', color: '#9333ea' }}>
+                      <LinkIcon size={12} />
+                    </span>
+                    <span>URL Shortener</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/tools/password-generator" className="category-item-link">
+                    <span className="category-badge" style={{ background: 'rgba(147, 51, 234, 0.06)', color: '#9333ea' }}>
+                      <Settings size={12} />
+                    </span>
+                    <span>Password Generator</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/tools/uuid-generator" className="category-item-link">
+                    <span className="category-badge" style={{ background: 'rgba(147, 51, 234, 0.06)', color: '#9333ea' }}>
+                      <Zap size={12} />
+                    </span>
+                    <span>UUID Generator</span>
+                  </Link>
+                </li>
+              </ul>
+              <Link href="/tools" style={{ fontWeight: 600, color: '#9333ea', fontSize: '0.875rem', display: 'inline-flex', alignItems: 'center', gap: '0.25rem' }}>
+                Explore category &rarr;
+              </Link>
+            </div>
+
+            {/* Category 4: Calculators & Finance */}
+            <div className="card" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.25rem', borderBottom: '1px solid var(--border-light)', paddingBottom: '1rem' }}>
+                <div style={{ width: 42, height: 42, borderRadius: '10px', background: 'rgba(234, 88, 12, 0.08)', color: '#ea580c', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <Calculator size={20} />
+                </div>
+                <h3 style={{ fontSize: '1.25rem' }}>Calculators & Finance</h3>
+              </div>
+              <p style={{ color: 'var(--text-muted)', fontSize: '0.875rem', marginBottom: '1.5rem', lineHeight: '1.5' }}>
+                Estimate loans, analyze fee margins, and check dynamic percentages in seconds.
+              </p>
+              <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 2rem 0', display: 'flex', flexDirection: 'column', gap: '0.5rem', flexGrow: 1 }}>
+                <li>
+                  <Link href="/tools/loan-calculator" className="category-item-link">
+                    <span className="category-badge" style={{ background: 'rgba(234, 88, 12, 0.06)', color: '#ea580c' }}>
+                      <Landmark size={12} />
+                    </span>
+                    <span>Loan Calculator</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/tools/paypal-fee-calculator" className="category-item-link">
+                    <span className="category-badge" style={{ background: 'rgba(234, 88, 12, 0.06)', color: '#ea580c' }}>
+                      <Calculator size={12} />
+                    </span>
+                    <span>PayPal Fee Calculator</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/tools/age-calculator" className="category-item-link">
+                    <span className="category-badge" style={{ background: 'rgba(234, 88, 12, 0.06)', color: '#ea580c' }}>
+                      <Calculator size={12} />
+                    </span>
+                    <span>Age Calculator</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/tools/gst-calculator" className="category-item-link">
+                    <span className="category-badge" style={{ background: 'rgba(234, 88, 12, 0.06)', color: '#ea580c' }}>
+                      <Calculator size={12} />
+                    </span>
+                    <span>GST Calculator</span>
+                  </Link>
+                </li>
+              </ul>
+              <Link href="/tools" style={{ fontWeight: 600, color: '#ea580c', fontSize: '0.875rem', display: 'inline-flex', alignItems: 'center', gap: '0.25rem' }}>
+                Explore category &rarr;
+              </Link>
+            </div>
+
+            {/* Category 5: Generators & Media */}
+            <div className="card" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.25rem', borderBottom: '1px solid var(--border-light)', paddingBottom: '1rem' }}>
+                <div style={{ width: 42, height: 42, borderRadius: '10px', background: 'rgba(219, 39, 119, 0.08)', color: '#db2777', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <ImageIcon size={20} />
+                </div>
+                <h3 style={{ fontSize: '1.25rem' }}>Generators & Media</h3>
+              </div>
+              <p style={{ color: 'var(--text-muted)', fontSize: '0.875rem', marginBottom: '1.5rem', lineHeight: '1.5' }}>
+                Create high-resolution QR codes, convert image formats, and download assets.
+              </p>
+              <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 2rem 0', display: 'flex', flexDirection: 'column', gap: '0.5rem', flexGrow: 1 }}>
+                <li>
+                  <Link href="/tools/qr-generator" className="category-item-link">
+                    <span className="category-badge" style={{ background: 'rgba(219, 39, 119, 0.06)', color: '#db2777' }}>
+                      <QrCode size={12} />
+                    </span>
+                    <span>QR Code Generator</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/tools/image-converter" className="category-item-link">
+                    <span className="category-badge" style={{ background: 'rgba(219, 39, 119, 0.06)', color: '#db2777' }}>
+                      <ImageIcon size={12} />
+                    </span>
+                    <span>Image Converter</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/tools/image-resizer" className="category-item-link">
+                    <span className="category-badge" style={{ background: 'rgba(219, 39, 119, 0.06)', color: '#db2777' }}>
+                      <ImageIcon size={12} />
+                    </span>
+                    <span>Image Resizer</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/tools/youtube-thumbnail" className="category-item-link">
+                    <span className="category-badge" style={{ background: 'rgba(219, 39, 119, 0.06)', color: '#db2777' }}>
+                      <ImageIcon size={12} />
+                    </span>
+                    <span>Thumbnail Downloader</span>
+                  </Link>
+                </li>
+              </ul>
+              <Link href="/tools" style={{ fontWeight: 600, color: '#db2777', fontSize: '0.875rem', display: 'inline-flex', alignItems: 'center', gap: '0.25rem' }}>
+                Explore category &rarr;
+              </Link>
+            </div>
+
+            {/* Category 6: Binary & Numbers */}
+            <div className="card" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.25rem', borderBottom: '1px solid var(--border-light)', paddingBottom: '1rem' }}>
+                <div style={{ width: 42, height: 42, borderRadius: '10px', background: 'rgba(87, 83, 78, 0.08)', color: '#57534e', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <Binary size={20} />
+                </div>
+                <h3 style={{ fontSize: '1.25rem' }}>Binary & Numbers</h3>
+              </div>
+              <p style={{ color: 'var(--text-muted)', fontSize: '0.875rem', marginBottom: '1.5rem', lineHeight: '1.5' }}>
+                Encode texts to binary, decode ASCII values, and translate number bases.
+              </p>
+              <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 2rem 0', display: 'flex', flexDirection: 'column', gap: '0.5rem', flexGrow: 1 }}>
+                <li>
+                  <Link href="/tools/text-to-binary" className="category-item-link">
+                    <span className="category-badge" style={{ background: 'rgba(87, 83, 78, 0.06)', color: '#57534e' }}>
+                      <Binary size={12} />
+                    </span>
+                    <span>Text to Binary</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/tools/binary-to-text" className="category-item-link">
+                    <span className="category-badge" style={{ background: 'rgba(87, 83, 78, 0.06)', color: '#57534e' }}>
+                      <Binary size={12} />
+                    </span>
+                    <span>Binary to Text</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/tools/hex-to-rgb" className="category-item-link">
+                    <span className="category-badge" style={{ background: 'rgba(87, 83, 78, 0.06)', color: '#57534e' }}>
+                      <Code size={12} />
+                    </span>
+                    <span>HEX to RGB Converter</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/tools/text-to-ascii" className="category-item-link">
+                    <span className="category-badge" style={{ background: 'rgba(87, 83, 78, 0.06)', color: '#57534e' }}>
+                      <Code size={12} />
+                    </span>
+                    <span>Text to ASCII Converter</span>
+                  </Link>
+                </li>
+              </ul>
+              <Link href="/tools" style={{ fontWeight: 600, color: '#57534e', fontSize: '0.875rem', display: 'inline-flex', alignItems: 'center', gap: '0.25rem' }}>
+                Explore category &rarr;
+              </Link>
+            </div>
           </div>
         </div>
       </section>
