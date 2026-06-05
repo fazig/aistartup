@@ -1,8 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { 
   FileText, Search, Link as LinkIcon, Settings, Code, Image as ImageIcon,
   Calculator, Sparkles, ArrowLeftRight, Binary
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Web Utilities Directory - All Free Tools | StartupAI Tools",
+  description: "Browse our complete list of free developer utilities, SEO calculators, unit converters, and text editing tools. All processed safely in-browser.",
+};
 
 export default function ToolsDirectory() {
   const categories = [

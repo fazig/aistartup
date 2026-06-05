@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Code, FileJson, Sparkles, QrCode, Settings, Type, Zap, Search, ShieldCheck } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "StartupAI Tools | Free Developer, Content & Web Utilities",
+  description: "Access a comprehensive collection of 100% free, lightning-fast web tools including JSON formatters, QR code generators, and text utilities. No registration required.",
+};
 
 export default function Home() {
   return (

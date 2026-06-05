@@ -1,47 +1,88 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Cookie Policy - Cookie Usage Details | StartupAI Tools",
+  description: "Read the StartupAI Tools Cookie Policy. Learn about cookie categories, advertising cookies, and how to manage your privacy settings.",
+};
+
 export default function CookiePolicyPage() {
   return (
-    <div className="container section" style={{ maxWidth: '800px' }}>
-      <h1 style={{ fontSize: '3rem', marginBottom: '2rem' }}>Cookie <span className="text-gradient">Policy</span></h1>
-      <div className="glass-panel" style={{ padding: '3rem' }}>
-        <p className="text-muted" style={{ marginBottom: '2rem' }}>Last Updated: {new Date().toLocaleDateString()}</p>
-        
-        <h3 style={{ marginTop: '2rem', marginBottom: '1rem' }}>1. What Are Cookies</h3>
-        <p style={{ marginBottom: '1rem', lineHeight: '1.6' }}>
-          Cookies are small text files stored on your computer or mobile device when you visit a website. They are widely used to make websites work, or work more efficiently, as well as to provide information to the owners of the site.
+    <div className="container section" style={{ maxWidth: '800px', padding: '4rem 1.5rem' }}>
+      <h1 style={{ fontSize: 'clamp(2.5rem, 5vw, 3.5rem)', marginBottom: '2rem', fontWeight: 900, letterSpacing: '-0.03em' }}>
+        Cookie <span className="text-gradient">Policy</span>
+      </h1>
+      
+      <div className="glass-panel" style={{ padding: '3rem', borderRadius: '16px', border: '1px solid var(--border-light)', background: 'var(--bg-card)', lineHeight: '1.75', color: 'var(--text-muted)' }}>
+        <p className="text-muted" style={{ marginBottom: '2rem', fontSize: '0.9rem', fontWeight: 600 }}>
+          Last Updated: June 5, 2026
         </p>
         
-        <h3 style={{ marginTop: '2rem', marginBottom: '1rem' }}>2. How We Use Cookies</h3>
-        <p style={{ marginBottom: '1rem', lineHeight: '1.6' }}>
-          We use cookies for the following purposes:
+        <p style={{ marginBottom: '1.5rem', fontSize: '1.05rem' }}>
+          This Cookie Policy explains what cookies are, how StartupAI Tools ("we", "our") uses cookies and similar tracking technologies on our website, and your rights to manage them. By using our website, you consent to the storage and use of cookies as detailed in this policy.
         </p>
-        <ul style={{ paddingLeft: '1.5rem', marginBottom: '1.5rem', display: 'flex', flexDirection: 'column', gap: '0.5rem', lineHeight: '1.6' }}>
+
+        <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: 'var(--text-main)', marginTop: '2rem', marginBottom: '0.85rem' }}>
+          1. What Are Cookies?
+        </h2>
+        <p style={{ marginBottom: '1.5rem' }}>
+          Cookies are small text files containing numbers and letters that are sent to and stored on your computer, smartphone, or tablet when you load a website. They act as a memory log, allowing the site to remember your actions, device configuration, or preferences (like language selection or theme toggles) over a period of time. 
+        </p>
+        <p style={{ marginBottom: '1.5rem' }}>
+          Cookies do not execute software packages, carry viruses, or extract private files from your hard drive.
+        </p>
+
+        <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: 'var(--text-main)', marginTop: '2rem', marginBottom: '0.85rem' }}>
+          2. Categories of Cookies We Use
+        </h2>
+        <p style={{ marginBottom: '1.5rem' }}>
+          We categorize our cookies based on their specific utility. Below is the list of cookie types deployed on our platform:
+        </p>
+        <ul style={{ paddingLeft: '1.5rem', marginBottom: '1.5rem', display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
           <li>
-            <strong>Analytics & Performance:</strong> We use Google Analytics to analyze how visitors use our site. This helps us understand which tools are popular and how we can improve user experience. This data is aggregated and anonymized.
+            <strong>Essential & Functional Cookies:</strong> These cookies are critical to render our layout and allow core features to work. For example, they may store your current theme selection (dark vs. light mode) or temporary parameters for calculators. Without these, certain sections may fail to load correctly.
           </li>
           <li>
-            <strong>Advertising (Future Readiness):</strong> Third-party vendors, including Google, use cookies to serve ads based on your prior visits to this or other websites. Google's use of advertising cookies enables it and its partners to serve relevant ads.
+            <strong>Performance & Analytics Cookies:</strong> We utilize Google Analytics cookies to track aggregated visitor patterns. This cookie structures help us understand which utilities are popular, calculate average session duration, and monitor error codes. All metrics are aggregated and anonymous.
           </li>
           <li>
-            <strong>Functionality:</strong> Some cookies may save your tool preferences or settings so you don't have to re-enter them on your next visit.
+            <strong>Advertising Cookies:</strong> Third-party ad vendors, including Google AdSense, place cookies to display advertisements that align with your interests. Google's use of advertising cookies enables it and its partners to serve ads based on your visits to our site and other pages on the internet.
           </li>
         </ul>
-        
-        <h3 style={{ marginTop: '2rem', marginBottom: '1rem' }}>3. Types of Cookies We Use</h3>
-        <p style={{ marginBottom: '1rem', lineHeight: '1.6' }}>
-          We use both session cookies (which expire when you close your web browser) and persistent cookies (which stay on your device until they expire or you delete them).
+
+        <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: 'var(--text-main)', marginTop: '2rem', marginBottom: '0.85rem' }}>
+          3. How to Manage and Disable Cookies
+        </h2>
+        <p style={{ marginBottom: '1.5rem' }}>
+          You have the right to accept or decline cookies. Most web browsers automatically accept cookies by default, but you can change your browser settings to refuse cookies or notify you whenever a cookie is set.
         </p>
-        
-        <h3 style={{ marginTop: '2rem', marginBottom: '1rem' }}>4. How to Manage and Control Cookies</h3>
-        <p style={{ marginBottom: '1rem', lineHeight: '1.6' }}>
-          You can control and manage cookies in various ways. Most browsers allow you to refuse or accept cookies, or to delete cookies that have already been set. Please note that removing or blocking cookies may impact your user experience, and some parts of our website may no longer be fully accessible.
+        <p style={{ marginBottom: '1.5rem' }}>
+          To block cookies in your specific browser, visit the settings panel:
         </p>
-        <p style={{ marginBottom: '1.5rem', lineHeight: '1.6' }}>
-          To opt out of Google Analytics tracking across all websites, you can visit: <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)' }}>Google Analytics Opt-out Browser Add-on</a>.
+        <ul style={{ paddingLeft: '1.5rem', marginBottom: '1.5rem', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+          <li>**Google Chrome:** Settings &gt; Privacy and Security &gt; Third-party Cookies</li>
+          <li>**Apple Safari:** Settings &gt; Safari &gt; Advanced &gt; Privacy & Security</li>
+          <li>**Mozilla Firefox:** Settings &gt; Privacy & Security &gt; Enhanced Tracking Protection</li>
+          <li>**Microsoft Edge:** Settings &gt; Cookies and site permissions</li>
+        </ul>
+        <p style={{ marginBottom: '1.5rem' }}>
+          Please note that disabling cookies may affect the usability of certain tools (such as retaining inputs or saving configuration layouts).
         </p>
-        
-        <h3 style={{ marginTop: '2rem', marginBottom: '1rem' }}>5. Updates to This Policy</h3>
-        <p style={{ lineHeight: '1.6' }}>
-          We may update this Cookie Policy from time to time in order to reflect changes to the cookies we use or for other operational, legal, or regulatory reasons. Please revisit this page regularly to stay informed about our use of cookies.
+
+        <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: 'var(--text-main)', marginTop: '2rem', marginBottom: '0.85rem' }}>
+          4. Updates to This Cookie Policy
+        </h2>
+        <p style={{ marginBottom: '1.5rem' }}>
+          We may update this Cookie Policy from time to time to reflect modifications in our cookie deployments, changes in partner API integrations, or regulatory updates. We encourage you to review this policy regularly to stay informed about our data handling arrays.
+        </p>
+
+        <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: 'var(--text-main)', marginTop: '2rem', marginBottom: '0.85rem' }}>
+          5. Contact Information
+        </h2>
+        <p>
+          If you have further questions or seek clarification on our Cookie Policy, please contact our privacy compliance team:
+        </p>
+        <p style={{ marginTop: '0.5rem', fontSize: '1.05rem', fontWeight: 700, color: 'var(--text-main)' }}>
+          cookies@startupai.tech
         </p>
       </div>
     </div>
