@@ -19,7 +19,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "18 min read",
     category: "Web Publishing",
     author: "Faizan Arif",
-    image: "/adsense_audit_cover.png",
+    image: "/adsense_audit_cover.webp",
     content: `If you have ever built a website, poured hours into coding or writing, and then submitted it to Google AdSense only to receive that frustratingly vague email stating **"Valuable Inventory: Low Value Content"** or **"Site Behavior: Navigation"**, you are not alone. 
 
 It is one of the most frustrating experiences in web development. Google’s rejection emails are notoriously cryptic. They tell you *what* policy you violated, but they almost never tell you *why* your specific site failed or *how* to fix it. You are left guessing whether you need more articles, faster hosting, or a new layout.
@@ -230,7 +230,7 @@ By establishing high-quality content depth, configuring clean technical layouts,
     readTime: "22 min read",
     category: "Design & SEO",
     author: "Faizan Arif",
-    image: "/small_qr_code_guide.png",
+    image: "/small_qr_code_guide.webp",
     content: `If you have ever designed a sleek business card, minimalist product packaging, or a compact event flyer, you have likely run into the ultimate design dilemma: **the QR code eyesore**.
 
 On one hand, you want your users to scan a code and instantly land on your website, download your app, or check your social profiles. On the other hand, you don't want a massive, blocky black-and-white square to ruin your premium, clean aesthetic. Naturally, you begin to search for a **qr code generator small size** solution.
