@@ -270,7 +270,7 @@ textarea.input-field {
 }
 
 .header-mobile-drawer.is-open {
-  max-height: 300px;
+  max-height: 400px;
 }
 
 .header-mobile-menu {
@@ -292,6 +292,10 @@ textarea.input-field {
 .mobile-nav-link:hover {
   color: var(--primary);
   text-decoration: none;
+}
+
+.dropdown-item:hover {
+  background-color: var(--bg-main) !important;
 }
 
 /* Extra Responsive Viewport Tweaks */
