@@ -116,6 +116,11 @@ export default function RootLayout({
                 </h4>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem', fontSize: '0.875rem' }}>
                   <li>
+                    <Link href="/blog/vibe-coding-tools" style={{ color: '#94a3b8', textDecoration: 'none', transition: 'color 0.2s', display: 'block', lineHeight: '1.4', fontWeight: 600 }}>
+                      The Ultimate Guide to Vibe Coding Tools
+                    </Link>
+                  </li>
+                  <li>
                     <Link href="/blog/why-google-adsense-rejects-websites" style={{ color: '#94a3b8', textDecoration: 'none', transition: 'color 0.2s', display: 'block', lineHeight: '1.4' }}>
                       Why AdSense Rejects Good Sites & How to Fix
                     </Link>
