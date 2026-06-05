@@ -1,7 +1,8 @@
 "use client";
+import Link from "next/link";
 
 import { useState, useMemo } from "react";
-import { Shuffle, Copy, Check, Trash2, RefreshCw } from "lucide-react";
+import { Shuffle, Copy, Check, Trash2, RefreshCw, ArrowLeft } from "lucide-react";
 
 const NOUNS = [
   "time","year","people","way","day","man","woman","child","world","life",
@@ -96,6 +97,21 @@ export default function RandomWordGenerator() {
 
   return (
     <div className="container" style={{ padding: '3rem 1.5rem' }}>
+      <Link
+        href="/tools"
+        className="btn btn-outline"
+        style={{
+          display: "inline-flex",
+          alignItems: "center",
+          gap: "0.5rem",
+          marginBottom: "1.5rem",
+          fontSize: "0.85rem",
+          padding: "0.5rem 1rem",
+        }}
+      >
+        <ArrowLeft size={16} /> Back to Tools
+      </Link>
+
       <div style={{ marginBottom: '2rem' }}>
         <h1 style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.5rem' }}>
           <Shuffle color="var(--primary)" /> Random Word Generator

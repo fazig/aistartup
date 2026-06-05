@@ -1,7 +1,8 @@
 "use client";
+import Link from "next/link";
 
 import { useState } from "react";
-import { Server, Activity, CheckCircle, AlertTriangle } from "lucide-react";
+import { Server, Activity, CheckCircle, AlertTriangle, ArrowLeft } from "lucide-react";
 import { checkServerStatus } from "./actions";
 
 export default function ServerStatusChecker() {
@@ -26,6 +27,21 @@ export default function ServerStatusChecker() {
 
   return (
     <div className="container" style={{ padding: '3rem 1.5rem' }}>
+      <Link
+        href="/tools"
+        className="btn btn-outline"
+        style={{
+          display: "inline-flex",
+          alignItems: "center",
+          gap: "0.5rem",
+          marginBottom: "1.5rem",
+          fontSize: "0.85rem",
+          padding: "0.5rem 1rem",
+        }}
+      >
+        <ArrowLeft size={16} /> Back to Tools
+      </Link>
+
       <div style={{ marginBottom: '2rem' }}>
         <h1 style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.5rem' }}>
           <Server color="var(--primary)" /> Server Status Checker

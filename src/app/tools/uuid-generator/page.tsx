@@ -1,7 +1,8 @@
 "use client";
+import Link from "next/link";
 
 import { useState, useCallback } from "react";
-import { Fingerprint, Copy, Check, Download, RefreshCw } from "lucide-react";
+import { Fingerprint, Copy, Check, Download, RefreshCw, ArrowLeft } from "lucide-react";
 
 function generateUUIDv4(): string {
   if (typeof crypto !== "undefined" && crypto.randomUUID) {
@@ -73,6 +74,21 @@ export default function UUIDGenerator() {
 
   return (
     <div className="container" style={{ padding: "3rem 1.5rem" }}>
+      <Link
+        href="/tools"
+        className="btn btn-outline"
+        style={{
+          display: "inline-flex",
+          alignItems: "center",
+          gap: "0.5rem",
+          marginBottom: "1.5rem",
+          fontSize: "0.85rem",
+          padding: "0.5rem 1rem",
+        }}
+      >
+        <ArrowLeft size={16} /> Back to Tools
+      </Link>
+
       <div style={{ marginBottom: "2rem" }}>
         <h1 style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "0.5rem" }}>
           <Fingerprint color="var(--primary)" /> UUID Generator

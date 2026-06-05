@@ -197,9 +197,20 @@ export default function QRDecoder() {
     <div className="container" style={{ padding: "3rem 1.5rem" }}>
       {/* Back Button */}
       <div style={{ marginBottom: "1.5rem" }}>
-        <Link href="/free-sumo-tools" className="btn btn-outline" style={{ padding: "0.5rem 1rem", fontSize: "0.875rem", gap: "0.35rem", display: "inline-flex", alignItems: "center" }}>
-          <ArrowLeft size={16} /> Back to Free Sumo Tools
-        </Link>
+              <Link
+        href="/tools"
+        className="btn btn-outline"
+        style={{
+          display: "inline-flex",
+          alignItems: "center",
+          gap: "0.5rem",
+          marginBottom: "1.5rem",
+          fontSize: "0.85rem",
+          padding: "0.5rem 1rem",
+        }}
+      >
+        <ArrowLeft size={16} /> Back to Tools
+      </Link>
       </div>
 
       {/* Hero Header */}

@@ -184,8 +184,8 @@ ${macroText}
   return (
     <div className="container" style={{ padding: "3rem 1.5rem", maxWidth: "1200px" }}>
       {/* Back Button */}
-      <Link
-        href="/free-sumo-tools"
+            <Link
+        href="/tools"
         className="btn btn-outline"
         style={{
           display: "inline-flex",
@@ -194,13 +194,9 @@ ${macroText}
           marginBottom: "1.5rem",
           fontSize: "0.85rem",
           padding: "0.5rem 1rem",
-          border: "1px solid var(--border-light)",
-          borderRadius: "8px",
-          color: "var(--text-main)",
-          textDecoration: "none",
         }}
       >
-        <ArrowLeft size={16} /> Back to Free Sumo Tools
+        <ArrowLeft size={16} /> Back to Tools
       </Link>
 
       {/* Header */}

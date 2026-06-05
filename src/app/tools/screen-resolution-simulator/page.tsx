@@ -1,7 +1,8 @@
 "use client";
+import Link from "next/link";
 
 import { useState } from "react";
-import { Monitor, Smartphone, Tablet, MonitorPlay, ExternalLink } from "lucide-react";
+import { Monitor, Smartphone, Tablet, MonitorPlay, ExternalLink, ArrowLeft } from "lucide-react";
 
 export default function ScreenResolutionSimulator() {
   const [url, setUrl] = useState("");
@@ -29,6 +30,21 @@ export default function ScreenResolutionSimulator() {
 
   return (
     <div className="container" style={{ padding: '3rem 1.5rem', maxWidth: '1400px' }}>
+      <Link
+        href="/tools"
+        className="btn btn-outline"
+        style={{
+          display: "inline-flex",
+          alignItems: "center",
+          gap: "0.5rem",
+          marginBottom: "1.5rem",
+          fontSize: "0.85rem",
+          padding: "0.5rem 1rem",
+        }}
+      >
+        <ArrowLeft size={16} /> Back to Tools
+      </Link>
+
       <div style={{ marginBottom: '2rem' }}>
         <h1 style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.5rem' }}>
           <Monitor color="var(--primary)" /> Webpage Screen Resolution Simulator

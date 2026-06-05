@@ -1,4 +1,6 @@
 "use client";
+import { ArrowLeft } from "lucide-react";
+import Link from "next/link";
 
 import { useState, useEffect } from "react";
 import { 
@@ -129,6 +131,21 @@ export default function UrlShortener() {
 
   return (
     <div className="container" style={{ padding: "4rem 1.5rem" }}>
+      <Link
+        href="/tools"
+        className="btn btn-outline"
+        style={{
+          display: "inline-flex",
+          alignItems: "center",
+          gap: "0.5rem",
+          marginBottom: "1.5rem",
+          fontSize: "0.85rem",
+          padding: "0.5rem 1rem",
+        }}
+      >
+        <ArrowLeft size={16} /> Back to Tools
+      </Link>
+
       {/* Hero Header */}
       <div style={{ textAlign: "center", marginBottom: "3rem" }}>
         <div style={{ 

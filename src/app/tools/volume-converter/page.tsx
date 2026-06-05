@@ -74,8 +74,8 @@ export default function VolumeConverter() {
   return (
     <div className="container" style={{ padding: "3rem 1.5rem" }}>
       {/* Back Button */}
-      <Link
-        href="/free-sumo-tools"
+            <Link
+        href="/tools"
         className="btn btn-outline"
         style={{
           display: "inline-flex",
@@ -86,7 +86,7 @@ export default function VolumeConverter() {
           padding: "0.5rem 1rem",
         }}
       >
-        <ArrowLeft size={16} /> Back to Free Sumo Tools
+        <ArrowLeft size={16} /> Back to Tools
       </Link>
 
       <div style={{ marginBottom: "2rem" }}>
