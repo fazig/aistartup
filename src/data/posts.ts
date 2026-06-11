@@ -10,7 +10,18 @@ export interface BlogPost {
   content: string;
 }
 
+import { postAiToolsApp } from "./articles/ai-tools-app";
+import { postAiToolsPresentation } from "./articles/ai-tools-to-make-presentation";
+import { postAiToolsWebsite } from "./articles/ai-tools-website";
+import { postAiToolsGraphicDesign } from "./articles/ai-tools-for-graphic-design";
+import { postAiToolsVideoGenerator } from "./articles/ai-tools-video-generator";
+
 export const BLOG_POSTS: BlogPost[] = [
+  postAiToolsApp,
+  postAiToolsPresentation,
+  postAiToolsWebsite,
+  postAiToolsGraphicDesign,
+  postAiToolsVideoGenerator,
   {
     slug: "why-google-adsense-rejects-websites",
     title: "Why Google AdSense Rejects Good Websites: The Complete 2026 Audit and Approval Blueprint",
