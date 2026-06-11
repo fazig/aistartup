@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { BLOG_POSTS } from "@/data/posts";
 import { Calendar, User, Clock, ArrowRight, BookOpen } from "lucide-react";
 
@@ -58,10 +59,11 @@ export default function BlogIndex() {
             }}
           >
             {/* Post Cover Image */}
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img 
+            <Image 
               src={post.image} 
               alt={post.title} 
+              width={400}
+              height={200}
               style={{ 
                 width: "100%", 
                 height: "200px", 

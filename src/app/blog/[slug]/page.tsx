@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { BLOG_POSTS } from "@/data/posts";
 import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
@@ -110,11 +111,13 @@ export default async function BlogPostPage({
         border: "1px solid var(--border-light)",
         boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.03)"
       }}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img 
+        <Image 
           src={post.image} 
           alt={post.title} 
+          width={800}
+          height={450}
           style={{ width: "100%", height: "auto", display: "block", maxHeight: "450px", objectFit: "cover" }} 
+          priority
         />
       </div>
 
@@ -232,8 +235,7 @@ function parseMarkdownToJSX(content: string) {
             boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.05)',
             maxWidth: '100%'
           }}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={src} alt={alt} style={{ width: '100%', height: 'auto', display: 'block', maxHeight: '420px', objectFit: 'cover' }} />
+            <Image src={src} alt={alt} width={800} height={450} style={{ width: '100%', height: 'auto', display: 'block', maxHeight: '420px', objectFit: 'cover' }} />
             <div style={{ padding: '0.6rem 1rem', background: '#f8fafc', fontSize: '0.8rem', color: 'var(--text-muted)', borderTop: '1px solid var(--border-light)', textAlign: 'center', fontWeight: 500 }}>
               {alt}
             </div>

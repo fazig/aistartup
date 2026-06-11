@@ -271,68 +271,70 @@ export default function HoursCalculator() {
       {mode === "timesheet" && timesheetResults && (
         <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem", marginBottom: "3rem" }}>
           {/* Main Grid table for days */}
-          <div className="card" style={{ overflowX: "auto" }}>
+          <div className="card">
             <h3 style={{ fontSize: "1.1rem", marginBottom: "1rem" }}>Weekly Hours Log</h3>
-            <table style={{ width: "100%", borderCollapse: "collapse", minWidth: "600px", fontSize: "0.9rem" }}>
-              <thead>
-                <tr style={{ borderBottom: "2px solid var(--border-light)", textAlign: "left", color: "var(--text-muted)" }}>
-                  <th style={{ padding: "0.75rem 0.5rem", width: "40px" }}>Active</th>
-                  <th style={{ padding: "0.75rem 0.5rem" }}>Day</th>
-                  <th style={{ padding: "0.75rem 0.5rem" }}>Start Time</th>
-                  <th style={{ padding: "0.75rem 0.5rem" }}>End Time</th>
-                  <th style={{ padding: "0.75rem 0.5rem", width: "110px" }}>Break (mins)</th>
-                  <th style={{ padding: "0.75rem 0.5rem", textAlign: "right" }}>Daily Hours</th>
-                </tr>
-              </thead>
-              <tbody>
-                {shifts.map((s, idx) => (
-                  <tr key={idx} style={{ borderBottom: "1px solid var(--border-light)", opacity: s.active ? 1 : 0.6 }}>
-                    <td style={{ padding: "0.75rem 0.5rem" }}>
-                      <input
-                        type="checkbox"
-                        checked={s.active}
-                        onChange={(e) => updateShift(idx, "active", e.target.checked)}
-                        style={{ width: "1.1rem", height: "1.1rem", cursor: "pointer", accentColor: "var(--primary)" }}
-                      />
-                    </td>
-                    <td style={{ padding: "0.75rem 0.5rem", fontWeight: 600 }}>{s.dayName}</td>
-                    <td style={{ padding: "0.75rem 0.5rem" }}>
-                      <input
-                        type="time"
-                        className="input-field"
-                        value={s.start}
-                        disabled={!s.active}
-                        onChange={(e) => updateShift(idx, "start", e.target.value)}
-                        style={{ padding: "0.3rem 0.5rem", maxWidth: "120px" }}
-                      />
-                    </td>
-                    <td style={{ padding: "0.75rem 0.5rem" }}>
-                      <input
-                        type="time"
-                        className="input-field"
-                        value={s.end}
-                        disabled={!s.active}
-                        onChange={(e) => updateShift(idx, "end", e.target.value)}
-                        style={{ padding: "0.3rem 0.5rem", maxWidth: "120px" }}
-                      />
-                    </td>
-                    <td style={{ padding: "0.75rem 0.5rem" }}>
-                      <input
-                        type="number"
-                        className="input-field"
-                        value={s.breakMins}
-                        disabled={!s.active}
-                        onChange={(e) => updateShift(idx, "breakMins", e.target.value)}
-                        style={{ padding: "0.3rem 0.5rem" }}
-                      />
-                    </td>
-                    <td style={{ padding: "0.75rem 0.5rem", textAlign: "right", fontWeight: 700 }}>
-                      {s.active ? `${timesheetResults.shifts[idx].totalHours.toFixed(2)}h` : "—"}
-                    </td>
+            <div style={{ overflowX: "auto", width: "100%", WebkitOverflowScrolling: "touch" }}>
+              <table style={{ width: "100%", borderCollapse: "collapse", minWidth: "600px", fontSize: "0.9rem" }}>
+                <thead>
+                  <tr style={{ borderBottom: "2px solid var(--border-light)", textAlign: "left", color: "var(--text-muted)" }}>
+                    <th style={{ padding: "0.75rem 0.5rem", width: "40px" }}>Active</th>
+                    <th style={{ padding: "0.75rem 0.5rem" }}>Day</th>
+                    <th style={{ padding: "0.75rem 0.5rem" }}>Start Time</th>
+                    <th style={{ padding: "0.75rem 0.5rem" }}>End Time</th>
+                    <th style={{ padding: "0.75rem 0.5rem", width: "110px" }}>Break (mins)</th>
+                    <th style={{ padding: "0.75rem 0.5rem", textAlign: "right" }}>Daily Hours</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {shifts.map((s, idx) => (
+                    <tr key={idx} style={{ borderBottom: "1px solid var(--border-light)", opacity: s.active ? 1 : 0.6 }}>
+                      <td style={{ padding: "0.75rem 0.5rem" }}>
+                        <input
+                          type="checkbox"
+                          checked={s.active}
+                          onChange={(e) => updateShift(idx, "active", e.target.checked)}
+                          style={{ width: "1.1rem", height: "1.1rem", cursor: "pointer", accentColor: "var(--primary)" }}
+                        />
+                      </td>
+                      <td style={{ padding: "0.75rem 0.5rem", fontWeight: 600 }}>{s.dayName}</td>
+                      <td style={{ padding: "0.75rem 0.5rem" }}>
+                        <input
+                          type="time"
+                          className="input-field"
+                          value={s.start}
+                          disabled={!s.active}
+                          onChange={(e) => updateShift(idx, "start", e.target.value)}
+                          style={{ padding: "0.3rem 0.5rem", maxWidth: "120px" }}
+                        />
+                      </td>
+                      <td style={{ padding: "0.75rem 0.5rem" }}>
+                        <input
+                          type="time"
+                          className="input-field"
+                          value={s.end}
+                          disabled={!s.active}
+                          onChange={(e) => updateShift(idx, "end", e.target.value)}
+                          style={{ padding: "0.3rem 0.5rem", maxWidth: "120px" }}
+                        />
+                      </td>
+                      <td style={{ padding: "0.75rem 0.5rem" }}>
+                        <input
+                          type="number"
+                          className="input-field"
+                          value={s.breakMins}
+                          disabled={!s.active}
+                          onChange={(e) => updateShift(idx, "breakMins", e.target.value)}
+                          style={{ padding: "0.3rem 0.5rem" }}
+                        />
+                      </td>
+                      <td style={{ padding: "0.75rem 0.5rem", textAlign: "right", fontWeight: 700 }}>
+                        {s.active ? `${timesheetResults.shifts[idx].totalHours.toFixed(2)}h` : "—"}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
 
           {/* Wage / Total Panel */}
