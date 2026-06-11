@@ -15,8 +15,18 @@ import { postAiToolsPresentation } from "./articles/ai-tools-to-make-presentatio
 import { postAiToolsWebsite } from "./articles/ai-tools-website";
 import { postAiToolsGraphicDesign } from "./articles/ai-tools-for-graphic-design";
 import { postAiToolsVideoGenerator } from "./articles/ai-tools-video-generator";
+import { postHowToGetAdsenseApproval } from "./articles/how-to-get-adsense-approval";
+import { postAdsenseHowLongToGetApproved } from "./articles/adsense-how-long-to-get-approved";
+import { postHowToCheckMyAdsenseAccountIsApproved } from "./articles/how-to-check-my-adsense-account-is-approved";
+import { postWhenCanYouGetAdsenseOnYoutube } from "./articles/when-can-you-get-adsense-on-youtube";
+import { postDidNotReceiveAdsensePayment } from "./articles/did-not-receive-adsense-payment";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postHowToGetAdsenseApproval,
+  postAdsenseHowLongToGetApproved,
+  postHowToCheckMyAdsenseAccountIsApproved,
+  postWhenCanYouGetAdsenseOnYoutube,
+  postDidNotReceiveAdsensePayment,
   postAiToolsApp,
   postAiToolsPresentation,
   postAiToolsWebsite,
