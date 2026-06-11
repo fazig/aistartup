@@ -25,7 +25,7 @@ export default function Home() {
           </p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link href="/tools/ai-copilot" className="btn btn-primary" style={{ padding: '0.85rem 1.75rem', fontSize: '1.05rem', background: 'linear-gradient(to right, var(--primary), #9333ea)', boxShadow: '0 4px 12px rgba(37, 99, 235, 0.25)' }}>
-              <Sparkles size={16} style={{ marginRight: '0.25rem' }} /> Try AI Copilot
+              <Sparkles size={16} style={{ marginRight: '0.25rem' }} /> Try ZenNote AI
             </Link>
             <Link href="#tools" className="btn btn-outline" style={{ padding: '0.85rem 1.75rem', fontSize: '1.05rem' }}>
               Explore Web Tools
@@ -48,12 +48,12 @@ export default function Home() {
                 <Sparkles size={24} />
               </div>
               <h3 style={{ fontSize: '1.25rem', marginBottom: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                AI Copilot Dashboard <span style={{ fontSize: '0.65rem', background: '#9333ea', color: '#ffffff', padding: '0.15rem 0.5rem', borderRadius: '10px', fontWeight: 700 }}>FLAGSHIP</span>
+                ZenNote AI <span style={{ fontSize: '0.65rem', background: '#9333ea', color: '#ffffff', padding: '0.15rem 0.5rem', borderRadius: '10px', fontWeight: 700 }}>FLAGSHIP</span>
               </h3>
               <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '1.5rem' }}>
-                Pitch decks, SEO content copywriters, validation stress-testing, and React code generation powered by OpenRouter.
+                Converts unstructured brain-dumps, daily tasks, and notes into organized action plans and email drafts instantly.
               </p>
-              <div style={{ fontWeight: 600, color: '#9333ea', fontSize: '0.875rem' }}>Open Copilot &rarr;</div>
+              <div style={{ fontWeight: 600, color: '#9333ea', fontSize: '0.875rem' }}>Open ZenNote &rarr;</div>
             </Link>
 
             <Link href="/tools/json-formatter" className="card" style={{ display: 'block', color: 'inherit' }}>

@@ -40,7 +40,7 @@ export default function Header() {
         {/* Desktop Menu Links */}
         <nav className="header-desktop-menu">
           <Link href="/tools/ai-copilot" className="nav-link nav-link-highlight" style={{ display: "flex", alignItems: "center", gap: "0.25rem" }}>
-            <Sparkles size={14} /> AI Copilot
+            <Sparkles size={14} /> ZenNote AI
           </Link>
 
           <Link href="/tools" className="nav-link">
@@ -170,7 +170,7 @@ export default function Header() {
       <div className={`header-mobile-drawer ${isOpen ? "is-open" : ""}`}>
         <nav className="header-mobile-menu">
           <Link href="/tools/ai-copilot" className="mobile-nav-link nav-link-highlight" style={{ display: "flex", alignItems: "center", gap: "0.25rem" }} onClick={closeMenu}>
-            <Sparkles size={14} /> AI Copilot
+            <Sparkles size={14} /> ZenNote AI
           </Link>
           <Link href="/tools" className="mobile-nav-link" onClick={closeMenu}>
             All Tools

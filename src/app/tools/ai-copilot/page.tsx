@@ -14,26 +14,20 @@ import {
   Play, 
   RotateCw, 
   AlertCircle,
-  HelpCircle,
   Eye,
   EyeOff,
   Code,
   Layout,
   Search,
   BookOpen,
-  Info
+  Calendar,
+  ClipboardList,
+  MessageSquare,
+  Lightbulb,
+  FileText
 } from "lucide-react";
 
 // Types
-interface AgentProfile {
-  id: string;
-  name: string;
-  description: string;
-  icon: React.ReactNode;
-  defaultPrompt: string;
-  systemPrompt: string;
-}
-
 interface ModelOption {
   id: string;
   name: string;
@@ -42,28 +36,37 @@ interface ModelOption {
   description: string;
 }
 
-export default function AICopilot() {
-  // States
+export default function ZenNoteDashboard() {
+  // Credentials & Settings
   const [apiKey, setApiKey] = useState("");
   const [showApiKey, setShowApiKey] = useState(false);
   const [selectedModel, setSelectedModel] = useState("anthropic/claude-3.5-sonnet");
-  const [selectedAgent, setSelectedAgent] = useState("pitch");
-  const [startupInfo, setStartupInfo] = useState("A web platform offering a suite of free web developer utilities and SEO tools (like JSON formatters, QR code decoders, and word counters).");
-  const [customPrompt, setCustomPrompt] = useState("");
-  
-  // Console outputs
-  const [consoleOutput, setConsoleOutput] = useState("");
+  const [temperature, setTemperature] = useState(0.7);
+  const [maxTokens, setMaxTokens] = useState(2500);
+
+  // Inputs
+  const [brainDump, setBrainDump] = useState(
+    "need to call plumbing company at 2pm about leak, email my team about rescheduling the meeting to friday at 10, buy almond milk and apples, what can i make tonight with chicken and spinach? also tell sarah i can't make it to her dinner party because i have a late call."
+  );
+
+  // States for generation
   const [isStreaming, setIsStreaming] = useState(false);
   const [statusText, setStatusText] = useState("READY");
-  const [copied, setCopied] = useState(false);
+  const [consoleOutput, setConsoleOutput] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   
-  // Stats
-  const [temperature, setTemperature] = useState(0.7);
-  const [maxTokens, setMaxTokens] = useState(2000);
+  // Console Tab & Parsing States
+  const [activeTab, setActiveTab] = useState<"console" | "tasks" | "drafts" | "routine" | "insights">("console");
+  const [tasksList, setTasksList] = useState<{ id: string; text: string; done: boolean }[]>([]);
+  const [draftsContent, setDraftsContent] = useState("");
+  const [routineContent, setRoutineContent] = useState("");
+  const [insightsContent, setInsightsContent] = useState("");
+  const [copiedDrafts, setCopiedDrafts] = useState(false);
+  const [copiedRoutine, setCopiedRoutine] = useState(false);
+  const [copiedInsights, setCopiedInsights] = useState(false);
 
   // References
-  const consoleBottomRef = useRef<HTMLDivElement>(null);
+  const terminalScrollRef = useRef<HTMLDivElement>(null);
 
   // Models list
   const models: ModelOption[] = [
@@ -104,41 +107,18 @@ export default function AICopilot() {
     }
   ];
 
-  // Agent profiles
-  const agents: AgentProfile[] = [
-    {
-      id: "pitch",
-      name: "Pitch Deck Architect",
-      description: "Generates pitch deck structures, pain points, value propositions, and problem statements.",
-      icon: <Layout size={18} />,
-      systemPrompt: "You are an expert venture capitalist and startup pitch consultant. Help the founder refine their elevator pitch and deck content.",
-      defaultPrompt: "Please analyze my startup info and generate: \n1. A compelling 1-sentence value proposition.\n2. A detailed 'Problem Statement' explaining the customer pain point.\n3. A 'Solution' breakdown explaining how we uniquely solve it.\n4. A suggested 10-slide pitch deck outline customized for this product."
-    },
-    {
-      id: "seo",
-      name: "SEO Landing Page Writer",
-      description: "Creates conversion-optimized landing page copy with targeted headlines and meta tags.",
-      icon: <Search size={18} />,
-      systemPrompt: "You are an elite SEO strategist and direct-response copywriter. Write highly engaging landing page copy optimized for search algorithms.",
-      defaultPrompt: "Please write high-converting landing page copy based on my startup details. Include:\n1. A SEO Meta Title (max 60 chars) and Meta Description (max 155 chars).\n2. A main H1 headline (with an emotional hook) and a sub-headline.\n3. A Hero section intro copy (2-3 sentences).\n4. A bulleted 'Features vs Benefits' list explaining the value.\n5. Three target primary keywords that we should optimize this copy for."
-    },
-    {
-      id: "validator",
-      name: "Idea Stress-Tester",
-      description: "Stress-tests your business model, estimates market fit, and identifies critical pivot risks.",
-      icon: <BookOpen size={18} />,
-      systemPrompt: "You are an analytical startup advisor and risk manager. Give objective, tough-love analysis of business models to avoid failure.",
-      defaultPrompt: "Provide a brutal, realistic validation analysis for this startup idea. Include:\n1. Target Audience Persona: Who is the ideal customer profile?\n2. Market Dynamics: What are the primary barriers to entry and customer acquisition challenges?\n3. Three Critical Failure Risks: What is most likely to kill this startup within 18 months?\n4. Recommended Pivot: A strategic refinement to make the business model more robust."
-    },
-    {
-      id: "coder",
-      name: "Next.js Code Architect",
-      description: "Generates and reviews production-ready Next.js client components using Tailwind/CSS.",
-      icon: <Code size={18} />,
-      systemPrompt: "You are a senior Next.js full-stack engineer. Write clean, accessible React code conforming to modern standards.",
-      defaultPrompt: "Create a fully functional, beautiful Next.js client component for my startup website. It should be a key interactive feature or utility page. Ensure:\n1. It uses modern Tailwind CSS or inline CSS with modular custom styling.\n2. It has clean typescript types.\n3. It uses lucide-react icons for UI highlights.\n4. Show the complete component code with explanatory comments."
+  // Presets load
+  const loadPreset = (type: "professional" | "developer") => {
+    if (type === "professional") {
+      setBrainDump(
+        "need to call plumbing company at 2pm about leak, email my team about rescheduling the meeting to friday at 10, buy almond milk and apples, what can i make tonight with chicken and spinach? also tell sarah i can't make it to her dinner party because i have a late call."
+      );
+    } else {
+      setBrainDump(
+        "fix the typescript type error in Header.tsx component, email the client that the landing page mockup is ready but we need feedback on color scheme, remember to pay the internet bill by tonight, search for a quick workout routine for back pain, also review index.css rules."
+      );
     }
-  ];
+  };
 
   // Load API Key from LocalStorage
   useEffect(() => {
@@ -154,139 +134,239 @@ export default function AICopilot() {
     localStorage.setItem("openrouter_api_key", val);
   };
 
-  // Scroll console to bottom on stream
+  // Inner scroll log container only
   useEffect(() => {
-    if (consoleBottomRef.current) {
-      consoleBottomRef.current.scrollIntoView({ behavior: "smooth" });
+    if (isStreaming && terminalScrollRef.current) {
+      terminalScrollRef.current.scrollTop = terminalScrollRef.current.scrollHeight;
     }
-  }, [consoleOutput]);
+  }, [consoleOutput, isStreaming]);
 
-  // Handle agent profile change
-  const handleAgentChange = (agentId: string) => {
-    setSelectedAgent(agentId);
-    const agent = agents.find(a => a.id === agentId);
-    if (agent) {
-      setCustomPrompt(agent.defaultPrompt);
-    }
+  // Helper to extract tag contents
+  const extractTagContent = (text: string, tag: string) => {
+    const startTag = `[${tag}]`;
+    const endTag = `[/${tag}]`;
+    const startIndex = text.indexOf(startTag);
+    const endIndex = text.indexOf(endTag);
+    if (startIndex === -1 || endIndex === -1) return "";
+    return text.substring(startIndex + startTag.length, endIndex).trim();
   };
 
-  // Set default prompt on start
-  useEffect(() => {
-    handleAgentChange("pitch");
-  }, []);
+  // Parse output once completed
+  const parseOutputs = (rawText: string) => {
+    // 1. Parse tasks
+    const tasksRaw = extractTagContent(rawText, "TASKS");
+    const tasksParsed = tasksRaw
+      .split("\n")
+      .map(line => line.trim())
+      .filter(line => line.startsWith("- [ ]") || line.startsWith("- [x]") || line.startsWith("*") || line.startsWith("-"))
+      .map((line, idx) => {
+        // Clean line markers
+        const cleanText = line
+          .replace(/^-\s*\[\s*[x ]\s*\]/, "")
+          .replace(/^-\s*/, "")
+          .replace(/^\*\s*/, "")
+          .trim();
+        return {
+          id: `task-${idx}`,
+          text: cleanText,
+          done: line.includes("[x]")
+        };
+      });
+    setTasksList(tasksParsed.length > 0 ? tasksParsed : []);
 
-  // Copy console output
-  const handleCopyOutput = () => {
-    if (!consoleOutput) return;
-    navigator.clipboard.writeText(consoleOutput);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    // 2. Parse drafts
+    const draftsParsed = extractTagContent(rawText, "DRAFTS");
+    setDraftsContent(draftsParsed);
+
+    // 3. Parse routine
+    const routineParsed = extractTagContent(rawText, "ROUTINE");
+    setRoutineContent(routineParsed);
+
+    // 4. Parse insights
+    const insightsParsed = extractTagContent(rawText, "INSIGHTS");
+    setInsightsContent(insightsParsed);
   };
 
-  // Simulated typing effect for Demo Mode
-  const runDemoMode = (prompt: string, agentId: string) => {
+  // Toggle tasks completion locally
+  const toggleTask = (taskId: string) => {
+    setTasksList(prev => 
+      prev.map(t => t.id === taskId ? { ...t, done: !t.done } : t)
+    );
+  };
+
+  // System Prompt instructing model to output structured blocks
+  const systemPrompt = `You are ZenNote AI, a daily cognitive assistant. 
+Analyze the user's messy daily brain dump (unstructured thoughts, quick notes, draft requests, and questions).
+Organize them into structured sections using exactly the following block tags:
+
+[TASKS]
+Provide a clean bulleted checklist of tasks. Write each as:
+- [ ] Task description
+[/TASKS]
+
+[DRAFTS]
+Write out fully drafted emails, chat responses, or texts requested. Format with headings, e.g., '### Draft 1: Email to Team'. If no drafts requested, write: 'No drafts needed.'
+[/DRAFTS]
+
+[ROUTINE]
+Generate a logical, chronological daily routine or time-blocked schedule incorporating the tasks. Use bullet points.
+[/ROUTINE]
+
+[INSIGHTS]
+Give quick answers to any questions (e.g. recipes, tips, code analysis). Provide helpful details.
+[/INSIGHTS]
+
+Before the tag blocks, you may output a short <thought>...</thought> section detailing your reasoning analysis. 
+Do not omit the tags under any circumstances. Ensure all content fits inside these blocks.`;
+
+  // Simulated Streaming for Demo Mode
+  const runDemoMode = (type: "professional" | "developer") => {
     setIsStreaming(true);
     setConsoleOutput("");
     setErrorMessage("");
-    setStatusText("GENERATING (DEMO MODE)");
-    
-    // Choose appropriate simulated response based on agent profile
+    setStatusText("THINKING");
+    setActiveTab("console");
+
     let demoText = "";
-    
-    if (agentId === "pitch") {
-      demoText = `### StartupAI Pitch Deck Blueprint\n\n**1. One-Sentence Value Proposition**\n> "Empowering web creators with a zero-registration, browser-native utility suite that eliminates server delays and protects data privacy."\n\n---\n\n**2. The Problem Statement**\nWeb developers, content writers, and digital marketers perform dozens of micro-tasks hourly (formatting JSON, converting images, decoding tokens). Existing platforms are plagued by:\n* **High friction:** Forced sign-ups, paywalls, or cluttered banner ads that degrade performance.\n* **Security Risks:** Client data (like passwords, keys, or proprietary scripts) is sent to external servers, violating compliance.\n* **Slow Speeds:** Bulky server-side rendering makes simple actions take seconds.\n\n---\n\n**3. The Solution**\nOur platform operates as a secure client-side sandbox. All tools load instantly, run local browser-native operations, and ensure zero bytes of user data ever leave their computer. We merge premium visual design with absolute security and blazing speed.\n\n---\n\n**4. Customized 10-Slide Pitch Deck Structure**\n\n* **Slide 1: Cover / Hook** - StartupAI: The developer's browser-native power suite.\n* **Slide 2: The Problem** - micro-utility fatigue & security leaks in corporate networks.\n* **Slide 3: The Solution** - Local-first client tools running on web assembly.\n* **Slide 4: Product Demo** - Visual matrix showing our 120+ active utilities.\n* **Slide 5: Market Opportunity** - 28M+ software developers & 100M+ content creators globally.\n* **Slide 6: Business Model** - Freemium API keys, enterprise private deployments, white-labeled widgets.\n* **Slide 7: Technology Stack** - Next.js App Router, Tailwind PostCSS, and Client WebAssembly.\n* **Slide 8: Traction / SEO** - Organic traffic acquisition strategy showing search volume for core tools (e.g., "JSON formatter").\n* **Slide 9: Competition** - Comparison showing why our ad-free, secure approach beats old legacy sites.\n* **Slide 10: The Ask / Team** - Requesting Series Seed to build enterprise client packages.`;
-    } else if (agentId === "seo") {
-      demoText = `### Landing Page Copy Blueprint (SEO Optimized)\n\n**Meta Tags Configuration:**\n* **Meta Title:** StartupAI Tools - Free Web Utilities & Developer Toolkit\n* **Meta Description:** Access over 100+ free, secure web utilities. Format JSON, generate QR codes, compute financial ratios, and convert assets. 100% client-side.\n\n---\n\n**Hero Headline & Sub-Headline:**\n# Micro-Utilities, Re-Imagined for Speed & Security\n### Stop uploading sensitive data. Run 100+ web tools locally in your browser with zero latency.\n\n---\n\n**Hero Paragraph Intro:**\n"StartupAI Tools is the modern workflow accelerator built for developers, designers, and marketers who value their time and data privacy. Every single tool runs client-side inside sandboxed browser memory, rendering immediate results without sending a single packet to foreign servers."\n\n---\n\n**Features vs Benefits Matrix:**\n* **Client-Side Processing (Benefit: 100% Secure)** - Your JSON payloads, passwords, and photos are processed in sandbox. Absolute data compliance.\n* **Zero Sign-Up Required (Benefit: High Efficiency)** - Skip registration forms. Land on the site, click your tool, and get the job done in one click.\n* **Optimized Bundle Sizes (Benefit: Lightning Fast)** - Next.js lazy-loading ensures each tool page loads under 200ms.\n\n---\n\n**Target SEO Keywords:**\n1. \`free developer web tools\` (High intent)\n2. \`secure json formatter browser\` (Brand specificity)\n3. \`client side web utilities list\` (Informational volume)`;
-    } else if (agentId === "validator") {
-      demoText = `### Strategic Business Validation Report\n\n**1. Target Audience Persona**\n* **Primary User:** Senior Software Engineers & DevOps agents needing quick decoders/generators during active coding sprints without logging into bulky SaaS platforms.\n* **Secondary User:** SEO Specialists & Content Writers auditing page sizes, redirect rules, or checking word densities on the fly.\n\n---\n\n**2. Market Dynamics & Acquisition Challenges**\n* **Barriers to Entry:** Extremely low barriers. Competitors like CyberChef or online converters exist. \n* **Acquisition Moat:** Organic Search SEO is the primary channel. Success depends heavily on site speed, keyword-rich slugs, and backlink authority. \n\n---\n\n**3. Critical Failure Risks (Next 18 Months)**\n* **High Churn / Low Stickiness:** Users solve a 3-second problem and leave. Monopolizing user attention is difficult without accounts.\n* **Monetization Struggle:** Running ads degrades the "premium developer utility" brand. Subscription models fail for micro-tools.\n* **Google Algorithm Volatility:** Organic SEO is fragile. A single Core Update can slash traffic by 50% if the site lacks depth.\n\n---\n\n**4. Strategic pivot Recommendation**\nInstead of just a directory of tools, position the site as an **"OpenAPI Playground Dashboard"**. Implement a custom client-side API console where developers register once, paste their own API Keys (e.g. OpenRouter), and run AI tasks directly on the same interface. This increases user retention, drives product-led signups, and opens up premium B2B licensing opportunities.`;
+
+    if (type === "professional") {
+      demoText = `<thought>
+Analyzing brain-dump...
+- Identified tasks: Call plumbing company (2:00 PM), buy almond milk/apples.
+- Identified emails/messages: Reschedule meeting email to team, dinner cancellation message to Sarah.
+- Identified question: Recipe ideas using chicken and spinach.
+- Synthesizing schedule...
+- Compiling cooking tips...
+</thought>
+
+[TASKS]
+- [ ] Call plumbing company about water leak (Scheduled for 2:00 PM)
+- [ ] Send meeting reschedule email to team (Friday at 10:00 AM)
+- [ ] Stop at store for almond milk and fresh apples
+- [ ] Send dinner cancellation text message to Sarah
+[/TASKS]
+
+[DRAFTS]
+### Draft 1: Email to Team (Reschedule Meeting)
+**Subject:** Rescheduling team sync to Friday at 10:00 AM
+**Body:**
+Hi Team,
+
+I'd like to reschedule our upcoming meeting to Friday, June 12th, at 10:00 AM due to a schedule conflict. Please let me know if this slot works for everyone.
+
+Best regards,
+[Your Name]
+
+### Draft 2: SMS to Sarah (Dinner Party)
+**Body:**
+Hi Sarah! I'm so sorry, but I won't be able to make it to dinner tonight. I have a late call scheduled that I can't push back. Let's catch up and reschedule next week!
+[/DRAFTS]
+
+[ROUTINE]
+* **09:00 AM** - Review agenda and start work
+* **10:00 AM** - Send meeting reschedule email to team
+* **02:00 PM** - Call plumbing company to schedule leak inspection
+* **05:30 PM** - Stop by grocery store for almond milk and apples
+* **06:00 PM** - Text Sarah dinner cancellation
+* **07:00 PM** - Prepare dinner (Chicken & Spinach Stir-Fry)
+[/ROUTINE]
+
+[INSIGHTS]
+### Quick Recipe: Garlic Chicken & Spinach Stir-Fry
+Here is a fast, healthy dinner recipe using chicken and spinach:
+
+* **Ingredients:** Chicken breast (cubed), Fresh spinach leaves, 2 cloves Garlic (minced), Soy sauce, Olive oil, Pepper.
+* **Directions:**
+  1. Heat olive oil in a skillet over medium-high heat. Add minced garlic and sauté for 1 minute.
+  2. Add cubed chicken breast, season with pepper, and cook until golden brown (6-8 minutes).
+  3. Toss in the fresh spinach leaves and a splash of soy sauce.
+  4. Stir constantly for 2 minutes until the spinach wilts. Serve over rice or eat as is!
+[/INSIGHTS]`;
     } else {
-      demoText = `// Next.js Client Component: StartupAI Tool Dashboard
-"use client";
+      demoText = `<thought>
+Analyzing developer brain-dump...
+- Identified code tasks: Fix typescript error in Header.tsx, review index.css rules.
+- Identified client email: Project mockup ready, ask for color scheme feedback.
+- Identified chore: Pay internet bill.
+- Identified health search: Workout routine for back pain.
+- Generating developer timeline...
+- Compiling back exercises...
+</thought>
 
-import React, { useState } from 'react';
-import { Sparkles, Terminal, Copy, Check } from 'lucide-react';
+[TASKS]
+- [ ] Debug Typescript type error in Header.tsx component
+- [ ] Send project mockup update email to client
+- [ ] Pay the internet bill (Due tonight!)
+- [ ] Perform quick back stretches for lumbar pain relief
+- [ ] Review styling layout rules in index.css
+[/TASKS]
 
-interface Tool {
-  id: string;
-  name: string;
-  category: string;
+[DRAFTS]
+### Draft 1: Email to Client (Landing Page Feedback)
+**Subject:** Landing Page Mockup Ready - StartupAI Project
+**Body:**
+Hi [Client Name],
+
+I'm excited to share that the landing page mockup is ready for your review! You can view it live in the preview branch. 
+
+Could you take a look and share your thoughts? In particular, we would love your feedback on the color scheme and typography choice.
+
+Best,
+[Your Name]
+[/DRAFTS]
+
+[ROUTINE]
+* **09:00 AM** - Begin coding sprint: Open Header.tsx and fix TypeScript imports/types
+* **11:00 AM** - Send mockup email to client
+* **02:00 PM** - Review CSS rules in index.css for spacing optimization
+* **04:30 PM** - Perform quick 10-minute back stretches
+* **06:00 PM** - Log in and pay the internet bill
+[/ROUTINE]
+
+[INSIGHTS]
+### Lumbar Stretch Routine for Back Pain (10 Mins)
+Perfect for developers sitting at desks all day:
+
+1. **Child's Pose:** Kneel on floor, sit on heels, reach hands forward on the floor. Hold for 45s.
+2. **Cat-Cow Stretch:** On hands and knees, alternate arching your back toward the ceiling and dipping it toward the floor. 10 reps.
+3. **Knee-to-Chest:** Lie on back, pull one knee up to your chest, hold for 30s. Switch sides.
+
+### TypeScript Tip: Header Icon Import
+If you get type errors on Lucide icons, make sure you import them collectively or check element props:
+\`\`\`typescript
+import { LucideIcon } from 'lucide-react';
+interface NavItem {
+  icon: LucideIcon;
+  label: string;
 }
-
-export default function StartupDashboard() {
-  const [tools] = useState<Tool[]>([
-    { id: '1', name: 'JSON Validator', category: 'Developer' },
-    { id: '2', name: 'Secure MD5 Hasher', category: 'Security' },
-    { id: '3', name: 'SVG-to-Base64', category: 'Media' }
-  ]);
-  
-  const [activeTool, setActiveTool] = useState<string>('1');
-
-  return (
-    <div className="p-6 max-w-4xl mx-auto bg-slate-900 text-white rounded-2xl border border-slate-800 shadow-2xl">
-      <div className="flex items-center justify-between mb-6 pb-4 border-b border-slate-800">
-        <div className="flex items-center gap-2">
-          <Sparkles className="text-blue-500 animate-pulse" />
-          <h2 className="text-xl font-bold">StartupAI Developer console</h2>
-        </div>
-        <span className="text-xs bg-blue-900/40 text-blue-400 px-3 py-1 rounded-full border border-blue-800">
-          Client Sandbox Active
-        </span>
-      </div>
-      
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {/* Sidebar */}
-        <div className="space-y-2">
-          {tools.map(tool => (
-            <button
-              key={tool.id}
-              onClick={() => setActiveTool(tool.id)}
-              className={\`w-full text-left p-3 rounded-lg text-sm font-medium transition-all \${
-                activeTool === tool.id 
-                  ? 'bg-blue-600 text-white shadow' 
-                  : 'bg-slate-800/60 text-slate-400 hover:bg-slate-800'
-              }\`}
-            >
-              {tool.name}
-            </button>
-          ))}
-        </div>
-        
-        {/* Workspace */}
-        <div className="md:col-span-2 bg-slate-950 p-4 rounded-xl border border-slate-800 min-h-[200px] flex flex-col justify-between">
-          <div className="font-mono text-xs text-slate-500 flex items-center gap-2 mb-4">
-            <Terminal size={14} />
-            <span>sandbox_terminal.sh - tool_{activeTool}</span>
-          </div>
-          
-          <div className="flex-grow flex items-center justify-center text-slate-400 text-sm">
-            Ready to initialize locally. Secure browser runtime active.
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}`;
+\`\`\`
+[/INSIGHTS]`;
     }
 
-    let currentLength = 0;
+    let index = 0;
+    setStatusText("GENERATING");
+    
     const interval = setInterval(() => {
-      if (currentLength < demoText.length) {
-        currentLength += Math.min(6, demoText.length - currentLength);
-        setConsoleOutput(demoText.substring(0, currentLength));
+      if (index < demoText.length) {
+        index += Math.min(8, demoText.length - index); // stream block chunks
+        setConsoleOutput(demoText.substring(0, index));
       } else {
         clearInterval(interval);
         setIsStreaming(false);
         setStatusText("COMPLETED");
+        parseOutputs(demoText);
+        setActiveTab("tasks"); // automatically swap to parsed outputs
       }
     }, 15);
   };
 
-  // Run Real OpenRouter Request
-  const runOpenRouterRequest = async (prompt: string, systemPrompt: string) => {
+  // Real OpenRouter Stream Fetch
+  const runOpenRouterRequest = async () => {
     setIsStreaming(true);
     setConsoleOutput("");
     setErrorMessage("");
-    setStatusText("CONNECTING...");
+    setStatusText("CONNECTING");
+    setActiveTab("console");
 
     try {
       const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
@@ -294,18 +374,18 @@ export default function StartupDashboard() {
         headers: {
           "Content-Type": "application/json",
           "Authorization": `Bearer ${apiKey}`,
-          "HTTP-Referer": "https://www.aitoolspro.tech", // Required for OpenRouter review criteria
-          "X-Title": "StartupAI Tools", // Required for OpenRouter review criteria
+          "HTTP-Referer": "https://www.aitoolspro.tech", // Custom referer for OpenRouter analytics
+          "X-Title": "StartupAI Tools",
         },
         body: JSON.stringify({
           model: selectedModel,
           messages: [
             { role: "system", content: systemPrompt },
-            { role: "user", content: prompt }
+            { role: "user", content: `Here is my brain dump: ${brainDump}` }
           ],
           temperature: temperature,
           max_tokens: maxTokens,
-          stream: true // Enable streaming if possible, otherwise we handle chunk responses
+          stream: true
         })
       });
 
@@ -314,12 +394,12 @@ export default function StartupDashboard() {
         throw new Error(errorData?.error?.message || `API Error: ${response.status} - ${response.statusText}`);
       }
 
-      setStatusText("STREAMING RESPONSE...");
+      setStatusText("GENERATING");
       const reader = response.body?.getReader();
       const decoder = new TextDecoder("utf-8");
 
       if (!reader) {
-        throw new Error("ReadableStream is not supported by this browser.");
+        throw new Error("ReadableStream is not supported by your browser.");
       }
 
       let done = false;
@@ -330,8 +410,6 @@ export default function StartupDashboard() {
         done = readerDone;
         if (value) {
           const chunk = decoder.decode(value, { stream: !done });
-          
-          // OpenRouter streams returns server-sent events as data: {...}
           const lines = chunk.split("\n").filter(line => line.trim().startsWith("data:"));
           
           for (const line of lines) {
@@ -346,43 +424,45 @@ export default function StartupDashboard() {
               accumulatedContent += content;
               setConsoleOutput(accumulatedContent);
             } catch (err) {
-              // Ignore line parsing errors on stream boundaries
+              // Ignore boundary errors
             }
           }
         }
       }
 
       setStatusText("COMPLETED");
+      parseOutputs(accumulatedContent);
+      setActiveTab("tasks"); // Swap automatically to parsed checklist tab
     } catch (err: any) {
-      setErrorMessage(err.message || "An unexpected error occurred during the OpenRouter API request.");
+      setErrorMessage(err.message || "Failed to contact OpenRouter API.");
       setStatusText("FAILED");
     } finally {
       setIsStreaming(false);
     }
   };
 
-  // Submit trigger
   const handleRunAgent = () => {
-    if (isStreaming) return;
-    
-    // Combine template prompt with startup info
-    const agent = agents.find(a => a.id === selectedAgent);
-    const systemPrompt = agent ? agent.systemPrompt : "You are a helpful startup copilot assistant.";
-    const basePrompt = customPrompt || (agent ? agent.defaultPrompt : "");
-    const finalPrompt = basePrompt.replace("[STARTUP_INFO]", startupInfo);
+    if (isStreaming || !brainDump.trim()) return;
 
     if (!apiKey) {
-      // Run Demo Mode if API key is not entered
-      runDemoMode(finalPrompt, selectedAgent);
+      // Choose demo mode depending on text contents
+      const isDev = brainDump.toLowerCase().includes("typescript") || brainDump.toLowerCase().includes("code") || brainDump.toLowerCase().includes("css");
+      runDemoMode(isDev ? "developer" : "professional");
     } else {
-      // Run actual OpenRouter API call
-      runOpenRouterRequest(finalPrompt, systemPrompt);
+      runOpenRouterRequest();
     }
   };
 
+  // Helper copy handlers
+  const copyToClipboard = (text: string, setCopyState: (s: boolean) => void) => {
+    navigator.clipboard.writeText(text);
+    setCopyState(true);
+    setTimeout(() => setCopyState(false), 2000);
+  };
+
   return (
-    <div className="container" style={{ padding: "3rem 1.5rem" }}>
-      {/* Back button */}
+    <div className="container" style={{ padding: "3rem 1.25rem", maxWidth: "1250px" }}>
+      {/* Breadcrumb back */}
       <Link
         href="/tools"
         className="btn btn-outline"
@@ -392,448 +472,647 @@ export default function StartupDashboard() {
           gap: "0.5rem",
           marginBottom: "1.5rem",
           fontSize: "0.85rem",
-          padding: "0.5rem 1.25rem",
+          padding: "0.5rem 1rem",
         }}
       >
-        <ArrowLeft size={16} /> Back to Tools
+        <ArrowLeft size={16} /> Back to Directory
       </Link>
 
-      {/* Flagship Header */}
-      <div style={{ 
-        display: "flex", 
-        flexDirection: "column", 
-        gap: "0.5rem", 
-        marginBottom: "3rem",
-        background: "linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, rgba(147, 51, 234, 0.05) 100%)",
-        padding: "2.5rem",
-        borderRadius: "16px",
+      {/* Header Info Banner */}
+      <div style={{
+        background: "linear-gradient(135deg, rgba(37, 99, 235, 0.04) 0%, rgba(147, 51, 234, 0.04) 100%)",
         border: "1px solid var(--border-light)",
-        boxShadow: "inset 0 0 20px rgba(37, 99, 235, 0.02)"
+        borderRadius: "16px",
+        padding: "2.5rem 2rem",
+        marginBottom: "2.5rem",
+        position: "relative",
+        overflow: "hidden"
       }}>
         <div style={{
           display: "inline-flex",
           alignItems: "center",
-          gap: "0.5rem",
-          background: "rgba(37, 99, 235, 0.1)",
+          gap: "0.4rem",
+          background: "rgba(37, 99, 235, 0.08)",
           color: "var(--primary)",
-          padding: "0.35rem 0.85rem",
-          borderRadius: "100px",
-          width: "fit-content",
+          padding: "0.3rem 0.75rem",
+          borderRadius: "50px",
           fontSize: "0.75rem",
           fontWeight: 700,
-          textTransform: "uppercase",
-          letterSpacing: "0.05em",
-          marginBottom: "0.5rem"
+          marginBottom: "1rem"
         }}>
-          <Sparkles size={12} /> Flagship AI-Native Product
+          <Sparkles size={12} /> Flagship AI Organizer
         </div>
-        <h1 style={{ fontSize: "2.5rem", letterSpacing: "-0.03em", lineHeight: "1.2", marginBottom: "0.5rem" }}>
-          StartupAI <span style={{ background: "linear-gradient(to right, var(--primary), #9333ea)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Copilot Dashboard</span>
+        <h1 style={{ fontSize: "clamp(1.75rem, 4vw, 2.5rem)", letterSpacing: "-0.03em", marginBottom: "0.5rem" }}>
+          ZenNote AI <span style={{ color: "var(--primary)" }}>Organizer</span>
         </h1>
-        <p style={{ color: "var(--text-muted)", fontSize: "1.1rem", maxWidth: "800px", lineHeight: "1.5" }}>
-          A unified multi-agent platform powered by **OpenRouter**. Draft pitches, write landing pages, validation analysis, and build React code on the fly. 
+        <p style={{ color: "var(--text-muted)", fontSize: "1.05rem", maxWidth: "750px", lineHeight: "1.5", margin: 0 }}>
+          Dump your messy mind, raw tasks, and text drafts into one box. Our intelligent agent parses, organizes, and drafts your daily work instantly.
         </p>
       </div>
 
-      {/* Main Sandbox Grid */}
+      {/* Grid Dashboard */}
       <div style={{
         display: "grid",
-        gridTemplateColumns: "350px 1fr",
+        gridTemplateColumns: "1fr",
         gap: "2rem",
-      }} className="grid-2">
+      }}>
         
-        {/* Left Control Panel */}
-        <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
+        {/* Row 1: Configurations & Main Input (Split on large screens) */}
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "1fr",
+          gap: "2rem",
+        }} className="grid-2">
           
-          {/* Key Manager Card */}
-          <div className="card" style={{ padding: "1.5rem" }}>
-            <h3 style={{ fontSize: "1rem", marginBottom: "1rem", display: "flex", alignItems: "center", gap: "0.5rem" }}>
-              <Key size={16} color="var(--primary)" /> API Credentials
-            </h3>
+          {/* Settings Column */}
+          <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
             
-            <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
-              <label style={{ fontSize: "0.8rem", fontWeight: 600, color: "var(--text-muted)" }}>
-                OpenRouter API Key
-              </label>
-              <div style={{ position: "relative" }}>
-                <input
-                  type={showApiKey ? "text" : "password"}
-                  className="input-field"
-                  style={{ 
-                    paddingRight: "2.5rem", 
-                    fontFamily: "monospace", 
-                    fontSize: "0.8rem",
-                    borderColor: apiKey ? "#22c55e" : "var(--border-strong)"
-                  }}
-                  placeholder="sk-or-v1-..."
-                  value={apiKey}
-                  onChange={(e) => handleSaveKey(e.target.value)}
-                />
-                <button
-                  type="button"
-                  onClick={() => setShowApiKey(!showApiKey)}
-                  style={{
-                    position: "absolute",
-                    right: "0.75rem",
-                    top: "50%",
-                    transform: "translateY(-50%)",
-                    background: "none",
-                    border: "none",
-                    cursor: "pointer",
-                    color: "var(--text-muted)"
-                  }}
-                >
-                  {showApiKey ? <EyeOff size={16} /> : <Eye size={16} />}
-                </button>
-              </div>
+            {/* Input Card */}
+            <div className="card" style={{ padding: "1.5rem" }}>
+              <h3 style={{ fontSize: "1.1rem", marginBottom: "1rem", display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                <FileText size={18} color="var(--primary)" /> 1. Paste Daily Brain Dump
+              </h3>
               
-              {!apiKey ? (
-                <div style={{ 
-                  fontSize: "0.75rem", 
-                  color: "#ea580c", 
-                  background: "#fff7ed", 
-                  padding: "0.5rem 0.75rem", 
-                  borderRadius: "6px",
-                  lineHeight: "1.4"
-                }}>
-                  No key provided. Operating in **Demo Mode** with professional pre-baked outputs.
+              <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+                {/* Preset Loaders */}
+                <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
+                  <button
+                    onClick={() => loadPreset("professional")}
+                    className="btn btn-outline"
+                    style={{ padding: "0.35rem 0.75rem", fontSize: "0.75rem", borderRadius: "6px" }}
+                  >
+                    Load Personal Preset
+                  </button>
+                  <button
+                    onClick={() => loadPreset("developer")}
+                    className="btn btn-outline"
+                    style={{ padding: "0.35rem 0.75rem", fontSize: "0.75rem", borderRadius: "6px" }}
+                  >
+                    Load Coding Preset
+                  </button>
                 </div>
-              ) : (
-                <div style={{ 
-                  fontSize: "0.75rem", 
-                  color: "#16a34a", 
-                  background: "#f0fdf4", 
-                  padding: "0.5rem 0.75rem", 
-                  borderRadius: "6px",
-                  fontWeight: 500
-                }}>
-                  Key saved locally. Requests will stream live from OpenRouter.
-                </div>
-              )}
-            </div>
-          </div>
 
-          {/* Model Selector Card */}
-          <div className="card" style={{ padding: "1.5rem" }}>
-            <h3 style={{ fontSize: "1rem", marginBottom: "1.25rem", display: "flex", alignItems: "center", gap: "0.5rem" }}>
-              <Cpu size={16} color="var(--primary)" /> LLM Engine
-            </h3>
-            
-            <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
-              {/* Select dropdown */}
-              <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
-                <label style={{ fontSize: "0.8rem", fontWeight: 600, color: "var(--text-muted)" }}>
-                  Select AI Model
-                </label>
-                <select
-                  value={selectedModel}
-                  onChange={(e) => setSelectedModel(e.target.value)}
+                <textarea
                   className="input-field"
                   style={{ 
+                    minHeight: "180px", 
                     fontFamily: "sans-serif", 
-                    fontSize: "0.85rem",
-                    background: "#ffffff",
-                    cursor: "pointer",
-                    padding: "0.6rem"
+                    lineHeight: "1.5", 
+                    padding: "0.85rem",
+                    fontSize: "16px" // Crucial: At least 16px to prevent iOS auto-zoom
                   }}
-                >
-                  {models.map(m => (
-                    <option key={m.id} value={m.id}>
-                      {m.name} ({m.provider})
-                    </option>
-                  ))}
-                </select>
-              </div>
+                  placeholder="Write whatever is in your head... e.g., 'remind me to pay bills, email boss about the update, also need a recipe for spinach...'"
+                  value={brainDump}
+                  onChange={(e) => setBrainDump(e.target.value)}
+                />
 
-              {/* Model Description Box */}
-              {models.find(m => m.id === selectedModel) && (
-                <div style={{ 
-                  background: "var(--bg-main)", 
-                  padding: "0.75rem", 
-                  borderRadius: "8px", 
-                  border: "1px solid var(--border-light)",
-                  fontSize: "0.75rem"
-                }}>
-                  <div style={{ fontWeight: 700, marginBottom: "0.25rem", display: "flex", justifyContent: "space-between" }}>
-                    <span>Context: {models.find(m => m.id === selectedModel)?.context}</span>
-                    <span style={{ color: "var(--primary)" }}>{models.find(m => m.id === selectedModel)?.provider}</span>
-                  </div>
-                  <p style={{ color: "var(--text-muted)", margin: 0, lineHeight: "1.4" }}>
-                    {models.find(m => m.id === selectedModel)?.description}
-                  </p>
-                </div>
-              )}
-
-              {/* Temperature & Token Settings */}
-              <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem", borderTop: "1px solid var(--border-light)", paddingTop: "1rem" }}>
-                <div>
-                  <div style={{ display: "flex", justifyContent: "space-between", fontSize: "0.75rem", marginBottom: "0.25rem", fontWeight: 600 }}>
-                    <span>Temperature</span>
-                    <span>{temperature}</span>
-                  </div>
-                  <input
-                    type="range"
-                    min="0"
-                    max="1.5"
-                    step="0.1"
-                    value={temperature}
-                    onChange={(e) => setTemperature(parseFloat(e.target.value))}
-                    style={{ width: "100%" }}
-                  />
-                </div>
-                
-                <div>
-                  <div style={{ display: "flex", justifyContent: "space-between", fontSize: "0.75rem", marginBottom: "0.25rem", fontWeight: 600 }}>
-                    <span>Max Length</span>
-                    <span>{maxTokens} tokens</span>
-                  </div>
-                  <input
-                    type="range"
-                    min="256"
-                    max="4000"
-                    step="256"
-                    value={maxTokens}
-                    onChange={(e) => setMaxTokens(parseInt(e.target.value))}
-                    style={{ width: "100%" }}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Agent Template Selector */}
-          <div className="card" style={{ padding: "1.5rem" }}>
-            <h3 style={{ fontSize: "1rem", marginBottom: "1rem" }}>Agent Workspace</h3>
-            <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
-              {agents.map(a => (
                 <button
-                  key={a.id}
-                  onClick={() => handleAgentChange(a.id)}
+                  className="btn btn-primary"
+                  onClick={handleRunAgent}
+                  disabled={isStreaming || !brainDump.trim()}
                   style={{
+                    padding: "0.85rem 1.5rem",
+                    fontSize: "1rem",
                     display: "flex",
                     alignItems: "center",
-                    gap: "0.75rem",
-                    padding: "0.75rem",
-                    borderRadius: "8px",
-                    border: "1px solid",
-                    borderColor: selectedAgent === a.id ? "var(--primary)" : "var(--border-light)",
-                    background: selectedAgent === a.id ? "rgba(37, 99, 235, 0.05)" : "#ffffff",
-                    color: selectedAgent === a.id ? "var(--primary)" : "var(--text-main)",
-                    cursor: "pointer",
-                    textAlign: "left",
-                    transition: "all 0.2s"
+                    justifyContent: "center",
+                    gap: "0.5rem",
+                    boxShadow: "0 4px 10px rgba(37, 99, 235, 0.15)",
+                    minHeight: "48px" // Touch target
                   }}
                 >
-                  <div style={{ 
-                    padding: "0.3rem", 
-                    borderRadius: "6px",
-                    background: selectedAgent === a.id ? "var(--primary)" : "var(--bg-main)",
-                    color: selectedAgent === a.id ? "#ffffff" : "var(--text-muted)"
-                  }}>
-                    {a.icon}
-                  </div>
-                  <div>
-                    <div style={{ fontWeight: 600, fontSize: "0.85rem" }}>{a.name}</div>
-                    <div style={{ fontSize: "0.7rem", color: "var(--text-muted)", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", width: "220px" }}>
-                      {a.description}
-                    </div>
-                  </div>
+                  {isStreaming ? (
+                    <>
+                      <RotateCw size={18} className="animate-spin" /> Stream Organizing...
+                    </>
+                  ) : (
+                    <>
+                      <Play size={16} /> Organize My Thoughts
+                    </>
+                  )}
                 </button>
-              ))}
+              </div>
+            </div>
+
+            {/* Optional Credentials Panel */}
+            <div className="card" style={{ padding: "1.5rem" }}>
+              <h3 style={{ fontSize: "1rem", marginBottom: "1rem", display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                <Key size={16} color="var(--primary)" /> API Key Setup
+              </h3>
+              
+              <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+                <label style={{ fontSize: "0.8rem", fontWeight: 600, color: "var(--text-muted)" }}>
+                  OpenRouter API Key (Optional)
+                </label>
+                <div style={{ position: "relative" }}>
+                  <input
+                    type={showApiKey ? "text" : "password"}
+                    className="input-field"
+                    style={{ 
+                      paddingRight: "2.5rem", 
+                      fontFamily: "monospace", 
+                      fontSize: "16px", // prevent iOS zoom
+                      borderColor: apiKey ? "#16a34a" : "var(--border-strong)"
+                    }}
+                    placeholder="sk-or-v1-..."
+                    value={apiKey}
+                    onChange={(e) => handleSaveKey(e.target.value)}
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setShowApiKey(!showApiKey)}
+                    style={{
+                      position: "absolute",
+                      right: "0.75rem",
+                      top: "50%",
+                      transform: "translateY(-50%)",
+                      background: "none",
+                      border: "none",
+                      cursor: "pointer",
+                      color: "var(--text-muted)",
+                      display: "flex",
+                      alignItems: "center"
+                    }}
+                  >
+                    {showApiKey ? <EyeOff size={16} /> : <Eye size={16} />}
+                  </button>
+                </div>
+                {!apiKey ? (
+                  <span style={{ fontSize: "0.75rem", color: "#d97706", lineHeight: "1.4" }}>
+                    No key provided. Running inside **Demo Sandbox Mode** with immediate simulated analysis.
+                  </span>
+                ) : (
+                  <span style={{ fontSize: "0.75rem", color: "#16a34a", fontWeight: 500 }}>
+                    API Connected. Requests will load live from OpenRouter.
+                  </span>
+                )}
+              </div>
+            </div>
+
+          </div>
+
+          {/* Model Engine Configuration Panel */}
+          <div className="card" style={{ padding: "1.5rem", display: "flex", flexDirection: "column", gap: "1.25rem" }}>
+            <h3 style={{ fontSize: "1.1rem", display: "flex", alignItems: "center", gap: "0.5rem" }}>
+              <Cpu size={18} color="var(--primary)" /> 2. Model Settings
+            </h3>
+            
+            <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+              <label style={{ fontSize: "0.8rem", fontWeight: 600, color: "var(--text-muted)" }}>
+                Model Selection
+              </label>
+              <select
+                value={selectedModel}
+                onChange={(e) => setSelectedModel(e.target.value)}
+                className="input-field"
+                style={{ 
+                  fontFamily: "sans-serif", 
+                  fontSize: "0.85rem",
+                  background: "#ffffff",
+                  cursor: "pointer",
+                  padding: "0.6rem"
+                }}
+              >
+                {models.map(m => (
+                  <option key={m.id} value={m.id}>
+                    {m.name}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            {/* Model Info Details */}
+            <div style={{ 
+              background: "var(--bg-main)", 
+              padding: "0.85rem", 
+              borderRadius: "8px", 
+              border: "1px solid var(--border-light)",
+              fontSize: "0.75rem",
+              lineHeight: "1.4"
+            }}>
+              <div style={{ fontWeight: 700, marginBottom: "0.25rem", display: "flex", justifyContent: "space-between" }}>
+                <span>Context Limit: {models.find(m => m.id === selectedModel)?.context}</span>
+                <span style={{ color: "var(--primary)" }}>{models.find(m => m.id === selectedModel)?.provider}</span>
+              </div>
+              <p style={{ color: "var(--text-muted)", margin: 0 }}>
+                {models.find(m => m.id === selectedModel)?.description}
+              </p>
+            </div>
+
+            {/* Temperature Sliders */}
+            <div style={{ display: "flex", flexDirection: "column", gap: "1rem", marginTop: "0.5rem" }}>
+              <div>
+                <div style={{ display: "flex", justifyContent: "space-between", fontSize: "0.75rem", marginBottom: "0.25rem", fontWeight: 600 }}>
+                  <span>Temperature (Creativity)</span>
+                  <span>{temperature}</span>
+                </div>
+                <input
+                  type="range"
+                  min="0"
+                  max="1.5"
+                  step="0.1"
+                  value={temperature}
+                  onChange={(e) => setTemperature(parseFloat(e.target.value))}
+                  style={{ width: "100%", height: "6px" }}
+                />
+              </div>
+
+              <div>
+                <div style={{ display: "flex", justifyContent: "space-between", fontSize: "0.75rem", marginBottom: "0.25rem", fontWeight: 600 }}>
+                  <span>Max Tokens</span>
+                  <span>{maxTokens}</span>
+                </div>
+                <input
+                  type="range"
+                  min="500"
+                  max="4000"
+                  step="250"
+                  value={maxTokens}
+                  onChange={(e) => setMaxTokens(parseInt(e.target.value))}
+                  style={{ width: "100%", height: "6px" }}
+                />
+              </div>
             </div>
           </div>
 
         </div>
 
-        {/* Right Console Workspace */}
-        <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
-          
-          {/* Inputs Section */}
-          <div className="card" style={{ padding: "1.5rem" }}>
-            <h3 style={{ fontSize: "1.1rem", marginBottom: "1rem" }}>
-              1. Provide Startup Details
-            </h3>
-            
-            <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-              <div>
-                <label style={{ fontSize: "0.85rem", fontWeight: 600, marginBottom: "0.5rem", display: "block" }}>
-                  Product Pitch / Business Description
-                </label>
-                <textarea
-                  className="input-field"
-                  style={{ minHeight: "80px", fontFamily: "sans-serif", lineHeight: "1.4", padding: "0.75rem" }}
-                  placeholder="Describe your startup core features, target users, and what it does..."
-                  value={startupInfo}
-                  onChange={(e) => setStartupInfo(e.target.value)}
-                />
-              </div>
-
-              <div>
-                <label style={{ fontSize: "0.85rem", fontWeight: 600, marginBottom: "0.5rem", display: "block" }}>
-                  Customize Prompt Template
-                </label>
-                <textarea
-                  className="input-field"
-                  style={{ minHeight: "130px", fontFamily: "monospace", fontSize: "0.8rem", padding: "0.75rem", background: "var(--bg-main)" }}
-                  placeholder="Agent instruction template..."
-                  value={customPrompt}
-                  onChange={(e) => setCustomPrompt(e.target.value)}
-                />
-                <span style={{ fontSize: "0.7rem", color: "var(--text-muted)", marginTop: "0.25rem", display: "block" }}>
-                  Note: The string <code style={{ background: "rgba(0,0,0,0.05)", padding: "0.1rem 0.25rem", borderRadius: "3px" }}>[STARTUP_INFO]</code> will be replaced with your description above.
+        {/* Row 2: Console / Tabbed Output Dashboard */}
+        <div style={{
+          background: "#0f172a", // Sleek dark editor styling
+          borderRadius: "16px",
+          border: "1px solid #1e293b",
+          display: "flex",
+          flexDirection: "column",
+          boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.15)",
+          overflow: "hidden"
+        }}>
+          {/* Header Dashboard Info / Tabs */}
+          <div style={{
+            display: "flex",
+            flexDirection: "column",
+            borderBottom: "1px solid #1e293b",
+            background: "#121b2e"
+          }}>
+            {/* Title / Status */}
+            <div style={{ 
+              display: "flex", 
+              justifyContent: "space-between", 
+              alignItems: "center", 
+              padding: "0.85rem 1.25rem",
+              borderBottom: "1px solid #1e293b/50"
+            }}>
+              <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                <Terminal size={14} color="#94a3b8" />
+                <span style={{ color: "#e2e8f0", fontSize: "0.8rem", fontFamily: "monospace" }}>
+                  zennote_analysis_output.json
                 </span>
               </div>
+              <span style={{
+                fontSize: "0.65rem",
+                fontWeight: 700,
+                fontFamily: "monospace",
+                background: isStreaming ? "rgba(234, 88, 12, 0.2)" : "rgba(34, 197, 94, 0.2)",
+                color: isStreaming ? "#f97316" : "#22c55e",
+                padding: "0.2rem 0.5rem",
+                borderRadius: "4px",
+                border: "1px solid",
+                borderColor: isStreaming ? "rgba(234, 88, 12, 0.4)" : "rgba(34, 197, 94, 0.4)"
+              }}>
+                {statusText}
+              </span>
+            </div>
 
+            {/* Navigation Tabs Bar */}
+            <div style={{
+              display: "flex",
+              overflowX: "auto",
+              whiteSpace: "nowrap",
+              scrollbarWidth: "none"
+            }} className="console-tabs-bar">
               <button
-                className="btn btn-primary"
-                onClick={handleRunAgent}
-                disabled={isStreaming || !startupInfo.trim()}
+                onClick={() => setActiveTab("console")}
                 style={{
-                  padding: "0.85rem 1.5rem",
-                  fontSize: "1rem",
-                  alignSelf: "flex-end",
+                  padding: "0.85rem 1.25rem",
+                  background: activeTab === "console" ? "#0f172a" : "transparent",
+                  color: activeTab === "console" ? "#3b82f6" : "#64748b",
+                  border: "none",
+                  borderBottom: activeTab === "console" ? "2px solid #3b82f6" : "none",
+                  cursor: "pointer",
+                  fontSize: "0.8rem",
+                  fontWeight: 600,
                   display: "flex",
                   alignItems: "center",
-                  gap: "0.5rem",
-                  boxShadow: "0 4px 10px rgba(37, 99, 235, 0.2)"
+                  gap: "0.4rem"
                 }}
               >
-                {isStreaming ? (
-                  <>
-                    <RotateCw size={18} className="animate-spin" /> Stream Generating...
-                  </>
-                ) : (
-                  <>
-                    <Play size={16} /> Run AI Agent
-                  </>
-                )}
+                <Terminal size={14} /> Live Stream
+              </button>
+
+              <button
+                onClick={() => setActiveTab("tasks")}
+                disabled={!isStreaming && tasksList.length === 0}
+                style={{
+                  padding: "0.85rem 1.25rem",
+                  background: activeTab === "tasks" ? "#0f172a" : "transparent",
+                  color: activeTab === "tasks" ? "#3b82f6" : "#64748b",
+                  border: "none",
+                  borderBottom: activeTab === "tasks" ? "2px solid #3b82f6" : "none",
+                  cursor: (tasksList.length > 0) ? "pointer" : "not-allowed",
+                  fontSize: "0.8rem",
+                  fontWeight: 600,
+                  opacity: (tasksList.length > 0) ? 1 : 0.5,
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "0.4rem"
+                }}
+              >
+                <ClipboardList size={14} /> Checklist ({tasksList.length})
+              </button>
+
+              <button
+                onClick={() => setActiveTab("drafts")}
+                disabled={!isStreaming && !draftsContent}
+                style={{
+                  padding: "0.85rem 1.25rem",
+                  background: activeTab === "drafts" ? "#0f172a" : "transparent",
+                  color: activeTab === "drafts" ? "#3b82f6" : "#64748b",
+                  border: "none",
+                  borderBottom: activeTab === "drafts" ? "2px solid #3b82f6" : "none",
+                  cursor: draftsContent ? "pointer" : "not-allowed",
+                  fontSize: "0.8rem",
+                  fontWeight: 600,
+                  opacity: draftsContent ? 1 : 0.5,
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "0.4rem"
+                }}
+              >
+                <MessageSquare size={14} /> Message Drafts
+              </button>
+
+              <button
+                onClick={() => setActiveTab("routine")}
+                disabled={!isStreaming && !routineContent}
+                style={{
+                  padding: "0.85rem 1.25rem",
+                  background: activeTab === "routine" ? "#0f172a" : "transparent",
+                  color: activeTab === "routine" ? "#3b82f6" : "#64748b",
+                  border: "none",
+                  borderBottom: activeTab === "routine" ? "2px solid #3b82f6" : "none",
+                  cursor: routineContent ? "pointer" : "not-allowed",
+                  fontSize: "0.8rem",
+                  fontWeight: 600,
+                  opacity: routineContent ? 1 : 0.5,
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "0.4rem"
+                }}
+              >
+                <Calendar size={14} /> Daily Schedule
+              </button>
+
+              <button
+                onClick={() => setActiveTab("insights")}
+                disabled={!isStreaming && !insightsContent}
+                style={{
+                  padding: "0.85rem 1.25rem",
+                  background: activeTab === "insights" ? "#0f172a" : "transparent",
+                  color: activeTab === "insights" ? "#3b82f6" : "#64748b",
+                  border: "none",
+                  borderBottom: activeTab === "insights" ? "2px solid #3b82f6" : "none",
+                  cursor: insightsContent ? "pointer" : "not-allowed",
+                  fontSize: "0.8rem",
+                  fontWeight: 600,
+                  opacity: insightsContent ? 1 : 0.5,
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "0.4rem"
+                }}
+              >
+                <Lightbulb size={14} /> AI Recommendations
               </button>
             </div>
           </div>
 
-          {/* Console Output Terminal */}
-          <div style={{
-            background: "#0f172a", // Dark slate background for premium dev terminal console
-            borderRadius: "12px",
-            border: "1px solid #1e293b",
-            display: "flex",
-            flexDirection: "column",
-            boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.2)"
-          }}>
-            {/* Terminal Header */}
+          {/* Console Error Banner */}
+          {errorMessage && (
             <div style={{
+              background: "rgba(239, 68, 68, 0.15)",
+              color: "#f87171",
+              padding: "1rem",
+              fontSize: "0.85rem",
+              fontFamily: "monospace",
+              borderBottom: "1px solid rgba(239, 68, 68, 0.3)",
               display: "flex",
-              justifyContent: "space-between",
               alignItems: "center",
-              padding: "0.75rem 1.25rem",
-              borderBottom: "1px solid #1e293b",
-              background: "#1e293b/40"
+              gap: "0.5rem"
             }}>
-              <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-                <div style={{ display: "flex", gap: "0.35rem" }}>
-                  <span style={{ width: 10, height: 10, borderRadius: "50%", background: "#ef4444", display: "inline-block" }}></span>
-                  <span style={{ width: 10, height: 10, borderRadius: "50%", background: "#eab308", display: "inline-block" }}></span>
-                  <span style={{ width: 10, height: 10, borderRadius: "50%", background: "#22c55e", display: "inline-block" }}></span>
-                </div>
-                <span style={{ color: "#94a3b8", fontFamily: "monospace", fontSize: "0.75rem", marginLeft: "0.5rem" }}>
-                  copilot_runtime.log
-                </span>
-              </div>
-
-              {/* Status Badge */}
-              <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-                <span style={{
-                  fontSize: "0.65rem",
-                  fontWeight: 700,
-                  fontFamily: "monospace",
-                  background: isStreaming ? "rgba(234, 88, 12, 0.2)" : "rgba(34, 197, 94, 0.2)",
-                  color: isStreaming ? "#f97316" : "#22c55e",
-                  padding: "0.2rem 0.5rem",
-                  borderRadius: "4px",
-                  border: "1px solid",
-                  borderColor: isStreaming ? "rgba(234, 88, 12, 0.4)" : "rgba(34, 197, 94, 0.4)"
-                }}>
-                  {statusText}
-                </span>
-              </div>
+              <AlertCircle size={16} />
+              <div>{errorMessage}</div>
             </div>
+          )}
 
-            {/* Error Message Box inside Terminal */}
-            {errorMessage && (
-              <div style={{
-                background: "rgba(239, 68, 68, 0.15)",
-                color: "#f87171",
-                padding: "1rem",
-                fontSize: "0.85rem",
-                fontFamily: "monospace",
-                borderBottom: "1px solid rgba(239, 68, 68, 0.3)",
-                display: "flex",
-                alignItems: "flex-start",
-                gap: "0.5rem"
-              }}>
-                <AlertCircle size={16} style={{ marginTop: "0.1rem", flexShrink: 0 }} />
-                <div>{errorMessage}</div>
+          {/* Scrollable Viewport Container (Local Scroll Only!) */}
+          <div 
+            ref={terminalScrollRef}
+            style={{
+              padding: "1.5rem",
+              minHeight: "360px",
+              maxHeight: "550px",
+              overflowY: "auto",
+              background: "#0f172a",
+              color: "#e2e8f0",
+              lineHeight: "1.6"
+            }}
+          >
+            
+            {/* console raw log stream tab */}
+            {activeTab === "console" && (
+              <div style={{ fontFamily: "monospace", fontSize: "0.85rem", whiteSpace: "pre-wrap" }}>
+                {consoleOutput ? (
+                  consoleOutput
+                ) : (
+                  <span style={{ color: "#475569", fontStyle: "italic" }}>
+                    Console terminal ready. Enter notes above and click &quot;Organize My Thoughts&quot; to start...
+                  </span>
+                )}
               </div>
             )}
 
-            {/* Terminal Workspace Screen */}
-            <div style={{
-              padding: "1.5rem",
-              minHeight: "350px",
-              maxHeight: "600px",
-              overflowY: "auto",
-              color: "#e2e8f0",
-              fontFamily: "monospace",
-              fontSize: "0.85rem",
-              lineHeight: "1.6"
-            }}>
-              {consoleOutput ? (
-                <div style={{ whiteSpace: "pre-wrap" }}>
-                  {consoleOutput}
-                </div>
-              ) : (
-                <div style={{ color: "#475569", fontStyle: "italic", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", minHeight: "320px" }}>
-                  Terminal idle. Configure parameters above and click &quot;Run AI Agent&quot; to compile logs...
-                </div>
-              )}
-              <div ref={consoleBottomRef} />
-            </div>
-
-            {/* Terminal Footer Panel */}
-            <div style={{
-              display: "flex",
-              justifyContent: "flex-end",
-              alignItems: "center",
-              padding: "0.6rem 1.25rem",
-              borderTop: "1px solid #1e293b",
-              background: "#0b0f19",
-              borderRadius: "0 0 12px 12px"
-            }}>
-              <div style={{ display: "flex", gap: "0.75rem" }}>
-                <button
-                  onClick={handleCopyOutput}
-                  disabled={!consoleOutput}
-                  style={{
-                    background: "none",
-                    border: "none",
-                    color: consoleOutput ? "#94a3b8" : "#475569",
-                    cursor: consoleOutput ? "pointer" : "not-allowed",
-                    fontSize: "0.75rem",
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "0.35rem",
-                    padding: "0.25rem 0.5rem",
-                    borderRadius: "4px",
-                    transition: "color 0.2s"
-                  }}
-                  className="terminal-btn"
-                >
-                  {copied ? <Check size={14} color="#22c55e" /> : <Copy size={14} />}
-                  <span>{copied ? "Copied!" : "Copy Logs"}</span>
-                </button>
+            {/* Checklist Tab */}
+            {activeTab === "tasks" && (
+              <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+                <h4 style={{ color: "#ffffff", fontSize: "1.1rem", borderBottom: "1px solid #1e293b", paddingBottom: "0.5rem" }}>
+                  Daily Checklist
+                </h4>
+                {tasksList.length > 0 ? (
+                  <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+                    {tasksList.map(task => (
+                      <label 
+                        key={task.id}
+                        style={{
+                          display: "flex",
+                          alignItems: "flex-start",
+                          gap: "0.75rem",
+                          background: "#1e293b/40",
+                          padding: "0.75rem 1rem",
+                          borderRadius: "8px",
+                          cursor: "pointer",
+                          transition: "background-color 0.2s",
+                          color: task.done ? "#64748b" : "#e2e8f0",
+                          textDecoration: task.done ? "line-through" : "none",
+                        }}
+                      >
+                        <input
+                          type="checkbox"
+                          checked={task.done}
+                          onChange={() => toggleTask(task.id)}
+                          style={{
+                            marginTop: "0.25rem",
+                            width: "16px",
+                            height: "16px",
+                            cursor: "pointer"
+                          }}
+                        />
+                        <span style={{ fontSize: "0.95rem" }}>{task.text}</span>
+                      </label>
+                    ))}
+                  </div>
+                ) : (
+                  <span style={{ color: "#64748b" }}>No tasks parsed yet. Try running the generator.</span>
+                )}
               </div>
-            </div>
+            )}
 
+            {/* Message Drafts Tab */}
+            {activeTab === "drafts" && (
+              <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: "1px solid #1e293b", paddingBottom: "0.5rem" }}>
+                  <h4 style={{ color: "#ffffff", fontSize: "1.1rem", margin: 0 }}>
+                    Extracted Drafts
+                  </h4>
+                  {draftsContent && (
+                    <button
+                      onClick={() => copyToClipboard(draftsContent, setCopiedDrafts)}
+                      style={{
+                        background: "rgba(59, 130, 246, 0.1)",
+                        color: "#3b82f6",
+                        border: "1px solid rgba(59, 130, 246, 0.3)",
+                        padding: "0.3rem 0.6rem",
+                        borderRadius: "6px",
+                        fontSize: "0.75rem",
+                        cursor: "pointer",
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "0.25rem"
+                      }}
+                    >
+                      {copiedDrafts ? <Check size={12} color="#22c55e" /> : <Copy size={12} />}
+                      <span>{copiedDrafts ? "Copied!" : "Copy All Drafts"}</span>
+                    </button>
+                  )}
+                </div>
+                {draftsContent ? (
+                  <div style={{ whiteSpace: "pre-wrap", fontSize: "0.95rem", color: "#cbd5e1" }}>
+                    {draftsContent}
+                  </div>
+                ) : (
+                  <span style={{ color: "#64748b" }}>No messages extracted.</span>
+                )}
+              </div>
+            )}
+
+            {/* Daily Schedule Tab */}
+            {activeTab === "routine" && (
+              <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: "1px solid #1e293b", paddingBottom: "0.5rem" }}>
+                  <h4 style={{ color: "#ffffff", fontSize: "1.1rem", margin: 0 }}>
+                    Chronological Routine
+                  </h4>
+                  {routineContent && (
+                    <button
+                      onClick={() => copyToClipboard(routineContent, setCopiedRoutine)}
+                      style={{
+                        background: "rgba(59, 130, 246, 0.1)",
+                        color: "#3b82f6",
+                        border: "1px solid rgba(59, 130, 246, 0.3)",
+                        padding: "0.3rem 0.6rem",
+                        borderRadius: "6px",
+                        fontSize: "0.75rem",
+                        cursor: "pointer",
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "0.25rem"
+                      }}
+                    >
+                      {copiedRoutine ? <Check size={12} color="#22c55e" /> : <Copy size={12} />}
+                      <span>{copiedRoutine ? "Copied!" : "Copy Schedule"}</span>
+                    </button>
+                  )}
+                </div>
+                {routineContent ? (
+                  <div style={{ whiteSpace: "pre-wrap", fontSize: "0.95rem", color: "#cbd5e1" }}>
+                    {routineContent}
+                  </div>
+                ) : (
+                  <span style={{ color: "#64748b" }}>No daily schedule generated.</span>
+                )}
+              </div>
+            )}
+
+            {/* Recommendations Tab */}
+            {activeTab === "insights" && (
+              <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: "1px solid #1e293b", paddingBottom: "0.5rem" }}>
+                  <h4 style={{ color: "#ffffff", fontSize: "1.1rem", margin: 0 }}>
+                    AI Recommendations
+                  </h4>
+                  {insightsContent && (
+                    <button
+                      onClick={() => copyToClipboard(insightsContent, setCopiedInsights)}
+                      style={{
+                        background: "rgba(59, 130, 246, 0.1)",
+                        color: "#3b82f6",
+                        border: "1px solid rgba(59, 130, 246, 0.3)",
+                        padding: "0.3rem 0.6rem",
+                        borderRadius: "6px",
+                        fontSize: "0.75rem",
+                        cursor: "pointer",
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "0.25rem"
+                      }}
+                    >
+                      {copiedInsights ? <Check size={12} color="#22c55e" /> : <Copy size={12} />}
+                      <span>{copiedInsights ? "Copied!" : "Copy Recommendations"}</span>
+                    </button>
+                  )}
+                </div>
+                {insightsContent ? (
+                  <div style={{ whiteSpace: "pre-wrap", fontSize: "0.95rem", color: "#cbd5e1" }}>
+                    {insightsContent}
+                  </div>
+                ) : (
+                  <span style={{ color: "#64748b" }}>No recommendations extracted.</span>
+                )}
+              </div>
+            )}
+
+          </div>
+
+          {/* Console Footer */}
+          <div style={{
+            padding: "0.6rem 1.25rem",
+            background: "#0a0f1d",
+            borderTop: "1px solid #1e293b",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center"
+          }}>
+            <span style={{ color: "#475569", fontSize: "0.7rem", fontFamily: "monospace" }}>
+              sandbox_runtime: v1.0.4
+            </span>
           </div>
 
         </div>
@@ -842,29 +1121,21 @@ export default function StartupDashboard() {
 
       {/* Guide Section */}
       <section className="section" style={{ borderTop: "1px solid var(--border-light)", marginTop: "4rem" }}>
-        <h2 style={{ fontSize: "1.75rem", marginBottom: "1rem" }}>Using OpenRouter to Fund Your API Costs</h2>
+        <h2 style={{ fontSize: "1.75rem", marginBottom: "1rem" }}>How ZenNote AI Works</h2>
         <div style={{ display: "flex", flexDirection: "column", gap: "1rem", color: "var(--text-muted)", lineHeight: "1.6" }}>
           <p>
-            The **JoinSecret OpenRouter Startup Reward** provides qualifying startups with $1,000 in API credits. This allows you to integrate cutting-edge open-source and proprietary models into your app without any upfront costs.
+            ZenNote AI uses a single prompt input to perform multiple cognitive tasks in parallel. Behind the scenes, the model runs entity extraction, prioritizes calendar tasks, drafts communications in natural business tones, and searches contextual data.
           </p>
           <div style={{ 
             background: "#f8fafc", 
             border: "1px solid var(--border-light)", 
             borderRadius: "12px", 
-            padding: "1.5rem",
-            display: "flex",
-            flexDirection: "column",
-            gap: "0.75rem"
+            padding: "1.5rem"
           }}>
-            <h4 style={{ color: "var(--text-main)", fontWeight: 700 }}>How we meet the review criteria:</h4>
-            <ul style={{ listStyleType: "disc", paddingLeft: "1.25rem", display: "flex", flexDirection: "column", gap: "0.5rem" }}>
-              <li>
-                <strong>AI-Native Product:</strong> This dashboard acts as a playground showcasing how we interface with OpenRouter agents to drive startup operations.
-              </li>
-              <li>
-                <strong>API Request Compliance:</strong> Standard API requests from this domain automatically attach the required referer headers (<code style={{ background: "rgba(0,0,0,0.04)", padding: "0.1rem 0.2rem" }}>HTTP-Referer: https://www.aitoolspro.tech</code>) confirming live production integration.
-              </li>
-            </ul>
+            <h4 style={{ color: "var(--text-main)", fontWeight: 700, marginBottom: "0.5rem" }}>Safe & Local Execution</h4>
+            <p style={{ margin: 0, fontSize: "0.9rem" }}>
+              All settings, templates, and API keys are stored solely inside your browser's local sandbox memory. No user logs or credentials are ever sent to or processed by our servers.
+            </p>
           </div>
         </div>
       </section>

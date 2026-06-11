@@ -16,7 +16,7 @@ export default function ToolsDirectory() {
       title: "AI & Agent Tools",
       icon: <Sparkles size={20} color="var(--primary)" />,
       tools: [
-        { name: "StartupAI Copilot (OpenRouter)", path: "/tools/ai-copilot", status: "live" },
+        { name: "ZenNote AI (Daily Organizer)", path: "/tools/ai-copilot", status: "live" },
         { name: "AI SEO Meta Title Generator", path: "/tools/meta-title-generator", status: "live" },
         { name: "AI SEO Meta Description Generator", path: "/tools/meta-description-generator", status: "live" },
       ]
