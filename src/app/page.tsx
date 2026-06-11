@@ -23,9 +23,12 @@ export default function Home() {
           <p style={{ fontSize: 'clamp(1rem, 2vw, 1.25rem)', color: 'var(--text-muted)', maxWidth: '700px', margin: '0 auto 2.5rem auto', lineHeight: 1.5 }}>
             100% free, lightning-fast tools for developers, content creators, and SEO professionals. No registration required. All processing happens safely in your browser.
           </p>
-          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
-            <Link href="#tools" className="btn btn-primary" style={{ padding: '0.85rem 1.75rem', fontSize: '1.05rem' }}>
-              Explore All Tools
+          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <Link href="/tools/ai-copilot" className="btn btn-primary" style={{ padding: '0.85rem 1.75rem', fontSize: '1.05rem', background: 'linear-gradient(to right, var(--primary), #9333ea)', boxShadow: '0 4px 12px rgba(37, 99, 235, 0.25)' }}>
+              <Sparkles size={16} style={{ marginRight: '0.25rem' }} /> Try AI Copilot
+            </Link>
+            <Link href="#tools" className="btn btn-outline" style={{ padding: '0.85rem 1.75rem', fontSize: '1.05rem' }}>
+              Explore Web Tools
             </Link>
           </div>
         </div>
@@ -40,6 +43,19 @@ export default function Home() {
           </div>
 
           <div className="grid-3">
+            <Link href="/tools/ai-copilot" className="card" style={{ display: 'block', color: 'inherit', border: '1.5px solid rgba(147, 51, 234, 0.3)', background: 'linear-gradient(to bottom, #ffffff, rgba(147, 51, 234, 0.02))' }}>
+              <div style={{ width: 48, height: 48, borderRadius: '12px', background: 'rgba(147, 51, 234, 0.08)', color: '#9333ea', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.5rem' }}>
+                <Sparkles size={24} />
+              </div>
+              <h3 style={{ fontSize: '1.25rem', marginBottom: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                AI Copilot Dashboard <span style={{ fontSize: '0.65rem', background: '#9333ea', color: '#ffffff', padding: '0.15rem 0.5rem', borderRadius: '10px', fontWeight: 700 }}>FLAGSHIP</span>
+              </h3>
+              <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '1.5rem' }}>
+                Pitch decks, SEO content copywriters, validation stress-testing, and React code generation powered by OpenRouter.
+              </p>
+              <div style={{ fontWeight: 600, color: '#9333ea', fontSize: '0.875rem' }}>Open Copilot &rarr;</div>
+            </Link>
+
             <Link href="/tools/json-formatter" className="card" style={{ display: 'block', color: 'inherit' }}>
               <div style={{ width: 48, height: 48, borderRadius: '12px', background: '#eff6ff', color: 'var(--primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.5rem' }}>
                 <FileJson size={24} />

@@ -13,6 +13,15 @@ export const metadata: Metadata = {
 export default function ToolsDirectory() {
   const categories = [
     {
+      title: "AI & Agent Tools",
+      icon: <Sparkles size={20} color="var(--primary)" />,
+      tools: [
+        { name: "StartupAI Copilot (OpenRouter)", path: "/tools/ai-copilot", status: "live" },
+        { name: "AI SEO Meta Title Generator", path: "/tools/meta-title-generator", status: "live" },
+        { name: "AI SEO Meta Description Generator", path: "/tools/meta-description-generator", status: "live" },
+      ]
+    },
+    {
       title: "Text & Content Tools",
       icon: <FileText size={20} color="var(--primary)" />,
       tools: [
@@ -41,8 +50,6 @@ export default function ToolsDirectory() {
         { name: "Keyword Density Checker", path: "/tools/keyword-density-checker", status: "live" },
         { name: "Keyword CPC Calculator", path: "#", status: "planned" },
         { name: "Keywords Suggestion Tool", path: "#", status: "planned" },
-        { name: "AI SEO Meta Title Generator", path: "/tools/meta-title-generator", status: "live" },
-        { name: "AI SEO Meta Description Generator", path: "/tools/meta-description-generator", status: "live" },
         { name: "AI Keyword Cluster Ideas", path: "#", status: "planned" },
       ]
     },

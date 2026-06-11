@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Wrench, Menu, X, ChevronDown } from "lucide-react";
+import { Wrench, Menu, X, ChevronDown, Sparkles } from "lucide-react";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,6 +39,10 @@ export default function Header() {
 
         {/* Desktop Menu Links */}
         <nav className="header-desktop-menu">
+          <Link href="/tools/ai-copilot" className="nav-link nav-link-highlight" style={{ display: "flex", alignItems: "center", gap: "0.25rem" }}>
+            <Sparkles size={14} /> AI Copilot
+          </Link>
+
           <Link href="/tools" className="nav-link">
             All Tools
           </Link>
@@ -165,6 +169,9 @@ export default function Header() {
       {/* Mobile Dropdown Menu Drawer */}
       <div className={`header-mobile-drawer ${isOpen ? "is-open" : ""}`}>
         <nav className="header-mobile-menu">
+          <Link href="/tools/ai-copilot" className="mobile-nav-link nav-link-highlight" style={{ display: "flex", alignItems: "center", gap: "0.25rem" }} onClick={closeMenu}>
+            <Sparkles size={14} /> AI Copilot
+          </Link>
           <Link href="/tools" className="mobile-nav-link" onClick={closeMenu}>
             All Tools
           </Link>
