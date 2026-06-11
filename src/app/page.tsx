@@ -3,7 +3,8 @@ import Link from "next/link";
 import { 
   Code, FileJson, Sparkles, QrCode, Settings, Type, Zap, Search, 
   ShieldCheck, Calculator, ArrowLeftRight, Binary, FileText, 
-  Link as LinkIcon, Image as ImageIcon, Landmark, FileCode, CheckCircle
+  Link as LinkIcon, Image as ImageIcon, Landmark, FileCode, CheckCircle,
+  Keyboard, Timer, Activity
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -29,6 +30,38 @@ export default function Home() {
             </Link>
             <Link href="#tools" className="btn btn-outline" style={{ padding: '0.85rem 1.75rem', fontSize: '1.05rem' }}>
               Explore Web Tools
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Typing Game Banner Section */}
+      <section className="section" style={{ background: 'linear-gradient(135deg, #fdf4ff 0%, #f3e8ff 100%)', borderBottom: '1px solid var(--border-light)', padding: '4rem 0' }}>
+        <div className="container">
+          <div style={{ background: '#ffffff', borderRadius: '24px', padding: 'clamp(2rem, 5vw, 4rem)', boxShadow: '0 20px 40px rgba(147, 51, 234, 0.08)', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', border: '1px solid rgba(147, 51, 234, 0.15)', position: 'relative', overflow: 'hidden' }}>
+            
+            <div style={{ position: 'absolute', top: '-50px', left: '-50px', width: '200px', height: '200px', background: 'var(--primary)', filter: 'blur(100px)', opacity: 0.1, borderRadius: '50%' }}></div>
+            <div style={{ position: 'absolute', bottom: '-50px', right: '-50px', width: '200px', height: '200px', background: '#ec4899', filter: 'blur(100px)', opacity: 0.1, borderRadius: '50%' }}></div>
+
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: '#fdf4ff', color: '#db2777', padding: '0.5rem 1.25rem', borderRadius: '100px', fontWeight: 700, fontSize: '0.875rem', marginBottom: '1.5rem', border: '1px solid rgba(219, 39, 119, 0.2)' }}>
+              <Activity size={16} /> NEW FEATURE
+            </div>
+            
+            <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', marginBottom: '1rem', letterSpacing: '-0.02em', color: '#1e293b' }}>
+              Test Your Typing Speed
+            </h2>
+            <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', maxWidth: '600px', marginBottom: '2.5rem', lineHeight: 1.6 }}>
+              Challenge yourself with our new professional-grade typing game. Check your WPM, accuracy, and improve your productivity with interactive text puzzles and sounds.
+            </p>
+
+            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center', marginBottom: '3rem' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#475569', fontWeight: 500 }}><Keyboard size={20} color="var(--primary)" /> Real-time WPM</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#475569', fontWeight: 500 }}><CheckCircle size={20} color="#10b981" /> Keystroke Accuracy</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#475569', fontWeight: 500 }}><Timer size={20} color="#f59e0b" /> Time Attack Modes</div>
+            </div>
+
+            <Link href="/tools/typing-test" className="btn" style={{ background: '#1e293b', color: 'white', padding: '1rem 2.5rem', fontSize: '1.1rem', borderRadius: '12px', display: 'inline-flex', alignItems: 'center', gap: '0.75rem', boxShadow: '0 10px 25px rgba(30, 41, 59, 0.2)', transition: 'all 0.2s ease' }}>
+              <Keyboard size={20} /> Play Typing Game Now
             </Link>
           </div>
         </div>

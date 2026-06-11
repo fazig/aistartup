@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { 
   FileText, Search, Link as LinkIcon, Settings, Code, Image as ImageIcon,
-  Calculator, Sparkles, ArrowLeftRight, Binary
+  Calculator, Sparkles, ArrowLeftRight, Binary, Keyboard
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -12,6 +12,13 @@ export const metadata: Metadata = {
 
 export default function ToolsDirectory() {
   const categories = [
+    {
+      title: "Games & Speed Tests",
+      icon: <Keyboard size={20} color="var(--primary)" />,
+      tools: [
+        { name: "Professional Typing Test", path: "/tools/typing-test", status: "live" },
+      ]
+    },
     {
       title: "AI & Agent Tools",
       icon: <Sparkles size={20} color="var(--primary)" />,
