@@ -2,7 +2,7 @@ import { BlogPost } from "../posts";
 
 export const postFreeQrCodeBuilder: BlogPost = {
   slug: "free-qr-code-builder",
-  title: "The Ultimate Free QR Code Builder: How to Make Dynamic QR Codes",
+  title: "How to Make Dynamic QR Codes",
   description: "Looking for a free qr code builder or a qr qr code generator? Learn how making free qr codes works, the difference between static and dynamic codes, and the best freeware generators.",
   date: "June 14, 2026",
   readTime: "9 min read",

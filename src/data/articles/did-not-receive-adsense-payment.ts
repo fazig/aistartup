@@ -2,7 +2,7 @@ import { BlogPost } from "../posts";
 
 export const postDidNotReceiveAdsensePayment: BlogPost = {
   slug: "did-not-receive-adsense-payment",
-  title: "Did Not Receive AdSense Payment: Troubleshooting Transfer Holds, Banking Audits, and Support Request Workflows",
+  title: "Troubleshooting Transfer Holds, Banking Audits, and",
   description: "Did not receive adsense payment? Troubleshoot wire transfer holds, SWIFT tracking, tax form audits, PIN issues, and bank compliance holds.",
   date: "June 11, 2026",
   readTime: "35 min read",

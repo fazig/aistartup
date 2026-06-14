@@ -508,6 +508,25 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* SEO Content Block */}
+      <section className="section" style={{ background: '#ffffff', padding: '4rem 0' }}>
+        <div className="container prose" style={{ maxWidth: '800px', margin: '0 auto', color: 'var(--text-muted)' }}>
+          <h2 style={{ color: 'var(--text-main)', fontSize: '2rem', marginBottom: '1rem' }}>The Ultimate Free Tools Directory for Developers and Marketers</h2>
+          <p>Welcome to StartupAI Tools, the internet's premier destination for 100% free online utilities. Whether you are a web developer looking to format JSON, a digital marketer needing a meta tag generator, or a student tracking word counts, our comprehensive suite of over 100 mini-tools has you covered.</p>
+          
+          <h3 style={{ color: 'var(--text-main)', fontSize: '1.5rem', marginTop: '2rem', marginBottom: '1rem' }}>Why We Built This Platform</h3>
+          <p>We believe that essential internet utilities should be completely free, lightning fast, and privacy-focused. Many other tool websites bombard you with popup ads or force you to sign up for an account just to compress an image or convert a color code. StartupAI Tools is different. Our tools run locally in your browser whenever possible, ensuring your data never touches our servers. This means instant results and total privacy.</p>
+          
+          <h3 style={{ color: 'var(--text-main)', fontSize: '1.5rem', marginTop: '2rem', marginBottom: '1rem' }}>Popular Categories</h3>
+          <ul>
+            <li><strong>Developer Tools:</strong> Formatters, validators, and converters for JSON, XML, HTML, and CSS.</li>
+            <li><strong>SEO Utilities:</strong> Meta tag generators, keyword extractors, and SERP preview tools.</li>
+            <li><strong>Text & Content:</strong> Word counters, case converters, and Lorem Ipsum generators.</li>
+            <li><strong>Image Optimization:</strong> WebP converters, resizers, and quality optimizers for faster page loads.</li>
+          </ul>
+          <p>Bookmark this site and never pay for a basic utility app again. We are constantly adding new tools based on community feedback, so check back often to see what is new!</p>
+        </div>
+      </section>
     </>
   );
 }

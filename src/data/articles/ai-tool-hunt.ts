@@ -2,7 +2,7 @@ import { BlogPost } from "../posts";
 
 export const postAiToolHunt: BlogPost = {
   slug: "ai-tool-hunt",
-  title: "The Ultimate Guide to Your Next ai tool hunt: Discover the Best Software",
+  title: "Discover the Best Software",
   description: "Join us on a massive ai tool hunt as we explore top applications for every workflow. Learn how to conduct your own ai tool hunt.",
   date: "June 12, 2026",
   readTime: "25 min read",

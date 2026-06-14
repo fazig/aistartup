@@ -2,7 +2,7 @@ import { BlogPost } from "../posts";
 
 export const postWhenCanYouGetAdsenseOnYoutube: BlogPost = {
   slug: "when-can-you-get-adsense-on-youtube",
-  title: "When Can You Get AdSense on YouTube: Partner Program (YPP) Milestones, Watch Hour Audits, and Application Guidelines",
+  title: "Partner Program (YPP) Milestones, Watch Hour Audits, and",
   description: "Discover the exact requirements, milestones, watch hour audits, and application guidelines to know when can you get adsense on youtube for your channel.",
   date: "June 11, 2026",
   readTime: "25 min read",

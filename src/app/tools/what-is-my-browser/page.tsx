@@ -51,8 +51,6 @@ export default function WhatIsMyBrowser() {
     });
   }, []);
 
-  if (!browserInfo) return <div style={{ padding: '3rem', textAlign: 'center' }}>Analyzing your system...</div>;
-
   return (
     <div className="container" style={{ padding: '3rem 1.5rem' }}>
       <Link
@@ -77,67 +75,81 @@ export default function WhatIsMyBrowser() {
         <p style={{ color: 'var(--text-muted)' }}>Instantly detect your browser, operating system, and screen specifications.</p>
       </div>
 
-      {/* Main Banner */}
-      <div className="card" style={{ marginBottom: '3rem', textAlign: 'center', padding: '3rem 1rem', background: 'linear-gradient(135deg, var(--primary) 0%, #1e3a8a 100%)', color: 'white' }}>
-        <h2 style={{ fontSize: '2.5rem', marginBottom: '0.5rem' }}>You are using {browserInfo.browser}</h2>
-        <p style={{ fontSize: '1.25rem', opacity: 0.9 }}>on {browserInfo.os} ({browserInfo.device})</p>
-      </div>
-
-      <div className="grid-2" style={{ marginBottom: '3rem' }}>
-        <div className="card">
-          <h3 style={{ fontSize: '1.25rem', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            <Monitor size={20} /> System Details
-          </h3>
-          <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', fontSize: '1rem' }}>
-            <tbody>
-              <tr style={{ borderBottom: '1px solid var(--border-light)' }}>
-                <td style={{ padding: '1rem', fontWeight: 600, width: '40%' }}>Browser Name</td>
-                <td style={{ padding: '1rem' }}>{browserInfo.browser}</td>
-              </tr>
-              <tr style={{ borderBottom: '1px solid var(--border-light)' }}>
-                <td style={{ padding: '1rem', fontWeight: 600 }}>Operating System</td>
-                <td style={{ padding: '1rem' }}>{browserInfo.os}</td>
-              </tr>
-              <tr style={{ borderBottom: '1px solid var(--border-light)' }}>
-                <td style={{ padding: '1rem', fontWeight: 600 }}>Device Type</td>
-                <td style={{ padding: '1rem' }}>{browserInfo.device}</td>
-              </tr>
-              <tr style={{ borderBottom: '1px solid var(--border-light)' }}>
-                <td style={{ padding: '1rem', fontWeight: 600 }}>Screen Resolution</td>
-                <td style={{ padding: '1rem' }}>{browserInfo.screenWidth} x {browserInfo.screenHeight} pixels</td>
-              </tr>
-              <tr style={{ borderBottom: '1px solid var(--border-light)' }}>
-                <td style={{ padding: '1rem', fontWeight: 600 }}>Browser Language</td>
-                <td style={{ padding: '1rem' }}>{browserInfo.language}</td>
-              </tr>
-              <tr style={{ borderBottom: '1px solid var(--border-light)' }}>
-                <td style={{ padding: '1rem', fontWeight: 600 }}>Cookies Enabled?</td>
-                <td style={{ padding: '1rem' }}>{browserInfo.cookiesEnabled}</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div className="card" style={{ display: 'flex', flexDirection: 'column' }}>
-          <h3 style={{ fontSize: '1.25rem', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            <Info size={20} /> Raw User-Agent String
-          </h3>
-          <p style={{ color: 'var(--text-muted)', marginBottom: '1rem', fontSize: '0.9rem' }}>
-            This is the exact string of data your web browser secretly sends to every website you visit:
-          </p>
-          <div style={{ background: '#f8fafc', padding: '1.5rem', borderRadius: '8px', border: '1px solid var(--border-strong)', fontFamily: 'monospace', fontSize: '0.9rem', lineHeight: 1.6, wordBreak: 'break-all' }}>
-            {browserInfo.userAgent}
+      {!browserInfo ? (
+        <div style={{ padding: '3rem', textAlign: 'center' }}>Analyzing your system...</div>
+      ) : (
+        <>
+          {/* Main Banner */}
+          <div className="card" style={{ marginBottom: '3rem', textAlign: 'center', padding: '3rem 1rem', background: 'linear-gradient(135deg, var(--primary) 0%, #1e3a8a 100%)', color: 'white' }}>
+            <h2 style={{ fontSize: '2.5rem', marginBottom: '0.5rem' }}>You are using {browserInfo.browser}</h2>
+            <p style={{ fontSize: '1.25rem', opacity: 0.9 }}>on {browserInfo.os} ({browserInfo.device})</p>
           </div>
-          <div style={{ marginTop: '1rem', padding: '1rem', background: '#eff6ff', color: '#1d4ed8', border: '1px solid #bfdbfe', borderRadius: '8px', fontSize: '0.85rem' }}>
-            <strong>Tech Support Tip:</strong> If you are talking to an IT technician or customer support agent, take a screenshot of this page and send it to them. It gives them all the diagnostic info they need!
+
+          <div className="grid-2" style={{ marginBottom: '3rem' }}>
+            <div className="card">
+              <h3 style={{ fontSize: '1.25rem', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <Monitor size={20} /> System Details
+              </h3>
+              <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', fontSize: '1rem' }}>
+                <tbody>
+                  <tr style={{ borderBottom: '1px solid var(--border-light)' }}>
+                    <td style={{ padding: '1rem', fontWeight: 600, width: '40%' }}>Browser Name</td>
+                    <td style={{ padding: '1rem' }}>{browserInfo.browser}</td>
+                  </tr>
+                  <tr style={{ borderBottom: '1px solid var(--border-light)' }}>
+                    <td style={{ padding: '1rem', fontWeight: 600 }}>Operating System</td>
+                    <td style={{ padding: '1rem' }}>{browserInfo.os}</td>
+                  </tr>
+                  <tr style={{ borderBottom: '1px solid var(--border-light)' }}>
+                    <td style={{ padding: '1rem', fontWeight: 600 }}>Device Type</td>
+                    <td style={{ padding: '1rem' }}>{browserInfo.device}</td>
+                  </tr>
+                  <tr style={{ borderBottom: '1px solid var(--border-light)' }}>
+                    <td style={{ padding: '1rem', fontWeight: 600 }}>Screen Resolution</td>
+                    <td style={{ padding: '1rem' }}>{browserInfo.screenWidth} x {browserInfo.screenHeight} pixels</td>
+                  </tr>
+                  <tr style={{ borderBottom: '1px solid var(--border-light)' }}>
+                    <td style={{ padding: '1rem', fontWeight: 600 }}>Browser Language</td>
+                    <td style={{ padding: '1rem' }}>{browserInfo.language}</td>
+                  </tr>
+                  <tr style={{ borderBottom: '1px solid var(--border-light)' }}>
+                    <td style={{ padding: '1rem', fontWeight: 600 }}>Cookies Enabled?</td>
+                    <td style={{ padding: '1rem' }}>{browserInfo.cookiesEnabled}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div className="card" style={{ display: 'flex', flexDirection: 'column' }}>
+              <h3 style={{ fontSize: '1.25rem', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <Info size={20} /> Raw User-Agent String
+              </h3>
+              <p style={{ color: 'var(--text-muted)', marginBottom: '1rem', fontSize: '0.9rem' }}>
+                This is the exact string of data your web browser secretly sends to every website you visit:
+              </p>
+              <div style={{ background: '#f8fafc', padding: '1.5rem', borderRadius: '8px', border: '1px solid var(--border-strong)', fontFamily: 'monospace', fontSize: '0.9rem', lineHeight: 1.6, wordBreak: 'break-all' }}>
+                {browserInfo.userAgent}
+              </div>
+              <div style={{ marginTop: '1rem', padding: '1rem', background: '#eff6ff', color: '#1d4ed8', border: '1px solid #bfdbfe', borderRadius: '8px', fontSize: '0.85rem' }}>
+                <strong>Tech Support Tip:</strong> If you are talking to an IT technician or customer support agent, take a screenshot of this page and send it to them. It gives them all the diagnostic info they need!
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        </>
+      )}
 
       <div className="prose">
         <h2>What is a User-Agent?</h2>
         <p>Every time you click a link or type a web address, your browser sends a request to a remote server. Attached to that request is a small header called the <strong>User-Agent String</strong>. This string tells the server exactly what browser you are using, what operating system you are on, and what type of device you have.</p>
         <p>Historically, web developers used this string to send different versions of a website to different users. If the User-Agent said "iPhone," the server would send the mobile version of the site. If it said "Internet Explorer 6," the server might send a warning that the browser is too old.</p>
+      </div>
+    
+      <div className="prose" style={{ marginTop: '4rem', padding: '2rem', background: 'var(--bg-main)', borderRadius: '12px' }}>
+        <h2>Why Should I Know What My Browser Is?</h2>
+        <p>Our "What is my Browser" tool instantly detects exactly what web browser, operating system, and device you are using. This information is crucial for troubleshooting website errors, improving security, and understanding how the internet sees your computer. When you contact technical support for a website issue, the very first question they will ask is "What browser are you using?"</p>
+        <h3>How does Browser Detection work?</h3>
+        <p>Every time you visit a website, your browser sends a hidden string of text called the User-Agent. This string contains data about your system, such as whether you are using Windows, macOS, or iOS, and whether your browser is Chrome, Firefox, Safari, or Edge. Our tool decodes this complex string into easy-to-read information so you do not have to guess.</p>
+        <p>Additionally, we detect your screen resolution, viewport size, and whether you have cookies enabled. Keeping your browser up to date is the number one way to protect yourself against viruses, malware, and hacking attempts online. Always make sure you are running the latest version of your preferred browser.</p>
       </div>
     </div>
   );

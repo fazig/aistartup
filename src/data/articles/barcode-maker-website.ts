@@ -2,7 +2,7 @@ import { BlogPost } from "../posts";
 
 export const postBarcodeMakerWebsite: BlogPost = {
   slug: "generate-barcode-online",
-  title: "How to Generate Barcode Assets Online: The Ultimate Barcode Maker Website Guide",
+  title: "The Ultimate Barcode Maker Website Guide",
   description: "Need to generate barcode labels for retail, inventory, or shipping? Discover how to use a barcode maker website, the differences between UPC, EAN, and Code 128.",
   date: "June 14, 2026",
   readTime: "7 min read",

@@ -2,7 +2,7 @@ import { BlogPost } from "../posts";
 
 export const postAiToolsWebsite: BlogPost = {
   slug: "ai-tools-website",
-  title: "How to Build an AI Tools Website from Scratch: Next.js, Tailwind, and OpenAPI Integration Guide",
+  title: "Next.js, Tailwind, and OpenAPI Integration Guide",
   description: "Learn how to build a high-performance, SEO-optimized AI tools website from scratch using Next.js, Tailwind CSS, and OpenAPI integration.",
   date: "June 11, 2026",
   readTime: "25 min read",

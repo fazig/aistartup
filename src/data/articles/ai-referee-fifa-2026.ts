@@ -2,7 +2,7 @@ import { BlogPost } from '../posts';
 
 export const postFifaAi0 : BlogPost = {
   slug: "ai-referee-fifa-2026",
-  title: "How AI Referees Are Changing the fifa 2026 world cup Forever",
+  title: "AI Referees Change the fifa 2026 world cup",
   description: "Discover how friendly robots and AI are helping referees make perfect decisions in the fifa 2026 world cup. A fun guide for kids and everyone!",
   date: 'June 14, 2026',
   readTime: '20 min read',

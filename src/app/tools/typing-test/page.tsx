@@ -431,7 +431,15 @@ export default function TypingTest() {
           </div>
 
         </div>
+      
+      <div className="prose" style={{ marginTop: '4rem', padding: '2rem', background: 'var(--bg-main)', borderRadius: '12px' }}>
+        <h2>Why Take a Typing Speed Test?</h2>
+        <p>A typing speed test is the best way to measure your Words Per Minute (WPM) and typing accuracy. In today's digital world, being able to type quickly and accurately is an essential skill for professionals, students, and developers alike. By taking regular typing tests, you can track your progress over time and identify which keys slow you down.</p>
+        <h3>How is Words Per Minute (WPM) calculated?</h3>
+        <p>WPM is calculated based on the standard assumption that a "word" consists of five characters or keystrokes, including spaces. If you type 50 characters in one minute, your speed is 10 WPM. Our free online typing test algorithm also factors in your accuracy by subtracting penalties for uncorrected errors, giving you your "Net WPM," which is the truest reflection of your typing speed.</p>
+        <p>To improve your typing speed, focus on accuracy first. Keep your hands in the proper home-row position and avoid looking at the keyboard. Practice daily for just 10 minutes using this free typing test, and you will see your WPM naturally increase as muscle memory takes over.</p>
       </div>
+</div>
     </>
   );
 }

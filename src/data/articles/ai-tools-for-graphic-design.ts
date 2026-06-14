@@ -2,7 +2,7 @@ import { BlogPost } from "../posts";
 
 export const postAiToolsGraphicDesign: BlogPost = {
   slug: "ai-tools-for-graphic-design",
-  title: "Revolutionizing Visual Assets: The Best AI Tools for Graphic Design and UI Styling",
+  title: "The Best AI Tools for Graphic Design and UI Styling",
   description: "Explore the best AI tools for graphic design and UI styling. Learn the technical mechanics, production workflows, and prompt structures.",
   date: "June 11, 2026",
   readTime: "25 min read",

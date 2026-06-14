@@ -1140,6 +1140,14 @@ interface NavItem {
         </div>
       </section>
 
+    
+      <div className="prose" style={{ marginTop: '4rem', padding: '2rem', background: 'var(--bg-main)', borderRadius: '12px' }}>
+        <h2>What is an AI Copilot?</h2>
+        <p>An AI Copilot is an intelligent assistant designed to help you organize your daily tasks, draft emails, format code, and streamline your entire workflow. Unlike standard chatbots, our free AI Copilot online is optimized specifically for parsing messy "brain dumps." You simply type everything on your mind—reminders, questions, tasks, and ideas—and the AI separates them into actionable structured lists.</p>
+        <h3>How to use the AI Copilot to boost productivity</h3>
+        <p>Using an AI Copilot can save you hours every week. Whether you are a software developer needing to debug TypeScript errors, or a professional trying to manage a busy schedule, simply paste your notes into the input box. The AI uses advanced natural language processing (powered by models like Claude 3.5 Sonnet and GPT-4o) to instantly categorize your thoughts into Tasks, Drafts, and Daily Routines.</p>
+        <p>The best part about this AI Copilot tool is that it is 100% free to test, completely private, and requires no signup. It is designed for maximum speed and efficiency, bringing the power of enterprise AI tools directly to your browser.</p>
+      </div>
     </div>
   );
 }

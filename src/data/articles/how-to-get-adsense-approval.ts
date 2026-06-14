@@ -2,7 +2,7 @@ import { BlogPost } from "../posts";
 
 export const postHowToGetAdsenseApproval: BlogPost = {
   slug: "how-to-get-adsense-approval",
-  title: "How to Get AdSense Approval: The Ultimate 2026 Strategy Guide for Publishers",
+  title: "The Ultimate 2026 Strategy Guide for Publishers",
   description: "Tired of AdSense rejections? Learn the exact technical checklist, content standards, and E-E-A-T optimizations to get approved in 2026.",
   date: "June 11, 2026",
   readTime: "25 min read",
@@ -393,7 +393,7 @@ export function CookieConsent() {
         <p className="text-sm text-slate-300 max-w-4xl">
           We use cookies to personalize content and ads, analyze traffic, and improve our services. 
           Third-party vendors, including Google, use cookies to serve ads based on your prior visits to this site. 
-          You can read more about how we use cookies in our <a href="/privacy/" className="underline text-blue-400 hover:text-blue-300">Privacy Policy</a>.
+          You can read more about how we use cookies in our <a href="/privacy" className="underline text-blue-400 hover:text-blue-300">Privacy Policy</a>.
         </p>
         <div className="flex gap-4">
           <button onClick={handleDecline} className="px-4 py-2 text-sm text-slate-400 hover:text-white transition">Decline</button>

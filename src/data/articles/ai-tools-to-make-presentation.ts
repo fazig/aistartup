@@ -2,7 +2,7 @@ import { BlogPost } from "../posts";
 
 export const postAiToolsPresentation: BlogPost = {
   slug: "ai-tools-to-make-presentation",
-  title: "Best AI Tools to Make Presentation Slides Instantly: Design Beautiful Decks without the Manual Effort",
+  title: "Design Beautiful Decks without the Manual Effort",
   description: "Discover the best ai tools to make presentation slides instantly. Design professional, high-converting decks without manual effort using AI creators.",
   date: "June 11, 2026",
   readTime: "25 min read",

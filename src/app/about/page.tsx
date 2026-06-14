@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Us | StartupAI Tools",
+  title: "About Us | StartupAI Tools & Developer Utilities Online",
   description: "Learn about StartupAI Tools, our mission to build free web developer utilities, and our privacy-first philosophy.",
 };
 

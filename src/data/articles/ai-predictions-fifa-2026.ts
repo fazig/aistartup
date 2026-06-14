@@ -2,7 +2,7 @@ import { BlogPost } from '../posts';
 
 export const postFifaAi2 : BlogPost = {
   slug: "ai-predictions-fifa-2026",
-  title: "Can Robots Guess the Winner of the fifa 2026 world cup?",
+  title: "Can Robots Guess the fifa 2026 world cup?",
   description: "AI is looking at millions of stats to predict who will win the fifa 2026 world cup. Let's learn how computers guess soccer match results!",
   date: 'June 14, 2026',
   readTime: '15 min read',

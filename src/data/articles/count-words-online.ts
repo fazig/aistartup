@@ -2,7 +2,7 @@ import { BlogPost } from "../posts";
 
 export const postCountWordsOnline: BlogPost = {
   slug: "count-number-of-words-online",
-  title: "How to Accurately Count Number of Words Online: The Complete Text Analytics Guide",
+  title: "The Complete Text Analytics Guide",
   description: "Need to count number of words online for an essay, novel, or SEO campaign? Learn how digital word counters work, their accuracy, and how to analyze character metrics.",
   date: "June 14, 2026",
   readTime: "8 min read",

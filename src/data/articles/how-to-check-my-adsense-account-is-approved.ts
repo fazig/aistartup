@@ -2,7 +2,7 @@ import { BlogPost } from "../posts";
 
 export const postHowToCheckMyAdsenseAccountIsApproved: BlogPost = {
   slug: "how-to-check-my-adsense-account-is-approved",
-  title: "How to Check My AdSense Account is Approved: Verification Methods, Console Status Codes, and Email Audit Logs",
+  title: "Verification Methods, Console Status Codes, and Email",
   description: "Discover how to check my adsense account is approved through developer consoles, API payloads, automated email audits, and client-side testing.",
   date: "June 11, 2026",
   readTime: "35 min read",
