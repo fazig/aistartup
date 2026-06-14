@@ -404,9 +404,9 @@ The following 14-point audit is designed to decrease adsense how long to get app
 
 Integrating clear links within your layouts establishes navigational authority. In the web publishing ecosystem, internal linking helps Google's crawlers index your domain. 
 
-For example, publishers struggling with programmatic rejection notices should review our detailed guide on [Why Google AdSense Rejects Good Websites](/why-google-adsense-rejects-websites), which details structural solutions for \"Low Value Content\" blocks. 
+For example, publishers struggling with programmatic rejection notices should review our detailed guide on [Why Google AdSense Rejects Good Websites](/blog/why-google-adsense-rejects-websites), which details structural solutions for "Low Value Content" blocks. 
 
-Additionally, if you are designing small-size marketing materials or business cards that integrate barcode routing to drive mobile traffic to your ad-monetized pages, consult our comprehensive documentation on [QR Code Generator Small Size](/qr-code-generator-small-size). This post covers printing specifications, vector exports, and minimum camera focal distance requirements to ensure high-density barcodes scan correctly.
+Additionally, if you are designing small-size marketing materials or business cards that integrate barcode routing to drive mobile traffic to your ad-monetized pages, consult our comprehensive documentation on [QR Code Generator Small Size](/blog/qr-code-generator-small-size). This post covers printing specifications, vector exports, and minimum camera focal distance requirements to ensure high-density barcodes scan correctly.
 
 ---
 

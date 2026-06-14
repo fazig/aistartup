@@ -471,7 +471,7 @@ export function NavigationHeader() {
               <Link href="/tools/adsense-eligibility-checker/" className="text-slate-600 hover:text-slate-900 inline-flex items-center px-1 pt-1 text-sm font-medium">
                 Eligibility Checker
               </Link>
-              <Link href="/blog/why-google-adsense-rejects-websites/" className="text-slate-600 hover:text-slate-900 inline-flex items-center px-1 pt-1 text-sm font-medium">
+              <Link href="/blog/why-google-adsense-rejects-websites" className="text-slate-600 hover:text-slate-900 inline-flex items-center px-1 pt-1 text-sm font-medium">
                 Rejection Audit
               </Link>
             </div>
@@ -502,7 +502,7 @@ export function NavigationHeader() {
           <Link href="/tools/adsense-eligibility-checker/" className="bg-blue-50 border-blue-500 text-blue-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">
             Eligibility Checker
           </Link>
-          <Link href="/blog/why-google-adsense-rejects-websites/" className="border-transparent text-slate-600 hover:bg-slate-50 hover:border-slate-300 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">
+          <Link href="/blog/why-google-adsense-rejects-websites" className="border-transparent text-slate-600 hover:bg-slate-50 hover:border-slate-300 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">
             Rejection Audit
           </Link>
         </div>
