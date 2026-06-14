@@ -21,8 +21,14 @@ import { postHowToCheckMyAdsenseAccountIsApproved } from "./articles/how-to-chec
 import { postWhenCanYouGetAdsenseOnYoutube } from "./articles/when-can-you-get-adsense-on-youtube";
 import { postDidNotReceiveAdsensePayment } from "./articles/did-not-receive-adsense-payment";
 import { postAiToolHunt } from "./articles/ai-tool-hunt";
+import { postCountWordsOnline } from "./articles/count-words-online";
+import { postFreeQrCodeBuilder } from "./articles/free-qr-code-builder";
+import { postBarcodeMakerWebsite } from "./articles/barcode-maker-website";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postCountWordsOnline,
+  postFreeQrCodeBuilder,
+  postBarcodeMakerWebsite,
   postHowToGetAdsenseApproval,
   postAdsenseHowLongToGetApproved,
   postHowToCheckMyAdsenseAccountIsApproved,
