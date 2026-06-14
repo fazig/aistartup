@@ -25,7 +25,19 @@ import { postCountWordsOnline } from "./articles/count-words-online";
 import { postFreeQrCodeBuilder } from "./articles/free-qr-code-builder";
 import { postBarcodeMakerWebsite } from "./articles/barcode-maker-website";
 
+import { postFifaAi0 } from './articles/ai-referee-fifa-2026';
+import { postFifaAi1 } from './articles/ai-stadiums-fifa-2026';
+import { postFifaAi2 } from './articles/ai-predictions-fifa-2026';
+import { postFifaAi3 } from './articles/ai-vr-fans-fifa-2026';
+import { postFifaAi4 } from './articles/ai-training-players-fifa-2026';
+
 export const BLOG_POSTS: BlogPost[] = [
+  postFifaAi0,
+  postFifaAi1,
+  postFifaAi2,
+  postFifaAi3,
+  postFifaAi4,
+
   postCountWordsOnline,
   postFreeQrCodeBuilder,
   postBarcodeMakerWebsite,
