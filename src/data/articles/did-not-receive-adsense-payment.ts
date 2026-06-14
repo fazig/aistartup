@@ -32,28 +32,21 @@ Google processes publisher payments on a strict, automated monthly schedule. If 
 |                     1st - 7th of the Month                   |
 | - Finalization of previous month's estimated earnings        |
 | - Deduction for invalid traffic / click fraud policies       |
-+--------------------------------------------------------------+
                                |
                                v
-+--------------------------------------------------------------+
 |                       20th of the Month                      |
 | - Deadline for resolving payment holds / tax form updates    |
 | - Deadline for reaching payment threshold ($100 minimum)     |
-+--------------------------------------------------------------+
                                |
                                v
-+--------------------------------------------------------------+
 |                     21st - 26th of the Month                 |
 | - Google initiates payment routing to clearing networks      |
 | - Status transitions: Pending -> In Progress -> Issued       |
-+--------------------------------------------------------------+
                                |
                                v
-+--------------------------------------------------------------+
 |                    26th of the Month Onward                  |
 | - If funds are not visible: Initiate Wire / EFT tracing      |
 | - Engage correspondent bank compliance desks                 |
-+--------------------------------------------------------------+
 \`\`\`
 
 ### Deciphering AdSense Payment Statuses
@@ -159,23 +152,17 @@ When Google issues a wire payment:
 3. Intermediary correspondent bank audits are why some publishers did not receive adsense payment within five business days. These intermediary banks can hold transfers to perform security checks, verify names, or deduct processing fees.
 
 \`\`\`
-+--------------------------------------------------------------+
 |                    Google Originating Bank                   |
 |                  - Citibank N.A. (New York)                  |
-+--------------------------------------------------------------+
                                |
                                v  (SWIFT MT103 Message)
-+--------------------------------------------------------------+
 |                 Correspondent / Intermediary Bank            |
 |                  - Clear clearinghouse audits                |
 |                  - AML / Sanction screening checks           |
-+--------------------------------------------------------------+
                                |
                                v  (Local Settlement Route)
-+--------------------------------------------------------------+
 |                     Your Local Bank Account                  |
 |                  - Credited in USD or Local Currency         |
-+--------------------------------------------------------------+
 \`\`\`
 
 ### SWIFT MT103 Fields & The UETR Code

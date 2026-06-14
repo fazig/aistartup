@@ -39,39 +39,30 @@ When you submit your site to the AdSense console, your domain does not immediate
 |  - Custom Domain Registration                           |
 |  - Google Search Console Integration                    |
 |  - Dynamic sitemap.xml & robots.txt submission          |
-+---------------------------------------------------------+
                              |
                              v
-+---------------------------------------------------------+
 |              Phase 2: Trust & Compliance Pages          |
 |  - Privacy Policy (with Google AdSense Cookie Clause)   |
 |  - Terms of Service, Cookie Policy, & Disclaimers       |
 |  - About Us (E-E-A-T bio) & Contact Us (Valid Email)    |
-+---------------------------------------------------------+
                              |
                              v
-+---------------------------------------------------------+
 |            Phase 3: Content Depth & Architecture        |
 |  - Minimum 30+ indexed pages of high-quality content    |
 |  - Wrapping programmatic tools in descriptive text      |
 |  - Eliminating thin content & scaffolding rich schemas  |
-+---------------------------------------------------------+
                              |
                              v
-+---------------------------------------------------------+
 |            Phase 4: Site Performance & Usability        |
 |  - Core Web Vitals Optimization (TTFB < 200ms)          |
 |  - Flawless mobile responsive navigation layouts        |
 |  - Clean console logs & zero broken link targets        |
-+---------------------------------------------------------+
                              |
                              v
-+---------------------------------------------------------+
 |             Phase 5: Submitting for Verification       |
 |  - Injecting AdSense Code snippet in Header metadata    |
 |  - Validating ads.txt status over active HTTPS protocol |
 |  - Awaiting Quality Raters Manual Review                |
-+---------------------------------------------------------+
 \`\`\`
 
 ### The Automated Scraper Audit (Phase 1)

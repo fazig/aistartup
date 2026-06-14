@@ -252,7 +252,6 @@ export const PromptOptimizer: React.FC = () => {
 
         <div className="grid grid-cols-2 gap-4">
           <div>
-            <label className="block text-sm font-medium mb-1 text-slate-700 dark:text-slate-300">
               Style Token
             </label>
             <select
@@ -267,11 +266,9 @@ export const PromptOptimizer: React.FC = () => {
           </div>
 
           <div>
-            <label className="block text-sm font-medium mb-1 text-slate-700 dark:text-slate-300">
               Aspect Ratio
             </label>
             <select
-              className="w-full px-3 py-2 border border-slate-300 dark:border-slate-700 rounded-md bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-100 focus:outline-none"
               value={aspectRatio}
               onChange={(e) => setAspectRatio(e.target.value)}
             >
@@ -284,7 +281,6 @@ export const PromptOptimizer: React.FC = () => {
         </div>
 
         <div>
-          <label className="block text-sm font-medium mb-1 text-slate-700 dark:text-slate-300">
             Stylization Weight: {engineWeight}
           </label>
           <input

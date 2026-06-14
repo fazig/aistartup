@@ -26,7 +26,6 @@ Before investigating the diagnostics, it is essential to understand the underlyi
 \`\`\`
 +--------------------------------------------------------------+
 |                   Site Submitted to AdSense                  |
-+--------------------------------------------------------------+
                                |
                                v
                      +--------------------+
@@ -38,7 +37,6 @@ Before investigating the diagnostics, it is essential to understand the underlyi
         +-----------------------+    +-----------------------+
         | Automated Crawler     |    | Human Policy Rater    |
         | (Mediapartners-Google)|    | (Trust & Safety Team) |
-        +-----------------------+    +-----------------------+
                     \                      /
                      \                    /
                       v                  v
@@ -143,7 +141,6 @@ Conversely, if the site is still undergoing evaluation, the response payload wil
 {
   "sites": [
     {
-      "name": "accounts/pub-9876543210123456/sites/example.com",
       "domain": "example.com",
       "state": "GETTING_READY",
       "verificationState": "PENDING_VERIFICATION",
@@ -226,7 +223,6 @@ This crawler verification represents a programmatic way of how to check my adsen
     +---------------------------+       +---------------------------+
     | adsTxtState = READY       |       | adsTxtState = NOT_FOUND   |
     | High-Value Bids Allowed   |       | Ad Delivery Paused/Low Bid|
-    +---------------------------+       +---------------------------+
 \`\`\`
 
 ### The Impact of HTTP Redirection Status Codes on ads.txt Crawling

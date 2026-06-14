@@ -27,23 +27,18 @@ The evolution of the modern ai tools app has moved from simple chat interfaces t
 | - Simple input/output text boxes                           |
 | - Zero context retention between requests                  |
 | - Highly fragmented subscriptions                          |
-+------------------------------------------------------------+
                              |
                              v
-+------------------------------------------------------------+
 | Phase 2: Orchestration & Silos (2024-2025)                 |
 | - Agentic loops (AutoGPT, CrewAI)                          |
 | - Specialized silos (chat vs. IDE extensions)              |
 | - High token overhead due to redundant prompts             |
-+------------------------------------------------------------+
                              |
                              v
-+------------------------------------------------------------+
 | Phase 3: The Unified Workspace (2026)                      |
 | - Local-first context synchronization                      |
 | - Intelligent multi-LLM routing                            |
 | - Client-side execution sandboxes                          |
-+------------------------------------------------------------+
 \`\`\`
 
 By consolidating multiple models into a single client, a modern ai tools app reduces cognitive friction and context-switching. Instead of maintaining open tabs for five different model providers, developers now use a unified interface that routes prompts to the most suitable model based on complexity, security requirements, and cost.
@@ -229,7 +224,6 @@ By feeding the index of a newly written component folder directly to the local p
 +------------------+     +-------------------+     +------------------+
 | TypeScript Code  | --> |   AI Tools App    | --> |  Documentation   |
 | (Raw Components) |     |  (Context Aware)  |     | (Clean Markdown) |
-+------------------+     +-------------------+     +------------------+
 \`\`\`
 
 ### Reducing Cognitive Fatigue

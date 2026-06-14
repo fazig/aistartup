@@ -376,8 +376,6 @@ export async function getCachedVideo(prompt: string, config: any): Promise<strin
 }
 
 export async function setCachedVideo(prompt: string, config: any, url: string, ttl: number = 86400): Promise<void> {
-  const payloadString = JSON.stringify({ prompt, config });
-  const hash = crypto.createHash("sha256").update(payloadString).digest("hex");
   
   await redis.set(\`video-cache:\${hash}\`, url, "EX", ttl);
 }

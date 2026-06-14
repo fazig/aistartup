@@ -268,7 +268,6 @@ Monetization Timeline and Verification Flowchart
 [Phase 6: Monthly Payout Engine]
   | - Accumulate minimum $100 earnings payout threshold
   | - Automatic electronic funds transfer (EFT) between 21st and 26th of the month
-========================================================================================
 \`\`\`
 
 ---
