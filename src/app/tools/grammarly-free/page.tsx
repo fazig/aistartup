@@ -615,7 +615,7 @@ export default function GrammarlyFree() {
               gap: "1rem"
             }}>
               {/* Mode Selector Tabs */}
-              <div style={{ display: "flex", gap: "0.25rem", background: "#f1f5f9", padding: "0.25rem", borderRadius: "8px" }}>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: "0.25rem", background: "#f1f5f9", padding: "0.25rem", borderRadius: "8px" }}>
                 <button 
                   onClick={() => setMode("edit")}
                   style={{
@@ -674,7 +674,7 @@ export default function GrammarlyFree() {
               </div>
 
               {/* Toolbar Controls */}
-              <div style={{ display: "flex", gap: "0.75rem", alignItems: "center" }}>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: "0.75rem", alignItems: "center" }}>
                 <select 
                   value={selectedLanguage}
                   onChange={(e) => setSelectedLanguage(e.target.value)}

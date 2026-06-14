@@ -427,3 +427,10 @@ img, video, iframe, svg {
 }
 
 
+
+ b o d y   { 
+     w o r d - w r a p :   b r e a k - w o r d ; 
+     o v e r f l o w - w r a p :   b r e a k - w o r d ; 
+ } 
+  
+ 
