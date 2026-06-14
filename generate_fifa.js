@@ -84,36 +84,23 @@ articles.forEach((article, index) => {
   console.log("Article " + (index + 1) + " has " + words + " words.");
 
   // Escape backticks for the template literal
-  const escapedContent = content.replace(/`/g, '\\`');
+  const escapedContent = content.replace(/`/g, '\\`').replace(/\$/g, '\\$');
 
   const fileContent = "import { BlogPost } from '../posts';\n\n" +
 "export const postFifaAi" + index + " : BlogPost = {\n" +
-"  slug: '" + article.slug + "',\n" +
-"  title: '" + article.title + "',\n" +
-"  description: '" + article.description + "',\n" +
+"  slug: " + JSON.stringify(article.slug) + ",\n" +
+"  title: " + JSON.stringify(article.title) + ",\n" +
+"  description: " + JSON.stringify(article.description) + ",\n" +
 "  date: 'June 14, 2026',\n" +
 "  readTime: '15 min read',\n" +
 "  category: 'AI & Sports',\n" +
 "  author: 'Faizan Arif',\n" +
-"  image: '" + article.image + "',\n" +
+"  image: " + JSON.stringify(article.image) + ",\n" +
 "  content: `" + escapedContent + "`\n" +
 "};\n";
 
   fs.writeFileSync(path.join(dir, article.slug + ".ts"), fileContent);
 });
 
-// Update posts.ts
-const postsPath = path.join(__dirname, 'src', 'data', 'posts.ts');
-let postsContent = fs.readFileSync(postsPath, 'utf8');
-
-let imports = '';
-let arrayItems = '';
-articles.forEach((article, index) => {
-  imports += "import { postFifaAi" + index + " } from './articles/" + article.slug + "';\n";
-  arrayItems += "  postFifaAi" + index + ",\n";
-});
-
-postsContent = postsContent.replace('export const BLOG_POSTS: BlogPost[] = [', imports + "\nexport const BLOG_POSTS: BlogPost[] = [\n" + arrayItems);
-
-fs.writeFileSync(postsPath, postsContent);
-console.log('Successfully updated posts.ts');
+// Update posts.ts skipped, since it's already there and we don't want to duplicate imports.
+console.log('Successfully regenerated articles');

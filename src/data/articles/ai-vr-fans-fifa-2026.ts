@@ -1,14 +1,14 @@
 import { BlogPost } from '../posts';
 
 export const postFifaAi3 : BlogPost = {
-  slug: 'ai-vr-fans-fifa-2026',
-  title: 'Virtual Reality Magic: Watching the fifa 2026 world cup from Home',
-  description: 'Put on your VR headset! AI is making it possible to feel like you are inside the stadium during the fifa 2026 world cup.',
+  slug: "ai-vr-fans-fifa-2026",
+  title: "Virtual Reality Magic: Watching the fifa 2026 world cup from Home",
+  description: "Put on your VR headset! AI is making it possible to feel like you are inside the stadium during the fifa 2026 world cup.",
   date: 'June 14, 2026',
   readTime: '15 min read',
   category: 'AI & Sports',
   author: 'Faizan Arif',
-  image: '/fifa_ai_vr.png',
+  image: "/fifa_ai_vr.png",
   content: `![Image](/fifa_ai_vr.png)
 
 ## Welcome to the Future of Soccer!

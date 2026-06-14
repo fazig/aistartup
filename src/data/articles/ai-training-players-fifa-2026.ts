@@ -1,14 +1,14 @@
 import { BlogPost } from '../posts';
 
 export const postFifaAi4 : BlogPost = {
-  slug: 'ai-training-players-fifa-2026',
-  title: 'Robot Coaches: How AI Trains Players for the fifa 2026 world cup',
-  description: 'Find out how AI and robot coaches are teaching soccer stars new tricks and keeping them safe for the fifa 2026 world cup.',
+  slug: "ai-training-players-fifa-2026",
+  title: "Robot Coaches: How AI Trains Players for the fifa 2026 world cup",
+  description: "Find out how AI and robot coaches are teaching soccer stars new tricks and keeping them safe for the fifa 2026 world cup.",
   date: 'June 14, 2026',
   readTime: '15 min read',
   category: 'AI & Sports',
   author: 'Faizan Arif',
-  image: '/fifa_ai_training.png',
+  image: "/fifa_ai_training.png",
   content: `![Image](/fifa_ai_training.png)
 
 ## Welcome to the Future of Soccer!

@@ -1,14 +1,14 @@
 import { BlogPost } from '../posts';
 
 export const postFifaAi1 : BlogPost = {
-  slug: 'ai-stadiums-fifa-2026',
-  title: 'Magic Stadiums: How AI Builds Arenas for the fifa 2026 world cup',
-  description: 'Learn how computers and AI are designing amazing, floating-like stadiums for the fifa 2026 world cup. Perfect for families and kids to explore!',
+  slug: "ai-stadiums-fifa-2026",
+  title: "Magic Stadiums: How AI Builds Arenas for the fifa 2026 world cup",
+  description: "Learn how computers and AI are designing amazing, floating-like stadiums for the fifa 2026 world cup. Perfect for families and kids to explore!",
   date: 'June 14, 2026',
   readTime: '15 min read',
   category: 'AI & Sports',
   author: 'Faizan Arif',
-  image: '/fifa_ai_stadium.png',
+  image: "/fifa_ai_stadium.png",
   content: `![Image](/fifa_ai_stadium.png)
 
 ## Welcome to the Future of Soccer!

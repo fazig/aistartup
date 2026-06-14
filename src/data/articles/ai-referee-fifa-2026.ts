@@ -1,14 +1,14 @@
 import { BlogPost } from '../posts';
 
 export const postFifaAi0 : BlogPost = {
-  slug: 'ai-referee-fifa-2026',
-  title: 'How AI Referees Are Changing the fifa 2026 world cup Forever',
-  description: 'Discover how friendly robots and AI are helping referees make perfect decisions in the fifa 2026 world cup. A fun guide for kids and everyone!',
+  slug: "ai-referee-fifa-2026",
+  title: "How AI Referees Are Changing the fifa 2026 world cup Forever",
+  description: "Discover how friendly robots and AI are helping referees make perfect decisions in the fifa 2026 world cup. A fun guide for kids and everyone!",
   date: 'June 14, 2026',
   readTime: '15 min read',
   category: 'AI & Sports',
   author: 'Faizan Arif',
-  image: '/fifa_ai_referee.png',
+  image: "/fifa_ai_referee.png",
   content: `![Image](/fifa_ai_referee.png)
 
 ## Welcome to the Future of Soccer!
