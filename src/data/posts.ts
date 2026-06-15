@@ -36,7 +36,10 @@ import { postAiFreeImageToVideoGenerator } from './articles/ai-free-image-to-vid
 import { postAiFreeFaceSwapVideo } from './articles/ai-free-face-swap-video';
 import { postAiFreeAnimationVideoGenerator } from './articles/ai-free-animation-video-generator';
 
+import { postRemoveImageBg8k } from './articles/remove-image-background-guide';
+
 export const BLOG_POSTS: BlogPost[] = [
+  postRemoveImageBg8k,
   postAiFreeKissingVideoGenerator,
   postAiFreeImageToVideoGenerator,
   postAiFreeFaceSwapVideo,
