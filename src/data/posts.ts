@@ -35,22 +35,12 @@ import { postAiFreeKissingVideoGenerator } from './articles/ai-free-kissing-vide
 import { postAiFreeImageToVideoGenerator } from './articles/ai-free-image-to-video-generator';
 import { postAiFreeFaceSwapVideo } from './articles/ai-free-face-swap-video';
 import { postAiFreeAnimationVideoGenerator } from './articles/ai-free-animation-video-generator';
-import { postAiFreeKissGenerator } from './articles/ai-free-kiss-generator';
-import { postAiFreeWatermarkRemover } from './articles/ai-free-watermark-remover';
-import { postAiFreeKissingVideo } from './articles/ai-free-kissing-video';
-import { postAiFreeAppDownload } from './articles/ai-free-app-download';
-import { postAiFreeWebsiteCreate } from './articles/ai-free-website-create';
 
 export const BLOG_POSTS: BlogPost[] = [
   postAiFreeKissingVideoGenerator,
   postAiFreeImageToVideoGenerator,
   postAiFreeFaceSwapVideo,
   postAiFreeAnimationVideoGenerator,
-  postAiFreeKissGenerator,
-  postAiFreeWatermarkRemover,
-  postAiFreeKissingVideo,
-  postAiFreeAppDownload,
-  postAiFreeWebsiteCreate,
   postFifaAi0,
   postFifaAi1,
   postFifaAi2,
