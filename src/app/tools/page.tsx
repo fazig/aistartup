@@ -225,6 +225,7 @@ export default function ToolsDirectory() {
         { name: "ICO to PNG", path: "/tools/ico-to-png", status: "live" },
         { name: "ICO Converter", path: "/tools/ico-converter", status: "live" },
         { name: "Image Enlarger", path: "/tools/image-enlarger", status: "live" },
+        { name: "Remove Background", path: "/tools/remove-background", status: "new" },
         { name: "JPG to PNG", path: "/tools/jpg-to-png", status: "live" },
         { name: "PNG to JPG", path: "/tools/png-to-jpg", status: "live" },
         { name: "WebP to JPG", path: "/tools/webp-to-jpg", status: "live" },
