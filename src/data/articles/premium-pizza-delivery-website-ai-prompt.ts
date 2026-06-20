@@ -9,7 +9,7 @@ export const postPremiumPizzaDeliveryWebsite: BlogPost = {
   readTime: "30 min read",
   category: "AI & Technology",
   author: "Faizan Arif",
-  image: "/pizza_delivery_website_cover.svg",
+  image: "/pizza_delivery_website_cover.png",
   content: `# Build a Premium 3D Pizza Delivery Website with AI — Full Prompt & Source Code
 
 In this guide, I share the **exact AI prompt** I used to generate a complete, production-ready pizza delivery web application — plus the **full open-source codebase** you can clone, customize, and deploy today.
