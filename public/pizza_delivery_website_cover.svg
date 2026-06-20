@@ -16,7 +16,7 @@
   <text x="80" y="120" fill="#ff6b2c" font-family="system-ui,sans-serif" font-size="22" font-weight="600" letter-spacing="4">AI BUILD GUIDE</text>
   <text x="80" y="220" fill="#ffffff" font-family="system-ui,sans-serif" font-size="56" font-weight="800">Premium Pizza</text>
   <text x="80" y="290" fill="#ffffff" font-family="system-ui,sans-serif" font-size="56" font-weight="800">Delivery Web App</text>
-  <text x="80" y="370" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="24">Next.js · Three.js · Framer Motion · Full Prompt</text>
+  <text x="80" y="370" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="24">Next.js ï¿½ Three.js ï¿½ Framer Motion ï¿½ Full Prompt</text>
   <rect x="80" y="420" width="280" height="52" rx="12" fill="url(#accent)"/>
   <text x="220" y="453" fill="#ffffff" font-family="system-ui,sans-serif" font-size="18" font-weight="700" text-anchor="middle">View Source on GitHub</text>
   <text x="80" y="540" fill="#64748b" font-family="system-ui,sans-serif" font-size="18">github.com/fazig/pizzawebsite</text>
