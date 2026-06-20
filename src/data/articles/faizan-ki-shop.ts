@@ -9,7 +9,7 @@ export const postFaizanKiShop: BlogPost = {
   category: 'Software Development',
   author: 'Faizan',
   image: '/images/faizan-ki-shop.png',
-    content: \`# How I Built a Professional Shop Management Software (FaizanKiShop) Using AI
+  content: `# How I Built a Professional Shop Management Software (FaizanKiShop) Using AI
 
 In the modern era of programming, the lines between an idea and its execution have been incredibly blurred thanks to the rise of advanced Artificial Intelligence. What used to take weeks of meticulous planning, designing, wireframing, frontend development, backend logic, and desktop packaging can now be orchestrated in mere hours. Today, I am incredibly excited to showcase **FaizanKiShop**, a complete, highly professional, and extremely responsive Shop Management Software that was entirely generated using AI.
 
