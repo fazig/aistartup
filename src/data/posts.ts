@@ -37,8 +37,10 @@ import { postAiFreeFaceSwapVideo } from './articles/ai-free-face-swap-video';
 import { postAiFreeAnimationVideoGenerator } from './articles/ai-free-animation-video-generator';
 
 import { postRemoveImageBg8k } from './articles/remove-image-background-guide';
+import { postPremiumPizzaDeliveryWebsite } from './articles/premium-pizza-delivery-website-ai-prompt';
 
 export const BLOG_POSTS: BlogPost[] = [
+  postPremiumPizzaDeliveryWebsite,
   postRemoveImageBg8k,
   postAiFreeKissingVideoGenerator,
   postAiFreeImageToVideoGenerator,
