@@ -39,8 +39,10 @@ import { postAiFreeAnimationVideoGenerator } from './articles/ai-free-animation-
 import { postRemoveImageBg8k } from './articles/remove-image-background-guide';
 import { postPremiumPizzaDeliveryWebsite } from './articles/premium-pizza-delivery-website-ai-prompt';
 import { postFaizanKiShop } from './articles/faizan-ki-shop';
+import { postFaizanKiAwazVoiceEnhancer } from './articles/faizan-ki-awaz-voice-enhancer';
 
 export const BLOG_POSTS: BlogPost[] = [
+  postFaizanKiAwazVoiceEnhancer,
   postFaizanKiShop,
   postPremiumPizzaDeliveryWebsite,
   postRemoveImageBg8k,
