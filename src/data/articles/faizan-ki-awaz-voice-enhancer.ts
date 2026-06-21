@@ -9,7 +9,7 @@ export const postFaizanKiAwazVoiceEnhancer: BlogPost = {
   category: "AI Tools Development",
   author: "Faizan Arif",
   image: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-  content: \`
+  content: `
 <iframe width="100%" height="450" src="https://www.youtube.com/embed/nz57igUDjxU?si=-rkGp8T3i-q1H5zG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 *(Watch the full video tutorial above to see the Voice Enhancer in action!)*
@@ -141,5 +141,5 @@ As promised, I am open-sourcing the basic code structure of FaizanKiAwaz. You ca
 [📥 **Download faizan-ki-awaz.zip**](/downloads/faizan-ki-awaz.zip)
 
 *Requires Python 3.9+. Note that to keep the download size small, the pre-trained ONNX models are not included in the ZIP file; the script will automatically download them the first time you run it!*
-\`
+`
 };
