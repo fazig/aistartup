@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Voice Enhancer & Vocal Polish Studio</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <!-- WaveSurfer.js for beautiful audio waveforms -->
+    <script src="https://unpkg.com/wavesurfer.js@7"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>FaizanKiAwaz</h1>
+            <p>Clean background noise, level voice volume, and boost clarity with premium studio effects</p>
+        </header>
+
+
+        <div class="dashboard-grid">
+            <!-- Left Panel: Upload & Controls -->
+            <div class="panel">
+                <!-- Dropzone -->
+                <div class="dropzone" id="dropzone">
+                    <div class="dropzone-icon">&#8679;</div>
+                    <p>Drag & drop audio file here</p>
+                    <span>Supports WAV, MP3, M4A, OGG up to 50MB</span>
+                    <input type="file" id="file-input" style="display: none;" accept="audio/*">
+                </div>
+
+                <!-- File Info Box -->
+                <div class="file-info-box" id="file-info-box">
+                    <span class="file-icon">&#127911;</span>
+                    <div class="file-details">
+                        <div class="file-name" id="file-name">audio_file.wav</div>
+                        <div class="file-size" id="file-size">4.5 MB</div>
+                    </div>
+                    <button class="remove-file" id="remove-file" title="Remove file">&times;</button>
+                </div>
+
+                <!-- Parameters & Options -->
+                <div class="options-section">
+                    <!-- Presets Selection -->
+                    <div class="preset-container" style="margin-bottom: 25px;">
+                        <h3 style="margin-bottom: 12px;">Vocal Presets</h3>
+                        <select id="preset-select" class="preset-dropdown">
+                            <option value="custom">Manual Control (Custom)</option>
+                            <option value="youtube" selected>Podcast & YouTube Vocal</option>
+                            <option value="studio">Studio Quality (Hi-Fi)</option>
+                            <option value="noisy">Extreme Noise Restoration</option>
+                            <option value="natural">Natural & Soft</option>
+                            <option value="asmr">ASMR & Whisper Boost</option>
+                        </select>
+                    </div>
+
+                    <h3>1. Noise Cleaners</h3>
+                    <div class="toggle-group" style="margin-bottom: 25px;">
+                        <!-- AI Denoise -->
+                        <div class="toggle-item flex-col">
+                            <div class="toggle-row">
+                                <div class="toggle-label">
+                                    <span class="toggle-title">AI Speech Restoration</span>
+                                    <span class="toggle-desc">GTCRN neural network isolates human voice</span>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox" id="ai-denoise" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <!-- AI Denoise Blend Slider -->
+                            <div class="slider-control" id="ai-mix-container">
+                                <div class="slider-header">
+                                    <span>AI Denoise Blend (Wet/Dry)</span>
+                                    <span id="val-ai-mix" class="val-badge">90%</span>
+                                </div>
+                                <input type="range" id="ai-mix" min="0" max="100" value="90" class="range-slider">
+                            </div>
+                        </div>
+
+                        <!-- DSP Denoise -->
+                        <div class="toggle-item">
+                            <div class="toggle-label">
+                                <span class="toggle-title">DSP Noise Gate</span>
+                                <span class="toggle-desc">Removes constant background hiss, fans & hum</span>
+                            </div>
+                            <label class="switch">
+                                <input type="checkbox" id="dsp-denoise">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <h3>2. Vocal Polish Studio</h3>
+                    <div class="toggle-group">
+                        <!-- Vocal Compressor/Leveler -->
+                        <div class="toggle-item flex-col">
+                            <div class="slider-control" style="width: 100%;">
+                                <div class="slider-header">
+                                    <span class="toggle-title">Vocal Compressor / Leveler</span>
+                                    <span id="val-compressor" class="val-badge">50% (Medium)</span>
+                                </div>
+                                <span class="toggle-desc" style="display: block; margin-top: -4px; margin-bottom: 10px;">Smooths volume variations & thickens speech</span>
+                                <input type="range" id="compressor-strength" min="0" max="100" value="50" class="range-slider">
+                            </div>
+                        </div>
+
+                        <!-- Output Volume Boost -->
+                        <div class="toggle-item flex-col">
+                            <div class="slider-control" style="width: 100%;">
+                                <div class="slider-header">
+                                    <span class="toggle-title">Level Boost (Gain)</span>
+                                    <span id="val-volume" class="val-badge">+3.0 dB</span>
+                                </div>
+                                <span class="toggle-desc" style="display: block; margin-top: -4px; margin-bottom: 10px;">Increases overall vocal level and presence</span>
+                                <input type="range" id="volume-boost" min="0" max="120" value="30" class="range-slider"> <!-- Value divided by 10 in JS -->
+                            </div>
+                        </div>
+
+                        <!-- De-esser -->
+                        <div class="toggle-item flex-col">
+                            <div class="toggle-row">
+                                <div class="toggle-label">
+                                    <span class="toggle-title">Vocal De-esser</span>
+                                    <span class="toggle-desc">Dynamically tames harsh "S" and "T" sibilance</span>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox" id="deesser-toggle" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="slider-control" id="deesser-slider-container">
+                                <div class="slider-header">
+                                    <span>De-esser Taming Level</span>
+                                    <span id="val-deesser" class="val-badge">70%</span>
+                                </div>
+                                <input type="range" id="deesser-strength" min="0" max="100" value="70" class="range-slider">
+                            </div>
+                        </div>
+
+                        <!-- Low Rumble Cut -->
+                        <div class="toggle-item">
+                            <div class="toggle-label">
+                                <span class="toggle-title">Sub-Bass Rumble Cut</span>
+                                <span class="toggle-desc">Removes thumps, wind, and low hum below 80Hz</span>
+                            </div>
+                            <label class="switch">
+                                <input type="checkbox" id="rumble-cut" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+
+                        <!-- Warmth Boost -->
+                        <div class="toggle-item">
+                            <div class="toggle-label">
+                                <span class="toggle-title">Warmth & Body (150Hz EQ)</span>
+                                <span class="toggle-desc">Adds warm radio-host resonance to thin voices</span>
+                            </div>
+                            <label class="switch">
+                                <input type="checkbox" id="warmth-boost" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+
+                        <!-- Presence Boost -->
+                        <div class="toggle-item flex-col">
+                            <div class="slider-control" style="width: 100%;">
+                                <div class="slider-header">
+                                    <span class="toggle-title">Vocal Clarity (Presence EQ)</span>
+                                    <span id="val-presence" class="val-badge">+4.0 dB</span>
+                                </div>
+                                <span class="toggle-desc" style="display: block; margin-top: -4px; margin-bottom: 10px;">Boosts 3kHz range to make speech sharp & clear</span>
+                                <input type="range" id="presence-boost" min="0" max="80" value="40" class="range-slider">
+                            </div>
+                        </div>
+
+                        <!-- Studio Air Sheen -->
+                        <div class="toggle-item flex-col">
+                            <div class="slider-control" style="width: 100%;">
+                                <div class="slider-header">
+                                    <span class="toggle-title">Studio Air (High Sheen EQ)</span>
+                                    <span id="val-air" class="val-badge">+5.0 dB</span>
+                                </div>
+                                <span class="toggle-desc" style="display: block; margin-top: -4px; margin-bottom: 10px;">Adds dynamic high-end sheen above 8kHz</span>
+                                <input type="range" id="air-boost" min="0" max="80" value="50" class="range-slider">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Process Button -->
+                <button class="btn-primary" id="enhance-btn" disabled>
+                    <span>Clean & Polish Audio</span>
+                    <span class="icon">&#10024;</span>
+                </button>
+            </div>
+
+            <!-- Right Panel: Waveforms & Output Player -->
+            <div class="panel preview-panel">
+                <!-- Empty State -->
+                <div class="empty-state" id="empty-state">
+                    <div class="empty-state-icon">&#128266;</div>
+                    <p style="font-weight: 500; font-size: 1.1rem; margin-bottom: 5px;">No audio loaded yet</p>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">Upload an audio file on the left to see the waveform here</p>
+                </div>
+
+                <!-- Processing State -->
+                <div class="processing-state" id="processing-state">
+                    <div class="glow-spinner"></div>
+                    <div class="processing-text">Polishing Your Voice...</div>
+                    <div class="processing-sub">Running deep learning AI restoration & studio mastering</div>
+                </div>
+
+                <!-- Waveforms comparison -->
+                <div id="preview-container" style="display: none; width: 100%;">
+                    <!-- Original -->
+                    <div class="waveform-card">
+                        <div class="card-header">
+                            <div class="card-title">
+                                <span style="font-size: 1.2rem;">&#128081;</span> Input Audio
+                            </div>
+                            <span class="badge badge-original">Noisy Original</span>
+                        </div>
+                        <div class="waveform-container" id="waveform-original"></div>
+                        <div class="audio-controls">
+                            <button class="btn-play" id="btn-play-original">
+                                <span class="icon">&#9654;</span>
+                            </button>
+                            <div class="time-display" id="time-original">0:00 / 0:00</div>
+                        </div>
+                    </div>
+
+                    <!-- Spacer -->
+                    <div style="height: 20px;"></div>
+
+                    <!-- Enhanced -->
+                    <div class="waveform-card">
+                        <div class="card-header">
+                            <div class="card-title">
+                                <span style="font-size: 1.2rem; color: var(--success-green);">&#10024;</span> Output Audio
+                            </div>
+                            <span class="badge badge-enhanced">Studio Mastered</span>
+                        </div>
+                        <div class="waveform-container" id="waveform-enhanced"></div>
+                        <div class="audio-controls">
+                            <button class="btn-play" id="btn-play-enhanced">
+                                <span class="icon">&#9654;</span>
+                            </button>
+                            <div class="time-display" id="time-enhanced">0:00 / 0:00</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Download Link -->
+                <div class="download-area" id="download-area">
+                    <a href="#" class="btn-download" id="download-btn">
+                        <span>Download Studio Mastered WAV</span>
+                        <span class="icon">&#128190;</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
