@@ -8,7 +8,7 @@ export const postFaizanKiAwazVoiceEnhancer: BlogPost = {
   readTime: "15 min read",
   category: "AI Tools Development",
   author: "Faizan Arif",
-  image: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+  image: "/images/voice_enhancer_ui.png",
   content: `
 <iframe width="100%" height="450" src="https://www.youtube.com/embed/nz57igUDjxU?si=-rkGp8T3i-q1H5zG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -22,7 +22,7 @@ In this comprehensive deep dive, I'm going to walk you through exactly how I bui
 
 And the best part? I'm going to give you the exact "Master Prompts" I used so you can recreate this entire tool yourself using the [Antigravity IDE](/blog/ai-tool-hunt). By the end of this article, you will not only understand how advanced audio processing works in Python, but you'll also be able to download the complete source code using the ZIP file provided at the bottom of this page.
 
-![Voice Enhancer UI](https://images.unsplash.com/photo-1589903308904-1010c2294adc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80)
+![Voice Enhancer UI](/images/voice_enhancer_ui.png)
 *Image: Building a professional, dark-themed audio interface.*
 
 ---
@@ -49,7 +49,7 @@ To build FaizanKiAwaz, I had to carefully select a technology stack that was pow
 - **PyWebView**: To make this feel like a native application rather than a website, I wrapped the Flask server inside a desktop window.
 - **PyInstaller**: Finally, I used PyInstaller to bundle everything into a single Windows \`.exe\` file.
 
-![Code Architecture](https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80)
+![Code Architecture](/images/audio_ai_architecture.png)
 *Image: Writing the Python DSP pipeline.*
 
 ---
