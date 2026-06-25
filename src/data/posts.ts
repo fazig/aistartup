@@ -40,8 +40,18 @@ import { postRemoveImageBg8k } from './articles/remove-image-background-guide';
 import { postPremiumPizzaDeliveryWebsite } from './articles/premium-pizza-delivery-website-ai-prompt';
 import { postFaizanKiShop } from './articles/faizan-ki-shop';
 import { postFaizanKiAwazVoiceEnhancer } from './articles/faizan-ki-awaz-voice-enhancer';
+import { postFootballVsSoccerTheDifference } from './articles/football-vs-soccer-the-difference';
+import { postAiToolsFromChina100OfThemList } from './articles/ai-tools-from-china-100-of-them-list';
+import { postIsClaudeTheBestAiToolInHistory } from './articles/is-claude-the-best-ai-tool-in-history';
+import { postChinaMakesTheToolCheaperHow } from './articles/china-makes-the-tool-cheaper-how';
+import { postAiVsHumansWhoWillWinInTheEnd } from './articles/ai-vs-humans-who-will-win-in-the-end';
 
 export const BLOG_POSTS: BlogPost[] = [
+  postFootballVsSoccerTheDifference,
+  postAiToolsFromChina100OfThemList,
+  postIsClaudeTheBestAiToolInHistory,
+  postChinaMakesTheToolCheaperHow,
+  postAiVsHumansWhoWillWinInTheEnd,
   postFaizanKiAwazVoiceEnhancer,
   postFaizanKiShop,
   postPremiumPizzaDeliveryWebsite,
