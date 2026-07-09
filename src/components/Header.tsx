@@ -135,6 +135,26 @@ export default function Header() {
                 </Link>
 
                 <Link 
+                  href="/tools/live-sports" 
+                  className="dropdown-item"
+                  onClick={() => setDropdownOpen(false)}
+                  style={{
+                    padding: '0.6rem 0.8rem',
+                    borderRadius: '8px',
+                    fontSize: '0.85rem',
+                    color: 'var(--text-main)',
+                    fontWeight: 500,
+                    textDecoration: 'none',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    transition: 'background-color 0.15s'
+                  }}
+                >
+                  <span style={{ fontWeight: 700 }}>Live Sports Stats</span>
+                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Real-time match scores</span>
+                </Link>
+
+                <Link 
                   href="/free-sumo-tools" 
                   className="dropdown-item"
                   onClick={() => setDropdownOpen(false)}
@@ -190,6 +210,9 @@ export default function Header() {
           </Link>
           <Link href="/tools/adsense-eligibility-checker" className="mobile-nav-link" style={{ paddingLeft: "1rem" }} onClick={closeMenu}>
             AdSense Checker
+          </Link>
+          <Link href="/tools/live-sports" className="mobile-nav-link" style={{ paddingLeft: "1rem" }} onClick={closeMenu}>
+            Live Sports Stats
           </Link>
           <Link href="/free-sumo-tools" className="mobile-nav-link nav-link-highlight" style={{ paddingLeft: "1rem" }} onClick={closeMenu}>
             Free Sumo Tools
