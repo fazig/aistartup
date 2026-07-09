@@ -22,6 +22,7 @@ export interface Match {
   awayTeam: Team;
   league: string;
   commentary?: string;
+  sportPath: string;
 }
 
 // ESPN API Endpoints
@@ -45,7 +46,7 @@ const ENDPOINTS = {
 /**
  * Normalizes ESPN API response to our unified Match interface
  */
-function normalizeESPNMatch(event: any, leagueName: string): Match | null {
+function normalizeESPNMatch(event: any, leagueName: string, sportPath: string): Match | null {
   try {
     const competition = event.competitions[0];
     const competitors = competition.competitors;
@@ -79,7 +80,8 @@ function normalizeESPNMatch(event: any, leagueName: string): Match | null {
         logo: away.team.logo,
         score: away.score || '0',
         winner: away.winner
-      }
+      },
+      sportPath
     };
   } catch (error) {
     console.error("Error normalizing event:", error);
@@ -102,19 +104,21 @@ export async function fetchSportsData(category: 'all' | 'football_soccer' | 'cri
   }
 
   try {
-    const fetchPromises = urlsToFetch.map(url => fetch(url, { next: { revalidate: 30 } }).then(res => {
+    const fetchPromises = urlsToFetch.map(url => fetch(url, { next: { revalidate: 30 } }).then(async res => {
       if (!res.ok) return null;
-      return res.json();
+      const data = await res.json();
+      return { data, url };
     }).catch(() => null));
 
     const results = await Promise.all(fetchPromises);
     const matches: Match[] = [];
 
     results.forEach(result => {
-      if (result && result.events) {
-        const leagueName = result.leagues?.[0]?.name || 'Unknown League';
-        result.events.forEach((event: any) => {
-          const match = normalizeESPNMatch(event, leagueName);
+      if (result && result.data && result.data.events) {
+        const leagueName = result.data.leagues?.[0]?.name || 'Unknown League';
+        const sportPath = result.url.split('/sports/')[1]?.split('/scoreboard')[0] || '';
+        result.data.events.forEach((event: any) => {
+          const match = normalizeESPNMatch(event, leagueName, sportPath);
           if (match) matches.push(match);
         });
       }
@@ -129,5 +133,17 @@ export async function fetchSportsData(category: 'all' | 'football_soccer' | 'cri
   } catch (error) {
     console.error("Error fetching sports data:", error);
     return [];
+  }
+}
+
+export async function fetchMatchDetails(sportPath: string, id: string) {
+  try {
+    const url = `https://site.api.espn.com/apis/site/v2/sports/${sportPath}/summary?event=${id}`;
+    const res = await fetch(url, { next: { revalidate: 30 } });
+    if (!res.ok) return null;
+    return await res.json();
+  } catch (err) {
+    console.error("Error fetching match details:", err);
+    return null;
   }
 }

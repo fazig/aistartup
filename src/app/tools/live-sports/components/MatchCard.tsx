@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Image from "next/image";
 import { Match, Team } from "../api/sportsData";
 import { Calendar, Clock, MessageSquareText } from "lucide-react";
@@ -54,85 +55,88 @@ export default function MatchCard({ match }: { match: Match }) {
   );
 
   return (
-    <div style={{
-      background: "#ffffff",
-      border: "1px solid var(--border-light)",
-      borderRadius: "16px",
-      padding: "1.5rem",
-      boxShadow: "0 4px 15px rgba(0,0,0,0.03)",
-      transition: "transform 0.2s, box-shadow 0.2s",
-      display: "flex",
-      flexDirection: "column",
-      gap: "1rem",
-      cursor: "pointer"
-    }}
-    onMouseEnter={(e) => {
-      e.currentTarget.style.transform = "translateY(-4px)";
-      e.currentTarget.style.boxShadow = "0 10px 25px rgba(0,0,0,0.08)";
-    }}
-    onMouseLeave={(e) => {
-      e.currentTarget.style.transform = "translateY(0)";
-      e.currentTarget.style.boxShadow = "0 4px 15px rgba(0,0,0,0.03)";
-    }}
-    >
-      {/* Header: League & Status */}
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: "1px solid var(--border-light)", paddingBottom: "0.75rem" }}>
-        <span style={{ fontSize: "0.8rem", fontWeight: 700, color: "var(--text-muted)", textTransform: "uppercase" }}>
-          {match.league}
-        </span>
-        {getStatusBadge()}
-      </div>
-
-      {/* Main Score Area */}
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "0.5rem" }}>
-        <TeamLogo team={match.homeTeam} />
-        
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "4px", padding: "0 1rem" }}>
-          <div style={{ fontSize: "2rem", fontWeight: 800, color: "var(--text-main)", display: "flex", gap: "12px" }}>
-            <span style={{ color: match.homeTeam.winner ? "var(--text-main)" : "var(--text-muted)" }}>{match.homeTeam.score}</span>
-            <span>-</span>
-            <span style={{ color: match.awayTeam.winner ? "var(--text-main)" : "var(--text-muted)" }}>{match.awayTeam.score}</span>
-          </div>
-          <span style={{ fontSize: "0.8rem", color: "var(--primary)", fontWeight: 700, textAlign: "center" }}>
-            {match.status.detail}
+    <Link href={`/tools/live-sports/${match.sportPath}/${match.id}`} style={{ textDecoration: 'none' }}>
+      <div style={{
+        background: "white",
+        borderRadius: "16px",
+        padding: "1.5rem",
+        boxShadow: "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
+        display: "flex",
+        flexDirection: "column",
+        gap: "1rem",
+        position: "relative",
+        border: "1px solid var(--border-light)",
+        transition: "transform 0.2s, box-shadow 0.2s",
+        height: "100%",
+        cursor: "pointer"
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.transform = 'translateY(-4px)';
+        e.currentTarget.style.boxShadow = '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)';
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.transform = 'none';
+        e.currentTarget.style.boxShadow = '0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)';
+      }}>
+        {/* Header: League & Status */}
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: "1px solid var(--border-light)", paddingBottom: "0.75rem" }}>
+          <span style={{ fontSize: "0.8rem", fontWeight: 700, color: "var(--text-muted)", textTransform: "uppercase" }}>
+            {match.league}
           </span>
+          {getStatusBadge()}
         </div>
 
-        <TeamLogo team={match.awayTeam} />
-      </div>
+        {/* Main Score Area */}
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "0.5rem" }}>
+          <TeamLogo team={match.homeTeam} />
+          
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "4px", padding: "0 1rem" }}>
+            <div style={{ fontSize: "2rem", fontWeight: 800, color: "var(--text-main)", display: "flex", gap: "12px" }}>
+              <span style={{ color: match.homeTeam.winner ? "var(--text-main)" : "var(--text-muted)" }}>{match.homeTeam.score}</span>
+              <span>-</span>
+              <span style={{ color: match.awayTeam.winner ? "var(--text-main)" : "var(--text-muted)" }}>{match.awayTeam.score}</span>
+            </div>
+            <span style={{ fontSize: "0.8rem", color: "var(--primary)", fontWeight: 700, textAlign: "center" }}>
+              {match.status.detail}
+            </span>
+          </div>
 
-      {/* Commentary / Details */}
-      {match.commentary && match.commentary !== match.status.detail && (
-        <div style={{ 
-          marginTop: "0.5rem", 
-          padding: "0.75rem", 
-          background: "#f8fafc", 
-          borderRadius: "8px", 
-          fontSize: "0.85rem", 
-          color: "var(--text-muted)", 
-          display: "flex", 
-          gap: "8px",
-          alignItems: "flex-start",
-          border: "1px solid #e2e8f0"
-        }}>
-          <MessageSquareText size={16} color="var(--primary)" style={{ flexShrink: 0, marginTop: "2px" }} />
-          <span style={{ lineHeight: 1.4 }}>{match.commentary}</span>
+          <TeamLogo team={match.awayTeam} />
         </div>
-      )}
 
-      {/* Footer Details */}
-      <div style={{ display: "flex", justifyContent: "center", gap: "1rem", marginTop: "auto", paddingTop: "0.75rem", borderTop: "1px solid var(--border-light)" }}>
-        {!isLive && (
-          <div style={{ display: "flex", alignItems: "center", gap: "4px", fontSize: "0.8rem", color: "var(--text-muted)" }}>
-            <Calendar size={14} />
-            <span>{new Date(match.date).toLocaleDateString(undefined, { month: 'short', day: 'numeric' })}</span>
+        {/* Commentary / Details */}
+        {match.commentary && match.commentary !== match.status.detail && (
+          <div style={{ 
+            marginTop: "0.5rem", 
+            padding: "0.75rem", 
+            background: "#f8fafc", 
+            borderRadius: "8px", 
+            fontSize: "0.85rem", 
+            color: "var(--text-muted)", 
+            display: "flex", 
+            gap: "8px",
+            alignItems: "flex-start",
+            border: "1px solid #e2e8f0"
+          }}>
+            <MessageSquareText size={16} color="var(--primary)" style={{ flexShrink: 0, marginTop: "2px" }} />
+            <span style={{ lineHeight: 1.4 }}>{match.commentary}</span>
           </div>
         )}
-        <div style={{ display: "flex", alignItems: "center", gap: "4px", fontSize: "0.8rem", color: "var(--text-muted)" }}>
-          <Clock size={14} />
-          <span>{new Date(match.date).toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit' })}</span>
+
+        {/* Footer Details */}
+        <div style={{ display: "flex", justifyContent: "center", gap: "1rem", marginTop: "auto", paddingTop: "0.75rem", borderTop: "1px solid var(--border-light)" }}>
+          {!isLive && (
+            <div style={{ display: "flex", alignItems: "center", gap: "4px", fontSize: "0.8rem", color: "var(--text-muted)" }}>
+              <Calendar size={14} />
+              <span>{new Date(match.date).toLocaleDateString(undefined, { month: 'short', day: 'numeric' })}</span>
+            </div>
+          )}
+          <div style={{ display: "flex", alignItems: "center", gap: "4px", fontSize: "0.8rem", color: "var(--text-muted)" }}>
+            <Clock size={14} />
+            <span>{new Date(match.date).toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit' })}</span>
+          </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
