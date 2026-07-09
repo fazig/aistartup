@@ -1,4 +1,4 @@
-import type { BlogPost } from '../../types';
+import { BlogPost } from "../posts";
 
 export const postChatgptGrokClaude: BlogPost = {
   id: 'chatgpt-grok-claude',

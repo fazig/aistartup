@@ -1,4 +1,4 @@
-import type { BlogPost } from '../../types';
+import { BlogPost } from "../posts";
 
 export const postIphone18ProMax: BlogPost = {
   id: 'iphone-18-pro-max-new-features',

@@ -1,4 +1,4 @@
-import type { BlogPost } from '../../types';
+import { BlogPost } from "../posts";
 
 export const postChinaAiToolsTop100: BlogPost = {
   id: 'china-ai-tools-top-100',
