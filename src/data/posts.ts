@@ -56,6 +56,10 @@ import { postIphone18ProMax } from './articles/iphone-18-pro-max';
 import { postBestEarphonesIphone } from './articles/best-earphones-iphone';
 import { postChatgptGrokClaude } from './articles/chatgpt-grok-claude';
 import { postChinaAiToolsTop100 } from './articles/china-ai-tools-top-100';
+import { postNotebookLmAgenticFeatures } from './articles/notebooklm-agentic-features';
+import { postNotebookLmStudyHack } from './articles/notebooklm-study-hack';
+import { postNotebookLmContentCreatorStudio } from './articles/notebooklm-content-creator-studio';
+import { postNotebookLmHallucinationProblem } from './articles/notebooklm-hallucination-problem';
 
 export const BLOG_POSTS: BlogPost[] = [
   postAiToolsApp,
@@ -100,4 +104,8 @@ export const BLOG_POSTS: BlogPost[] = [
   postBestEarphonesIphone,
   postChatgptGrokClaude,
   postChinaAiToolsTop100,
+  postNotebookLmAgenticFeatures,
+  postNotebookLmStudyHack,
+  postNotebookLmContentCreatorStudio,
+  postNotebookLmHallucinationProblem,
 ];
