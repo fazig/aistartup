@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Match, Team } from "../api/sportsData";
-import { Calendar, Clock } from "lucide-react";
+import { Calendar, Clock, MessageSquareText } from "lucide-react";
 
 export default function MatchCard({ match }: { match: Match }) {
   const isLive = match.status.state === "in";
@@ -93,7 +93,7 @@ export default function MatchCard({ match }: { match: Match }) {
             <span>-</span>
             <span style={{ color: match.awayTeam.winner ? "var(--text-main)" : "var(--text-muted)" }}>{match.awayTeam.score}</span>
           </div>
-          <span style={{ fontSize: "0.8rem", color: "var(--text-muted)", fontWeight: 500, textAlign: "center" }}>
+          <span style={{ fontSize: "0.8rem", color: "var(--primary)", fontWeight: 700, textAlign: "center" }}>
             {match.status.detail}
           </span>
         </div>
@@ -101,8 +101,27 @@ export default function MatchCard({ match }: { match: Match }) {
         <TeamLogo team={match.awayTeam} />
       </div>
 
+      {/* Commentary / Details */}
+      {match.commentary && match.commentary !== match.status.detail && (
+        <div style={{ 
+          marginTop: "0.5rem", 
+          padding: "0.75rem", 
+          background: "#f8fafc", 
+          borderRadius: "8px", 
+          fontSize: "0.85rem", 
+          color: "var(--text-muted)", 
+          display: "flex", 
+          gap: "8px",
+          alignItems: "flex-start",
+          border: "1px solid #e2e8f0"
+        }}>
+          <MessageSquareText size={16} color="var(--primary)" style={{ flexShrink: 0, marginTop: "2px" }} />
+          <span style={{ lineHeight: 1.4 }}>{match.commentary}</span>
+        </div>
+      )}
+
       {/* Footer Details */}
-      <div style={{ display: "flex", justifyContent: "center", gap: "1rem", marginTop: "0.5rem", paddingTop: "0.75rem", borderTop: "1px solid var(--border-light)" }}>
+      <div style={{ display: "flex", justifyContent: "center", gap: "1rem", marginTop: "auto", paddingTop: "0.75rem", borderTop: "1px solid var(--border-light)" }}>
         {!isLive && (
           <div style={{ display: "flex", alignItems: "center", gap: "4px", fontSize: "0.8rem", color: "var(--text-muted)" }}>
             <Calendar size={14} />

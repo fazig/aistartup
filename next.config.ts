@@ -8,6 +8,18 @@ const nextConfig: NextConfig = {
   },
   experimental: {
     optimizePackageImports: ['lucide-react', 'crypto-js', 'exifr', 'qrcode.react'],
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'a.espncdn.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'secure.espncdn.com',
+      }
+    ],
   }
 };
 

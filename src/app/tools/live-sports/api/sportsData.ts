@@ -21,6 +21,7 @@ export interface Match {
   homeTeam: Team;
   awayTeam: Team;
   league: string;
+  commentary?: string;
 }
 
 // ESPN API Endpoints
@@ -62,6 +63,7 @@ function normalizeESPNMatch(event: any, leagueName: string): Match | null {
         detail: event.status.type.detail,
       },
       league: leagueName,
+      commentary: event.competitions?.[0]?.headlines?.[0]?.description || event.competitions?.[0]?.notes?.[0]?.headline || event.status?.type?.detail || "",
       homeTeam: {
         id: home.id,
         name: home.team.name,
