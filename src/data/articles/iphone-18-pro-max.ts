@@ -1,13 +1,14 @@
 import { BlogPost } from "../posts";
 
 export const postIphone18ProMax: BlogPost = {
-  id: 'iphone-18-pro-max-new-features',
+  slug: 'iphone-18-pro-max-new-features',
   title: 'iPhone 18 Pro Max: The Ultimate Guide to Apple’s Next Big Leap',
   description: 'Dive deep into the rumored new features of the upcoming iPhone 18 Pro Max. From an invisible under-display camera to the all-new A19 Bionic chip and revolutionary battery life.',
   date: '2026-07-09',
   author: 'Tech Insights Team',
-  imageUrl: '/images/iphone_18_pro_max_cover.png',
-  tags: ['Apple', 'iPhone', 'Smartphones', 'Tech News'],
+  image: '/images/iphone_18_pro_max_cover.png',
+  readTime: '10 min read',
+  category: 'Technology',
   content: `
 The tech world never sleeps, and neither do the rumors surrounding Apple's flagship devices. While the current generation of iPhones continues to dominate the premium market segment globally, the anticipation for what comes next is already reaching a fever pitch. The upcoming iPhone 18 Pro Max is not just expected to be an incremental upgrade; industry analysts and supply chain leaks suggest it will be a monumental leap forward, fundamentally changing how we interact with our handheld devices. From the long-awaited implementation of true edge-to-edge displays to groundbreaking advancements in artificial intelligence and battery chemistry, the iPhone 18 Pro Max promises to be the most significant overhaul in Apple’s smartphone lineup since the iPhone X. 
 

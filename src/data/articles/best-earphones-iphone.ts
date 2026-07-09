@@ -1,13 +1,14 @@
 import { BlogPost } from "../posts";
 
 export const postBestEarphonesIphone: BlogPost = {
-  id: 'best-earphones-iphone',
+  slug: 'best-earphones-iphone',
   title: 'Best Earphones for iPhone: A Comprehensive Comparison Across All Series',
   description: 'An exhaustive, detailed guide comparing the absolute best earphones for every iPhone model. From budget-friendly hidden gems to premium audiophile-grade wireless earbuds.',
   date: '2026-07-09',
   author: 'Audio Hardware Experts',
-  imageUrl: '/images/best_earphones_iphone_cover.png',
-  tags: ['Audio', 'Earphones', 'iPhone', 'Hardware', 'Review'],
+  image: '/images/best_earphones_iphone_cover.png',
+  readTime: '10 min read',
+  category: 'Technology',
   content: `
 The iPhone ecosystem is globally renowned for its seamless, deeply integrated hardware and software experience. However, to truly unlock the absolute massive potential of Apple's premium devices—whether you are commuting, intensely working out, or critically listening to high-fidelity lossless audio—you absolutely must pair your iPhone with the perfect set of earphones. Since Apple famously and controversially removed the physical 3.5mm headphone jack many years ago, the wireless audio market has completely exploded, offering thousands of highly varied options ranging from budget-friendly knockoffs to ultra-premium, incredibly expensive audiophile gear.
 

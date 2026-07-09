@@ -1,13 +1,14 @@
 import { BlogPost } from "../posts";
 
 export const postChinaAiToolsTop100: BlogPost = {
-  id: 'china-ai-tools-top-100',
+  slug: 'china-ai-tools-top-100',
   title: 'The Great Eastern AI Boom: The Top 100 New China AI Tools List',
   description: 'A massive, highly comprehensive breakdown of the incredibly innovative, rapidly expanding artificial intelligence ecosystem emerging from China. Discover the incredible tools reshaping the global digital landscape.',
   date: '2026-07-09',
   author: 'Global Tech Insights Team',
-  imageUrl: '/images/china_ai_tools_cover.png',
-  tags: ['China', 'AI Tools', 'Innovation', 'Tech Startups', 'Global Tech'],
+  image: '/images/china_ai_tools_cover.png',
+  readTime: '10 min read',
+  category: 'Technology',
   content: `
 For years, the global narrative surrounding artificial intelligence development has been overwhelmingly, almost exclusively, dominated by massive Silicon Valley behemoths like OpenAI, Google, and Anthropic. However, a massive, quiet, and incredibly powerful revolution has been aggressively brewing in the East. China has completely, undeniably emerged as a staggering, massive superpower in the generative artificial intelligence space. Backed by incredibly immense government funding, a massive, highly competitive domestic market, and some of the absolute brightest, most aggressively innovative engineering minds on the planet, Chinese tech giants and scrappy, hyper-agile startups are releasing incredibly powerful AI tools at a completely breathtaking, dizzying pace.
 

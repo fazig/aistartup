@@ -1,13 +1,14 @@
 import { BlogPost } from "../posts";
 
 export const postSamsungS27Ultra: BlogPost = {
-  id: 'samsung-s27-ultra-upcoming-mobile',
+  slug: 'samsung-s27-ultra-upcoming-mobile',
   title: 'Samsung S27 Ultra: Everything We Know About the Upcoming Flagship Mobile',
   description: 'A comprehensive, detailed look at the highly anticipated Samsung S27 Ultra upcoming mobile. We explore leaked specs, camera upgrades, AI features, and battery innovations.',
   date: '2026-07-09',
   author: 'Tech Insights Team',
-  imageUrl: '/samsung_s27_ultra_cover.png',
-  tags: ['Samsung', 'Smartphones', 'Tech News', 'S27 Ultra'],
+  image: '/samsung_s27_ultra_cover.png',
+  readTime: '10 min read',
+  category: 'Technology',
   content: `
 The smartphone industry is constantly evolving, but every few years, a device emerges that redefines our expectations of what a pocket-sized computer can achieve. The upcoming Samsung S27 Ultra is heavily rumored to be exactly that kind of generational leap. As technology enthusiasts eagerly await official announcements, a steady stream of leaks, supply chain rumors, and patent filings have already begun painting a remarkably vivid picture of what to expect. From groundbreaking artificial intelligence capabilities to structural design overhauls and revolutionary battery technology, the upcoming flagship promises to redefine what a premium mobile device can accomplish. In this massive, comprehensive breakdown, we will explore every single facet of the Samsung S27 Ultra. We will analyze its potential impact on the consumer market, compare it against its immediate predecessors, and help you decide if it is truly worth the inevitable premium price tag.
 

@@ -1,13 +1,14 @@
 import { BlogPost } from "../posts";
 
 export const postChatgptGrokClaude: BlogPost = {
-  id: 'chatgpt-grok-claude',
+  slug: 'chatgpt-grok-claude',
   title: 'The Great AI War: ChatGPT 5.6 vs Grok vs Claude Opus',
   description: 'An incredibly detailed, massive comparison of the bleeding-edge AI models. Discover how OpenAI’s newly released GPT-5.6 stacks up against Elon Musk’s Grok and Anthropic’s masterpiece, Claude Opus.',
   date: '2026-07-09',
   author: 'AI Research Team',
-  imageUrl: '/images/chatgpt_grok_claude_cover.png',
-  tags: ['Artificial Intelligence', 'ChatGPT', 'Grok', 'Claude Opus', 'Tech Analysis'],
+  image: '/images/chatgpt_grok_claude_cover.png',
+  readTime: '10 min read',
+  category: 'Technology',
   content: `
 The landscape of artificial general intelligence (AGI) is moving at a completely unprecedented, utterly terrifying, and deeply exhilarating pace. Just when we collectively assume the technological dust has finally settled and one massively powerful corporation has definitively won the arms race, a competitor unexpectedly drops a paradigm-shifting model that completely rewrites all the previously established rules. The incredibly sudden, unannounced release of OpenAI’s highly anticipated GPT-5.6 has sent massive shockwaves rippling throughout the entire global tech community. However, unlike previous iterations where OpenAI stood completely unchallenged at the absolute summit, they now face incredibly fierce, heavily funded opposition from two distinctly different challengers: Elon Musk’s fiercely independent, heavily uncensored Grok, and Anthropic’s beautifully nuanced, incredibly safe masterpiece, Claude Opus.
 
