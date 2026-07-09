@@ -51,6 +51,11 @@ import { postBestWebsiteToDownloadFreeGames } from './articles/best-website-to-d
 import { postBestQrCodeGenerator } from './articles/best-qr-code-generator';
 import { postClaudeFable5IsLiveNow } from './articles/claude-fable-5-is-live-now';
 import { postClaudeVsChatgptWhoWillWin } from './articles/claude-vs-chatgpt-who-will-win';
+import { postSamsungS27Ultra } from './articles/samsung-s27-ultra';
+import { postIphone18ProMax } from './articles/iphone-18-pro-max';
+import { postBestEarphonesIphone } from './articles/best-earphones-iphone';
+import { postChatgptGrokClaude } from './articles/chatgpt-grok-claude';
+import { postChinaAiToolsTop100 } from './articles/china-ai-tools-top-100';
 
 export const BLOG_POSTS: BlogPost[] = [
   postAiToolsApp,
@@ -90,4 +95,9 @@ export const BLOG_POSTS: BlogPost[] = [
   postBestQrCodeGenerator,
   postClaudeFable5IsLiveNow,
   postClaudeVsChatgptWhoWillWin,
+  postSamsungS27Ultra,
+  postIphone18ProMax,
+  postBestEarphonesIphone,
+  postChatgptGrokClaude,
+  postChinaAiToolsTop100,
 ];
