@@ -4,7 +4,10 @@ import Link from "next/link";
 import { Wrench } from "lucide-react";
 import Header from "@/components/Header";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import Script from "next/script";
 import "./globals.css";
+
+import CookieConsent from "@/components/CookieConsent";
 
 const inter = Inter({ 
   subsets: ["latin"], 
@@ -26,6 +29,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="google-adsense-account" content="ca-pub-0000000000000000" />
+        <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://googleads.g.doubleclick.net" crossOrigin="anonymous" />
+      </head>
       <body className={inter.variable}>
         <Header />
 
@@ -157,7 +165,19 @@ export default function RootLayout({
             </div>
           </div>
         </footer>
+        
+        {/* Dynamic Client-Side Components */}
+        <CookieConsent />
+        
         <GoogleAnalytics gaId="G-L0D1YKGN2H" />
+        
+        {/* Defer AdSense script until page is interactive to boost speed */}
+        <Script
+          id="adsense-script"
+          strategy="lazyOnload"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000"
+          crossOrigin="anonymous"
+        />
       </body>
     </html>
   );
