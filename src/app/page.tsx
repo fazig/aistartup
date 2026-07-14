@@ -8,8 +8,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "StartupAI Tools | Free Developer, Content & Web Utilities",
-  description: "Access a comprehensive collection of 100% free, lightning-fast web tools including JSON formatters, QR code generators, and text utilities. No registration required.",
+  title: "StartupAI Tools | Free AI Image Enhancer & Web Utilities",
+  description: "Access over 100+ free, lightning-fast web tools including a free HD AI Image Enhancer (Remini alternative), JSON formatters, and SEO utilities. No registration required.",
+  keywords: "free AI image enhancer, Remini alternative free, web tools, developer utilities, upscale image to HD",
 };
 
 export default function Home() {
@@ -87,6 +88,19 @@ export default function Home() {
                 Converts unstructured brain-dumps, daily tasks, and notes into organized action plans and email drafts instantly.
               </p>
               <div style={{ fontWeight: 600, color: '#9333ea', fontSize: '0.875rem' }}>Open ZenNote &rarr;</div>
+            </Link>
+
+            <Link href="/tools/image-enhancer" className="card" style={{ display: 'block', color: 'inherit', border: '1.5px solid rgba(236, 72, 153, 0.3)', background: 'linear-gradient(to bottom, #ffffff, rgba(236, 72, 153, 0.02))' }}>
+              <div style={{ width: 48, height: 48, borderRadius: '12px', background: 'rgba(236, 72, 153, 0.08)', color: '#ec4899', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.5rem' }}>
+                <ImageIcon size={24} />
+              </div>
+              <h3 style={{ fontSize: '1.25rem', marginBottom: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                Image Enhancer HD <span style={{ fontSize: '0.65rem', background: '#ec4899', color: '#ffffff', padding: '0.15rem 0.5rem', borderRadius: '10px', fontWeight: 700 }}>HOT</span>
+              </h3>
+              <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '1.5rem' }}>
+                Upscale and enhance your photos to full HD instantly for free. The ultimate free Remini alternative.
+              </p>
+              <div style={{ fontWeight: 600, color: '#ec4899', fontSize: '0.875rem' }}>Enhance Image &rarr;</div>
             </Link>
 
             <Link href="/tools/json-formatter" className="card" style={{ display: 'block', color: 'inherit' }}>
@@ -386,6 +400,14 @@ export default function Home() {
                 Create high-resolution QR codes, convert image formats, and download assets.
               </p>
               <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 2rem 0', display: 'flex', flexDirection: 'column', gap: '0.5rem', flexGrow: 1 }}>
+                <li>
+                  <Link href="/tools/image-enhancer" className="category-item-link">
+                    <span className="category-badge" style={{ background: 'rgba(236, 72, 153, 0.1)', color: '#ec4899' }}>
+                      <Sparkles size={12} />
+                    </span>
+                    <span style={{ fontWeight: 600 }}>Image Enhancer HD</span>
+                  </Link>
+                </li>
                 <li>
                   <Link href="/tools/qr-generator" className="category-item-link">
                     <span className="category-badge" style={{ background: 'rgba(219, 39, 119, 0.06)', color: '#db2777' }}>
