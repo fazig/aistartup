@@ -95,6 +95,26 @@ export default function Header() {
                 }}
               >
                 <Link 
+                  href="/tools/image-enhancer" 
+                  className="dropdown-item"
+                  onClick={() => setDropdownOpen(false)}
+                  style={{
+                    padding: '0.6rem 0.8rem',
+                    borderRadius: '8px',
+                    fontSize: '0.85rem',
+                    color: 'var(--text-main)',
+                    fontWeight: 500,
+                    textDecoration: 'none',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    transition: 'background-color 0.15s'
+                  }}
+                >
+                  <span style={{ fontWeight: 700, color: '#ec4899', display: 'flex', alignItems: 'center', gap: '0.25rem' }}><Sparkles size={14} /> Image Enhancer HD</span>
+                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Free AI image upscaling</span>
+                </Link>
+
+                <Link 
                   href="/tools/grammarly-free" 
                   className="dropdown-item"
                   onClick={() => setDropdownOpen(false)}
@@ -205,6 +225,9 @@ export default function Header() {
           <div style={{ padding: "0.25rem 0", fontWeight: 700, fontSize: "0.85rem", color: "var(--text-muted)", textTransform: "uppercase", marginTop: "0.5rem" }}>
             Popular Tools
           </div>
+          <Link href="/tools/image-enhancer" className="mobile-nav-link" style={{ paddingLeft: "1rem", color: '#ec4899', display: 'flex', alignItems: 'center', gap: '0.25rem' }} onClick={closeMenu}>
+            <Sparkles size={14} /> Image Enhancer HD
+          </Link>
           <Link href="/tools/grammarly-free" className="mobile-nav-link" style={{ paddingLeft: "1rem" }} onClick={closeMenu}>
             Grammarly Free
           </Link>
