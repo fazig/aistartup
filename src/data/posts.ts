@@ -60,6 +60,11 @@ import { postNotebookLmAgenticFeatures } from './articles/notebooklm-agentic-fea
 import { postNotebookLmStudyHack } from './articles/notebooklm-study-hack';
 import { postNotebookLmContentCreatorStudio } from './articles/notebooklm-content-creator-studio';
 import { postNotebookLmHallucinationProblem } from './articles/notebooklm-hallucination-problem';
+import { postNewIphone18ProMaxComing } from './articles/new-iphone-18-pro-max-coming';
+import { postHowSamsungPhonesAreBetterInAi } from './articles/how-samsung-phones-are-better-in-ai';
+import { postChinaFreeToolKimi } from './articles/china-free-tool-kimi';
+import { postHowToVibeCodeUsingCodex } from './articles/how-to-vibe-code-using-codex';
+import { postClaudeFable5IsTheMostExpensiveToolYet } from './articles/claude-fable-5-is-the-most-expensive-tool-yet';
 
 export const BLOG_POSTS: BlogPost[] = [
   postAiToolsApp,
@@ -108,4 +113,9 @@ export const BLOG_POSTS: BlogPost[] = [
   postNotebookLmStudyHack,
   postNotebookLmContentCreatorStudio,
   postNotebookLmHallucinationProblem,
+  postNewIphone18ProMaxComing,
+  postHowSamsungPhonesAreBetterInAi,
+  postChinaFreeToolKimi,
+  postHowToVibeCodeUsingCodex,
+  postClaudeFable5IsTheMostExpensiveToolYet,
 ];
