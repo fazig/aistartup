@@ -66,6 +66,13 @@ import { postChinaFreeToolKimi } from './articles/china-free-tool-kimi';
 import { postHowToVibeCodeUsingCodex } from './articles/how-to-vibe-code-using-codex';
 import { postClaudeFable5IsTheMostExpensiveToolYet } from './articles/claude-fable-5-is-the-most-expensive-tool-yet';
 
+import { postClaudeFable5GameArticle } from './articles/claude-fable-5-game-article';
+import { postWatchWorldCupFree } from './articles/watch-world-cup-free';
+import { postWatchFootballMatchesFree } from './articles/watch-football-matches-free';
+import { postWhoWillWinWorldCupAi } from './articles/who-will-win-world-cup-ai';
+import { postBestAppsStreamFifa2026 } from './articles/best-apps-stream-fifa-2026';
+import { postWillMessiWinWorldCup } from './articles/will-messi-win-world-cup';
+
 export const BLOG_POSTS: BlogPost[] = [
   postAiToolsApp,
   postAiToolsPresentation,
@@ -118,4 +125,10 @@ export const BLOG_POSTS: BlogPost[] = [
   postChinaFreeToolKimi,
   postHowToVibeCodeUsingCodex,
   postClaudeFable5IsTheMostExpensiveToolYet,
+  postClaudeFable5GameArticle,
+  postWatchWorldCupFree,
+  postWatchFootballMatchesFree,
+  postWhoWillWinWorldCupAi,
+  postBestAppsStreamFifa2026,
+  postWillMessiWinWorldCup,
 ];
