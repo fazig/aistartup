@@ -66,6 +66,7 @@ import { postChinaFreeToolKimi } from './articles/china-free-tool-kimi';
 import { postHowToVibeCodeUsingCodex } from './articles/how-to-vibe-code-using-codex';
 import { postClaudeFable5IsTheMostExpensiveToolYet } from './articles/claude-fable-5-is-the-most-expensive-tool-yet';
 import { postBestAiPodcastShowNotes } from './articles/best-ai-podcast-show-notes';
+import { postBestFreeAiColorizeOldPhotos } from './articles/best-free-ai-tool-colorize-old-photos';
 
 import { postClaudeFable5GameArticle } from './articles/claude-fable-5-game-article';
 import { postWatchWorldCupFree } from './articles/watch-world-cup-free';
@@ -127,6 +128,7 @@ export const BLOG_POSTS: BlogPost[] = [
   postHowToVibeCodeUsingCodex,
   postClaudeFable5IsTheMostExpensiveToolYet,
   postBestAiPodcastShowNotes,
+  postBestFreeAiColorizeOldPhotos,
   postClaudeFable5GameArticle,
   postWatchWorldCupFree,
   postWatchFootballMatchesFree,
