@@ -1,15 +1,15 @@
 import { BlogPost } from '../posts';
 
 export const postBestFreeAiColorizeOldPhotos: BlogPost = {
-  slug: \`best-free-ai-tool-colorize-old-photos\`,
-  title: \`The Ultimate Guide: Best Free AI Tool to Colorize Old Photos\`,
-  description: \`Bring your family history back to life. Discover the absolute best free AI tool to colorize old photos and restore your cherished memories in seconds.\`,
+  slug: `best-free-ai-tool-colorize-old-photos`,
+  title: `The Ultimate Guide: Best Free AI Tool to Colorize Old Photos`,
+  description: `Bring your family history back to life. Discover the absolute best free AI tool to colorize old photos and restore your cherished memories in seconds.`,
   date: new Date().toISOString().split('T')[0],
-  readTime: \`10 min read\`,
-  category: \`AI Tools\`,
-  author: \`AI Writer\`,
-  image: \`https://images.unsplash.com/photo-1543857778-c4a1a3e0b2eb?auto=format&fit=crop&q=80&w=1000\`,
-  content: \`There is something profoundly emotional about looking at an old black-and-white photograph. It captures a frozen moment in time—a great-grandparent's wedding day, a historic street corner from a bygone era, or a candid childhood memory of someone you love. But while black-and-white images possess a certain timeless romance, they also create a psychological distance. It feels like looking at history, rather than reality.
+  readTime: `10 min read`,
+  category: `AI Tools`,
+  author: `AI Writer`,
+  image: `https://images.unsplash.com/photo-1543857778-c4a1a3e0b2eb?auto=format&fit=crop&q=80&w=1000`,
+  content: `There is something profoundly emotional about looking at an old black-and-white photograph. It captures a frozen moment in time—a great-grandparent's wedding day, a historic street corner from a bygone era, or a candid childhood memory of someone you love. But while black-and-white images possess a certain timeless romance, they also create a psychological distance. It feels like looking at history, rather than reality.
 
 Color changes everything. When you add vibrant, accurate hues to a monochromatic image, the subjects suddenly feel alive, relatable, and present. For decades, colorization was a painstaking process reserved for professional archivists and skilled Photoshop artists who spent hours meticulously painting over pixels. 
 
@@ -141,5 +141,5 @@ Gather those old shoeboxes full of memories, fire up your scanner, and experienc
 
 ---
 *Disclaimer: The tools mentioned in this article were selected based on independent reviews. We encourage users to read the privacy policies of any AI tool before uploading sensitive personal photographs.*
-\`
+`
 };
