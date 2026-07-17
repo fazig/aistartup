@@ -65,6 +65,7 @@ import { postHowSamsungPhonesAreBetterInAi } from './articles/how-samsung-phones
 import { postChinaFreeToolKimi } from './articles/china-free-tool-kimi';
 import { postHowToVibeCodeUsingCodex } from './articles/how-to-vibe-code-using-codex';
 import { postClaudeFable5IsTheMostExpensiveToolYet } from './articles/claude-fable-5-is-the-most-expensive-tool-yet';
+import { postBestAiPodcastShowNotes } from './articles/best-ai-podcast-show-notes';
 
 import { postClaudeFable5GameArticle } from './articles/claude-fable-5-game-article';
 import { postWatchWorldCupFree } from './articles/watch-world-cup-free';
@@ -125,6 +126,7 @@ export const BLOG_POSTS: BlogPost[] = [
   postChinaFreeToolKimi,
   postHowToVibeCodeUsingCodex,
   postClaudeFable5IsTheMostExpensiveToolYet,
+  postBestAiPodcastShowNotes,
   postClaudeFable5GameArticle,
   postWatchWorldCupFree,
   postWatchFootballMatchesFree,
