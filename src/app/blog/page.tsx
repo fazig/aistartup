@@ -44,7 +44,7 @@ export default function BlogIndex() {
         maxWidth: "1100px",
         margin: "0 auto 4rem auto"
       }}>
-        {BLOG_POSTS.map((post) => (
+        {[...BLOG_POSTS].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).map((post) => (
           <article 
             key={post.slug} 
             className="card" 
