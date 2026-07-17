@@ -74,6 +74,7 @@ import { postBestFreeAiSeamlessTextureGenerator } from './articles/best-free-ai-
 import { postBestFreeAiInteriorDesignGenerator } from './articles/best-free-ai-interior-design-generator';
 import { postBestFreeAiWorkoutPlanGenerator } from './articles/best-free-ai-workout-plan-generator';
 import { postBestFreeAiPresentationMaker } from './articles/best-free-ai-presentation-maker';
+import { postBestFreeAiRecipeGenerator } from './articles/best-free-ai-recipe-generator';
 
 import { postClaudeFable5GameArticle } from './articles/claude-fable-5-game-article';
 import { postWatchWorldCupFree } from './articles/watch-world-cup-free';
@@ -143,6 +144,7 @@ export const BLOG_POSTS: BlogPost[] = [
   postBestFreeAiInteriorDesignGenerator,
   postBestFreeAiWorkoutPlanGenerator,
   postBestFreeAiPresentationMaker,
+  postBestFreeAiRecipeGenerator,
   postClaudeFable5GameArticle,
   postWatchWorldCupFree,
   postWatchFootballMatchesFree,
