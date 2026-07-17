@@ -68,6 +68,7 @@ import { postClaudeFable5IsTheMostExpensiveToolYet } from './articles/claude-fab
 import { postBestAiPodcastShowNotes } from './articles/best-ai-podcast-show-notes';
 import { postBestFreeAiColorizeOldPhotos } from './articles/best-free-ai-tool-colorize-old-photos';
 import { postBestFreeAiVocalRemover } from './articles/best-free-ai-vocal-remover';
+import { postBestFreeAiDndCharacterPortraits } from './articles/best-free-ai-dnd-character-portraits';
 
 import { postClaudeFable5GameArticle } from './articles/claude-fable-5-game-article';
 import { postWatchWorldCupFree } from './articles/watch-world-cup-free';
@@ -131,6 +132,7 @@ export const BLOG_POSTS: BlogPost[] = [
   postBestAiPodcastShowNotes,
   postBestFreeAiColorizeOldPhotos,
   postBestFreeAiVocalRemover,
+  postBestFreeAiDndCharacterPortraits,
   postClaudeFable5GameArticle,
   postWatchWorldCupFree,
   postWatchFootballMatchesFree,
