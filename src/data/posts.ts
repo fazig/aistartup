@@ -31,7 +31,6 @@ import { postFifaAi2 } from './articles/ai-predictions-fifa-2026';
 import { postFifaAi3 } from './articles/ai-vr-fans-fifa-2026';
 import { postFifaAi4 } from './articles/ai-training-players-fifa-2026';
 
-import { postAiFreeKissingVideoGenerator } from './articles/ai-free-kissing-video-generator';
 import { postAiFreeImageToVideoGenerator } from './articles/ai-free-image-to-video-generator';
 import { postAiFreeFaceSwapVideo } from './articles/ai-free-face-swap-video';
 import { postAiFreeAnimationVideoGenerator } from './articles/ai-free-animation-video-generator';
@@ -41,13 +40,10 @@ import { postPremiumPizzaDeliveryWebsite } from './articles/premium-pizza-delive
 import { postFaizanKiShop } from './articles/faizan-ki-shop';
 import { postFaizanKiAwazVoiceEnhancer } from './articles/faizan-ki-awaz-voice-enhancer';
 import { postFootballVsSoccerTheDifference } from './articles/football-vs-soccer-the-difference';
-import { postAiToolsFromChina100OfThemList } from './articles/ai-tools-from-china-100-of-them-list';
 import { postIsClaudeTheBestAiToolInHistory } from './articles/is-claude-the-best-ai-tool-in-history';
-import { postChinaMakesTheToolCheaperHow } from './articles/china-makes-the-tool-cheaper-how';
 import { postAiVsHumansWhoWillWinInTheEnd } from './articles/ai-vs-humans-who-will-win-in-the-end';
 
 import { postTop5BestFreeAiToolsToUseIn2026 } from './articles/top-5-best-free-ai-tools-to-use-in-2026';
-import { postBestWebsiteToDownloadFreeGames } from './articles/best-website-to-download-free-games';
 import { postBestQrCodeGenerator } from './articles/best-qr-code-generator';
 import { postClaudeFable5IsLiveNow } from './articles/claude-fable-5-is-live-now';
 import { postClaudeVsChatgptWhoWillWin } from './articles/claude-vs-chatgpt-who-will-win';
@@ -79,10 +75,7 @@ import { postBestFreeAiCoverLetterGenerator } from './articles/best-free-ai-cove
 import { postBestFreeAiVoiceCloner } from './articles/best-free-ai-voice-cloner';
 
 import { postClaudeFable5GameArticle } from './articles/claude-fable-5-game-article';
-import { postWatchWorldCupFree } from './articles/watch-world-cup-free';
-import { postWatchFootballMatchesFree } from './articles/watch-football-matches-free';
 import { postWhoWillWinWorldCupAi } from './articles/who-will-win-world-cup-ai';
-import { postBestAppsStreamFifa2026 } from './articles/best-apps-stream-fifa-2026';
 import { postWillMessiWinWorldCup } from './articles/will-messi-win-world-cup';
 
 export const BLOG_POSTS: BlogPost[] = [
@@ -105,7 +98,6 @@ export const BLOG_POSTS: BlogPost[] = [
   postFifaAi2,
   postFifaAi3,
   postFifaAi4,
-  postAiFreeKissingVideoGenerator,
   postAiFreeImageToVideoGenerator,
   postAiFreeFaceSwapVideo,
   postAiFreeAnimationVideoGenerator,
@@ -114,12 +106,9 @@ export const BLOG_POSTS: BlogPost[] = [
   postFaizanKiShop,
   postFaizanKiAwazVoiceEnhancer,
   postFootballVsSoccerTheDifference,
-  postAiToolsFromChina100OfThemList,
   postIsClaudeTheBestAiToolInHistory,
-  postChinaMakesTheToolCheaperHow,
   postAiVsHumansWhoWillWinInTheEnd,
   postTop5BestFreeAiToolsToUseIn2026,
-  postBestWebsiteToDownloadFreeGames,
   postBestQrCodeGenerator,
   postClaudeFable5IsLiveNow,
   postClaudeVsChatgptWhoWillWin,
@@ -150,9 +139,6 @@ export const BLOG_POSTS: BlogPost[] = [
   postBestFreeAiCoverLetterGenerator,
   postBestFreeAiVoiceCloner,
   postClaudeFable5GameArticle,
-  postWatchWorldCupFree,
-  postWatchFootballMatchesFree,
   postWhoWillWinWorldCupAi,
-  postBestAppsStreamFifa2026,
   postWillMessiWinWorldCup,
 ];
