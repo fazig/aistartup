@@ -61,7 +61,7 @@ export default function YoutubeKeywordsExtractor() {
         <h1 style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.5rem' }}>
           <Video color="var(--primary)" /> YouTube Keywords Extractor
         </h1>
-        <p style={{ color: 'var(--text-muted)' }}>Spy on your competitors by extracting the hidden SEO tags and keywords from any YouTube video.</p>
+        <p style={{ color: 'var(--text-muted)' }}>Analyze public video tags and keywords to optimize your YouTube SEO and video metadata strategy.</p>
       </div>
 
       <div className="card" style={{ marginBottom: '3rem' }}>
@@ -134,10 +134,10 @@ export default function YoutubeKeywordsExtractor() {
         <h2>What are YouTube Tags?</h2>
         <p>When a content creator uploads a video to YouTube, the algorithm asks them to input a list of "Tags". These are secret, comma-separated keywords that help the algorithm understand exactly what the video is about, so it can recommend the video to the right viewers.</p>
 
-        <h2>Why spy on your competitors?</h2>
-        <p>If you are trying to grow your YouTube channel, the fastest way to get views is to rank highly in the search bar. However, knowing exactly which keywords to target is extremely difficult.</p>
-        <p>If you find a competitor's video that went viral and got 5 million views, you know they did something right. Our tool allows you to reverse-engineer their success. Simply paste the URL of their viral video into the box above, and our system will extract their secret list of tags.</p>
-        <p>You can then copy these exact same tags and paste them into your own video's metadata to steal a portion of their algorithmic traffic and get suggested next to their viral hits!</p>
+        <h2>Why analyze video tags?</h2>
+        <p>If you are trying to grow your YouTube channel, optimizing your video SEO is essential. Knowing which relevant tags and terms perform well in your niche helps improve video searchability.</p>
+        <p>Analyzing high-performing public videos in your field offers valuable insight into keyword trends. Simply paste a video URL into the tool above to view its public tag structure.</p>
+        <p>You can use these keywords to inspire your own original content metadata, structure relevant video descriptions, and refine your video search optimization strategy.</p>
       </div>
     </div>
   );

@@ -32,7 +32,7 @@ export default function ToolsDirectory() {
       title: "Text & Content Tools",
       icon: <FileText size={20} color="var(--primary)" />,
       tools: [
-        { name: "Grammarly Free", path: "/tools/grammarly-free", status: "live" },
+        { name: "Free Grammar Checker", path: "/tools/grammar-checker", status: "live" },
         { name: "Article Rewriter", path: "/tools/article-rewriter", status: "live" },
         { name: "Plagiarism Checker", path: "/tools/plagiarism-checker", status: "live" },
         { name: "Word Counter", path: "/tools/word-counter", status: "live" },
@@ -207,7 +207,6 @@ export default function ToolsDirectory() {
         { name: "QR Code Decoder", path: "/tools/qr-decoder", status: "live" },
         { name: "Image Placeholder Generator", path: "/tools/image-placeholder-generator", status: "live" },
         { name: "YouTube Keywords Extractor", path: "/tools/youtube-keywords-extractor", status: "live" },
-        { name: "YouTube Thumbnail Downloader", status: "live", path: "/tools/youtube-thumbnail" },
         { name: "EXIF Data Viewer", path: "/tools/exif-data-viewer", status: "live" },
         { name: "EXIF Data Remover", path: "#", status: "planned" },
         { name: "Bank to IFSC Code", path: "#", status: "planned" },

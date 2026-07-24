@@ -147,11 +147,11 @@ export default function Home() {
               <div style={{ fontWeight: 600, color: 'var(--primary)', fontSize: '0.875rem' }}>Use Tool &rarr;</div>
             </Link>
 
-            <Link href="/tools/grammarly-free" className="card" style={{ display: 'block', color: 'inherit' }}>
+            <Link href="/tools/grammar-checker" className="card" style={{ display: 'block', color: 'inherit' }}>
               <div style={{ width: 48, height: 48, borderRadius: '12px', background: '#eff6ff', color: 'var(--primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.5rem' }}>
                 <Sparkles size={24} />
               </div>
-              <h3 style={{ fontSize: '1.25rem', marginBottom: '0.75rem' }}>Grammarly Free</h3>
+              <h3 style={{ fontSize: '1.25rem', marginBottom: '0.75rem' }}>Free Grammar Checker</h3>
               <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '1.5rem' }}>
                 Analyze texts, correct spelling mistakes, optimize syntax, and improve readability instantly.
               </p>
@@ -201,11 +201,11 @@ export default function Home() {
               </p>
               <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 2rem 0', display: 'flex', flexDirection: 'column', gap: '0.5rem', flexGrow: 1 }}>
                 <li>
-                  <Link href="/tools/grammarly-free" className="category-item-link">
+                  <Link href="/tools/grammar-checker" className="category-item-link">
                     <span className="category-badge" style={{ background: 'rgba(37, 99, 235, 0.06)', color: 'var(--primary)' }}>
                       <Sparkles size={12} />
                     </span>
-                    <span>Grammarly Free</span>
+                    <span>Free Grammar Checker</span>
                   </Link>
                 </li>
                 <li>
@@ -433,11 +433,11 @@ export default function Home() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/tools/youtube-thumbnail" className="category-item-link">
+                  <Link href="/tools/image-cropper" className="category-item-link">
                     <span className="category-badge" style={{ background: 'rgba(219, 39, 119, 0.06)', color: '#db2777' }}>
                       <ImageIcon size={12} />
                     </span>
-                    <span>Thumbnail Downloader</span>
+                    <span>Image Cropper</span>
                   </Link>
                 </li>
               </ul>

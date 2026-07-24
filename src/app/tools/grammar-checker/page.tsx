@@ -40,7 +40,7 @@ interface LTMatch {
   };
 }
 
-export default function GrammarlyFree() {
+export default function GrammarChecker() {
   const [text, setText] = useState("");
   const [errors, setErrors] = useState<LTMatch[]>([]);
   const [checking, setChecking] = useState(false);
@@ -591,7 +591,7 @@ export default function GrammarlyFree() {
       {/* Hero Header */}
       <div style={{ marginBottom: "2.5rem" }}>
         <h1 style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "0.5rem", fontSize: "2.25rem" }}>
-          <Sparkles color="var(--primary)" size={28} /> Grammarly Free
+          <Sparkles color="var(--primary)" size={28} /> Free Grammar Checker
         </h1>
         <p style={{ color: "var(--text-muted)", fontSize: "1.1rem" }}>
           Analyze your texts, correct spelling mistakes, optimize syntax structure, and improve readability with our professional grammar analyzer.

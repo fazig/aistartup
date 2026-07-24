@@ -115,7 +115,7 @@ export default function Header() {
                 </Link>
 
                 <Link 
-                  href="/tools/grammarly-free" 
+                  href="/tools/grammar-checker" 
                   className="dropdown-item"
                   onClick={() => setDropdownOpen(false)}
                   style={{
@@ -130,7 +130,7 @@ export default function Header() {
                     transition: 'background-color 0.15s'
                   }}
                 >
-                  <span style={{ fontWeight: 700 }}>Grammarly Free</span>
+                  <span style={{ fontWeight: 700 }}>Free Grammar Checker</span>
                   <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Check grammar & spelling</span>
                 </Link>
                 
@@ -228,8 +228,8 @@ export default function Header() {
           <Link href="/tools/image-enhancer" className="mobile-nav-link" style={{ paddingLeft: "1rem", color: '#ec4899', display: 'flex', alignItems: 'center', gap: '0.25rem' }} onClick={closeMenu}>
             <Sparkles size={14} /> Image Enhancer HD
           </Link>
-          <Link href="/tools/grammarly-free" className="mobile-nav-link" style={{ paddingLeft: "1rem" }} onClick={closeMenu}>
-            Grammarly Free
+          <Link href="/tools/grammar-checker" className="mobile-nav-link" style={{ paddingLeft: "1rem" }} onClick={closeMenu}>
+            Free Grammar Checker
           </Link>
           <Link href="/tools/adsense-eligibility-checker" className="mobile-nav-link" style={{ paddingLeft: "1rem" }} onClick={closeMenu}>
             AdSense Checker

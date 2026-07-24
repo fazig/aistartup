@@ -1,0 +1,2051 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rumi's — Artisan Coffee & Restaurant</title>
+    <meta name="description" content="Rumi's — Where poetry meets coffee. A premium artisan coffee restaurant offering hand-crafted brews, exquisite pastries, and an unforgettable ambiance.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+    <style>
+        /* ========== RESET & BASE ========== */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --coffee-dark: #0a0704;
+            --coffee-rich: #1a120b;
+            --coffee-brown: #3c2a21;
+            --coffee-warm: #d5cea3;
+            --coffee-cream: #e5dcc5;
+            --coffee-gold: #c8a97e;
+            --coffee-amber: #d4a053;
+            --coffee-highlight: #f0c987;
+            --coffee-glow: #ffbd59;
+            --glass-bg: rgba(26, 18, 11, 0.65);
+            --glass-border: rgba(213, 206, 163, 0.12);
+            --text-primary: #f5f0e8;
+            --text-secondary: rgba(229, 220, 197, 0.7);
+            --text-muted: rgba(229, 220, 197, 0.4);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--coffee-dark);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            cursor: default;
+        }
+
+        /* ========== CUSTOM CURSOR ========== */
+        .cursor-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--coffee-gold);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 10000;
+            transition: transform 0.1s ease;
+            mix-blend-mode: difference;
+        }
+
+        .cursor-ring {
+            width: 40px;
+            height: 40px;
+            border: 1.5px solid rgba(200, 169, 126, 0.5);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 10000;
+            transition: all 0.15s ease-out;
+            transform: translate(-50%, -50%);
+        }
+
+        .cursor-ring.hover {
+            width: 60px;
+            height: 60px;
+            border-color: var(--coffee-gold);
+            background: rgba(200, 169, 126, 0.08);
+        }
+
+        /* ========== LOADING SCREEN ========== */
+        .loader {
+            position: fixed;
+            inset: 0;
+            background: var(--coffee-dark);
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+        }
+
+        .loader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--coffee-gold);
+            letter-spacing: 0.3em;
+            margin-bottom: 2rem;
+            animation: pulseGold 2s ease-in-out infinite;
+        }
+
+        .loader-bar {
+            width: 200px;
+            height: 2px;
+            background: rgba(200, 169, 126, 0.15);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .loader-bar::after {
+            content: '';
+            display: block;
+            width: 0%;
+            height: 100%;
+            background: linear-gradient(90deg, var(--coffee-gold), var(--coffee-glow));
+            border-radius: 2px;
+            animation: loadBar 2s ease-in-out forwards;
+        }
+
+        @keyframes loadBar {
+            to { width: 100%; }
+        }
+
+        @keyframes pulseGold {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
+        /* ========== 3D SCENE CONTAINER ========== */
+        .scene-3d {
+            perspective: 1200px;
+            perspective-origin: 50% 50%;
+        }
+
+        /* ========== NAVIGATION ========== */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1.5rem 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.5s ease;
+        }
+
+        .nav.scrolled {
+            padding: 1rem 3rem;
+            background: rgba(10, 7, 4, 0.92);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--coffee-gold);
+            letter-spacing: 0.15em;
+            text-decoration: none;
+            position: relative;
+        }
+
+        .nav-logo span {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-style: italic;
+            font-size: 0.7em;
+            color: var(--text-secondary);
+            display: block;
+            letter-spacing: 0.3em;
+            margin-top: -2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 400;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--coffee-gold);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--coffee-gold);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            padding: 0.7rem 1.8rem;
+            background: transparent;
+            border: 1px solid var(--coffee-gold);
+            color: var(--coffee-gold) !important;
+            border-radius: 2px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            text-decoration: none;
+        }
+
+        .nav-cta:hover {
+            background: var(--coffee-gold);
+            color: var(--coffee-dark) !important;
+            box-shadow: 0 0 30px rgba(200, 169, 126, 0.3);
+        }
+
+        .nav-cta::after {
+            display: none !important;
+        }
+
+        /* Hamburger */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 1.5px;
+            background: var(--coffee-gold);
+            transition: all 0.3s ease;
+        }
+
+        /* ========== HERO SECTION ========== */
+        .hero {
+            height: 100vh;
+            min-height: 700px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(ellipse at 30% 20%, rgba(200, 169, 126, 0.08) 0%, transparent 60%),
+                radial-gradient(ellipse at 70% 80%, rgba(212, 160, 83, 0.06) 0%, transparent 50%),
+                var(--coffee-dark);
+        }
+
+        .hero-particles {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: var(--coffee-gold);
+            border-radius: 50%;
+            opacity: 0;
+            animation: floatParticle 8s ease-in-out infinite;
+        }
+
+        @keyframes floatParticle {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.6; }
+            90% { opacity: 0.6; }
+            100% { transform: translateY(-10vh) rotate(720deg); opacity: 0; }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            transform-style: preserve-3d;
+            animation: heroFloat 6s ease-in-out infinite;
+        }
+
+        @keyframes heroFloat {
+            0%, 100% { transform: translateY(0) rotateX(0deg); }
+            50% { transform: translateY(-15px) rotateX(1deg); }
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            border: 1px solid rgba(200, 169, 126, 0.3);
+            border-radius: 50px;
+            font-size: 0.75rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--coffee-gold);
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+            background: rgba(200, 169, 126, 0.05);
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(3.5rem, 10vw, 9rem);
+            font-weight: 800;
+            line-height: 0.95;
+            letter-spacing: -0.02em;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            text-shadow: 0 0 80px rgba(200, 169, 126, 0.15);
+        }
+
+        .hero h1 .highlight {
+            background: linear-gradient(135deg, var(--coffee-gold), var(--coffee-glow), var(--coffee-amber));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero h1 .italic {
+            font-style: italic;
+            font-weight: 400;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 0.7em;
+        }
+
+        .hero-sub {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.1rem, 2vw, 1.5rem);
+            font-weight: 300;
+            font-style: italic;
+            color: var(--text-secondary);
+            max-width: 500px;
+            margin: 0 auto 3rem;
+            line-height: 1.6;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            padding: 1rem 2.5rem;
+            background: linear-gradient(135deg, var(--coffee-gold), var(--coffee-amber));
+            color: var(--coffee-dark);
+            border: none;
+            border-radius: 2px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, var(--coffee-glow), var(--coffee-gold));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px rgba(200, 169, 126, 0.4);
+        }
+
+        .btn-primary:hover::before {
+            opacity: 1;
+        }
+
+        .btn-primary span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn-secondary {
+            padding: 1rem 2.5rem;
+            background: transparent;
+            color: var(--coffee-gold);
+            border: 1px solid rgba(200, 169, 126, 0.4);
+            border-radius: 2px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            text-decoration: none;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(200, 169, 126, 0.1);
+            border-color: var(--coffee-gold);
+            transform: translateY(-2px);
+        }
+
+        .hero-scroll {
+            position: absolute;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            animation: scrollBounce 2s ease-in-out infinite;
+        }
+
+        .hero-scroll .line {
+            width: 1px;
+            height: 40px;
+            background: linear-gradient(to bottom, var(--coffee-gold), transparent);
+        }
+
+        @keyframes scrollBounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(10px); }
+        }
+
+        /* ========== FLOATING 3D COFFEE CUP (CSS) ========== */
+        .hero-3d-element {
+            position: absolute;
+            right: 8%;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 350px;
+            height: 350px;
+            transform-style: preserve-3d;
+            animation: rotate3D 20s linear infinite;
+            z-index: 5;
+        }
+
+        @keyframes rotate3D {
+            0% { transform: translateY(-50%) rotateY(0deg) rotateX(5deg); }
+            25% { transform: translateY(-55%) rotateY(90deg) rotateX(-5deg); }
+            50% { transform: translateY(-50%) rotateY(180deg) rotateX(5deg); }
+            75% { transform: translateY(-45%) rotateY(270deg) rotateX(-5deg); }
+            100% { transform: translateY(-50%) rotateY(360deg) rotateX(5deg); }
+        }
+
+        .cube-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            overflow: hidden;
+            backface-visibility: visible;
+        }
+
+        .cube-face img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.9;
+        }
+
+        .cube-face::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border: 1px solid rgba(200, 169, 126, 0.2);
+            border-radius: 20px;
+            background: linear-gradient(135deg, rgba(200, 169, 126, 0.1), transparent);
+        }
+
+        .face-front { transform: translateZ(175px); }
+        .face-back { transform: rotateY(180deg) translateZ(175px); }
+        .face-left { transform: rotateY(-90deg) translateZ(175px); }
+        .face-right { transform: rotateY(90deg) translateZ(175px); }
+
+        /* ========== SECTION SHARED ========== */
+        section {
+            position: relative;
+            padding: 8rem 3rem;
+        }
+
+        .section-label {
+            font-size: 0.75rem;
+            letter-spacing: 0.4em;
+            text-transform: uppercase;
+            color: var(--coffee-gold);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .section-label::before {
+            content: '';
+            width: 40px;
+            height: 1px;
+            background: var(--coffee-gold);
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-desc {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            max-width: 550px;
+            font-weight: 300;
+        }
+
+        /* ========== ABOUT SECTION ========== */
+        .about {
+            background: 
+                radial-gradient(ellipse at 80% 20%, rgba(200, 169, 126, 0.05) 0%, transparent 50%),
+                var(--coffee-rich);
+            overflow: hidden;
+        }
+
+        .about-grid {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+            align-items: center;
+        }
+
+        .about-image-wrapper {
+            position: relative;
+            transform-style: preserve-3d;
+        }
+
+        .about-image {
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            transform: perspective(800px) rotateY(-5deg) rotateX(2deg);
+            transition: transform 0.6s ease;
+            box-shadow: 30px 30px 80px rgba(0, 0, 0, 0.5);
+        }
+
+        .about-image:hover {
+            transform: perspective(800px) rotateY(0deg) rotateX(0deg);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .about-image::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border: 1px solid rgba(200, 169, 126, 0.15);
+            border-radius: 8px;
+            pointer-events: none;
+        }
+
+        .about-image-accent {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 150px;
+            height: 150px;
+            border: 1px solid rgba(200, 169, 126, 0.2);
+            border-radius: 8px;
+            z-index: -1;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--coffee-gold);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-top: 0.5rem;
+        }
+
+        /* ========== MENU SECTION ========== */
+        .menu {
+            background: var(--coffee-dark);
+            perspective: 1200px;
+        }
+
+        .menu-header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 5rem;
+        }
+
+        .menu-header .section-label {
+            justify-content: center;
+        }
+
+        .menu-header .section-label::before {
+            display: none;
+        }
+
+        .menu-header .section-desc {
+            margin: 0 auto;
+        }
+
+        .menu-grid {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .menu-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            transform-style: preserve-3d;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .menu-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(200, 169, 126, 0.08), transparent, rgba(200, 169, 126, 0.03));
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            border-radius: 12px;
+            z-index: 1;
+        }
+
+        .menu-card:hover {
+            transform: perspective(800px) rotateY(-5deg) rotateX(3deg) translateZ(20px);
+            box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(200, 169, 126, 0.1);
+            border-color: rgba(200, 169, 126, 0.25);
+        }
+
+        .menu-card:hover::before {
+            opacity: 1;
+        }
+
+        .menu-card-image {
+            width: 100%;
+            height: 280px;
+            overflow: hidden;
+        }
+
+        .menu-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .menu-card:hover .menu-card-image img {
+            transform: scale(1.08);
+        }
+
+        .menu-card-body {
+            padding: 1.8rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .menu-card-tag {
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--coffee-gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .menu-card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .menu-card-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 1.2rem;
+        }
+
+        .menu-card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menu-card-price {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--coffee-gold);
+        }
+
+        .menu-card-order {
+            font-size: 0.75rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--coffee-gold);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+
+        .menu-card-order:hover {
+            border-color: var(--coffee-gold);
+        }
+
+        /* ========== EXPERIENCE / PARALLAX SECTION ========== */
+        .experience {
+            height: 80vh;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .experience-bg {
+            position: absolute;
+            inset: 0;
+            background-image: var(--interior-bg);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .experience-bg::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to bottom,
+                rgba(10, 7, 4, 0.7),
+                rgba(10, 7, 4, 0.5),
+                rgba(10, 7, 4, 0.8)
+            );
+        }
+
+        .experience-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 800px;
+            padding: 0 2rem;
+        }
+
+        .experience-quote {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.8rem, 4vw, 3rem);
+            font-weight: 300;
+            font-style: italic;
+            line-height: 1.5;
+            color: var(--text-primary);
+            margin-bottom: 2rem;
+        }
+
+        .experience-quote::before {
+            content: '"';
+            font-size: 5rem;
+            color: var(--coffee-gold);
+            display: block;
+            line-height: 0.5;
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .experience-author {
+            font-size: 0.85rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--coffee-gold);
+        }
+
+        /* ========== FEATURES SECTION ========== */
+        .features {
+            background: 
+                radial-gradient(ellipse at 20% 80%, rgba(200, 169, 126, 0.04) 0%, transparent 50%),
+                var(--coffee-rich);
+        }
+
+        .features-header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 5rem;
+        }
+
+        .features-header .section-label {
+            justify-content: center;
+        }
+
+        .features-header .section-label::before {
+            display: none;
+        }
+
+        .features-header .section-desc {
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: rgba(26, 18, 11, 0.4);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            transition: all 0.5s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--coffee-gold), transparent);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(200, 169, 126, 0.25);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .feature-card:hover::before {
+            opacity: 1;
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            background: rgba(200, 169, 126, 0.08);
+            border-radius: 50%;
+            border: 1px solid rgba(200, 169, 126, 0.15);
+        }
+
+        .feature-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+        }
+
+        .feature-desc {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* ========== TESTIMONIALS ========== */
+        .testimonials {
+            background: var(--coffee-dark);
+            overflow: hidden;
+        }
+
+        .testimonials-header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 5rem;
+        }
+
+        .testimonials-header .section-label {
+            justify-content: center;
+        }
+
+        .testimonials-header .section-label::before {
+            display: none;
+        }
+
+        .testimonial-track {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonial-slides {
+            display: flex;
+            transition: transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .testimonial-slide {
+            min-width: 100%;
+            padding: 0 2rem;
+        }
+
+        .testimonial-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 3rem;
+            text-align: center;
+            backdrop-filter: blur(20px);
+        }
+
+        .testimonial-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            font-style: italic;
+            line-height: 1.7;
+            color: var(--text-primary);
+            margin-bottom: 2rem;
+        }
+
+        .testimonial-stars {
+            color: var(--coffee-gold);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            letter-spacing: 0.3em;
+        }
+
+        .testimonial-author-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .testimonial-author-role {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            letter-spacing: 0.1em;
+        }
+
+        .testimonial-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.8rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(200, 169, 126, 0.2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-dot.active {
+            background: var(--coffee-gold);
+            width: 24px;
+            border-radius: 4px;
+        }
+
+        /* ========== RESERVATION / CTA SECTION ========== */
+        .reservation {
+            padding: 10rem 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background: 
+                radial-gradient(circle at 50% 50%, rgba(200, 169, 126, 0.06) 0%, transparent 60%),
+                var(--coffee-rich);
+        }
+
+        .reservation-content {
+            position: relative;
+            z-index: 10;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .reservation .section-label {
+            justify-content: center;
+        }
+
+        .reservation .section-label::before {
+            display: none;
+        }
+
+        .reservation .section-title {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+        }
+
+        .reservation .section-desc {
+            margin: 0 auto 3rem;
+            max-width: 500px;
+        }
+
+        .reservation-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .reservation-form .form-group {
+            position: relative;
+        }
+
+        .reservation-form .form-group.full {
+            grid-column: 1 / -1;
+        }
+
+        .reservation-form input,
+        .reservation-form select {
+            width: 100%;
+            padding: 1rem 1.2rem;
+            background: rgba(26, 18, 11, 0.6);
+            border: 1px solid rgba(200, 169, 126, 0.15);
+            border-radius: 6px;
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            outline: none;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .reservation-form input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .reservation-form input:focus,
+        .reservation-form select:focus {
+            border-color: var(--coffee-gold);
+            box-shadow: 0 0 20px rgba(200, 169, 126, 0.1);
+        }
+
+        .reservation-form select {
+            appearance: none;
+            cursor: pointer;
+        }
+
+        .reservation-form select option {
+            background: var(--coffee-rich);
+            color: var(--text-primary);
+        }
+
+        .reservation-form .btn-primary {
+            width: 100%;
+            padding: 1.1rem;
+        }
+
+        /* ========== INSTAGRAM FEED ========== */
+        .instagram {
+            background: var(--coffee-dark);
+            padding: 6rem 3rem;
+        }
+
+        .instagram-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .instagram-header h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .instagram-header p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .instagram-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 4px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .instagram-item {
+            aspect-ratio: 1;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .instagram-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .instagram-item::after {
+            content: '♥';
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(10, 7, 4, 0.6);
+            color: var(--coffee-gold);
+            font-size: 1.5rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .instagram-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .instagram-item:hover::after {
+            opacity: 1;
+        }
+
+        /* ========== FOOTER ========== */
+        .footer {
+            background: var(--coffee-dark);
+            border-top: 1px solid var(--glass-border);
+            padding: 5rem 3rem 2rem;
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-brand .nav-logo {
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .footer-brand p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            max-width: 300px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(200, 169, 126, 0.2);
+            border-radius: 50%;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            border-color: var(--coffee-gold);
+            color: var(--coffee-gold);
+            background: rgba(200, 169, 126, 0.08);
+        }
+
+        .footer h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--coffee-gold);
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--coffee-gold);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 2rem;
+            border-top: 1px solid var(--glass-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-bottom p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        /* ========== SCROLL ANIMATIONS ========== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-60px);
+            transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .reveal-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(60px);
+            transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .reveal-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .reveal-scale {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .reveal-scale.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Staggered delays */
+        .delay-1 { transition-delay: 0.1s; }
+        .delay-2 { transition-delay: 0.2s; }
+        .delay-3 { transition-delay: 0.3s; }
+        .delay-4 { transition-delay: 0.4s; }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 1024px) {
+            .hero-3d-element {
+                display: none;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .menu-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 5rem 1.5rem;
+            }
+
+            .nav {
+                padding: 1rem 1.5rem;
+            }
+
+            .nav-links {
+                display: none;
+                position: fixed;
+                inset: 0;
+                background: rgba(10, 7, 4, 0.98);
+                backdrop-filter: blur(30px);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
+                z-index: 999;
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-links a {
+                font-size: 1.2rem;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .instagram-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .reservation-form {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .footer-bottom {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .cursor-dot, .cursor-ring {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .about-stats {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .instagram-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* ========== SMOOTH GRAIN TEXTURE ========== */
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 9998;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader-logo">RUMI'S</div>
+        <div class="loader-bar"></div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <a href="#" class="nav-logo" id="nav-logo">
+            RUMI'S
+            <span>Coffee & Kitchen</span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#about">Our Story</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#features">Why Us</a></li>
+            <li><a href="#reservation" class="nav-cta">Reserve</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg"></div>
+
+        <!-- Floating Particles -->
+        <div class="hero-particles" id="particles"></div>
+
+        <!-- 3D Rotating Cube -->
+        <div class="hero-3d-element" id="hero3d">
+            <div class="cube-face face-front">
+                <img src="images/hero.png" alt="Rumi's signature latte">
+            </div>
+            <div class="cube-face face-back">
+                <img src="images/interior.png" alt="Rumi's interior">
+            </div>
+            <div class="cube-face face-left">
+                <img src="images/espresso.png" alt="Rumi's espresso">
+            </div>
+            <div class="cube-face face-right">
+                <img src="images/pastry.png" alt="Rumi's pastry">
+            </div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-badge">✦ Est. 2018 — Artisan Coffee</div>
+            <h1>
+                <span class="italic">Where poetry meets</span><br>
+                <span class="highlight">Coffee</span>
+            </h1>
+            <p class="hero-sub">
+                A sanctuary for the soul — where every cup tells a story 
+                and every sip is a verse of warmth and wonder.
+            </p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn-primary"><span>Explore Menu</span></a>
+                <a href="#reservation" class="btn-secondary">Book a Table</a>
+            </div>
+        </div>
+
+        <div class="hero-scroll">
+            <span>Scroll</span>
+            <div class="line"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-grid">
+            <div class="about-image-wrapper reveal-left">
+                <div class="about-image">
+                    <img src="images/interior.png" alt="Inside Rumi's coffee restaurant">
+                </div>
+                <div class="about-image-accent"></div>
+            </div>
+            <div class="reveal-right">
+                <div class="section-label">Our Story</div>
+                <h2 class="section-title">Crafted with Love,<br>Served with <span style="color: var(--coffee-gold);">Soul</span></h2>
+                <p class="section-desc">
+                    Born from a passion for the perfect brew, Rumi's is more than a coffee house — it's a sanctuary.
+                    Named after the great poet Rumi, we believe every cup should inspire, comfort, and awaken the senses.
+                </p>
+                <p class="section-desc" style="margin-top: 1rem;">
+                    Our beans are ethically sourced from the highlands of Colombia, Ethiopia, and Guatemala, 
+                    roasted in small batches to preserve their unique character.
+                </p>
+                <div class="about-stats">
+                    <div class="stat">
+                        <div class="stat-number">8+</div>
+                        <div class="stat-label">Years of Craft</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">50K</div>
+                        <div class="stat-label">Happy Guests</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">24</div>
+                        <div class="stat-label">Bean Origins</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu" id="menu">
+        <div class="menu-header">
+            <div class="section-label reveal">Signature Collection</div>
+            <h2 class="section-title reveal delay-1">Our <span style="color: var(--coffee-gold);">Menu</span></h2>
+            <p class="section-desc reveal delay-2">
+                Each creation is a masterpiece — from our signature pour-overs 
+                to our artisan pastries, crafted fresh every morning.
+            </p>
+        </div>
+
+        <div class="menu-grid">
+            <div class="menu-card reveal delay-1">
+                <div class="menu-card-image">
+                    <img src="images/hero.png" alt="Rumi's Signature Latte">
+                </div>
+                <div class="menu-card-body">
+                    <div class="menu-card-tag">Signature</div>
+                    <h3 class="menu-card-title">Rumi's Golden Latte</h3>
+                    <p class="menu-card-desc">Turmeric-infused latte with oat milk, cinnamon, and a touch of honey — our crown jewel.</p>
+                    <div class="menu-card-footer">
+                        <span class="menu-card-price">$7.50</span>
+                        <a href="#reservation" class="menu-card-order">Order →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card reveal delay-2">
+                <div class="menu-card-image">
+                    <img src="images/cappuccino.png" alt="Velvet Cappuccino">
+                </div>
+                <div class="menu-card-body">
+                    <div class="menu-card-tag">Classic</div>
+                    <h3 class="menu-card-title">Velvet Cappuccino</h3>
+                    <p class="menu-card-desc">Double-shot espresso with silky steamed milk and a cocoa dust finish.</p>
+                    <div class="menu-card-footer">
+                        <span class="menu-card-price">$5.90</span>
+                        <a href="#reservation" class="menu-card-order">Order →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card reveal delay-3">
+                <div class="menu-card-image">
+                    <img src="images/pastry.png" alt="Artisan Croissant">
+                </div>
+                <div class="menu-card-body">
+                    <div class="menu-card-tag">Bakery</div>
+                    <h3 class="menu-card-title">Honey Butter Croissant</h3>
+                    <p class="menu-card-desc">Flaky, golden layers of handmade croissant drizzled with wildflower honey.</p>
+                    <div class="menu-card-footer">
+                        <span class="menu-card-price">$4.50</span>
+                        <a href="#reservation" class="menu-card-order">Order →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience / Parallax Section -->
+    <section class="experience" id="experience">
+        <div class="experience-bg" style="background-image: url('images/interior.png');"></div>
+        <div class="experience-content reveal-scale">
+            <div class="experience-quote">
+                Wherever you are, and whatever you do, 
+                be in love — and let the aroma of coffee 
+                remind you of life's simple wonders.
+            </div>
+            <div class="experience-author">— Inspired by Rumi</div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="features-header">
+            <div class="section-label reveal">Why Choose Us</div>
+            <h2 class="section-title reveal delay-1">The Rumi's <span style="color: var(--coffee-gold);">Difference</span></h2>
+            <p class="section-desc reveal delay-2">
+                We don't just serve coffee. We create moments worth savoring.
+            </p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card reveal delay-1">
+                <div class="feature-icon">☕</div>
+                <h3 class="feature-title">Small Batch Roasted</h3>
+                <p class="feature-desc">Every bean is roasted in-house in small batches to guarantee peak freshness and flavor.</p>
+            </div>
+            <div class="feature-card reveal delay-2">
+                <div class="feature-icon">🌿</div>
+                <h3 class="feature-title">Ethically Sourced</h3>
+                <p class="feature-desc">Direct trade partnerships with farmers across three continents ensure fair wages and sustainability.</p>
+            </div>
+            <div class="feature-card reveal delay-3">
+                <div class="feature-icon">🎨</div>
+                <h3 class="feature-title">Artisan Craft</h3>
+                <p class="feature-desc">Our baristas are trained artists — each pour is a performance, each cup is a canvas.</p>
+            </div>
+            <div class="feature-card reveal delay-4">
+                <div class="feature-icon">✨</div>
+                <h3 class="feature-title">Cozy Ambiance</h3>
+                <p class="feature-desc">Warm lighting, live acoustic sets, and curated poetry corners for the perfect escape.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="testimonials-header">
+            <div class="section-label reveal">Testimonials</div>
+            <h2 class="section-title reveal delay-1">Words from Our <span style="color: var(--coffee-gold);">Guests</span></h2>
+        </div>
+
+        <div class="testimonial-track reveal delay-2">
+            <div class="testimonial-slides" id="testimonialSlides">
+                <div class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★ ★ ★ ★ ★</div>
+                        <p class="testimonial-text">
+                            "Rumi's isn't just a coffee shop — it's an experience. The Golden Latte is absolutely divine, 
+                            and the atmosphere makes you never want to leave."
+                        </p>
+                        <div class="testimonial-author-name">Amara J.</div>
+                        <div class="testimonial-author-role">Regular Guest</div>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★ ★ ★ ★ ★</div>
+                        <p class="testimonial-text">
+                            "As a food critic, I've visited hundreds of cafés worldwide. 
+                            Rumi's stands in a league of its own — the attention to detail is extraordinary."
+                        </p>
+                        <div class="testimonial-author-name">Marcus T.</div>
+                        <div class="testimonial-author-role">Food Critic, The Culinary Post</div>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★ ★ ★ ★ ★</div>
+                        <p class="testimonial-text">
+                            "The poetry corner, the aroma, the warmth — 
+                            I wrote my entire novel sitting in Rumi's. This place fuels creativity."
+                        </p>
+                        <div class="testimonial-author-name">Leila K.</div>
+                        <div class="testimonial-author-role">Author & Poet</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-dots" id="testimonialDots">
+                <div class="testimonial-dot active" data-index="0"></div>
+                <div class="testimonial-dot" data-index="1"></div>
+                <div class="testimonial-dot" data-index="2"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section class="reservation" id="reservation">
+        <div class="reservation-content">
+            <div class="section-label reveal">Reserve Your Table</div>
+            <h2 class="section-title reveal delay-1">Make It <span style="color: var(--coffee-gold);">Yours</span></h2>
+            <p class="section-desc reveal delay-2">
+                Secure your perfect spot at Rumi's. Whether it's a quiet morning brew 
+                or an evening gathering, we'll prepare your sanctuary.
+            </p>
+            <form class="reservation-form reveal delay-3" id="reservationForm" onsubmit="return false;">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required id="res-name">
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email Address" required id="res-email">
+                </div>
+                <div class="form-group">
+                    <input type="date" id="res-date" required>
+                </div>
+                <div class="form-group">
+                    <select id="res-guests" required>
+                        <option value="" disabled selected>Number of Guests</option>
+                        <option>1 Guest</option>
+                        <option>2 Guests</option>
+                        <option>3–4 Guests</option>
+                        <option>5–8 Guests</option>
+                        <option>Private Event</option>
+                    </select>
+                </div>
+                <div class="form-group full">
+                    <button type="submit" class="btn-primary" id="res-submit"><span>Reserve Now</span></button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="nav-logo">
+                    RUMI'S
+                    <span>Coffee & Kitchen</span>
+                </a>
+                <p>
+                    Where poetry meets coffee. A sanctuary for the soul, 
+                    crafting extraordinary experiences one cup at a time.
+                </p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Instagram">IG</a>
+                    <a href="#" aria-label="Facebook">FB</a>
+                    <a href="#" aria-label="Twitter">TW</a>
+                    <a href="#" aria-label="TikTok">TK</a>
+                </div>
+            </div>
+            <div>
+                <h4>Explore</h4>
+                <ul class="footer-links">
+                    <li><a href="#about">Our Story</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#reservation">Reservations</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Visit Us</h4>
+                <ul class="footer-links">
+                    <li><a href="#">123 Poet's Lane</a></li>
+                    <li><a href="#">Downtown Arts District</a></li>
+                    <li><a href="#">Mon – Fri: 7AM – 10PM</a></li>
+                    <li><a href="#">Sat – Sun: 8AM – 11PM</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <ul class="footer-links">
+                    <li><a href="tel:+15551234567">+1 (555) 123-4567</a></li>
+                    <li><a href="mailto:hello@rumis.coffee">hello@rumis.coffee</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press Kit</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Rumi's Coffee & Kitchen. All rights reserved.</p>
+            <p>Crafted with ♥ and coffee</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // ========== LOADER ==========
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('loader').classList.add('hidden');
+            }, 2200);
+        });
+
+        // ========== CUSTOM CURSOR ==========
+        const cursorDot = document.getElementById('cursorDot');
+        const cursorRing = document.getElementById('cursorRing');
+        let mouseX = 0, mouseY = 0;
+        let ringX = 0, ringY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            cursorDot.style.left = mouseX + 'px';
+            cursorDot.style.top = mouseY + 'px';
+        });
+
+        function animateCursor() {
+            ringX += (mouseX - ringX) * 0.15;
+            ringY += (mouseY - ringY) * 0.15;
+            cursorRing.style.left = ringX + 'px';
+            cursorRing.style.top = ringY + 'px';
+            requestAnimationFrame(animateCursor);
+        }
+        animateCursor();
+
+        // Hover effect on interactive elements
+        document.querySelectorAll('a, button, .menu-card, .feature-card, .instagram-item').forEach(el => {
+            el.addEventListener('mouseenter', () => cursorRing.classList.add('hover'));
+            el.addEventListener('mouseleave', () => cursorRing.classList.remove('hover'));
+        });
+
+        // ========== NAVIGATION SCROLL ==========
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // ========== HAMBURGER MENU ==========
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+            });
+        });
+
+        // ========== PARTICLES ==========
+        const particlesContainer = document.getElementById('particles');
+        for (let i = 0; i < 30; i++) {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 8 + 's';
+            particle.style.animationDuration = (6 + Math.random() * 6) + 's';
+            particle.style.width = (2 + Math.random() * 3) + 'px';
+            particle.style.height = particle.style.width;
+            particle.style.opacity = 0.2 + Math.random() * 0.5;
+            particlesContainer.appendChild(particle);
+        }
+
+        // ========== 3D TILT ON MOUSE (HERO) ==========
+        const hero3d = document.getElementById('hero3d');
+        const heroSection = document.getElementById('hero');
+
+        heroSection.addEventListener('mousemove', (e) => {
+            if (!hero3d) return;
+            const rect = heroSection.getBoundingClientRect();
+            const x = (e.clientX - rect.left) / rect.width - 0.5;
+            const y = (e.clientY - rect.top) / rect.height - 0.5;
+
+            hero3d.style.transform = `
+                translateY(-50%)
+                rotateY(${x * 30}deg)
+                rotateX(${-y * 15}deg)
+            `;
+        });
+
+        heroSection.addEventListener('mouseleave', () => {
+            if (!hero3d) return;
+            hero3d.style.transition = 'transform 0.8s ease';
+            hero3d.style.transform = 'translateY(-50%) rotateY(0deg) rotateX(5deg)';
+            setTimeout(() => {
+                hero3d.style.transition = '';
+            }, 800);
+        });
+
+        // ========== 3D TILT ON MENU CARDS ==========
+        document.querySelectorAll('.menu-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = (e.clientX - rect.left) / rect.width - 0.5;
+                const y = (e.clientY - rect.top) / rect.height - 0.5;
+
+                card.style.transform = `
+                    perspective(800px)
+                    rotateY(${x * 12}deg)
+                    rotateX(${-y * 8}deg)
+                    translateZ(20px)
+                `;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = '';
+            });
+        });
+
+        // ========== SCROLL REVEAL ==========
+        const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // ========== TESTIMONIAL SLIDER ==========
+        const testimonialSlides = document.getElementById('testimonialSlides');
+        const testimonialDots = document.querySelectorAll('.testimonial-dot');
+        let currentSlide = 0;
+        const totalSlides = testimonialDots.length;
+
+        function goToSlide(index) {
+            currentSlide = index;
+            testimonialSlides.style.transform = `translateX(-${index * 100}%)`;
+            testimonialDots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+        }
+
+        testimonialDots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                goToSlide(parseInt(dot.dataset.index));
+            });
+        });
+
+        // Auto-advance testimonials
+        setInterval(() => {
+            goToSlide((currentSlide + 1) % totalSlides);
+        }, 5000);
+
+        // ========== COUNTER ANIMATION ==========
+        function animateCounters() {
+            document.querySelectorAll('.stat-number').forEach(counter => {
+                const text = counter.textContent;
+                const target = parseInt(text);
+                const suffix = text.replace(/[0-9]/g, '');
+                let current = 0;
+                const increment = target / 60;
+
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        counter.textContent = text;
+                        clearInterval(timer);
+                    } else {
+                        counter.textContent = Math.floor(current) + suffix;
+                    }
+                }, 25);
+            });
+        }
+
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const statsSection = document.querySelector('.about-stats');
+        if (statsSection) statsObserver.observe(statsSection);
+
+        // ========== PARALLAX EFFECT ON SCROLL ==========
+        window.addEventListener('scroll', () => {
+            const scrolled = window.scrollY;
+            const heroContent = document.querySelector('.hero-content');
+            if (heroContent) {
+                heroContent.style.transform = `translateY(${scrolled * 0.3}px)`;
+                heroContent.style.opacity = 1 - scrolled / 700;
+            }
+        });
+
+        // ========== SMOOTH ANCHOR SCROLLING ==========
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // ========== RESERVATION FORM ==========
+        document.getElementById('reservationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = document.getElementById('res-submit');
+            btn.innerHTML = '<span>✓ Reserved!</span>';
+            btn.style.background = 'linear-gradient(135deg, #2ecc71, #27ae60)';
+            setTimeout(() => {
+                btn.innerHTML = '<span>Reserve Now</span>';
+                btn.style.background = '';
+                this.reset();
+            }, 3000);
+        });
+    </script>
+</body>
+</html>

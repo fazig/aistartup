@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "YouTube Thumbnail Downloader - StartupAI Tools",
-  description: "Extract and download the high-resolution thumbnail from any YouTube video instantly.",
+  title: "Free Grammar Checker | StartupAI Tools",
+  description: "Analyze your texts, correct spelling mistakes, optimize syntax structure, and improve readability with our professional grammar analyzer.",
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "name": "YouTube Thumbnail Downloader",
-    "description": "Extract and download the high-resolution thumbnail from any YouTube video instantly.",
+    "name": "Free Grammar Checker",
+    "description": "Analyze your texts, correct spelling mistakes, optimize syntax structure, and improve readability with our professional grammar analyzer.",
     "applicationCategory": "UtilitiesApplication",
     "operatingSystem": "All",
     "offers": {

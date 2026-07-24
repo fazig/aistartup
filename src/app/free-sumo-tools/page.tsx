@@ -19,7 +19,7 @@ export default function FreeSumoToolsPage() {
       color: "#10b981",
       bg: "#ecfdf5",
       tools: [
-        { name: "Grammarly Free", path: "/tools/grammarly-free", live: true },
+        { name: "Free Grammar Checker", path: "/tools/grammar-checker", live: true },
         { name: "Text to Slug", path: "/tools/text-to-slug", live: true },
         { name: "Lorem Ipsum Generator", path: "/tools/lorem-ipsum-generator", live: true },
         { name: "Case Converter", path: "/tools/case-converter", live: true },
@@ -191,7 +191,6 @@ export default function FreeSumoToolsPage() {
         { name: "Get Source Code", path: "/tools/get-source-code", live: true },
         { name: "Link Analyzer", path: "/tools/link-analyzer", live: true },
         { name: "Domain into IP", path: "/tools/domain-into-ip", live: true },
-        { name: "YouTube Thumbnail Downloader", path: "/tools/youtube-thumbnail", live: true },
         { name: "YouTube Keywords Extractor", path: "/tools/youtube-keywords-extractor", live: true },
       ]
     }

@@ -30,9 +30,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta name="google-adsense-account" content="ca-pub-0000000000000000" />
-        <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://googleads.g.doubleclick.net" crossOrigin="anonymous" />
+        {/* Replace with your actual Google AdSense publisher ID when approved */}
+        {process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID && (
+          <>
+            <meta name="google-adsense-account" content={process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID} />
+            <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossOrigin="anonymous" />
+            <link rel="preconnect" href="https://googleads.g.doubleclick.net" crossOrigin="anonymous" />
+          </>
+        )}
       </head>
       <body className={inter.variable}>
         <Header />
@@ -94,7 +99,7 @@ export default function RootLayout({
                   Popular Tools
                 </h4>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem', fontSize: '0.875rem' }}>
-                  <li><Link href="/tools/grammarly-free" style={{ color: '#94a3b8', textDecoration: 'none', transition: 'color 0.2s' }}>Grammarly Free</Link></li>
+                  <li><Link href="/tools/grammar-checker" style={{ color: '#94a3b8', textDecoration: 'none', transition: 'color 0.2s' }}>Free Grammar Checker</Link></li>
                   <li><Link href="/tools/adsense-eligibility-checker" style={{ color: '#94a3b8', textDecoration: 'none', transition: 'color 0.2s' }}>AdSense Checker</Link></li>
                   <li><Link href="/free-sumo-tools" style={{ color: '#94a3b8', textDecoration: 'none', transition: 'color 0.2s' }}>Free Sumo Tools</Link></li>
                   <li><Link href="/tools/url-shortener" style={{ color: '#94a3b8', textDecoration: 'none', transition: 'color 0.2s' }}>URL Shortener</Link></li>
@@ -171,13 +176,15 @@ export default function RootLayout({
         
         <GoogleAnalytics gaId="G-L0D1YKGN2H" />
         
-        {/* Defer AdSense script until page is interactive to boost speed */}
-        <Script
-          id="adsense-script"
-          strategy="lazyOnload"
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000"
-          crossOrigin="anonymous"
-        />
+        {/* Dynamically render AdSense script if client ID is provided */}
+        {process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID && (
+          <Script
+            id="adsense-script"
+            strategy="lazyOnload"
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID}`}
+            crossOrigin="anonymous"
+          />
+        )}
       </body>
     </html>
   );
