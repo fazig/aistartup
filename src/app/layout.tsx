@@ -30,14 +30,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Replace with your actual Google AdSense publisher ID when approved */}
-        {process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID && (
-          <>
-            <meta name="google-adsense-account" content={process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID} />
-            <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossOrigin="anonymous" />
-            <link rel="preconnect" href="https://googleads.g.doubleclick.net" crossOrigin="anonymous" />
-          </>
-        )}
+        <meta name="google-adsense-account" content="ca-pub-1701881740445095" />
+        <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://googleads.g.doubleclick.net" crossOrigin="anonymous" />
       </head>
       <body className={inter.variable}>
         <Header />
@@ -176,15 +171,13 @@ export default function RootLayout({
         
         <GoogleAnalytics gaId="G-L0D1YKGN2H" />
         
-        {/* Dynamically render AdSense script if client ID is provided */}
-        {process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID && (
-          <Script
-            id="adsense-script"
-            strategy="lazyOnload"
-            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID}`}
-            crossOrigin="anonymous"
-          />
-        )}
+        {/* Official Google AdSense Script */}
+        <Script
+          id="adsense-script"
+          strategy="lazyOnload"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1701881740445095"
+          crossOrigin="anonymous"
+        />
       </body>
     </html>
   );
