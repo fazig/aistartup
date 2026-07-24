@@ -31,6 +31,11 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="google-adsense-account" content="ca-pub-1701881740445095" />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1701881740445095"
+          crossOrigin="anonymous"
+        />
         <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://googleads.g.doubleclick.net" crossOrigin="anonymous" />
       </head>
@@ -170,14 +175,6 @@ export default function RootLayout({
         <CookieConsent />
         
         <GoogleAnalytics gaId="G-L0D1YKGN2H" />
-        
-        {/* Official Google AdSense Script */}
-        <Script
-          id="adsense-script"
-          strategy="lazyOnload"
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1701881740445095"
-          crossOrigin="anonymous"
-        />
       </body>
     </html>
   );
