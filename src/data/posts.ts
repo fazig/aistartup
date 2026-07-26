@@ -77,8 +77,10 @@ import { postBestFreeAiVoiceCloner } from './articles/best-free-ai-voice-cloner'
 import { postClaudeFable5GameArticle } from './articles/claude-fable-5-game-article';
 import { postWhoWillWinWorldCupAi } from './articles/who-will-win-world-cup-ai';
 import { postWillMessiWinWorldCup } from './articles/will-messi-win-world-cup';
+import { postDeepseekV4VsGrok45VsOllamaGuide } from './articles/deepseek-v4-vs-grok-45-vs-ollama-guide';
 
 export const BLOG_POSTS: BlogPost[] = [
+  postDeepseekV4VsGrok45VsOllamaGuide,
   postAiToolsApp,
   postAiToolsPresentation,
   postAiToolsWebsite,
