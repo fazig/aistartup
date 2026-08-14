@@ -4,7 +4,7 @@ export const postFaizanKiAwazVoiceEnhancer: BlogPost = {
   slug: "build-ai-voice-enhancer-tool-faizankiawaz",
   title: "How I Built FaizanKiAwaz: A Professional AI Voice Enhancer Tool in Python",
   description: "Learn how to build a professional-grade AI Voice Enhancer (FaizanKiAwaz) using Python, Flask, PyWebView, and Sherpa-ONNX. Download the source code and get the master prompts to recreate it in the Antigravity IDE.",
-  date: new Date().toISOString().split('T')[0],
+  date: "2026-08-12",
   readTime: "15 min read",
   category: "AI Tools Development",
   author: "Faizan Arif",

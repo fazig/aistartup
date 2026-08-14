@@ -4,7 +4,7 @@ export const postClaudeVsChatgptWhoWillWin: BlogPost = {
   slug: `claude-vs-chatgpt-who-will-win`,
   title: `Claude Vs ChatGPT: Who Will Win the Ultimate AI Showdown?`,
   description: `In the battle of Claude Vs Chatgpt who will win? A detailed, human-written 3000-word breakdown of coding, reasoning, and creative writing.`,
-  date: new Date().toISOString().split('T')[0],
+  date: "2026-08-12",
   readTime: `15 min read`,
   category: `AI Comparisons`,
   author: `Faizan`,

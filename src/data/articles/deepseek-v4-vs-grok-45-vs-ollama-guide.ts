@@ -4,7 +4,7 @@ export const postDeepseekV4VsGrok45VsOllamaGuide: BlogPost = {
   slug: `deepseek-v4-vs-grok-45-vs-ollama-guide`,
   title: `DeepSeek V4 vs. Grok 4.5 vs. Ollama Latest Edition: The Ultimate Open-Source & Agentic AI Developer Guide (2026)`,
   description: `A comprehensive 3000-word deep dive comparing DeepSeek V4, Grok 4.5, and the latest Ollama edition. Learn how open-weight models, local privacy setups, and agentic workflows are reshaping modern software engineering in 2026.`,
-  date: new Date().toISOString().split('T')[0],
+  date: "2026-08-12",
   readTime: `18 min read`,
   category: `Artificial Intelligence`,
   author: `Faizan Arif`,

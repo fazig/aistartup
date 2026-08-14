@@ -4,7 +4,7 @@ export const postBestFreeAiVocalRemover: BlogPost = {
   slug: `best-free-ai-vocal-remover`,
   title: `The Ultimate Guide: Best Free AI Vocal Remover for Music Producers`,
   description: `Looking to isolate vocals or extract instrumentals for your next remix? Discover the best free AI vocal remover tools that deliver studio-quality acapellas in seconds.`,
-  date: new Date().toISOString().split('T')[0],
+  date: "2026-08-12",
   readTime: `10 min read`,
   category: `AI Tools`,
   author: "Faizan Arif",

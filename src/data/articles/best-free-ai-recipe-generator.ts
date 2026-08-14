@@ -4,7 +4,7 @@ export const postBestFreeAiRecipeGenerator: BlogPost = {
   slug: `best-free-ai-recipe-generator`,
   title: `The Ultimate Guide: Best Free AI Recipe Generator Based on Ingredients`,
   description: `Tired of staring at a fridge full of random ingredients? Discover the best free AI recipe generator tools to instantly turn your leftovers into gourmet, personalized meals.`,
-  date: new Date().toISOString().split('T')[0],
+  date: "2026-08-12",
   readTime: `10 min read`,
   category: `AI Tools`,
   author: "Faizan Arif",

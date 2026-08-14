@@ -4,7 +4,7 @@ export const postBestQrCodeGenerator: BlogPost = {
   slug: `best-qr-code-generator`,
   title: `Finding the Best QR Code Generator: A Complete Guide`,
   description: `Why settle for less when you can find the best Qr code generator? We explore features, security, and tracking in this ultimate deep-dive review.`,
-  date: new Date().toISOString().split('T')[0],
+  date: "2026-08-12",
   readTime: `15 min read`,
   category: `Web Tools`,
   author: `Faizan`,

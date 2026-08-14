@@ -4,7 +4,7 @@ export const postGrokNewVersionInCursorProIsMagic: BlogPost = {
   slug: `grok-new-version-cursor-pro-magic`,
   title: `Grok New Version in Cursor Pro is Pure Magic: The Real-Time Agentic IDE Breakthrough (2026)`,
   description: `Discover why the latest Grok integration in Cursor Pro is revolutionizing developer productivity in 2026. Explore real-time web grounding, 2M token context windows, instant multi-file editing, and hands-on coding workflows.`,
-  date: new Date().toISOString().split('T')[0],
+  date: "2026-08-12",
   readTime: `20 min read`,
   category: `Developer Experience`,
   author: `Faizan Arif`,

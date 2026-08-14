@@ -4,7 +4,7 @@ export const postBestFreeAiColorizeOldPhotos: BlogPost = {
   slug: `best-free-ai-tool-colorize-old-photos`,
   title: `The Ultimate Guide: Best Free AI Tool to Colorize Old Photos`,
   description: `Bring your family history back to life. Discover the absolute best free AI tool to colorize old photos and restore your cherished memories in seconds.`,
-  date: new Date().toISOString().split('T')[0],
+  date: "2026-08-12",
   readTime: `10 min read`,
   category: `AI Tools`,
   author: "Faizan Arif",

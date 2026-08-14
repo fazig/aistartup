@@ -4,7 +4,7 @@ export const postBestFreeAiDndCharacterPortraits: BlogPost = {
   slug: `best-free-ai-dnd-character-portraits`,
   title: `The Best Free AI Tool for Generating D&D Character Portraits`,
   description: `Tired of spending hours searching for the perfect character art? Discover the best free AI tool for generating DND character portraits and bring your tabletop hero to life.`,
-  date: new Date().toISOString().split('T')[0],
+  date: "2026-08-12",
   readTime: `10 min read`,
   category: `AI Tools`,
   author: "Faizan Arif",

@@ -4,7 +4,7 @@ export const postWillMessiWinWorldCup: BlogPost = {
   slug: `will-messi-win-world-cup`,
   title: `The Ultimate Question: Will Messi Win the World Cup Again in 2026?`,
   description: `He finally lifted the trophy in Qatar, but can Lionel Messi defy Father Time and lead Argentina to a back-to-back World Cup victory in 2026?`,
-  date: new Date().toISOString().split('T')[0],
+  date: "2026-08-12",
   readTime: `5 min read`,
   category: `Sports`,
   author: `Faizan`,

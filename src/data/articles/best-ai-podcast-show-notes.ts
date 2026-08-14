@@ -4,7 +4,7 @@ export const postBestAiPodcastShowNotes: BlogPost = {
   slug: `best-ai-for-writing-podcast-show-notes`,
   title: `The Ultimate Guide to the Best AI for Writing Podcast Show Notes`,
   description: `Tired of spending hours summarizing your podcast? Discover the best AI for writing podcast show notes to save time, boost SEO, and engage your listeners.`,
-  date: new Date().toISOString().split('T')[0],
+  date: "2026-08-12",
   readTime: `10 min read`,
   category: `AI Tools`,
   author: `Faizan`,

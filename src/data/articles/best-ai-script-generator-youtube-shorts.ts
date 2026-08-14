@@ -4,7 +4,7 @@ export const postBestAiScriptGeneratorYoutubeShorts: BlogPost = {
   slug: `best-ai-script-generator-youtube-shorts`,
   title: `The Ultimate Guide to the Best AI Script Generator for YouTube Shorts`,
   description: `Struggling to write viral hooks? Discover the best AI script generator for YouTube Shorts to create highly engaging, retention-optimized videos in seconds.`,
-  date: new Date().toISOString().split('T')[0],
+  date: "2026-08-12",
   readTime: `10 min read`,
   category: `AI Tools`,
   author: "Faizan Arif",

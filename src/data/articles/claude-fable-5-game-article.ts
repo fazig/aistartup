@@ -4,7 +4,7 @@ export const postClaudeFable5GameArticle: BlogPost = {
   slug: `claude-fable-5-game-article`,
   title: `How Claude AI Built a Realistic Game: The Fable 5 Phenomenon`,
   description: `Discover how Anthropic's Claude AI is revolutionizing game development with the creation of the ultra-realistic Fable 5 concept. Explore mechanics, graphics, and dynamic storytelling.`,
-  date: new Date().toISOString().split('T')[0],
+  date: "2026-08-12",
   readTime: `5 min read`,
   category: `Gaming`,
   author: `Faizan`,

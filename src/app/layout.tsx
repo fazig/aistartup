@@ -194,6 +194,7 @@ export default function RootLayout({
                   Legal & Support
                 </h4>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem', fontSize: '0.875rem' }}>
+                  <li><Link href="/about" style={{ color: '#94a3b8', textDecoration: 'none', transition: 'color 0.2s' }}>About Us</Link></li>
                   <li><Link href="/privacy" style={{ color: '#94a3b8', textDecoration: 'none', transition: 'color 0.2s' }}>Privacy Policy</Link></li>
                   <li><Link href="/terms" style={{ color: '#94a3b8', textDecoration: 'none', transition: 'color 0.2s' }}>Terms of Service</Link></li>
                   <li><Link href="/cookie-policy" style={{ color: '#94a3b8', textDecoration: 'none', transition: 'color 0.2s' }}>Cookie Policy</Link></li>

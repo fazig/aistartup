@@ -4,7 +4,7 @@ export const postFootballVsSoccerTheDifference: BlogPost = {
   slug: `football-vs-soccer-the-difference`,
   title: `Football vs Soccer: The Ultimate Cultural and Historical Divide Explained`,
   description: `An in-depth, humanized exploration of Football vs Soccer the difference, looking at the history, rules, and terminology that divide fans worldwide.`,
-  date: new Date().toISOString().split('T')[0],
+  date: "2026-08-12",
   readTime: `8 min read`,
   category: `Sports & Culture`,
   author: `Faizan`,

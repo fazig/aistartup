@@ -4,7 +4,7 @@ export const postBestFreeAiSeamlessTextureGenerator: BlogPost = {
   slug: `best-free-ai-seamless-texture-generator`,
   title: `The Ultimate Guide: Best Free AI Seamless Texture Generator for 3D Artists`,
   description: `Stop struggling with obvious tiling and manual photogrammetry. Discover the best free AI seamless texture generator to instantly create PBR materials for your 3D models.`,
-  date: new Date().toISOString().split('T')[0],
+  date: "2026-08-12",
   readTime: `10 min read`,
   category: `AI Tools`,
   author: "Faizan Arif",

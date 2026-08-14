@@ -4,7 +4,7 @@ export const postClaudeFable5IsLiveNow: BlogPost = {
   slug: `claude-fable-5-is-live-now`,
   title: `Claude Fable 5 is Live Now: Everything You Need to Know`,
   description: `The wait is over: Claude Fable 5 is live now! Dive into our massive 3000-word analysis of its new features, benchmarks, and creative capabilities.`,
-  date: new Date().toISOString().split('T')[0],
+  date: "2026-08-12",
   readTime: `15 min read`,
   category: `AI News`,
   author: `Faizan`,

@@ -4,7 +4,7 @@ export const postUnlimitedAiVideoGenerationManusAiTill25August: BlogPost = {
   slug: `unlimited-ai-video-generation-manus-ai-till-25-august`,
   title: `Unlimited AI Video Generation in Manus AI Till August 25: The Complete Creator Masterclass (2026)`,
   description: `Master Manus AI's limited-time unlimited video generation promotion running until August 25. Learn text-to-video synthesis, image-to-video animation, prompt engineering strategies, 4K rendering hacks, and production workflows.`,
-  date: new Date().toISOString().split('T')[0],
+  date: "2026-08-12",
   readTime: `22 min read`,
   category: `Artificial Intelligence`,
   author: `Faizan Arif`,

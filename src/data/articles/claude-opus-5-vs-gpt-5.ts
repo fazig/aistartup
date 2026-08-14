@@ -4,7 +4,7 @@ export const postClaudeOpus5VsGpt5: BlogPost = {
   slug: `claude-opus-5-vs-gpt-5`,
   title: `Claude Opus 5 vs. GPT-5: The Frontier AI Battle for Autonomous Engineering & Cognition (2026)`,
   description: `An exhaustive 3000+ word technical comparison between Anthropic's Claude Opus 5 and OpenAI's GPT-5. We analyze multi-file architectural refactoring, SWE-bench performance, dynamic context reasoning, and real-world developer benchmark results.`,
-  date: new Date().toISOString().split('T')[0],
+  date: "2026-08-12",
   readTime: `22 min read`,
   category: `Artificial Intelligence`,
   author: `Faizan Arif`,

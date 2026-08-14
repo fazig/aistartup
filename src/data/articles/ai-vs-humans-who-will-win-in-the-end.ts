@@ -4,7 +4,7 @@ export const postAiVsHumansWhoWillWinInTheEnd: BlogPost = {
   slug: `ai-vs-humans-who-will-win-in-the-end`,
   title: `AI vs Humans: Who Will Win in the End? The Ultimate Philosophical Debate`,
   description: `A deep, engaging, and human-written perspective on the ultimate showdown: Ai vs humans who will win in the end.`,
-  date: new Date().toISOString().split('T')[0],
+  date: "2026-08-12",
   readTime: `8 min read`,
   category: `Philosophy & Future`,
   author: `Faizan`,

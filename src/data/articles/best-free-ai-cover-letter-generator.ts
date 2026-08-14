@@ -4,7 +4,7 @@ export const postBestFreeAiCoverLetterGenerator: BlogPost = {
   slug: `best-free-ai-cover-letter-generator`,
   title: `The Ultimate Guide: Best Free AI Cover Letter Generator to Land Your Dream Job`,
   description: `Stop struggling with writer's block. Discover the best free AI cover letter generator tools to instantly write highly personalized, ATS-friendly applications that get you hired.`,
-  date: new Date().toISOString().split('T')[0],
+  date: "2026-08-12",
   readTime: `10 min read`,
   category: `AI Tools`,
   author: "Faizan Arif",

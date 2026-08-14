@@ -4,7 +4,7 @@ export const postUsingManusAiFreeTill25August: BlogPost = {
   slug: `using-manus-ai-free-till-25-august`,
   title: `How to Use Manus AI Completely Free Till August 25: The Ultimate General Agent Mastery Guide (2026)`,
   description: `Unlock 100% free access to Manus AI's general agent platform until August 25. Learn how to automate browser workflows, execute market research, build full-stack web applications, and maximize your agentic usage quota.`,
-  date: new Date().toISOString().split('T')[0],
+  date: "2026-08-12",
   readTime: `21 min read`,
   category: `Artificial Intelligence`,
   author: `Faizan Arif`,

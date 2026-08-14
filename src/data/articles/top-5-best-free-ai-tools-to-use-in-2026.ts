@@ -4,7 +4,7 @@ export const postTop5BestFreeAiToolsToUseIn2026: BlogPost = {
   slug: `top-5-best-free-ai-tools-to-use-in-2026`,
   title: `Top 5 Best Free AI Tools to Use in 2026`,
   description: `Discover the top 5 best free Ai tools to use in 2026 in this comprehensive, humanized guide exploring the future of artificial intelligence software.`,
-  date: new Date().toISOString().split('T')[0],
+  date: "2026-08-12",
   readTime: `15 min read`,
   category: `Technology & AI`,
   author: `Faizan`,

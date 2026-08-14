@@ -4,7 +4,7 @@ export const postBestFreeAiPresentationMaker: BlogPost = {
   slug: `best-free-ai-presentation-maker`,
   title: `The Ultimate Guide: Best Free AI Presentation Maker for Students and Professionals`,
   description: `Stop wasting hours formatting slides and hunting for stock photos. Discover the best free AI presentation maker tools to generate beautiful, professional slide decks in seconds.`,
-  date: new Date().toISOString().split('T')[0],
+  date: "2026-08-12",
   readTime: `10 min read`,
   category: `AI Tools`,
   author: "Faizan Arif",

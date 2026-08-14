@@ -4,7 +4,7 @@ export const postBestFreeAiWorkoutPlanGenerator: BlogPost = {
   slug: `best-free-ai-workout-plan-generator`,
   title: `The Ultimate Guide: Best Free AI Workout Plan Generator for Fast Results`,
   description: `Tired of generic fitness routines? Discover the best free AI workout plan generator to build a hyper-personalized, science-backed fitness schedule tailored to your goals.`,
-  date: new Date().toISOString().split('T')[0],
+  date: "2026-08-12",
   readTime: `10 min read`,
   category: `AI Tools`,
   author: "Faizan Arif",

@@ -4,7 +4,7 @@ export const postWhoWillWinWorldCupAi: BlogPost = {
   slug: `who-will-win-world-cup-ai`,
   title: `The Ultimate AI Prediction: Who Will Win the Football FIFA World Cup?`,
   description: `Pundits have their favorites, but what do the machines say? Dive into our comprehensive AI prediction on who will win the next Football FIFA World Cup.`,
-  date: new Date().toISOString().split('T')[0],
+  date: "2026-08-12",
   readTime: `5 min read`,
   category: `Sports AI`,
   author: `Faizan`,

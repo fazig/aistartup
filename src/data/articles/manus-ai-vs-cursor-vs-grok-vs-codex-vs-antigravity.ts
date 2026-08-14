@@ -4,7 +4,7 @@ export const postManusAiVsCursorVsGrokVsCodexVsAntigravity: BlogPost = {
   slug: `manus-ai-vs-cursor-vs-grok-vs-codex-vs-antigravity`,
   title: `Manus AI vs. Cursor vs. Grok vs. Codex vs. Antigravity: The Ultimate 2026 Agentic AI Battle`,
   description: `The definitive 3500-word architectural benchmark comparing Manus AI, Cursor Pro, Grok, OpenAI Codex, and Google Antigravity. We analyze general browser autonomy, IDE integration, multi-agent swarms, and developer efficiency.`,
-  date: new Date().toISOString().split('T')[0],
+  date: "2026-08-12",
   readTime: `25 min read`,
   category: `Artificial Intelligence`,
   author: `Faizan Arif`,

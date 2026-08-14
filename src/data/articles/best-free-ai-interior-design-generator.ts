@@ -4,7 +4,7 @@ export const postBestFreeAiInteriorDesignGenerator: BlogPost = {
   slug: `best-free-ai-interior-design-generator`,
   title: `The Ultimate Guide: Best Free AI Interior Design Generator Tools`,
   description: `Struggling to visualize your dream living room? Discover the best free AI interior design generator tools to instantly redesign any space from a single smartphone photo.`,
-  date: new Date().toISOString().split('T')[0],
+  date: "2026-08-12",
   readTime: `10 min read`,
   category: `AI Tools`,
   author: "Faizan Arif",

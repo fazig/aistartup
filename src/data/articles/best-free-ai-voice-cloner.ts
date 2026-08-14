@@ -4,7 +4,7 @@ export const postBestFreeAiVoiceCloner: BlogPost = {
   slug: `best-free-ai-voice-cloner`,
   title: `The Ultimate Guide: Best Free AI Voice Cloner for Content Creators`,
   description: `Tired of re-recording audio because of a single mispronounced word? Discover the best free AI voice cloner tools to instantly generate ultra-realistic voiceovers that sound exactly like you.`,
-  date: new Date().toISOString().split('T')[0],
+  date: "2026-08-12",
   readTime: `10 min read`,
   category: `AI Tools`,
   author: "Faizan Arif",
