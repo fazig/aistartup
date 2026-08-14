@@ -78,8 +78,18 @@ import { postClaudeFable5GameArticle } from './articles/claude-fable-5-game-arti
 import { postWhoWillWinWorldCupAi } from './articles/who-will-win-world-cup-ai';
 import { postWillMessiWinWorldCup } from './articles/will-messi-win-world-cup';
 import { postDeepseekV4VsGrok45VsOllamaGuide } from './articles/deepseek-v4-vs-grok-45-vs-ollama-guide';
+import { postClaudeOpus5VsGpt5 } from './articles/claude-opus-5-vs-gpt-5';
+import { postGrokNewVersionInCursorProIsMagic } from './articles/grok-new-version-cursor-pro-magic';
+import { postUsingManusAiFreeTill25August } from './articles/using-manus-ai-free-till-25-august';
+import { postUnlimitedAiVideoGenerationManusAiTill25August } from './articles/unlimited-ai-video-generation-manus-ai-till-25-august';
+import { postManusAiVsCursorVsGrokVsCodexVsAntigravity } from './articles/manus-ai-vs-cursor-vs-grok-vs-codex-vs-antigravity';
 
 export const BLOG_POSTS: BlogPost[] = [
+  postClaudeOpus5VsGpt5,
+  postGrokNewVersionInCursorProIsMagic,
+  postUsingManusAiFreeTill25August,
+  postUnlimitedAiVideoGenerationManusAiTill25August,
+  postManusAiVsCursorVsGrokVsCodexVsAntigravity,
   postDeepseekV4VsGrok45VsOllamaGuide,
   postAiToolsApp,
   postAiToolsPresentation,
