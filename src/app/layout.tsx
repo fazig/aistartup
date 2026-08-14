@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Wrench } from "lucide-react";
 import Header from "@/components/Header";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import Script from "next/script";
 import "./globals.css";
 
@@ -166,6 +167,7 @@ export default function RootLayout({
         <CookieConsent />
         
         <GoogleAnalytics gaId="G-L0D1YKGN2H" />
+        <SpeedInsights />
       </body>
     </html>
   );
