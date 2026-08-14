@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useRef, useEffect, useCallback } from "react";
-import { removeBackground, Config } from "@imgly/background-removal";
+import type { Config } from "@imgly/background-removal";
 import { UploadCloud, Download, Image as ImageIcon, CheckCircle, Trash2, ArrowLeft, Loader2, Sparkles } from "lucide-react";
 import Link from "next/link";
 import Head from "next/head";
@@ -76,6 +76,7 @@ export default function RemoveBackgroundTool() {
     setProgressText("Initializing ML Model...");
 
     try {
+      const { removeBackground } = await import("@imgly/background-removal");
       const config: Config = {
         progress: (key, current, total) => {
           const percent = Math.round((current / total) * 100) || 0;

@@ -3,6 +3,9 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Contact Us - Support & Feedback | StartupAI Tools",
   description: "Reach out to the StartupAI Tools team for support, feature suggestions, partnership requests, or feedback.",
+  alternates: { canonical: "/contact" },
+  openGraph: { title: "Contact Us - Support & Feedback | StartupAI Tools", description: "Reach out to the StartupAI Tools team for support, feature suggestions, partnership requests, or feedback.", url: "/contact", type: "website" },
+  twitter: { card: "summary_large_image", title: "Contact Us - Support & Feedback | StartupAI Tools", description: "Reach out to the StartupAI Tools team for support, feature suggestions, partnership requests, or feedback." },
 };
 
 export default function ContactPage() {
@@ -37,11 +40,49 @@ export default function ContactPage() {
         </form>
 
         <p style={{ marginTop: '2rem', textAlign: 'center', fontSize: '0.95rem', color: 'var(--text-muted)' }}>
-          Prefer direct email? You can also email us directly at <strong style={{ color: 'var(--primary)' }}>contact@startupai.tech</strong>
+          Prefer direct email? You can also email us directly at <strong style={{ color: 'var(--primary)' }}>contact@aitoolspro.tech</strong>
         </p>
       </div>
 
       {/* Helpful FAQs (Low Word Count Fix & Rich SEO Context) */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Do you store the text or files I submit to your tools?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No, we do not store any user-submitted data. Over 95% of our tools (such as the JSON Formatter, Case Converter, and Word Counter) run entirely client-side inside your web browser using HTML5 and JavaScript. Your inputs never reach our servers, keeping your data secure and private."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How can I request a new tool?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We love user suggestions! If there is a helper utility, mathematical calculator, or designer tool you reach for daily and would like to see added, write us via the contact form or direct email. Our engineering team reviews all requests and often builds them within a week."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is there a usage limit for the utilities?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely not. All tools on StartupAI Tools are 100% free and have zero daily limits. You can check as many files, generate as many QR codes, and validate as much code as your projects require."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How quickly will you reply to my message?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We monitor our inbox daily. While response times vary, we make it a priority to respond to support inquiries, bug reports, and commercial proposals within 24 to 48 hours."
+            }
+          }
+        ]
+      }) }} />
       <div style={{ marginTop: '4rem' }}>
         <h2 style={{ fontSize: '1.75rem', marginBottom: '1.5rem', fontWeight: 800, textAlign: 'center' }}>
           Frequently Asked Questions

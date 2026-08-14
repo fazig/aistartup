@@ -7,7 +7,7 @@ export const postBestFreeAiCoverLetterGenerator: BlogPost = {
   date: new Date().toISOString().split('T')[0],
   readTime: `10 min read`,
   category: `AI Tools`,
-  author: `AI Writer`,
+  author: "Faizan Arif",
   image: `https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&q=80&w=1000`,
   content: `Job hunting is universally recognized as one of the most soul-crushing activities a human being can endure. You spend hours polishing your resume, you fill out fifty different online portals asking for information that is *already on your resume*, and then, the final boss appears: The Cover Letter.
 

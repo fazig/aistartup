@@ -38,8 +38,22 @@ export default function ImageEnhancerPage() {
             <li><strong>Full HD Upscaling:</strong> Double the resolution of your images while intelligently preserving edge details and enhancing micro-contrast.</li>
           </ul>
           <p>
-            Stop paying exorbitant monthly fees for simple image sharpening. Bookmark this page and use our free image enhancer whenever you need to breathe new life into your photographs!
+            Stop paying monthly fees for simple image sharpening. Bookmark this page and use the enhancer whenever you need to restore a photo or enlarge a graphic for the web.
           </p>
+          <h3 style={{ color: 'var(--text-main)' }}>How to enhance a photo</h3>
+          <ol>
+            <li>Upload a JPG, PNG, or WebP file. Keep the original nearby so you can compare.</li>
+            <li>Run enhance. The browser upscales locally — nothing is uploaded to our servers.</li>
+            <li>Download the result. If edges look too sharp, re-run with a milder setting or start from a less compressed original.</li>
+          </ol>
+          <h3 style={{ color: 'var(--text-main)' }}>When this tool is a good fit</h3>
+          <p>
+            It works best on slightly soft phone photos, screenshots, and product shots that need more pixels for a listing. It will not recover faces that are already a handful of pixels, and it is not a replacement for a trained super-resolution model like Remini on severely damaged scans. Use it as a fast, private first pass.
+          </p>
+          <h3 style={{ color: 'var(--text-main)' }}>FAQ</h3>
+          <p><strong>Are my images stored?</strong> No. Processing happens in the browser.</p>
+          <p><strong>Is there a daily limit?</strong> No. There is no account and no quota.</p>
+          <p><strong>Can I use the output commercially?</strong> The tool does not claim rights to your files. You keep whatever rights you already had in the original photo.</p>
         </div>
       </section>
     </>

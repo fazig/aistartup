@@ -4,7 +4,6 @@ import Link from "next/link";
 import { Wrench } from "lucide-react";
 import Header from "@/components/Header";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import Script from "next/script";
 import "./globals.css";
 
 import CookieConsent from "@/components/CookieConsent";
@@ -15,11 +14,45 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "StartupAI Tools | Free Developer & Web Utilities",
+  metadataBase: new URL("https://www.aitoolspro.tech"),
+  title: {
+    default: "StartupAI Tools | Free Developer & Web Utilities",
+    template: "%s | StartupAI Tools",
+  },
   description: "A comprehensive collection of 100% free, lightning-fast web tools including JSON formatters, QR code generators, and text utilities.",
+  keywords: ["free web tools", "developer utilities", "JSON formatter", "QR code generator", "SEO tools", "free online tools", "AI image enhancer"],
+  authors: [{ name: "Faizan Arif", url: "https://www.aitoolspro.tech" }],
+  creator: "StartupAI Tools",
+  publisher: "StartupAI Tools",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://www.aitoolspro.tech",
+    siteName: "StartupAI Tools",
+    title: "StartupAI Tools | Free Developer & Web Utilities",
+    description: "Access 100+ free, lightning-fast web tools including AI Image Enhancer, JSON formatters, QR generators, and SEO utilities.",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "StartupAI Tools - Free Developer & Web Utilities" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "StartupAI Tools | Free Developer & Web Utilities",
+    description: "Access 100+ free, lightning-fast web tools including AI Image Enhancer, JSON formatters, and SEO utilities.",
+    images: ["/og-image.jpg"],
+  },
   verification: {
     google: "BN8r_18xTXqdWBekHRt95xIe5efvl8gg00Thn4qhMMI",
-  }
+  },
 };
 
 export default function RootLayout({
@@ -29,9 +62,37 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head />
+      <head>
+        <meta name="google-adsense-account" content="ca-pub-1701881740445095" />
+      </head>
       <body className={inter.variable}>
         <Header />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "StartupAI Tools",
+              url: "https://www.aitoolspro.tech",
+              description: "100+ free, lightning-fast web tools for developers and creators.",
+              publisher: {
+                "@type": "Organization",
+                name: "StartupAI Tools",
+                url: "https://www.aitoolspro.tech",
+                logo: {
+                  "@type": "ImageObject",
+                  url: "https://www.aitoolspro.tech/og-image.jpg",
+                },
+              },
+              potentialAction: {
+                "@type": "SearchAction",
+                target: "https://www.aitoolspro.tech/tools?q={search_term_string}",
+                "query-input": "required name=search_term_string",
+              },
+            }),
+          }}
+        />
 
         {/* Main Page Content */}
         <main style={{ minHeight: 'calc(100vh - var(--nav-height) - 250px)' }}>
@@ -105,18 +166,18 @@ export default function RootLayout({
                 </h4>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem', fontSize: '0.875rem' }}>
                   <li>
-                    <Link href="/blog/vibe-coding-tools" style={{ color: '#94a3b8', textDecoration: 'none', transition: 'color 0.2s', display: 'block', lineHeight: '1.4', fontWeight: 600 }}>
-                      The Ultimate Guide to Vibe Coding Tools
+                    <Link href="/blog/how-to-vibe-code-using-codex" style={{ color: '#94a3b8', textDecoration: 'none', transition: 'color 0.2s', display: 'block', lineHeight: '1.4', fontWeight: 600 }}>
+                      How to Vibe Code Using Codex
                     </Link>
                   </li>
                   <li>
-                    <Link href="/blog/why-google-adsense-rejects-websites" style={{ color: '#94a3b8', textDecoration: 'none', transition: 'color 0.2s', display: 'block', lineHeight: '1.4' }}>
-                      Why AdSense Rejects Good Sites & How to Fix
+                    <Link href="/blog/how-to-get-adsense-approval" style={{ color: '#94a3b8', textDecoration: 'none', transition: 'color 0.2s', display: 'block', lineHeight: '1.4' }}>
+                      How to Get AdSense Approval
                     </Link>
                   </li>
                   <li>
-                    <Link href="/blog/qr-code-generator-small-size" style={{ color: '#94a3b8', textDecoration: 'none', transition: 'color 0.2s', display: 'block', lineHeight: '1.4' }}>
-                      Ultimate Micro QR Codes Printing Guide
+                    <Link href="/blog/best-qr-code-generator" style={{ color: '#94a3b8', textDecoration: 'none', transition: 'color 0.2s', display: 'block', lineHeight: '1.4' }}>
+                      Best QR Code Generator
                     </Link>
                   </li>
                   <li>

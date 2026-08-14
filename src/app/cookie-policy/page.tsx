@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Cookie Policy - Cookie Usage Details | StartupAI Tools",
   description: "Read the StartupAI Tools Cookie Policy. Learn about cookie categories, advertising cookies, and how to manage your privacy settings.",
+  alternates: { canonical: "/cookie-policy" },
+  openGraph: { title: "Cookie Policy - Cookie Usage Details | StartupAI Tools", description: "Read the StartupAI Tools Cookie Policy. Learn about cookie categories, advertising cookies, and how to manage your privacy settings.", url: "/cookie-policy", type: "website" },
 };
 
 export default function CookiePolicyPage() {
@@ -82,7 +84,7 @@ export default function CookiePolicyPage() {
           If you have further questions or seek clarification on our Cookie Policy, please contact our privacy compliance team:
         </p>
         <p style={{ marginTop: '0.5rem', fontSize: '1.05rem', fontWeight: 700, color: 'var(--text-main)' }}>
-          cookies@startupai.tech
+          cookies@aitoolspro.tech
         </p>
       </div>
     </div>

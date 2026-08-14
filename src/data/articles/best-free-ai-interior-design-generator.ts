@@ -7,7 +7,7 @@ export const postBestFreeAiInteriorDesignGenerator: BlogPost = {
   date: new Date().toISOString().split('T')[0],
   readTime: `10 min read`,
   category: `AI Tools`,
-  author: `AI Writer`,
+  author: "Faizan Arif",
   image: `https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=1000`,
   content: `We have all experienced the overwhelming paralysis of staring at an empty room. You just moved into a new apartment, the walls are stark white, and you have absolutely no idea what to do. Should you buy a mid-century modern sofa? Would a bold navy blue accent wall make the room look too small? 
 

@@ -5,7 +5,7 @@ export const postChinaFreeToolKimi: BlogPost = {
   title: 'China Free Tool Kimi: The Rising Star Disrupting the Global AI Landscape',
   description: 'Explore the capabilities of the China free tool Kimi. Learn how this powerful AI assistant is challenging Western models with massive context windows.',
   date: '2026-07-14',
-  author: 'Global Tech Observers',
+  author: 'Faizan Arif',
   image: '/images/ai_tool_hunt_cover.png',
   readTime: '11 min read',
   category: 'Artificial Intelligence',

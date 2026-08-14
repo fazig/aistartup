@@ -1443,17 +1443,17 @@ export default function GrammarChecker() {
 
       {/* SEO Editorial Content */}
       <div className="prose" style={{ marginTop: "4rem" }}>
-        <h2>What makes Grammarly Free different?</h2>
+        <h2>What makes this free grammar checker different?</h2>
         <p>
-          Grammarly Free is a comprehensive, client-side prose linter and grammar checker built specifically for digital creators, writers, and developers. By combining the powerful LanguageTool open-source NLP grammar check engines with lightweight layouts, it isolates your text, identifies orthographic mistakes, casing inconsistencies, grammar rules violations, and stylistic recommendations instantly.
+          This free grammar checker is a client-side prose linter built for writers, students, and developers. It uses LanguageTool to flag spelling mistakes, agreement errors, and style issues without requiring a Grammarly account.
         </p>
         <p>
-          Unlike legacy cloud word processors, **your writing privacy is absolute**. All inputs are evaluated over localized secure protocols and temporary memory pools. No database histories are recorded and your essays, code documentation, or emails are never saved or harvested.
+          Your writing privacy is the point: we do not keep a history of essays, emails, or documentation you paste here. Suggestions are returned in the session and discarded when you leave the page.
         </p>
 
-        <h2>Understanding Grammar Check Categories</h2>
+        <h2>Understanding grammar check categories</h2>
         <p>
-          To help refine your writing, Grammarly Free groups error flags into three main diagnostic areas:
+          Errors are grouped into three diagnostic areas:
         </p>
         <ul>
           <li><strong>Spelling & Typos:</strong> Highlighted in red. Detects misspellings, character transpositions, or simple typographical mistakes, and cross-references standard dictionaries to offer correct alternates.</li>

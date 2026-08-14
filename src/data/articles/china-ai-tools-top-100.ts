@@ -5,7 +5,7 @@ export const postChinaAiToolsTop100: BlogPost = {
   title: 'The Great Eastern AI Boom: The Top 100 New China AI Tools List',
   description: 'A massive, highly comprehensive breakdown of the incredibly innovative, rapidly expanding artificial intelligence ecosystem emerging from China. Discover the incredible tools reshaping the global digital landscape.',
   date: '2026-07-09',
-  author: 'Global Tech Insights Team',
+  author: 'Faizan Arif',
   image: '/images/china_ai_tools_cover.png',
   readTime: '10 min read',
   category: 'Technology',

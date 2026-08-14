@@ -4,7 +4,7 @@ export const postFaizanKiShop: BlogPost = {
   slug: 'faizankishop-management-software-ai',
   title: 'How I Built a Professional Shop Management Software (FaizanKiShop) Using AI',
   description: 'A complete deep dive into generating a full-fledged, premium desktop shop management application utilizing Artificial Intelligence, complete with source code download.',
-  date: new Date().toISOString().split('T')[0],
+  date: "2026-07-15",
   readTime: '10 min read',
   category: 'Software Development',
   author: 'Faizan',

@@ -7,7 +7,7 @@ export const postBestFreeAiPresentationMaker: BlogPost = {
   date: new Date().toISOString().split('T')[0],
   readTime: `10 min read`,
   category: `AI Tools`,
-  author: `AI Writer`,
+  author: "Faizan Arif",
   image: `https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=1000`,
   content: `We have all been there. It is 11:30 PM the night before a massive board meeting or a final college seminar. You have all your research done, your talking points are memorized, but you are staring at a completely blank PowerPoint slide. 
 

@@ -6,7 +6,7 @@ import { Download, QrCode, ArrowLeft } from "lucide-react";
 import { QRCodeSVG } from "qrcode.react";
 
 export default function QrGenerator() {
-  const [url, setUrl] = useState("https://startupai.tech");
+  const [url, setUrl] = useState("https://www.aitoolspro.tech");
   const [size, setSize] = useState(256);
   const [fgColor, setFgColor] = useState("#0f172a");
 
@@ -115,7 +115,7 @@ export default function QrGenerator() {
           <div style={{ padding: '20px', background: 'white', borderRadius: '12px', border: '1px solid var(--border-light)', marginBottom: '2rem' }}>
             <QRCodeSVG 
               id="qr-code-svg"
-              value={url || "https://startupai.tech"} 
+              value={url || "https://www.aitoolspro.tech"} 
               size={size} 
               fgColor={fgColor} 
               level="H"

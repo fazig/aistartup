@@ -22,6 +22,19 @@ export async function generateMetadata({
   return {
     title: `${post.title} | StartupAI Tools Blog`,
     description: post.description,
+    alternates: { canonical: `/blog/${slug}` },
+    openGraph: {
+      type: "article",
+      publishedTime: post.date,
+      authors: [post.author],
+      images: [post.image || "/og-image.jpg"],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${post.title} | StartupAI Tools Blog`,
+      description: post.description,
+      images: [post.image || "/og-image.jpg"],
+    },
   };
 }
 
@@ -39,6 +52,36 @@ export default async function BlogPostPage({
 
   return (
     <div className="container" style={{ padding: "3rem 1.25rem", maxWidth: "860px" }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            headline: post.title,
+            description: post.description,
+            image: post.image ? `https://www.aitoolspro.tech${post.image}` : "https://www.aitoolspro.tech/og-image.jpg",
+            datePublished: post.date,
+            dateModified: post.date,
+            author: {
+              "@type": "Person",
+              name: post.author || "Faizan Arif"
+            },
+            publisher: {
+              "@type": "Organization",
+              name: "StartupAI Tools",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://www.aitoolspro.tech/og-image.jpg"
+              }
+            },
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": `https://www.aitoolspro.tech/blog/${post.slug}`
+            }
+          })
+        }}
+      />
       {/* Back Button */}
       <Link
         href="/blog"
@@ -247,15 +290,15 @@ function parseMarkdownToJSX(content: string) {
 
     // Headers
     if (line.startsWith("### ")) {
-      jsxElements.push(<h3 key={`h3-${i}`} style={{ fontSize: '1.4rem', marginTop: '1.75rem', marginBottom: '0.75rem', fontWeight: 700, color: 'var(--text-main)' }} dangerouslySetInnerHTML={{ __html: parseInlineMarkdown(line.substring(4)) }} />);
+      jsxElements.push(<h4 key={`h4-${i}`} style={{ fontSize: '1.4rem', marginTop: '1.75rem', marginBottom: '0.75rem', fontWeight: 700, color: 'var(--text-main)' }} dangerouslySetInnerHTML={{ __html: parseInlineMarkdown(line.substring(4)) }} />);
       continue;
     }
     if (line.startsWith("## ")) {
-      jsxElements.push(<h2 key={`h2-${i}`} style={{ fontSize: '1.85rem', marginTop: '2.5rem', marginBottom: '1.25rem', fontWeight: 800, color: 'var(--text-main)', borderBottom: '1px solid var(--border-light)', paddingBottom: '0.5rem' }} dangerouslySetInnerHTML={{ __html: parseInlineMarkdown(line.substring(3)) }} />);
+      jsxElements.push(<h3 key={`h3-${i}`} style={{ fontSize: '1.85rem', marginTop: '2.5rem', marginBottom: '1.25rem', fontWeight: 800, color: 'var(--text-main)', borderBottom: '1px solid var(--border-light)', paddingBottom: '0.5rem' }} dangerouslySetInnerHTML={{ __html: parseInlineMarkdown(line.substring(3)) }} />);
       continue;
     }
     if (line.startsWith("# ")) {
-      jsxElements.push(<h1 key={`h1-${i}`} style={{ fontSize: '2.5rem', marginBottom: '1.5rem', fontWeight: 900, color: 'var(--text-main)' }} dangerouslySetInnerHTML={{ __html: parseInlineMarkdown(line.substring(2)) }} />);
+      jsxElements.push(<h2 key={`h2-${i}`} style={{ fontSize: '2.5rem', marginBottom: '1.5rem', fontWeight: 900, color: 'var(--text-main)' }} dangerouslySetInnerHTML={{ __html: parseInlineMarkdown(line.substring(2)) }} />);
       continue;
     }
     

@@ -5,7 +5,7 @@ export const postClaudeFable5IsTheMostExpensiveToolYet: BlogPost = {
   title: 'Claude Fable 5 is the Most Expensive Tool Yet? Analyzing the Ultra-Premium AI Market',
   description: 'People are asking: Claude Fable 5 is the most expensive tool yet? We break down the pricing, features, and enterprise value of this premium AI model.',
   date: '2026-07-14',
-  author: 'Enterprise Tech Insights',
+  author: 'Faizan Arif',
   image: '/images/ai_tools_cover_generic.png',
   readTime: '12 min read',
   category: 'Artificial Intelligence',

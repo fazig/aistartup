@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Legal Disclaimer - Terms of Accuracy | StartupAI Tools",
   description: "Read the StartupAI Tools disclaimer. Understand our limitations regarding tool accuracy, professional advice, and external links.",
+  alternates: { canonical: "/disclaimer" },
+  openGraph: { title: "Legal Disclaimer - Terms of Accuracy | StartupAI Tools", description: "Read the StartupAI Tools disclaimer. Understand our limitations regarding tool accuracy, professional advice, and external links.", url: "/disclaimer", type: "website" },
 };
 
 export default function DisclaimerPage() {
@@ -73,7 +75,7 @@ export default function DisclaimerPage() {
           Before publishing content, deploying robots/sitemaps to search engines, or submitting tax metrics based on our tool outputs, it is your responsibility to verify the data manually or consult with appropriate legal or financial professionals. If you have questions regarding this disclaimer, please contact us at:
         </p>
         <p style={{ marginTop: '0.5rem', fontSize: '1.05rem', fontWeight: 700, color: 'var(--text-main)' }}>
-          disclaimers@startupai.tech
+          legal@aitoolspro.tech
         </p>
       </div>
     </div>

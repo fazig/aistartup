@@ -7,7 +7,7 @@ export const postBestFreeAiColorizeOldPhotos: BlogPost = {
   date: new Date().toISOString().split('T')[0],
   readTime: `10 min read`,
   category: `AI Tools`,
-  author: `AI Writer`,
+  author: "Faizan Arif",
   image: `https://images.unsplash.com/photo-1543857778-c4a1a3e0b2eb?auto=format&fit=crop&q=80&w=1000`,
   content: `There is something profoundly emotional about looking at an old black-and-white photograph. It captures a frozen moment in time—a great-grandparent's wedding day, a historic street corner from a bygone era, or a candid childhood memory of someone you love. But while black-and-white images possess a certain timeless romance, they also create a psychological distance. It feels like looking at history, rather than reality.
 

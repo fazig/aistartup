@@ -5,7 +5,7 @@ export const postChatgptGrokClaude: BlogPost = {
   title: 'The Great AI War: ChatGPT 5.6 vs Grok vs Claude Opus',
   description: 'An incredibly detailed, massive comparison of the bleeding-edge AI models. Discover how OpenAI’s newly released GPT-5.6 stacks up against Elon Musk’s Grok and Anthropic’s masterpiece, Claude Opus.',
   date: '2026-07-09',
-  author: 'AI Research Team',
+  author: 'Faizan Arif',
   image: '/images/chatgpt_grok_claude_cover.png',
   readTime: '10 min read',
   category: 'Technology',

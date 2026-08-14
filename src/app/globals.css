@@ -22,6 +22,8 @@ body {
   font-family: var(--font-sans), system-ui, sans-serif;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* Typography */
@@ -230,13 +232,7 @@ textarea.input-field {
 @media (max-width: 1024px) {
   .grid-4 { grid-template-columns: repeat(3, 1fr); }
 }
-@media (max-width: 768px) {
-  .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); }
-  .grid-2 { grid-template-columns: 1fr; }
-}
-@media (max-width: 480px) {
-  .grid-3, .grid-4 { grid-template-columns: 1fr; }
-}
+/* Merged below */
 
 /* Prose for SEO text */
 .prose {
@@ -396,35 +392,7 @@ textarea.input-field {
 }
 
 /* Extra Responsive Viewport Tweaks */
-@media (max-width: 768px) {
-  .header-desktop-menu {
-    display: none;
-  }
-  .header-toggle {
-    display: flex;
-  }
-  .header-mobile-drawer {
-    display: block;
-  }
-  .container {
-    padding: 0 1.25rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .container {
-    padding: 0 1rem;
-  }
-  .section {
-    padding: 2.5rem 0;
-  }
-  h1 {
-    font-size: 2rem !important;
-  }
-  h2 {
-    font-size: 1.5rem !important;
-  }
-}
+/* Merged below */
 
 /* Custom Directory Styles */
 .category-item-link {
@@ -490,38 +458,25 @@ img, video, iframe, svg {
 
 /* Mobile viewport layout overrides */
 @media (max-width: 768px) {
-  /* Prevent large inline grid structures from causing overflow */
-  .grid-3, .grid-4 {
-    grid-template-columns: 1fr !important;
-  }
-  
-  /* Override large card padding inline overrides */
-  .card {
-    padding: 1.25rem !important;
-  }
-  
-  /* Ensure inputs and flex items wrap correctly */
-  form, .flex-row-wrap {
-    flex-wrap: wrap !important;
-  }
-
-  /* Make markdown and other tables responsive on small screens */
-  table {
-    display: block;
-    width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
+  .grid-2 { grid-template-columns: 1fr; }
+  .grid-3, .grid-4 { grid-template-columns: 1fr !important; }
+  .header-desktop-menu { display: none; }
+  .header-toggle { display: flex; }
+  .header-mobile-drawer { display: block; }
+  .container { padding: 0 1.25rem; }
+  .card { padding: 1.25rem !important; }
+  form, .flex-row-wrap { flex-wrap: wrap !important; }
+  table { display: block; width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
 }
 
 @media (max-width: 640px) {
-  /* Ensure all forms stack nicely on mobile */
-  .grid-2 {
-    grid-template-columns: 1fr !important;
-  }
+  .grid-2 { grid-template-columns: 1fr !important; }
 }
 
-body {
-  word-wrap: break-word;
-  overflow-wrap: break-word;
+@media (max-width: 480px) {
+  .grid-3, .grid-4 { grid-template-columns: 1fr; }
+  .container { padding: 0 1rem; }
+  .section { padding: 2.5rem 0; }
+  h1 { font-size: 2rem !important; }
+  h2 { font-size: 1.5rem !important; }
 }

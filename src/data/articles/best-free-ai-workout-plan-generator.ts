@@ -7,7 +7,7 @@ export const postBestFreeAiWorkoutPlanGenerator: BlogPost = {
   date: new Date().toISOString().split('T')[0],
   readTime: `10 min read`,
   category: `AI Tools`,
-  author: `AI Writer`,
+  author: "Faizan Arif",
   image: `https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=1000`,
   content: `Every January, millions of people walk into a gym with the absolute best of intentions. They buy the expensive lifting shoes, they drink the chalky pre-workout powder, and they stare blankly at the racks of dumbbells. 
 

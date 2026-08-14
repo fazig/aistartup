@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Privacy Policy - Data Security & Usage | StartupAI Tools",
   description: "Read the StartupAI Tools privacy policy. Learn how we handle your tool inputs, cookies, Google Analytics, and ad partners.",
+  alternates: { canonical: "/privacy" },
+  openGraph: { title: "Privacy Policy - Data Security & Usage | StartupAI Tools", description: "Read the StartupAI Tools privacy policy. Learn how we handle your tool inputs, cookies, Google Analytics, and ad partners.", url: "/privacy", type: "website" },
 };
 
 export default function PrivacyPage() {
@@ -80,7 +82,7 @@ export default function PrivacyPage() {
           If you have questions regarding this Privacy Policy, your CCPA/GDPR rights, or wish to submit a data erasure request, please contact our Data Protection Officer at: 
         </p>
         <p style={{ marginTop: '0.5rem', fontSize: '1.05rem', fontWeight: 700, color: 'var(--text-main)' }}>
-          privacy@startupai.tech
+          privacy@aitoolspro.tech
         </p>
       </div>
     </div>

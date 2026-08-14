@@ -7,7 +7,7 @@ export const postBestFreeAiVoiceCloner: BlogPost = {
   date: new Date().toISOString().split('T')[0],
   readTime: `10 min read`,
   category: `AI Tools`,
-  author: `AI Writer`,
+  author: "Faizan Arif",
   image: `https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&q=80&w=1000`,
   content: `Every podcaster, YouTuber, and audiobook narrator knows the sheer agony of the editing phase. You spend three hours recording a highly technical video script. You pack up your expensive microphone, turn off your studio lights, and sit down at your computer to edit. 
 

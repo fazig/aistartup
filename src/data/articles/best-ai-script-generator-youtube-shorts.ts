@@ -7,7 +7,7 @@ export const postBestAiScriptGeneratorYoutubeShorts: BlogPost = {
   date: new Date().toISOString().split('T')[0],
   readTime: `10 min read`,
   category: `AI Tools`,
-  author: `AI Writer`,
+  author: "Faizan Arif",
   image: `https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=1000`,
   content: `We all know the staggering statistics. YouTube Shorts receives over 50 billion daily views. It is the single fastest way to grow a brand new channel from zero to thousands of subscribers. But there is a massive catch: the competition is brutal. 
 

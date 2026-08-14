@@ -291,6 +291,16 @@ export default function PngToWebp() {
         <p>
           You can choose between lossy compression (which discards minor pixel information to achieve ultra-small sizes) or lossless compression (which keeps the original pixel colors identical). The quality slider lets you pinpoint the sweet spot between clarity and file size reduction in real time.
         </p>
+        <h2>How to convert PNG to WebP here</h2>
+        <ol>
+          <li>Drop a PNG (transparency is kept).</li>
+          <li>Pick lossy for photos or lossless for logos and UI icons.</li>
+          <li>Watch the preview file size, then download or copy the result.</li>
+        </ol>
+        <h2>FAQ</h2>
+        <p><strong>Will Google index WebP?</strong> Yes. Serve WebP with a fallback only if you still support very old browsers.</p>
+        <p><strong>Does conversion leave this device?</strong> No. The canvas encoder runs locally.</p>
+        <p><strong>When should I keep PNG?</strong> Keep PNG for lossless print assets or editors that cannot open WebP. For websites, WebP is usually the better default.</p>
       </div>
     </div>
   );

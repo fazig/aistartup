@@ -7,7 +7,7 @@ export const postBestFreeAiRecipeGenerator: BlogPost = {
   date: new Date().toISOString().split('T')[0],
   readTime: `10 min read`,
   category: `AI Tools`,
-  author: `AI Writer`,
+  author: "Faizan Arif",
   image: `https://images.unsplash.com/photo-1495521821757-a1efb6729352?auto=format&fit=crop&q=80&w=1000`,
   content: `We have all experienced the 6:00 PM panic. You open the refrigerator, tired and hungry, and stare at a disjointed collection of groceries. You have half an onion, a wilted bag of spinach, two chicken thighs, and a nearly empty bottle of soy sauce. 
 

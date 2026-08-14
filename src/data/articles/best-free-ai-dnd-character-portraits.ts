@@ -7,7 +7,7 @@ export const postBestFreeAiDndCharacterPortraits: BlogPost = {
   date: new Date().toISOString().split('T')[0],
   readTime: `10 min read`,
   category: `AI Tools`,
-  author: `AI Writer`,
+  author: "Faizan Arif",
   image: `https://images.unsplash.com/photo-1605806616949-1e87b487cb2a?auto=format&fit=crop&q=80&w=1000`,
   content: `Every tabletop role-playing game starts the exact same way. You roll your stats, choose your class, pick your alignment, and write a sprawling three-page backstory about how your Tiefling Warlock lost their parents to a mysterious cult. You have the perfect image of them in your head: the exact curve of their horns, the tattered edge of their dark cloak, the glowing amethyst amulet around their neck.
 

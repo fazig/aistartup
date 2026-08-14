@@ -5,7 +5,7 @@ export const postHowToVibeCodeUsingCodex: BlogPost = {
   title: 'How to Vibe Code Using Codex: The Future of Intuitive Software Development',
   description: 'Learn how to vibe code using Codex. Discover the seamless integration of natural language and programming, transforming how developers build software.',
   date: '2026-07-14',
-  author: 'Developer Relations Team',
+  author: 'Faizan Arif',
   image: '/images/vibe_coding_future.webp',
   readTime: '14 min read',
   category: 'Development',

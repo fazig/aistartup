@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Terms of Service - Usage Guidelines | StartupAI Tools",
   description: "Read the StartupAI Tools terms of service. Understand our website guidelines, acceptable usage parameters, and liability exclusions.",
+  alternates: { canonical: "/terms" },
+  openGraph: { title: "Terms of Service - Usage Guidelines | StartupAI Tools", description: "Read the StartupAI Tools terms of service. Understand our website guidelines, acceptable usage parameters, and liability exclusions.", url: "/terms", type: "website" },
 };
 
 export default function TermsPage() {
@@ -79,7 +81,7 @@ export default function TermsPage() {
           These Terms shall be governed by and construed in accordance with the laws of your local jurisdiction, without regard to its conflict of law principles. If you have any inquiries regarding these terms, please contact:
         </p>
         <p style={{ marginTop: '0.5rem', fontSize: '1.05rem', fontWeight: 700, color: 'var(--text-main)' }}>
-          terms@startupai.tech
+          terms@aitoolspro.tech
         </p>
       </div>
     </div>

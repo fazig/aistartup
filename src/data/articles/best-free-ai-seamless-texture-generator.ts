@@ -7,7 +7,7 @@ export const postBestFreeAiSeamlessTextureGenerator: BlogPost = {
   date: new Date().toISOString().split('T')[0],
   readTime: `10 min read`,
   category: `AI Tools`,
-  author: `AI Writer`,
+  author: "Faizan Arif",
   image: `https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=1000`,
   content: `Every 3D artist, game developer, and architectural visualizer knows the pain of "The Tile." You spend hours modeling the perfect cobblestone street for your indie game. You find a decent texture online, apply it to your mesh, and immediately, your heart sinks. 
 

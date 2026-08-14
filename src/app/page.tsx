@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   title: "StartupAI Tools | Free AI Image Enhancer & Web Utilities",
   description: "Access over 100+ free, lightning-fast web tools including a free HD AI Image Enhancer (Remini alternative), JSON formatters, and SEO utilities. No registration required.",
   keywords: "free AI image enhancer, Remini alternative free, web tools, developer utilities, upscale image to HD",
+  alternates: { canonical: "/" },
+  openGraph: { title: "StartupAI Tools | Free AI Image Enhancer & Web Utilities", description: "Access over 100+ free, lightning-fast web tools including a free HD AI Image Enhancer (Remini alternative), JSON formatters, and SEO utilities. No registration required.", url: "/", type: "website" },
+  twitter: { card: "summary_large_image", title: "StartupAI Tools | Free AI Image Enhancer & Web Utilities", description: "Access over 100+ free, lightning-fast web tools including a free HD AI Image Enhancer (Remini alternative), JSON formatters, and SEO utilities. No registration required." },
 };
 
 export default function Home() {

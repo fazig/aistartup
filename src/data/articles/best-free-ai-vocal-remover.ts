@@ -7,7 +7,7 @@ export const postBestFreeAiVocalRemover: BlogPost = {
   date: new Date().toISOString().split('T')[0],
   readTime: `10 min read`,
   category: `AI Tools`,
-  author: `AI Writer`,
+  author: "Faizan Arif",
   image: `https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80&w=1000`,
   content: `Every music producer, DJ, and remixer has faced the exact same frustrating hurdle. You find the perfect track. The beat is incredible, the melody is haunting, and you instantly know exactly how you want to flip it for your next club edit. There is just one massive problem: the lead vocals are plastered right over the section you want to sample. 
 
