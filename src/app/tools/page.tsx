@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { 
   FileText, Search, Link as LinkIcon, Settings, Code, Image as ImageIcon,
-  Calculator, Sparkles, ArrowLeftRight, Binary, Keyboard
+  Calculator, Sparkles, ArrowLeftRight, Binary, Keyboard, Activity
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -12,6 +12,13 @@ export const metadata: Metadata = {
 
 export default function ToolsDirectory() {
   const categories = [
+    {
+      title: "Live Markets",
+      icon: <Activity size={20} color="var(--primary)" />,
+      tools: [
+        { name: "Live Trading Desk", path: "/tools/live-trading", status: "new" },
+      ]
+    },
     {
       title: "Games & Speed Tests",
       icon: <Keyboard size={20} color="var(--primary)" />,
@@ -234,7 +241,7 @@ export default function ToolsDirectory() {
     }
   ];
 
-  const totalLive = categories.reduce((acc, cat) => acc + cat.tools.filter(t => t.status === "live").length, 0);
+  const totalLive = categories.reduce((acc, cat) => acc + cat.tools.filter(t => t.status === "live" || t.status === "new").length, 0);
 
   return (
     <div className="container" style={{ padding: '4rem 1.5rem' }}>
@@ -265,10 +272,10 @@ export default function ToolsDirectory() {
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
               {cat.tools.map((tool, j) => (
                 <li key={j}>
-                  {tool.status === "live" ? (
-                    <Link href={tool.path} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0.5rem', borderRadius: '6px', background: '#eff6ff' }}>
+                  {tool.status === "live" || tool.status === "new" ? (
+                    <Link href={tool.path} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0.5rem', borderRadius: '6px', background: tool.status === "new" ? '#fff7ed' : '#eff6ff' }}>
                       <span style={{ fontWeight: 500 }}>{tool.name}</span>
-                      <span style={{ fontSize: '0.75rem', padding: '0.2rem 0.5rem', background: 'var(--primary)', color: 'white', borderRadius: '12px', fontWeight: 600 }}>LIVE</span>
+                      <span style={{ fontSize: '0.75rem', padding: '0.2rem 0.5rem', background: tool.status === "new" ? '#ea580c' : 'var(--primary)', color: 'white', borderRadius: '12px', fontWeight: 600 }}>{tool.status === "new" ? "NEW" : "LIVE"}</span>
                     </Link>
                   ) : (
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0.5rem', borderRadius: '6px', color: 'var(--text-muted)' }}>

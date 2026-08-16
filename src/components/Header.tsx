@@ -53,6 +53,27 @@ export default function Header() {
           <Link href="/tools" className="nav-link" style={{ color: '#475569', fontWeight: 600, fontSize: '0.9rem' }}>
             All Tools
           </Link>
+          <Link
+            href="/tools/live-trading"
+            className="nav-link"
+            style={{
+              color: '#b45309',
+              fontWeight: 700,
+              fontSize: '0.9rem',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.4rem'
+            }}
+          >
+            <span style={{
+              width: 7,
+              height: 7,
+              borderRadius: 99,
+              background: '#10b981',
+              boxShadow: '0 0 0 3px rgba(16, 185, 129, 0.18)'
+            }} />
+            Live Trading
+          </Link>
 
           {/* Dropdown for Popular Tools */}
           <div 
@@ -119,6 +140,26 @@ export default function Header() {
                 >
                   <span style={{ fontWeight: 700, color: '#ec4899', display: 'flex', alignItems: 'center', gap: '0.25rem' }}><Sparkles size={14} /> Image Enhancer HD</span>
                   <span style={{ fontSize: '0.75rem', color: '#64748b' }}>Free AI image upscaling</span>
+                </Link>
+
+                <Link 
+                  href="/tools/live-trading" 
+                  className="dropdown-item"
+                  onClick={() => setDropdownOpen(false)}
+                  style={{
+                    padding: '0.65rem 0.85rem',
+                    borderRadius: '10px',
+                    fontSize: '0.85rem',
+                    color: '#0f172a',
+                    fontWeight: 500,
+                    textDecoration: 'none',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    transition: 'background-color 0.15s'
+                  }}
+                >
+                  <span style={{ fontWeight: 700, color: '#b45309' }}>Live Trading Desk</span>
+                  <span style={{ fontSize: '0.75rem', color: '#64748b' }}>Realtime market pulse</span>
                 </Link>
 
                 <Link 
@@ -245,6 +286,9 @@ export default function Header() {
           <Link href="/tools" className="mobile-nav-link" onClick={closeMenu}>
             All Tools
           </Link>
+          <Link href="/tools/live-trading" className="mobile-nav-link" style={{ color: '#b45309', fontWeight: 700 }} onClick={closeMenu}>
+            Live Trading
+          </Link>
           <Link href="/blog" className="mobile-nav-link" onClick={closeMenu}>
             Blog
           </Link>
@@ -257,6 +301,9 @@ export default function Header() {
           </div>
           <Link href="/tools/image-enhancer" className="mobile-nav-link" style={{ paddingLeft: "1rem", color: '#ec4899', display: 'flex', alignItems: 'center', gap: '0.25rem' }} onClick={closeMenu}>
             <Sparkles size={14} /> Image Enhancer HD
+          </Link>
+          <Link href="/tools/live-trading" className="mobile-nav-link" style={{ paddingLeft: "1rem", color: '#b45309' }} onClick={closeMenu}>
+            Live Trading Desk
           </Link>
           <Link href="/tools/grammar-checker" className="mobile-nav-link" style={{ paddingLeft: "1rem" }} onClick={closeMenu}>
             Free Grammar Checker

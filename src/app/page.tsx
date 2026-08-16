@@ -17,6 +17,7 @@ import {
   Keyboard,
   Timer,
   ArrowRight,
+  ChartCandlestick,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -143,6 +144,22 @@ export default function Home() {
               <span className="home-tool-go">Enhance Image →</span>
             </Link>
 
+            <Link href="/tools/live-trading" className="home-tool">
+              <span className="home-tool-ico" aria-hidden="true">
+                <ChartCandlestick size={20} />
+              </span>
+              <div>
+                <h3>
+                  Live Trading Desk <span className="home-chip home-chip-hot">Live</span>
+                </h3>
+                <p>
+                  Realtime crypto ticks, stock quotes, forex, and a heat mosaic on a
+                  nocturne trading floor.
+                </p>
+              </div>
+              <span className="home-tool-go">Open Desk →</span>
+            </Link>
+
             <Link href="/tools/json-formatter" className="home-tool">
               <span className="home-tool-ico" aria-hidden="true">
                 <FileJson size={20} />
@@ -222,6 +239,38 @@ export default function Home() {
                 </p>
               </div>
               <span className="home-tool-go">Use Tool →</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="home-section">
+        <div className="container">
+          <div className="home-pulse">
+            <div>
+              <p className="home-kicker" style={{ color: "#e4c078", marginBottom: "0.65rem" }}>
+                New live tool
+              </p>
+              <h2>Watch markets in realtime</h2>
+              <p>
+                Pulse Desk streams crypto over a live wire, then layers stocks, forex, and
+                metals onto a gold-on-ink trading floor — ticker tape, sparkline, heat mosaic,
+                and an order ladder.
+              </p>
+              <div className="home-typing-meta">
+                <span>
+                  <ChartCandlestick size={14} /> Live crypto ticks
+                </span>
+                <span>
+                  <CheckCircle size={14} /> Stocks &amp; forex
+                </span>
+                <span>
+                  <Timer size={14} /> Heat mosaic
+                </span>
+              </div>
+            </div>
+            <Link href="/tools/live-trading" className="home-btn home-btn-primary">
+              Open Live Trading Desk
             </Link>
           </div>
         </div>
@@ -352,6 +401,9 @@ export default function Home() {
               </div>
               <p>Estimate loans, analyze fee margins, and check dynamic percentages in seconds.</p>
               <ul>
+                <li>
+                  <Link href="/tools/live-trading">Live Trading Desk</Link>
+                </li>
                 <li>
                   <Link href="/tools/loan-calculator">Loan Calculator</Link>
                 </li>

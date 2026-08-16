@@ -782,6 +782,43 @@ img, video, iframe, svg {
   color: var(--ink);
 }
 
+.home-pulse {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1.5rem 1.6rem;
+  background:
+    radial-gradient(680px 180px at 100% 0%, rgba(228, 192, 120, 0.18), transparent 55%),
+    #07080b;
+  color: #f3eee3;
+  border-radius: 18px;
+}
+
+.home-pulse h2 {
+  color: #f3eee3;
+  font-size: 1.45rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.4rem;
+}
+
+.home-pulse p {
+  color: #c9c0b2;
+  font-size: 0.95rem;
+  max-width: 38rem;
+  margin-bottom: 0.85rem;
+}
+
+.home-pulse .home-btn-primary {
+  background: #e4c078;
+  color: #161411;
+}
+
+.home-pulse .home-btn-primary:hover {
+  background: #f3eee3;
+  color: #161411;
+}
+
 .home-cats {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -909,7 +946,8 @@ img, video, iframe, svg {
   .home-tools,
   .home-cats,
   .home-why,
-  .home-typing {
+  .home-typing,
+  .home-pulse {
     grid-template-columns: 1fr;
   }
   .home-why article {
