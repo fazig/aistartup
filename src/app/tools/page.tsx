@@ -16,7 +16,7 @@ export default function ToolsDirectory() {
       title: "Live Markets",
       icon: <Activity size={20} color="var(--primary)" />,
       tools: [
-        { name: "Live Trading Desk", path: "/tools/live-trading", status: "new" },
+        { name: "TradingFEST", path: "/tools/live-trading", status: "new" },
       ]
     },
     {

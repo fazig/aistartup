@@ -72,7 +72,7 @@ export default function Header() {
               background: '#10b981',
               boxShadow: '0 0 0 3px rgba(16, 185, 129, 0.18)'
             }} />
-            Live Trading
+            TradingFEST
           </Link>
 
           {/* Dropdown for Popular Tools */}
@@ -158,8 +158,8 @@ export default function Header() {
                     transition: 'background-color 0.15s'
                   }}
                 >
-                  <span style={{ fontWeight: 700, color: '#b45309' }}>Live Trading Desk</span>
-                  <span style={{ fontSize: '0.75rem', color: '#64748b' }}>Realtime market pulse</span>
+                  <span style={{ fontWeight: 700, color: '#b45309' }}>TradingFEST</span>
+                  <span style={{ fontSize: '0.75rem', color: '#64748b' }}>Live markets & USDT rates</span>
                 </Link>
 
                 <Link 
@@ -287,7 +287,7 @@ export default function Header() {
             All Tools
           </Link>
           <Link href="/tools/live-trading" className="mobile-nav-link" style={{ color: '#b45309', fontWeight: 700 }} onClick={closeMenu}>
-            Live Trading
+            TradingFEST
           </Link>
           <Link href="/blog" className="mobile-nav-link" onClick={closeMenu}>
             Blog
@@ -303,7 +303,7 @@ export default function Header() {
             <Sparkles size={14} /> Image Enhancer HD
           </Link>
           <Link href="/tools/live-trading" className="mobile-nav-link" style={{ paddingLeft: "1rem", color: '#b45309' }} onClick={closeMenu}>
-            Live Trading Desk
+            TradingFEST
           </Link>
           <Link href="/tools/grammar-checker" className="mobile-nav-link" style={{ paddingLeft: "1rem" }} onClick={closeMenu}>
             Free Grammar Checker

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, IBM_Plex_Mono, Outfit } from "next/font/google";
+import { Fraunces, IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
 
 const serif = Fraunces({
   subsets: ["latin"],
@@ -7,8 +7,9 @@ const serif = Fraunces({
   display: "swap",
 });
 
-const sans = Outfit({
+const sans = IBM_Plex_Sans({
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-pulse-sans",
   display: "swap",
 });
@@ -21,16 +22,16 @@ const mono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Live Trading Desk — Real-Time Market Pulse",
+  title: "TradingFEST — Live Trading, USDT Rates & Currency Converter",
   description:
-    "Free realtime trading desk with live crypto prices, stock quotes, forex, metals, sparklines, a heat mosaic, and an order ladder. No signup.",
+    "TradingFEST is a free professional trading board with live crypto, stocks, forex, a multi-currency converter, and USDT prices from Binance, OKX, Bitget and 15 more exchanges.",
   keywords:
-    "live trading, realtime stock prices, live crypto prices, forex quotes, market pulse, free trading desk",
+    "TradingFEST, live trading, USDT rates, Binance OKX Bitget, currency converter, live crypto prices, forex converter",
   alternates: { canonical: "/tools/live-trading" },
   openGraph: {
-    title: "Live Trading Desk — Real-Time Market Pulse",
+    title: "TradingFEST — Live Trading & Currency Converter",
     description:
-      "Watch crypto, stocks, forex, and metals on a unique nocturne trading floor with live ticks and heat maps.",
+      "Watch live markets, convert any currency, and compare USDT prices across 18 exchanges.",
     url: "/tools/live-trading",
     type: "website",
   },
@@ -40,9 +41,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    name: "Live Trading Desk",
+    name: "TradingFEST",
     description:
-      "Free realtime trading desk with live crypto prices, stock quotes, forex, metals, and market heat maps.",
+      "Free professional trading board with live crypto, stocks, forex, currency conversion, and multi-exchange USDT rates.",
     applicationCategory: "FinanceApplication",
     operatingSystem: "All",
     offers: {
