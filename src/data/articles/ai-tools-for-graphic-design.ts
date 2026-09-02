@@ -8,7 +8,7 @@ export const postAiToolsGraphicDesign: BlogPost = {
   readTime: "25 min read",
   category: "AI & Technology",
   author: "Faizan Arif",
-  image: "/ai_graphic_design_cover.png",
+  image: "/ai_graphic_design_cover.webp",
   content: `# Revolutionizing Visual Assets: The Best AI Tools for Graphic Design and UI Styling
 
 The digital landscape moves at a relentless pace. In the fast-paced realm of digital marketing and web development, modern studios are rapidly integrating **ai tools for graphic design** to accelerate their creative pipelines and scale visual asset production. The transition from traditional, manual graphic design software to intelligence-driven systems marks a significant shift in how visual art is conceptualized, executed, and delivered. As digital environments demand high-velocity content, learning how to leverage the latest **ai tools for graphic design** is no longer optional for visual creators. 

@@ -10,7 +10,9 @@ import CookieConsent from "@/components/CookieConsent";
 
 const inter = Inter({ 
   subsets: ["latin"], 
-  variable: "--font-sans" 
+  variable: "--font-sans",
+  display: "swap",
+  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -63,12 +65,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta name="google-adsense-account" content="ca-pub-6854025589707929" />
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6854025589707929"
-          crossOrigin="anonymous"
-        />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
       </head>
       <body className={inter.variable}>
         <Header />

@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import path from "path";
 
 const nextConfig: NextConfig = {
   compress: true,
@@ -7,8 +8,17 @@ const nextConfig: NextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
   },
+  turbopack: {
+    root: path.resolve(__dirname),
+  },
   experimental: {
-    optimizePackageImports: ['lucide-react', 'crypto-js', 'exifr', 'qrcode.react'],
+    optimizePackageImports: [
+      'lucide-react',
+      'crypto-js',
+      'exifr',
+      'qrcode.react',
+      '@next/third-parties',
+    ],
   },
   images: {
     formats: ['image/avif', 'image/webp'],
