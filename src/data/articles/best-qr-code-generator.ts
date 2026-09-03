@@ -8,7 +8,7 @@ export const postBestQrCodeGenerator: BlogPost = {
   readTime: `15 min read`,
   category: `Web Tools`,
   author: `Faizan`,
-  image: `/images/best-qr-code-generator.png`,
+  image: `/images/best-qr-code-generator.webp`,
   content: `# The Complete Guide to Choosing a QR Code Generator in 2026
 
 In an era of mobile-first experiences, Quick Response (QR) codes have transitioned from a clunky novelty into an essential bridge between the physical and digital worlds. From contactless menus and event ticketing to direct marketing flyers, product packaging, and two-factor authentication, QR codes are ubiquitous.

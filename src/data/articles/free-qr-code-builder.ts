@@ -8,7 +8,7 @@ export const postFreeQrCodeBuilder: BlogPost = {
   readTime: "9 min read",
   category: "Marketing Tools",
   author: "Faizan Arif",
-  image: "/qr_code_cover.png",
+  image: "/qr_code_cover.webp",
   content: `![Free QR Code Builder](/qr_code_cover.png)
 
 In the post-pandemic digital landscape, Quick Response (QR) codes have become an omnipresent bridge between the physical and digital worlds. From restaurant menus and business cards to real estate signs and event tickets, everyone is looking for a reliable **free qr code builder**.

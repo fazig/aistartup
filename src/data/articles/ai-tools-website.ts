@@ -8,7 +8,7 @@ export const postAiToolsWebsite: BlogPost = {
   readTime: "25 min read",
   category: "AI & Technology",
   author: "Faizan Arif",
-  image: "/ai_tools_website_cover.png",
+  image: "/ai_tools_website_cover.webp",
   content: `# How to Build an AI Tools Website from Scratch: Next.js, Tailwind, and OpenAPI Integration Guide
 
 In the modern digital landscape, the access to specialized artificial intelligence utilities has transformed how individuals and organizations execute work. An **ai tools website** offers a gateway to micro-services designed to streamline developer workflows, creative writing, image manipulation, data analytics, and automation. By building an **ai tools website** using Next.js, Tailwind CSS, and OpenAPI integrations, engineers can construct high-performance hubs that serve thousands of users, achieve excellent search indexing, and offer seamless integration interfaces.

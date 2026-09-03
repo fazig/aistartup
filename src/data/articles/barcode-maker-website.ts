@@ -8,7 +8,7 @@ export const postBarcodeMakerWebsite: BlogPost = {
   readTime: "7 min read",
   category: "Business Tools",
   author: "Faizan Arif",
-  image: "/barcode_cover.png",
+  image: "/barcode_cover.webp",
   content: `![Generate Barcode Online](/barcode_cover.png)
 
 From the local grocery store checkout aisle to global Amazon fulfillment centers, barcodes are the invisible threads holding modern commerce together. If you are launching a new product, managing an internal warehouse, or simply trying to catalog your private library, you will eventually need to **generate barcode** graphics.

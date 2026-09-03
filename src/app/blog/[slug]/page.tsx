@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { BLOG_POSTS } from "@/data/posts";
+import { BLOG_POSTS, BLOG_METADATA } from "@/data/posts";
 import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
 
 export async function generateStaticParams() {
-  return BLOG_POSTS.map((post) => ({
+  return BLOG_METADATA.map((post) => ({
     slug: post.slug,
   }));
 }
@@ -17,7 +17,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const post = BLOG_POSTS.find((p) => p.slug === slug);
+  const post = BLOG_METADATA.find((p) => p.slug === slug);
   if (!post) return {};
   return {
     title: `${post.title} | StartupAI Tools Blog`,
@@ -159,6 +159,7 @@ export default async function BlogPostPage({
           alt={post.title} 
           width={800}
           height={450}
+          sizes="(max-width: 860px) 100vw, 860px"
           style={{ width: "100%", height: "auto", display: "block", maxHeight: "450px", objectFit: "cover" }} 
           priority
         />

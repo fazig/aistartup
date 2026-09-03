@@ -4,7 +4,6 @@ import React, { useState, useRef, useEffect, useCallback } from "react";
 import type { Config } from "@imgly/background-removal";
 import { UploadCloud, Download, Image as ImageIcon, CheckCircle, Trash2, ArrowLeft, Loader2, Sparkles } from "lucide-react";
 import Link from "next/link";
-import Head from "next/head";
 
 const COLORS = [
   { label: "Transparent", value: "transparent" },
@@ -147,10 +146,6 @@ export default function RemoveBackgroundTool() {
 
   return (
     <div className="container" style={{ padding: "3rem 1.5rem" }}>
-      {/* SEO Title & Meta for Next.js App Router can be added via head if needed, but since it's a client component, 
-          we usually rely on layout or let Google crawl the static text below. */}
-      <title>Free AI Background Remover | Remove BG from Images Free</title>
-      <meta name="description" content="Use our free AI Background Remover to easily make image backgrounds transparent. Add custom colors and download instantly. Fast, private, and 100% free." />
 
       <Link
         href="/tools"

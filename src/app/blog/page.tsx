@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { BLOG_POSTS } from "@/data/posts";
+import { BLOG_METADATA } from "@/data/posts-meta";
 import { Calendar, User, Clock, ArrowRight, BookOpen } from "lucide-react";
 
 export const metadata = {
@@ -9,6 +9,10 @@ export const metadata = {
 };
 
 export default function BlogIndex() {
+  const sortedPosts = [...BLOG_METADATA].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
+
   return (
     <div className="container" style={{ padding: "4rem 1.5rem" }}>
       {/* Blog Header */}
@@ -44,7 +48,7 @@ export default function BlogIndex() {
         maxWidth: "1100px",
         margin: "0 auto 4rem auto"
       }}>
-        {[...BLOG_POSTS].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).map((post) => (
+        {sortedPosts.map((post, index) => (
           <article 
             key={post.slug} 
             className="card" 
@@ -64,6 +68,9 @@ export default function BlogIndex() {
               alt={post.title} 
               width={400}
               height={200}
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              priority={index < 3}
+              loading={index < 3 ? undefined : "lazy"}
               style={{ 
                 width: "100%", 
                 height: "200px", 

@@ -47,7 +47,7 @@ export default function CookieConsent() {
       <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
         <h3 style={{ fontSize: "1.1rem", fontWeight: 700, margin: 0, color: "white" }}>We Value Your Privacy</h3>
         <p style={{ fontSize: "0.875rem", margin: 0, lineHeight: 1.5, color: "#94a3b8" }}>
-          We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies. Read our <Link href="/cookie-policy" style={{ color: "var(--primary)", textDecoration: "none" }}>Cookie Policy</Link> for more information.
+          We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking &quot;Accept All&quot;, you consent to our use of cookies. Read our <Link href="/cookie-policy" style={{ color: "var(--primary)", textDecoration: "none" }}>Cookie Policy</Link> for more information.
         </p>
       </div>
       <div style={{ display: "flex", gap: "1rem", alignSelf: "flex-end" }}>

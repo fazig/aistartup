@@ -4,7 +4,7 @@ import type { NextRequest } from "next/server";
 const CANONICAL_HOST = "www.aitoolspro.tech";
 const PREVIEW_HOSTS = ["aistartup-silk.vercel.app"];
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const host = request.headers.get("host")?.split(":")[0]?.toLowerCase() ?? "";
   if (PREVIEW_HOSTS.includes(host)) {
     const url = request.nextUrl.clone();
@@ -17,5 +17,7 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/((?!_next/static|_next/image|favicon.ico).*)"],
+  matcher: [
+    "/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp|avif|ico|bmp|woff|woff2|txt|xml)$).*)",
+  ],
 };

@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 import fs from "fs";
 import path from "path";
-import { BLOG_POSTS } from "@/data/posts";
+import { BLOG_METADATA } from "@/data/posts-meta";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // We can default this to a placeholder or detect the deployment URL,
@@ -69,7 +69,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const sitemapEntries: MetadataRoute.Sitemap = [
     ...staticEntries,
     ...toolEntries,
-    ...BLOG_POSTS.map(post => ({
+    ...BLOG_METADATA.map(post => ({
       url: `${baseUrl}/blog/${post.slug}`,
       lastModified: buildDate,
       changeFrequency: "weekly" as const,

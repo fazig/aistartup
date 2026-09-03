@@ -6,7 +6,7 @@ export const postChinaAiToolsTop100: BlogPost = {
   description: 'A massive, highly comprehensive breakdown of the incredibly innovative, rapidly expanding artificial intelligence ecosystem emerging from China. Discover the incredible tools reshaping the global digital landscape.',
   date: '2026-07-09',
   author: 'Faizan Arif',
-  image: '/images/china_ai_tools_cover.png',
+  image: '/images/china_ai_tools_cover.webp',
   readTime: '10 min read',
   category: 'Technology',
   content: `

@@ -8,7 +8,7 @@ export const postNotebookLmContentCreatorStudio: BlogPost = {
   readTime: "6 min read",
   category: "Creator Economy",
   author: "Faizan Arif",
-  image: "/images/notebooklm_content_cover.png",
+  image: "/images/notebooklm_content_cover.webp",
   content: `Content creation used to be a linear, exhausting process. You wrote a blog post, and then you moved on to the next one. If you wanted to turn that blog post into a YouTube video, a podcast episode, and a series of Instagram reels, you had to rewrite the script, record the audio, and manually design the graphics. It took days. Today, the most successful digital creators aren't working harder; they are working exponentially smarter by leveraging multi-modal AI tools.
 
 At the center of this revolution is the new "Studio" concept within Google NotebookLM. By uploading a single core document—a foundational "Source of Truth"—creators can now orchestrate an automated content factory that outputs nine different formats simultaneously.

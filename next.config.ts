@@ -12,12 +12,17 @@ const nextConfig: NextConfig = {
     root: path.resolve(__dirname),
   },
   experimental: {
+    staleTimes: {
+      dynamic: 30,
+      static: 300,
+    },
     optimizePackageImports: [
       'lucide-react',
       'crypto-js',
       'exifr',
       'qrcode.react',
       '@next/third-parties',
+      '@imgly/background-removal',
     ],
   },
   images: {
@@ -31,6 +36,10 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'secure.espncdn.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
       }
     ],
   },

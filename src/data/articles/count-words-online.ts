@@ -8,7 +8,7 @@ export const postCountWordsOnline: BlogPost = {
   readTime: "8 min read",
   category: "Writing Tools",
   author: "Faizan Arif",
-  image: "/word_counter_cover.png",
+  image: "/word_counter_cover.webp",
   content: `![Count Number of Words Online](/word_counter_cover.png)
 
 Whether you are an aspiring novelist working on your first manuscript, a student struggling to meet a strict essay requirement, or a digital marketer optimizing meta descriptions for SEO, you will inevitably need to **count number of words online**.

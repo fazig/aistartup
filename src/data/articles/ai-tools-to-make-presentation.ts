@@ -8,7 +8,7 @@ export const postAiToolsPresentation: BlogPost = {
   readTime: "25 min read",
   category: "AI & Technology",
   author: "Faizan Arif",
-  image: "/ai_presentation_tools_cover.png",
+  image: "/ai_presentation_tools_cover.webp",
   content: `For years, creating a slide deck meant hours of manual alignment, wrestling with textbox margins, hunting for high-resolution images, and manually resizing shapes. It is a slow, exhausting process that distracts from what truly matters: your content and your story. When you need to design slides on a tight deadline, finding the right **ai tools to make presentation** decks can save you hours of manual frustration.
 
 The presentation workflow has undergone a massive paradigm shift. Today's **ai tools to make presentation** slides have evolved far beyond basic templates. By utilizing **ai tools to make presentation** materials, designers and marketers can focus on storytelling rather than alignment. In this comprehensive guide, we will analyze the technical architecture of AI slide generators, review the top ten platforms, walk through a step-by-step template design workflow, and examine how you can automate slide design using code.

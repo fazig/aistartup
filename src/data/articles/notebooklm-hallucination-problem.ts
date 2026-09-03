@@ -8,7 +8,7 @@ export const postNotebookLmHallucinationProblem: BlogPost = {
   readTime: "5 min read",
   category: "Technology & Research",
   author: "Faizan Arif",
-  image: "/images/notebooklm_research_cover.png",
+  image: "/images/notebooklm_research_cover.webp",
   content: `For all the miraculous advancements in artificial intelligence over the last few years, one critical flaw has continued to plague the industry: hallucinations. We have all experienced it. You ask a frontier model for a historical fact, a legal precedent, or a medical statistic, and it confidently responds with a beautifully written, entirely fabricated answer. In a casual conversation, a hallucination is funny. In a professional research environment, it is catastrophic.
 
 As professionals demand higher reliability from their tools, the focus has shifted from "How smart is this model?" to "How verifiable is this model?" This is exactly where Google NotebookLM has carved out its niche, establishing itself as the undisputed gold standard for fact-checked, rigorous research.

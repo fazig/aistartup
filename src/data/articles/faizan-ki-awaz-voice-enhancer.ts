@@ -8,7 +8,7 @@ export const postFaizanKiAwazVoiceEnhancer: BlogPost = {
   readTime: "15 min read",
   category: "AI Tools Development",
   author: "Faizan Arif",
-  image: "/images/voice_enhancer_ui.png",
+  image: "/images/voice_enhancer_ui.webp",
   content: `
 <iframe width="100%" height="450" src="https://www.youtube.com/embed/nz57igUDjxU?si=-rkGp8T3i-q1H5zG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 

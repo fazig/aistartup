@@ -8,7 +8,7 @@ export const postAiVsHumansWhoWillWinInTheEnd: BlogPost = {
   readTime: `8 min read`,
   category: `Philosophy & Future`,
   author: `Faizan`,
-  image: `/images/ai-vs-humans.png`,
+  image: `/images/ai-vs-humans.webp`,
   content: `# AI vs Humans: Who Will Win in the End? The Ultimate Philosophical Debate
 
 As artificial intelligence advances, a profound question haunts humanity: **Ai vs humans who will win in the end**? It sounds like the plot of a science fiction movie, but **Ai vs humans who will win in the end** is a very real debate. When we contemplate **Ai vs humans who will win in the end**, we must define what 'winning' actually means. Some fear that in **Ai vs humans who will win in the end**, machines will replace us. But others believe that in **Ai vs humans who will win in the end**, cooperation is the true outcome. When asking **Ai vs humans who will win in the end**, we wonder. The debate **Ai vs humans who will win in the end** is huge.

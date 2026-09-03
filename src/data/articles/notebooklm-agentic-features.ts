@@ -8,7 +8,7 @@ export const postNotebookLmAgenticFeatures: BlogPost = {
   readTime: "5 min read",
   category: "AI & Productivity",
   author: "Faizan Arif",
-  image: "/images/notebooklm_agent_cover.png",
+  image: "/images/notebooklm_agent_cover.webp",
   content: `For the past two years, the AI landscape has been dominated by traditional conversational interfaces. You type a prompt, you get an answer. It was revolutionary at first, but it quickly hit a wall. When you are dealing with a fifty-page financial report or a massive dataset, simple Q&A isn't enough. You don't just want an answer; you want an assistant that actively synthesizes, structures, and cross-references data autonomously. Enter Google NotebookLM's latest evolution: Agentic Features. 
 
 As we push deeper into 2026, NotebookLM has fundamentally shifted its architecture. It's no longer just a passive reader of your uploaded PDFs. It has become a dynamic workspace where AI agents perform multi-step data analysis without needing constant human hand-holding. If you've been relying on standard chatbots to do your heavy lifting, you are missing out on the next big leap in workplace automation.

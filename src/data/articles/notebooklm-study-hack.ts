@@ -8,7 +8,7 @@ export const postNotebookLmStudyHack: BlogPost = {
   readTime: "5 min read",
   category: "Education & AI",
   author: "Faizan Arif",
-  image: "/images/notebooklm_study_cover.png",
+  image: "/images/notebooklm_study_cover.webp",
   content: `The traditional model of studying is fundamentally broken. For decades, students and lifelong learners have relied on passive consumption: reading a textbook, highlighting a few sentences, watching a lecture video, and hoping the information magically sticks. Cognitive science has proven time and time again that passive learning yields incredibly low retention rates. If you aren't actively engaging with the material, you are simply wasting your time. 
 
 Fortunately, the integration of AI into educational tools has completely upended this outdated model. The standout platform leading this charge is Google NotebookLM. Originally designed as a research assistant, it has quietly become the ultimate study hack. By allowing users to ingest diverse media sources—including YouTube videos and heavy academic PDFs—NotebookLM transforms static content into an interactive, conversational mentor.

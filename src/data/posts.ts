@@ -10,6 +10,9 @@ export interface BlogPost {
   content: string;
 }
 
+export { BLOG_METADATA } from "./posts-meta";
+export type { BlogPostMeta } from "./posts-meta";
+
 import { postAiToolsApp } from "./articles/ai-tools-app";
 import { postAiToolsPresentation } from "./articles/ai-tools-to-make-presentation";
 import { postAiToolsWebsite } from "./articles/ai-tools-website";

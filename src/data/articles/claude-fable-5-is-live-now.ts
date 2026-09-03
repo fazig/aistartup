@@ -8,7 +8,7 @@ export const postClaudeFable5IsLiveNow: BlogPost = {
   readTime: `15 min read`,
   category: `AI News`,
   author: `Faizan`,
-  image: `/images/claude-fable-5-live.png`,
+  image: `/images/claude-fable-5-live.webp`,
   content: `The technology industry is experiencing a profound paradigm shift today. After months of intense speculation, Claude Fable 5 is live now, bringing unparalleled capabilities to developers and creators alike. This release marks a significant milestone in natural language processing. Users are already reporting massive gains in productivity and creativity. The future of digital communication has officially arrived.
 
 For content writers, the landscape has completely transformed overnight. Because Claude Fable 5 is live now, drafting complex articles and engaging copy is faster than ever. The system understands nuance and context with remarkable precision. It adapts to various writing styles effortlessly. We are witnessing the dawn of a highly efficient era.

@@ -8,7 +8,7 @@ export const postDidNotReceiveAdsensePayment: BlogPost = {
   readTime: "35 min read",
   category: "Web Publishing",
   author: "Faizan Arif",
-  image: "/did_not_receive_adsense_payment_cover.png",
+  image: "/did_not_receive_adsense_payment_cover.webp",
   content: `Every month, thousands of digital publishers log into their banking apps between the 22nd and 26th, only to find that they did not receive adsense payment as expected. For content creators, programmatic developers, and web publishers, this monthly payout represents the financial foundation of their operations. When these funds go missing, it can disrupt server hosting renewals, API subscription payments, payroll, and content production schedules. If you did not receive adsense payment during this cycle, you must first determine if the delay is on Google's side or your bank's side.
 
 Understanding where your money is in the global banking system is the first step toward reclaiming it. The payment path from Google's originating account (often held at Citibank N.A.) to your local bank account involves multiple clearinghouses, correspondent networks, tax compliance gates, and fraud prevention filters. A breakdown anywhere along this path can halt your funds without direct notification. 

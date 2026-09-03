@@ -5,7 +5,6 @@ import { Wrench } from "lucide-react";
 import Header from "@/components/Header";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
-
 import CookieConsent from "@/components/CookieConsent";
 
 const inter = Inter({ 

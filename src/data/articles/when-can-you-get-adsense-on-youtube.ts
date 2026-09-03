@@ -8,7 +8,7 @@ export const postWhenCanYouGetAdsenseOnYoutube: BlogPost = {
   readTime: "25 min read",
   category: "AI & Technology",
   author: "Faizan Arif",
-  image: "/when_can_you_get_adsense_on_youtube_cover.png",
+  image: "/when_can_you_get_adsense_on_youtube_cover.webp",
   content: `### Introduction: The Economics of Modern Video Publishing
 
 The modern digital landscape has democratized content creation, allowing anyone with a smartphone and an internet connection to reach a global audience. YouTube has emerged as the premier platform for this digital revolution, turning video publishing into a highly lucrative career. Creators can build self-sustaining media empires, hire production crews, and generate significant revenue. However, for a new channel, the initial phase is often a challenge of patience and consistency. The primary target for almost all new creators is monetization, which leads to the essential question: when can you get adsense on youtube?

@@ -8,7 +8,7 @@ export const postAiToolHunt: BlogPost = {
   readTime: "25 min read",
   category: "AI Tools",
   author: "Faizan Arif",
-  image: "/ai_tool_hunt_cover.png",
+  image: "/ai_tool_hunt_cover.webp",
   content: `![ai tool hunt](/ai_tool_hunt_cover.png)
 
 In the ever-evolving landscape of digital innovation, embarking on a comprehensive search is not just a trend; it is a necessity. Many professionals find themselves needing better applications to streamline their workflows and boost productivity. The sheer volume of new applications released every week means that an organized approach is vital. Whether you are a solo entrepreneur, a massive enterprise, or an enthusiast trying to automate daily tasks, understanding your specific needs is the first step toward success.
