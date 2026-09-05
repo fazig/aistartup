@@ -34,7 +34,7 @@ You don't search for a recipe; you generate one based solely on your constraints
 
 The AI cross-references millions of flavor profiles, understands that soy sauce provides umami, recognizes that chicken thighs need slightly more cooking time than breasts, and outputs a step-by-step, perfectly formatted recipe that uses exactly what you have and nothing you don't. 
 
-*(Curious about how AI is optimizing other daily habits? Read our guide on the [Best Free AI Workout Plan Generator](#).)* (Inbound Link)
+*(Curious about how AI is optimizing other daily habits? Read our guide on the [Best Free AI Workout Plan Generator](/blog/best-free-ai-workout-plan-generator).)*
 
 ---
 
@@ -46,7 +46,7 @@ We have tested the platforms that use true generative AI to dynamically create b
 
 ### 1. ChefGPT: The Undisputed Market Leader
 
-If you are looking for the overall best free AI recipe generator with a beautiful interface, [ChefGPT](https://www.chefgpt.xyz/) (Outbound Link) is currently leading the pack by a wide margin.
+If you are looking for the overall best free AI recipe generator with a beautiful interface, [ChefGPT](https://www.chefgpt.xyz/) is currently leading the pack by a wide margin.
 
 **Why it stands out:**
 ChefGPT offers multiple different "modes" depending on what you need. The "PantryChef" mode is specifically designed for the leftover puzzle. You open the app, type in the ingredients sitting on your counter, and it instantly builds a recipe. 
@@ -61,7 +61,7 @@ ChefGPT offers multiple different "modes" depending on what you need. The "Pantr
 
 ### 2. DishGen: The Frictionless Experience
 
-If you don't want to create an account, log in, or deal with menus, [DishGen](https://dishgen.com/) (Outbound Link) is the fastest way from an empty stomach to a full plate.
+If you don't want to create an account, log in, or deal with menus, [DishGen](https://dishgen.com/) is the fastest way from an empty stomach to a full plate.
 
 **Why it's great:**
 DishGen operates almost exactly like a standard Google search bar, but powered by AI. You literally just type a sentence into the homepage: *"Make a vegan dessert using apples, oats, and cinnamon that takes less than 20 minutes."* 
@@ -76,7 +76,7 @@ DishGen operates almost exactly like a standard Google search bar, but powered b
 
 ### 3. Let's Foodie (AI Tool): The Wildcard
 
-[Let's Foodie](https://letsfoodie.com/) (Outbound Link) is primarily a food blog, but they have integrated a very powerful, completely free AI recipe generator into their site.
+[Let's Foodie](https://letsfoodie.com/) is primarily a food blog, but they have integrated a very powerful, completely free AI recipe generator into their site.
 
 **Why it's the hidden gem:**
 Unlike the standalone apps, this generator feels a bit more "raw." It uses a powerful language model to generate recipes that are often highly creative, combining flavor profiles you might not have thought of yourself.
@@ -117,7 +117,7 @@ Please provide a creative title for the dish, a brief flavor profile description
 
 By forcing the AI to act like a Michelin-star chef, it shifts its language model away from generic food blogs and starts applying professional culinary techniques (like deglazing the pan or properly resting the meat).
 
-*(Want to learn how AI can help you present your new culinary creations online? Read our guide on the [Best Free AI Presentation Maker](#).)* (Inbound Link)
+*(Want to learn how AI can help you present your new culinary creations online? Read our guide on the [Best Free AI Presentation Maker](/blog/best-free-ai-presentation-maker).)*
 
 ---
 

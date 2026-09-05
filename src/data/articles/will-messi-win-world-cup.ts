@@ -33,7 +33,7 @@ In the modern era of hyper-athletic, high-pressing football, playing at the high
 ### The Inter Miami Transition
 Following his triumphant 2022 campaign, Messi left the grueling European circuit of Paris Saint-Germain for Major League Soccer (MLS), joining Inter Miami. Some critics argued this was a sign of winding down. However, the data suggests otherwise. 
 
-By playing in the MLS, Messi is managing his workload. He is playing fewer hyper-intense matches, which could theoretically preserve his legs for the international stage. According to [The Athletic's sports science analysis](https://theathletic.com) (Outbound Link), elite players who step down to lower-intensity leagues in their late 30s can often extend their international careers by two to three years. 
+By playing in the MLS, Messi is managing his workload. He is playing fewer hyper-intense matches, which could theoretically preserve his legs for the international stage. According to [The Athletic's sports science analysis](https://theathletic.com), elite players who step down to lower-intensity leagues in their late 30s can often extend their international careers by two to three years. 
 
 ---
 
@@ -45,7 +45,7 @@ Fortunately for him, Argentina’s manager, Lionel Scaloni, has already perfecte
 
 If this midfield trio remains healthy and in form by 2026, the system will still work. Messi doesn't need to press the opposition goalkeeper; he just needs the ball at his feet in the final third. 
 
-*Want to know who else might challenge Argentina for the title? Read our [AI prediction on who will win the World Cup](#).* (Inbound Link)
+*Want to know who else might challenge Argentina for the title? Read our [AI prediction on who will win the World Cup](/blog).*
 
 ---
 
@@ -72,7 +72,7 @@ This expansion means that the tournament will be longer. To reach the final, a t
 
 Furthermore, the travel schedule across the United States, Mexico, and Canada will be exhausting. Flying from a group stage match in humid Miami to a knockout game in high-altitude Mexico City takes a toll on recovery. 
 
-*If you are planning to follow his journey, make sure you know the [best streaming apps for the 2026 tournament](#).* (Inbound Link)
+*If you are planning to follow his journey, make sure you know the [best streaming apps for the 2026 tournament](/tools/live-sports).*
 
 ---
 

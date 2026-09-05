@@ -1,8 +1,17 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Free QR Code Generator - StartupAI Tools",
-  description: "Instantly generate high-quality QR codes for URLs, text, or contact info.",
+  title: "Free QR Code Generator & Micro QR Maker - High Quality Barcodes",
+  description: "Free online QR code generator and Micro QR maker. Create standard and small-size QR codes for URLs, contact cards, text, and WiFi. Free instant high-res PNG download.",
+  alternates: {
+    canonical: "/tools/qr-generator",
+  },
+  openGraph: {
+    title: "Free QR Code Generator & Micro QR Maker | StartupAI Tools",
+    description: "Generate standard and micro QR codes for URLs, WiFi, and contact info.",
+    url: "/tools/qr-generator",
+    type: "website",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

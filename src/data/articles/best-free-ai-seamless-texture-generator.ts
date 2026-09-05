@@ -33,7 +33,7 @@ Artificial intelligence bridges the gap between these two methods. An AI seamles
 
 Instead of writing a math equation to create mud, or photographing real mud, you simply type: *"Wet, dark brown mud with small pebbles and tire tracks, perfectly seamless."* The AI understands the physical properties of mud and generates a completely unique, tileable image in seconds. 
 
-*(Curious about how AI is impacting other creative fields? Read our guide on the [Best AI Script Generator for YouTube Shorts](#).)* (Inbound Link)
+*(Curious about how AI is impacting other creative fields? Read our guide on the [Best AI Script Generator for YouTube Shorts](/blog/best-ai-script-generator-youtube-shorts).)*
 
 ---
 
@@ -45,7 +45,7 @@ We have tested the top platforms to find the ones that are genuinely free, truly
 
 ### 1. Polycam (AI Texture Generator): The Overall Champion
 
-If you are looking for the absolute best free AI seamless texture generator that produces production-ready materials, [Polycam's AI Texture Tool](https://poly.cam/tools/ai-texture-generator) (Outbound Link) is currently leading the pack.
+If you are looking for the absolute best free AI seamless texture generator that produces production-ready materials, [Polycam's AI Texture Tool](https://poly.cam/tools/ai-texture-generator) is currently leading the pack.
 
 **Why it stands out:**
 Polycam made its name as a 3D scanning app, but their jump into generative AI has been spectacular. When you generate a texture on Polycam, it doesn't just give you a flat image. It automatically generates the Color (Albedo), Normal, Displacement, and Roughness maps simultaneously.
@@ -60,7 +60,7 @@ Polycam made its name as a 3D scanning app, but their jump into generative AI ha
 
 ### 2. Leonardo.AI: The Artistic Sandbox
 
-While [Leonardo.AI](https://leonardo.ai/) (Outbound Link) is widely known for generating character portraits and concept art, it harbors a hidden superpower for 3D artists. 
+While [Leonardo.AI](https://leonardo.ai/) is widely known for generating character portraits and concept art, it harbors a hidden superpower for 3D artists. 
 
 **Why it's great:**
 Leonardo has a toggle button specifically designed for seamless tiling. When activated, any image you generate will perfectly tile on the X and Y axes. 
@@ -132,7 +132,7 @@ Fortunately, you do not need to buy expensive software like Substance B2M to do 
 
 By combining a free AI image generator with a free map extractor like Materialize, you essentially have a completely free, infinitely scalable material creation studio.
 
-*(Interested in other tools for game development? Check out our article on [How Claude AI Built a Realistic Game Concept](#).)* (Inbound Link)
+*(Interested in other tools for game development? Check out our article on [How Claude AI Built a Realistic Game Concept](/blog/claude-fable-5-game-article).)*
 
 ---
 

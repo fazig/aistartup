@@ -30,7 +30,7 @@ Historically, finding specific art was impossible. If you needed a picture of a 
 
 With generative AI, you don't have to compromise anymore. You can type that exact description into an image generator and receive four stunning variations in less than a minute. 
 
-*(Curious about how AI is revolutionizing other creative hobbies? Read our guide on the [Best Free AI Vocal Remover for Music Producers](#).)* (Inbound Link)
+*(Curious about how AI is revolutionizing other creative hobbies? Read our guide on the [Best Free AI Vocal Remover](/blog/best-free-ai-vocal-remover).)*
 
 ---
 
@@ -40,7 +40,7 @@ The AI image generation landscape is moving at a breakneck pace. Tools that were
 
 ### 1. Bing Image Creator (Powered by DALL-E 3): The Best for Beginners
 
-If you want the absolute most straightforward, zero-learning-curve experience, [Bing Image Creator](https://www.bing.com/create) (Outbound Link) is the best free AI tool for generating DND character portraits on the market right now. 
+If you want the absolute most straightforward, zero-learning-curve experience, [Bing Image Creator](https://www.bing.com/create) is the best free AI tool for generating DND character portraits on the market right now. 
 
 **Why it reigns supreme:**
 Bing Image Creator runs on OpenAI's DALL-E 3 model. The greatest strength of DALL-E 3 is its prompt adherence. In older AI models, if you asked for "a sword in the left hand and a shield in the right," the AI would get confused and give you a shield made of swords. DALL-E 3 actually understands spatial relationships and complex instructions.
@@ -56,7 +56,7 @@ Bing Image Creator runs on OpenAI's DALL-E 3 model. The greatest strength of DAL
 
 ### 2. Midjourney (via Discord): The Aesthetic King
 
-While [Midjourney](https://www.midjourney.com/) (Outbound Link) recently moved away from its completely free tier due to high server demand, they frequently offer free trials or promotions, and it is impossible to talk about D&D portraits without mentioning it.
+While [Midjourney](https://www.midjourney.com/) recently moved away from its completely free tier due to high server demand, they frequently offer free trials or promotions, and it is impossible to talk about D&D portraits without mentioning it.
 
 **Why it's the professional choice:**
 Midjourney creates the most breathtaking, artistically coherent images of any AI tool. If you want your character portrait to look like it was painted by a master fantasy illustrator or featured on the cover of a published D&D campaign book, Midjourney is the answer.
@@ -71,7 +71,7 @@ Midjourney creates the most breathtaking, artistically coherent images of any AI
 
 ### 3. Leonardo.AI: The Character Designer's Sandbox
 
-[Leonardo.AI](https://leonardo.ai/) (Outbound Link) is a lesser-known platform that is rapidly gaining popularity among the tabletop RPG community due to its generous free tier and massive level of control. 
+[Leonardo.AI](https://leonardo.ai/) is a lesser-known platform that is rapidly gaining popularity among the tabletop RPG community due to its generous free tier and massive level of control. 
 
 **Why it's great:**
 Leonardo gives you a massive dashboard of controls. It features specific "fine-tuned models" designed entirely for RPG characters and isometric game assets. 
@@ -133,7 +133,7 @@ When prompting for a token, add the phrase: *"A portrait shot from the shoulders
 
 By forcing the AI to generate a solid white background, you can easily drag the resulting image into a free background remover tool (like Remove.bg), and then drop the transparent image directly into your Virtual Tabletop token maker. You can generate an entire goblin ambush squad with unique facial expressions in five minutes.
 
-*(Want to learn how AI can help you write better campaign stories? Read our article on the [Best AI for writing podcast show notes](#) to see how natural language models are evolving.)* (Inbound Link)
+*(Want to learn how AI can help you write better campaign stories? Read our article on the [Best AI for Writing Podcast Show Notes](/blog/best-ai-podcast-show-notes) to see how natural language models are evolving.)*
 
 ---
 

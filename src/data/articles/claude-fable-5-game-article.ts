@@ -106,7 +106,7 @@ Because Claude excels at human-like reasoning and tone emulation, the emotional 
 Is this purely theoretical? No. We can look at existing technological proofs to validate the "Claude Fable 5" hypothesis.
 
 ### Evidence 1: Inworld AI and Smart NPCs
-Companies like [Inworld AI](https://inworld.ai/) (Outbound Link) are already partnering with major studios to implement brain-like architectures in NPCs. These models are powered by LLMs. When integrated via API, they allow voice-to-voice interaction where players physically speak into their microphones, and the NPC replies contextually.
+Companies like [Inworld AI](https://inworld.ai/) are already partnering with major studios to implement brain-like architectures in NPCs. These models are powered by LLMs. When integrated via API, they allow voice-to-voice interaction where players physically speak into their microphones, and the NPC replies contextually.
 
 ### Evidence 2: AI-Generated Animation Curves
 Machine learning is being used to smooth out animations. Instead of manually keyframing a character walking up a steep, uneven hill, AI interpolates the foot placement in real-time, matching the terrain physics. This eliminates the "sliding" effect common in older RPGs, cementing the realistic feel.
@@ -167,8 +167,8 @@ The theoretical development of *Claude Fable 5* represents just the tip of the i
 Imagine logging into a game where the world continues to evolve even when you are offline. AI factions wage wars, economies crash and recover, and NPCs live out their daily lives, all simulated by an overarching LLM. When you log back in, the town crier—powered by Claude—tells you the news of what happened while you were away, customized to care about the things you care about.
 
 ### Inbound & Outbound Connections
-For more on how AI is shaping the world, check out our [internal guide on AI in Digital Art](#) (Inbound Link placeholder). 
-To explore the technical specifications of Anthropic's models, visit the [official Anthropic website](https://www.anthropic.com/) (Outbound Link).
+For more on how AI is shaping the world, check out our [guide on AI Tools for Graphic Design](/blog/ai-tools-for-graphic-design). 
+To explore the technical specifications of Anthropic's models, visit the [official Anthropic website](https://www.anthropic.com/).
 
 ---
 

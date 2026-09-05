@@ -11,6 +11,56 @@ export interface BlogPostMeta {
 
 export const BLOG_METADATA: BlogPostMeta[] = [
   {
+    "slug": "top-free-ai-presentation-makers-2026",
+    "title": "Top Free AI Presentation Makers in 2026: Goodbye PowerPoint, Hello Instant Slides",
+    "description": "Tired of spending 4 hours formatting slides? We tested the top free AI presentation makers in 2026 (Gamma, Beautiful.ai, Tome, Presentations.AI) so you don't have to.",
+    "date": "2026-09-05",
+    "readTime": "9 min read",
+    "category": "AI Tools",
+    "author": "Faizan Arif",
+    "image": "/images/ai-presentation-makers-2026.webp"
+  },
+  {
+    "slug": "best-spinbot-alternatives-free",
+    "title": "Best Spinbot Alternatives in 2026: 5 Free Paraphrasers That Don't Ruin Your Text",
+    "description": "Looking for a clean, free alternative to Spinbot and QuillBot? Here are the best free article rewriters and paraphrasers that maintain natural tone and clarity.",
+    "date": "2026-09-05",
+    "readTime": "8 min read",
+    "category": "Writing Tools",
+    "author": "Faizan Arif",
+    "image": "/images/spinbot-alternatives-2026.webp"
+  },
+  {
+    "slug": "micro-qr-codes-guide",
+    "title": "Micro QR Codes: What They Are, How They Work, and When to Use Them",
+    "description": "Everything you need to know about Micro QR codes vs standard QR codes. Learn printing dimensions, minimum scan distances, and generate high-density barcodes for free.",
+    "date": "2026-09-05",
+    "readTime": "7 min read",
+    "category": "Tech Guides",
+    "author": "Faizan Arif",
+    "image": "/images/micro-qr-codes-guide.webp"
+  },
+  {
+    "slug": "manus-ai-vs-google-antigravity",
+    "title": "Manus AI vs Google Antigravity: The 2026 Autonomous Agent Benchmark",
+    "description": "An honest, hands-on comparison between Manus AI and Google Antigravity. Architecture, autonomous terminal execution, speed, and real-world developer benchmarks.",
+    "date": "2026-09-05",
+    "readTime": "10 min read",
+    "category": "AI Engineering",
+    "author": "Faizan Arif",
+    "image": "/images/manus-vs-antigravity.webp"
+  },
+  {
+    "slug": "samsung-ai-vs-galaxy-ai-differences",
+    "title": "Samsung AI vs Galaxy AI: What's the Difference and Will You Pay in 2026?",
+    "description": "Samsung's AI branding is confusing. Here is the clear breakdown between Samsung AI and Galaxy AI, which features are on-device, and the truth about paid subscriptions.",
+    "date": "2026-09-05",
+    "readTime": "8 min read",
+    "category": "Smartphones & Tech",
+    "author": "Faizan Arif",
+    "image": "/images/samsung-ai-vs-galaxy-ai.webp"
+  },
+  {
     "slug": "claude-opus-5-vs-gpt-5",
     "title": "Claude Opus 5 vs. GPT-5: The Frontier AI Battle for Autonomous Engineering & Cognition (2026)",
     "description": "An exhaustive 3000+ word technical comparison between Anthropic",

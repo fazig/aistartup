@@ -1,8 +1,17 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Article Rewriter (Spinbot) - StartupAI Tools",
-  description: "Instantly paraphrase and rewrite articles by automatically swapping words with their synonyms.",
+  title: "Free Article Rewriter & Spinbot Alternative (100% Free Paraphrasing Tool)",
+  description: "Free online article rewriter and Spinbot alternative. Instantly paraphrase essays, rewrite articles, and rephrase text with intelligent synonym matching. No limits, 100% free.",
+  alternates: {
+    canonical: "/tools/article-rewriter",
+  },
+  openGraph: {
+    title: "Free Article Rewriter & Spinbot Alternative | StartupAI Tools",
+    description: "Instantly paraphrase essays, rewrite articles, and rephrase text for free.",
+    url: "/tools/article-rewriter",
+    type: "website",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

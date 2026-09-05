@@ -32,7 +32,7 @@ Not everyone can listen to your podcast at the exact moment they discover it. So
 ### 3. Lead Generation and Affiliate Marketing
 Your show notes are the prime real estate for converting listeners into customers. This is where you place links to your products, your email newsletter sign-up forms, and your affiliate links. If a guest mentions a fantastic book, you drop the Amazon affiliate link in the show notes. It’s a passive income stream that you miss out on if you don't write them.
 
-*(Looking for more ways to automate your content creation? Check out our guide on the [Top 5 Best Free AI Tools to Use](#).)* (Inbound Link)
+*(Looking for more ways to automate your content creation? Check out our guide on the [Top 5 Best Free AI Tools to Use in 2026](/blog/top-5-best-free-ai-tools-to-use-in-2026).)*
 
 ---
 
@@ -67,7 +67,7 @@ We have tested dozens of platforms, putting them through their paces with variou
 
 ### 1. Castmagic: The All-in-One Content Engine
 
-If you want the absolute best AI for writing podcast show notes and turning your audio into a marketing machine, [Castmagic](https://www.castmagic.io) (Outbound Link) is the current heavyweight champion.
+If you want the absolute best AI for writing podcast show notes and turning your audio into a marketing machine, [Castmagic](https://www.castmagic.io) is the current heavyweight champion.
 
 **How it works:**
 You upload your raw audio or video file, and Castmagic instantly generates a highly accurate transcript. But it doesn't stop there. It uses advanced AI prompts to extract the absolute best content from your episode.
@@ -81,7 +81,7 @@ You upload your raw audio or video file, and Castmagic instantly generates a hig
 
 ### 2. Swell AI: The Workflow Automator
 
-[Swell AI](https://www.swellai.com) (Outbound Link) is another fantastic option, specifically designed to integrate smoothly into existing production workflows. 
+[Swell AI](https://www.swellai.com) is another fantastic option, specifically designed to integrate smoothly into existing production workflows. 
 
 **Key Features:**
 *   **Multiple Outputs:** Like Castmagic, it generates summaries, titles, and social posts. 
@@ -137,7 +137,7 @@ A single 45-minute podcast episode is a treasure trove of content. Historically,
 
 By feeding your audio into a tool like Castmagic or Swell AI, you essentially create a content factory. You record once, and you distribute everywhere.
 
-*(Interested in how AI is changing other creative fields? Read our article on whether [Claude is the best AI tool in history](#).)* (Inbound Link)
+*(Interested in how AI is changing other creative fields? Read our article on whether [Claude is the best AI tool in history](/blog/is-claude-the-best-ai-tool-in-history).)*
 
 ---
 

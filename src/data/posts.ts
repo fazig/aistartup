@@ -64,8 +64,18 @@ import { postGrokNewVersionInCursorProIsMagic } from "./articles/grok-new-versio
 import { postUsingManusAiFreeTill25August } from "./articles/using-manus-ai-free-till-25-august";
 import { postUnlimitedAiVideoGenerationManusAiTill25August } from "./articles/unlimited-ai-video-generation-manus-ai-till-25-august";
 import { postManusAiVsCursorVsGrokVsCodexVsAntigravity } from "./articles/manus-ai-vs-cursor-vs-grok-vs-codex-vs-antigravity";
+import { postTopFreeAiPresentationMakers2026 } from "./articles/top-free-ai-presentation-makers-2026";
+import { postBestSpinbotAlternativesFree } from "./articles/best-spinbot-alternatives-free";
+import { postMicroQrCodesGuide } from "./articles/micro-qr-codes-guide";
+import { postManusAiVsGoogleAntigravity } from "./articles/manus-ai-vs-google-antigravity";
+import { postSamsungAiVsGalaxyAiDifferences } from "./articles/samsung-ai-vs-galaxy-ai-differences";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postTopFreeAiPresentationMakers2026,
+  postBestSpinbotAlternativesFree,
+  postMicroQrCodesGuide,
+  postManusAiVsGoogleAntigravity,
+  postSamsungAiVsGalaxyAiDifferences,
   postClaudeOpus5VsGpt5,
   postGrokNewVersionInCursorProIsMagic,
   postUsingManusAiFreeTill25August,

@@ -31,7 +31,7 @@ A standard blog post (like this one) follows a traditional structure: Introducti
 
 When you use a generic AI tool like ChatGPT and simply say, *"Write a YouTube short about iPhones,"* it will give you a robotic, boring essay. To get viral results, you need a specialized tool or a highly specialized prompt.
 
-*(Want to learn how AI can help you with other creative endeavors? Read our guide on the [Best Free AI Tool to Colorize Old Photos](#).)* (Inbound Link)
+*(Want to learn how AI can help you with other creative endeavors? Read our guide on the [Best Free AI Tool to Colorize Old Photos](/blog/best-free-ai-tool-colorize-old-photos).)*
 
 ---
 
@@ -41,7 +41,7 @@ While you can technically use any Large Language Model (LLM) to write a script, 
 
 ### 1. VidIQ AI Script Generator: The YouTube Native
 
-If you want a tool built specifically by people who understand the YouTube algorithm, [VidIQ](https://vidiq.com) (Outbound Link) offers the most tailored experience on the market.
+If you want a tool built specifically by people who understand the YouTube algorithm, [VidIQ](https://vidiq.com) offers the most tailored experience on the market.
 
 **Why it stands out:**
 VidIQ is fundamentally a YouTube analytics company. Their AI is not just a text generator; it is tied directly into real-time YouTube search data. When you ask it to generate a script, it is actually cross-referencing your topic with currently trending keywords in your specific niche.
@@ -56,7 +56,7 @@ VidIQ is fundamentally a YouTube analytics company. Their AI is not just a text 
 
 ### 2. Syllaby.io: The Workflow Master
 
-[Syllaby](https://syllaby.io) (Outbound Link) is a relatively new player that has taken the social media marketing world by storm. It is designed from the ground up specifically for short-form video content (TikTok, Reels, Shorts).
+[Syllaby](https://syllaby.io) is a relatively new player that has taken the social media marketing world by storm. It is designed from the ground up specifically for short-form video content (TikTok, Reels, Shorts).
 
 **Why it's great:**
 Syllaby gamifies the entire process. You type in your niche (e.g., "Real Estate Agent"), and it immediately spits out a calendar of the top 30 questions people are searching for in that niche. You click one button, and it generates a 60-second, highly engaging script answering that exact question.
@@ -109,7 +109,7 @@ Include bracketed visual cues (like text on screen or b-roll ideas) to keep the 
 
 When you use this structured prompt, the AI stops acting like a Wikipedia article and starts acting like a professional content strategist.
 
-*(Looking to automate your audio production as well? Check out our guide on the [Best Free AI Vocal Remover](#).)* (Inbound Link)
+*(Looking to automate your audio production as well? Check out our guide on the [Best Free AI Vocal Remover](/blog/best-free-ai-vocal-remover).)*
 
 ---
 

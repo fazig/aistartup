@@ -34,7 +34,7 @@ You tell the AI, *"Create a 10-slide presentation about the history of renewable
 
 The AI then simultaneously acts as your researcher, your copywriter, and your graphic designer. It outlines the narrative arc, writes the bullet points, generates or sources the images, and applies a cohesive design system across the entire deck. 
 
-*(Curious about how AI can help you with other tedious workflows? Check out our guide on the [Best AI Script Generator for YouTube Shorts](#).)* (Inbound Link)
+*(Curious about how AI can help you with other tedious workflows? Check out our guide on the [Best AI Script Generator for YouTube Shorts](/blog/best-ai-script-generator-youtube-shorts).)*
 
 ---
 
@@ -46,7 +46,7 @@ We have tested the top platforms to find the ones that genuinely understand desi
 
 ### 1. Gamma.app: The Undisputed King of Design
 
-If you are looking for the absolute best free AI presentation maker regarding sheer visual quality and ease of use, [Gamma](https://gamma.app/) (Outbound Link) is currently in a league of its own.
+If you are looking for the absolute best free AI presentation maker regarding sheer visual quality and ease of use, [Gamma](https://gamma.app/) is currently in a league of its own.
 
 **Why it stands out:**
 Gamma doesn't just make slide decks; it makes "webpages that act like slide decks." The aesthetic is incredibly modern, resembling a high-end tech startup's landing page rather than a boring corporate PowerPoint. 
@@ -61,7 +61,7 @@ Gamma doesn't just make slide decks; it makes "webpages that act like slide deck
 
 ### 2. Tome: The Storyteller's Tool
 
-[Tome](https://tome.app/) (Outbound Link) was one of the very first AI presentation makers to go viral, and it remains one of the most powerful tools for narrative-driven decks.
+[Tome](https://tome.app/) was one of the very first AI presentation makers to go viral, and it remains one of the most powerful tools for narrative-driven decks.
 
 **Why it's great:**
 Tome places a massive emphasis on storytelling. When you give it a prompt, it doesn't just list facts; it tries to construct a narrative arc with a clear beginning, middle, and end. 
@@ -76,7 +76,7 @@ Tome places a massive emphasis on storytelling. When you give it a prompt, it do
 
 ### 3. Canva (Magic Design): The Familiar Workhorse
 
-You likely already use [Canva](https://www.canva.com/) (Outbound Link) for designing social media posts or flyers. Over the last year, they have quietly integrated one of the most powerful AI presentation engines into their free platform.
+You likely already use [Canva](https://www.canva.com/) for designing social media posts or flyers. Over the last year, they have quietly integrated one of the most powerful AI presentation engines into their free platform.
 
 **Why it's the professional choice:**
 Canva's "Magic Design" feature bridges the gap between AI generation and manual editing better than anyone else. Because it lives inside the massive Canva ecosystem, you have access to millions of stock photos, graphics, and fonts to tweak the AI's initial output.
@@ -131,7 +131,7 @@ If your audience is reading your slides, they are not listening to you. When you
 
 AI is fantastic at generating the first draft of your slide deck, but you must be the editor who trims the fat.
 
-*(Looking for tools to help you stay physically fit while working long desk hours? Check out our article on the [Best Free AI Workout Plan Generator](#).)* (Inbound Link)
+*(Looking for tools to help you stay physically fit while working long desk hours? Check out our article on the [Best Free AI Workout Plan Generator](/blog/best-free-ai-workout-plan-generator).)*
 
 ---
 

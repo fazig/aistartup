@@ -29,7 +29,7 @@ ControlNet changes the game. It acts as a set of training wheels for the AI. Whe
 
 Then, when you tell the AI to make the room look "Scandinavian Minimalist," the AI paints *over* your room, respecting the exact physical boundaries and perspective of your actual real-world space. It understands that a bed cannot float in mid-air, and it understands how natural light from your real window should cast shadows on virtual furniture.
 
-*(Want to learn how AI is revolutionizing other visual industries? Read our guide on the [Best Free AI Seamless Texture Generator for 3D Artists](#).)* (Inbound Link)
+*(Want to learn how AI is revolutionizing other visual industries? Read our guide on the [Best Free AI Seamless Texture Generator](/blog/best-free-ai-seamless-texture-generator).)*
 
 ---
 
@@ -41,7 +41,7 @@ We have sifted through the noise to find the platforms that offer genuinely free
 
 ### 1. Reimagine Home AI: The Most Comprehensive
 
-If you are looking for an incredibly robust tool that handles both interior and exterior design, [Reimagine Home](https://www.reimaginehome.ai/) (Outbound Link) is arguably the best free AI interior design generator for sheer versatility.
+If you are looking for an incredibly robust tool that handles both interior and exterior design, [Reimagine Home](https://www.reimaginehome.ai/) is arguably the best free AI interior design generator for sheer versatility.
 
 **Why it stands out:**
 Reimagine Home doesn't just slap new furniture into an empty room. It can actually digitally "clean" a cluttered room before redesigning it. If your current living room is filled with moving boxes and old couches, the AI will digitally remove them, figure out what the empty floor looks like, and *then* apply the new design style.
@@ -56,7 +56,7 @@ Reimagine Home doesn't just slap new furniture into an empty room. It can actual
 
 ### 2. RoomGPT: The Fastest and Easiest
 
-If you want zero friction, zero confusing menus, and instant results, [RoomGPT](https://www.roomgpt.io/) (Outbound Link) is a wildly popular, open-source tool that went viral for a reason.
+If you want zero friction, zero confusing menus, and instant results, [RoomGPT](https://www.roomgpt.io/) is a wildly popular, open-source tool that went viral for a reason.
 
 **Why it's great:**
 The interface is impossibly simple. You upload a photo, select your room type (Living Room, Bedroom, Bathroom, etc.), and select a theme (Modern, Vintage, Cyberpunk, Tropical). You click generate, and 10 seconds later, your room is transformed. 
@@ -71,7 +71,7 @@ The interface is impossibly simple. You upload a photo, select your room type (L
 
 ### 3. Planner 5D (AI Features): The Architect's Choice
 
-[Planner 5D](https://planner5d.com/) (Outbound Link) has been a staple in the DIY home design space for years, originally starting as a traditional 2D/3D floor plan creator. However, they have recently integrated powerful AI tools into their free platform.
+[Planner 5D](https://planner5d.com/) has been a staple in the DIY home design space for years, originally starting as a traditional 2D/3D floor plan creator. However, they have recently integrated powerful AI tools into their free platform.
 
 **Why it's the professional choice:**
 Unlike Reimagine Home or RoomGPT, which just give you a static 2D image, Planner 5D actually tries to recognize the furniture in your photo and build a 3D model of your room. 
@@ -116,7 +116,7 @@ But AI cannot go to the hardware store and physically touch the fabric to ensure
 ### The Ultimate Collaborative Tool
 The most successful interior designers are already using these AI tools *with* their clients. Instead of creating expensive 3D mockups that take weeks, a designer can sit with a client, run their living room through RoomGPT, and instantly agree on a color palette in the very first meeting.
 
-*(Looking for tools to help market your new interior design business? Check out our article on the [Best AI Script Generator for YouTube Shorts](#) to start creating viral content.)* (Inbound Link)
+*(Looking for tools to help market your new interior design business? Check out our article on the [Best AI Script Generator for YouTube Shorts](/blog/best-ai-script-generator-youtube-shorts) to start creating viral content.)*
 
 ---
 

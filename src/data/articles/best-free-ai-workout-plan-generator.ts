@@ -32,7 +32,7 @@ A human personal trainer spends the first session asking you questions: *What ar
 
 An AI workout generator does the exact same thing, but it processes the data instantly. By feeding an AI your specific parameters, it cross-references thousands of biomechanical studies to output a routine perfectly calibrated to your current fitness level. It acts as a digital coach that adapts to your life, rather than forcing you to adapt to a static PDF.
 
-*(Curious about how AI is optimizing other areas of life? Read our guide on the [Best Free AI Interior Design Generator Tools](#).)* (Inbound Link)
+*(Curious about how AI is optimizing other areas of life? Read our guide on the [Best Free AI Interior Design Generator Tools](/blog/best-free-ai-interior-design-generator).)*
 
 ---
 
@@ -44,7 +44,7 @@ We have sifted through the noise to find the tools that genuinely use artificial
 
 ### 1. Fitbod (Free Version): The Algorithmic Heavyweight
 
-If you are looking for an app that completely takes the thinking out of weightlifting, [Fitbod](https://fitbod.me/) (Outbound Link) is widely considered the pioneer in algorithmic fitness.
+If you are looking for an app that completely takes the thinking out of weightlifting, [Fitbod](https://fitbod.me/) is widely considered the pioneer in algorithmic fitness.
 
 **Why it stands out:**
 Fitbod's greatest strength is its adaptability. You tell the app exactly what equipment is available to you today. If you are traveling and the hotel gym only has a cable machine and a treadmill, Fitbod instantly recalculates your entire workout to utilize only that specific equipment. 
@@ -59,7 +59,7 @@ Fitbod's greatest strength is its adaptability. You tell the app exactly what eq
 
 ### 2. BodBot: The Most Customizable Free Option
 
-If you want a truly free experience without aggressive paywalls, [BodBot](https://www.bodbot.com/) (Outbound Link) is arguably the best free AI workout plan generator for sheer granular control.
+If you want a truly free experience without aggressive paywalls, [BodBot](https://www.bodbot.com/) is arguably the best free AI workout plan generator for sheer granular control.
 
 **Why it's great:**
 BodBot's initial setup questionnaire is exhaustively detailed. It asks you about your shoulder mobility, your hip flexibility, and specific joint pain. It uses this data to completely filter out exercises that could exacerbate your specific physical limitations.
@@ -114,7 +114,7 @@ Please format the routine in a clear, day-by-day table. Include specific exercis
 
 When you use this prompt, the AI will generate a routine that rivals programs sold by fitness influencers for hundreds of dollars. 
 
-*(Want to learn how AI can help you create visual content for your fitness journey? Check out our guide on the [Best Free AI Seamless Texture Generator](#).)* (Inbound Link)
+*(Want to learn how AI can help you create visual content for your fitness journey? Check out our guide on the [Best Free AI Seamless Texture Generator](/blog/best-free-ai-seamless-texture-generator).)*
 
 ---
 

@@ -66,6 +66,16 @@ const nextConfig: NextConfig = {
       { source: "/blog/ai-vr-fans-fifa-2026", destination: "/blog", permanent: true },
       { source: "/blog/ai-training-players-fifa-2026", destination: "/blog", permanent: true },
       { source: "/blog/claude-fable-5-game-article", destination: "/blog", permanent: true },
+      { source: "/blog/qr-code-generator-small-size", destination: "/blog/micro-qr-codes-guide", permanent: true },
+      { source: "/blog/ai-tools-from-china-100-of-them-list", destination: "/blog/china-ai-tools-top-100", permanent: true },
+      { source: "/blog/why-google-adsense-rejects-websites", destination: "/blog/how-to-get-adsense-approval", permanent: true },
+      { source: "/blog/best-ai-for-writing-podcast-show-notes", destination: "/blog/best-ai-podcast-show-notes", permanent: true },
+      { source: "/blog/build-ai-voice-enhancer-tool-faizankiawaz", destination: "/blog/faizan-ki-awaz-voice-enhancer", permanent: true },
+      { source: "/blog/china-makes-the-tool-cheaper-how", destination: "/blog/china-ai-tools-top-100", permanent: true },
+      { source: "/blog/best-website-to-download-free-games", destination: "/blog", permanent: true },
+      { source: "/blog/ai-free-kissing-video-generator", destination: "/blog", permanent: true },
+      { source: "/blog/iphone-18-pro-max-new-features", destination: "/blog", permanent: true },
+      { source: "/blog/samsung-s27-ultra-upcoming-mobile", destination: "/blog", permanent: true },
     ];
   },
   async headers() {

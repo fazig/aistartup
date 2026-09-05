@@ -31,7 +31,7 @@ Through millions of iterations, the AI learns patterns. It learns that grass is 
 ### The Limitation of Reality
 It is important to remember that AI colorization is a mathematically probable *interpretation* of reality, not a factual record. The AI cannot know if your grandfather's tie was navy blue or dark green—it simply applies the color that statistically makes the most sense based on the grey values and textures in the image. 
 
-*(Want to learn about other AI tools that are changing the visual arts? Read our guide on the [Top 5 Best Free AI Tools to Use in 2026](#).)* (Inbound Link)
+*(Want to learn about other AI tools that are changing the visual arts? Read our guide on the [Top 5 Best Free AI Tools to Use in 2026](/blog/top-5-best-free-ai-tools-to-use-in-2026).)*
 
 ---
 
@@ -43,7 +43,7 @@ We have sifted through the noise to find the tools that are genuinely free, prod
 
 ### 1. Palette.fm: The Undisputed King of Colorization
 
-If you are looking for the overall best free AI tool to colorize old photos right now, [Palette.fm](https://palette.fm) (Outbound Link) is arguably the greatest achievement in the field.
+If you are looking for the overall best free AI tool to colorize old photos right now, [Palette.fm](https://palette.fm) is arguably the greatest achievement in the field.
 
 **Why Palette.fm stands out:**
 Unlike older tools that simply slap a single, flat color layer over an image, Palette.fm is deeply contextual. It was built by a former Google researcher, and its primary advantage is the sheer variety of color palettes it offers. 
@@ -60,7 +60,7 @@ When you upload a photo, it doesn't just give you one result. It gives you a "Ba
 
 ### 2. MyHeritage In Color: The Genealogist's Choice
 
-If your primary goal is building a family tree, you have likely heard of [MyHeritage](https://www.myheritage.com/incolor) (Outbound Link). They partnered with the deep-learning experts at DeOldify to integrate a colorization tool directly into their genealogy platform.
+If your primary goal is building a family tree, you have likely heard of [MyHeritage](https://www.myheritage.com/incolor). They partnered with the deep-learning experts at DeOldify to integrate a colorization tool directly into their genealogy platform.
 
 **Why it's great:**
 The MyHeritage tool goes beyond simple colorization; it also features a spectacular photo enhancer that sharpens blurry faces. If you have a tiny, out-of-focus passport photo from 1920, MyHeritage can sharpen the eyes and bring out the skin tones simultaneously.
@@ -117,7 +117,7 @@ When you present an older relative with a colorized photo of their childhood, th
 
 By utilizing these free tools, you are acting as an amateur historian and an emotional archivist for your family. 
 
-*(Curious about how AI is reshaping other creative tools? Check out our review on whether [Claude Fable 5 is the most expensive tool yet](#).)* (Inbound Link)
+*(Curious about how AI is reshaping other creative tools? Check out our review on whether [Claude Fable 5 Review](/blog/claude-fable-5-game-article).)*
 
 ---
 

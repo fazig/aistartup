@@ -24,13 +24,13 @@ So, *who will win the football FIFA World Cup?* Let's take emotion out of the eq
 
 Before we reveal the winner, it’s crucial to understand how this prediction was formulated. Artificial Intelligence doesn't have a favorite team. It doesn't care about a fairytale ending for a retiring legend. It only cares about data. 
 
-To determine who will win the football FIFA World Cup, our AI prediction model, built on architecture similar to models used by [Opta Analyst](https://theanalyst.com/eu/) (Outbound Link), analyzed:
+To determine who will win the football FIFA World Cup, our AI prediction model, built on architecture similar to models used by [Opta Analyst](https://theanalyst.com/eu/), analyzed:
 1. **Historical Head-to-Head Records:** Going back 40 years to find systemic weaknesses between specific nations.
 2. **xG (Expected Goals) and xA (Expected Assists):** Instead of just looking at goals scored, the AI looks at the *quality* of chances a team creates.
 3. **Player Fatigue Metrics:** Factoring in the gruelling domestic seasons leading up to the tournament.
 4. **Elo Ratings:** A continuous rating system that updates after every single international match.
 
-*Curious about how you can actually watch these predictions unfold? Check out our guide on the [free way to watch the World Cup Final online](#).* (Inbound Link)
+*Curious about how you can actually watch these predictions unfold? Check out our guide on the [free way to watch the World Cup Final online](/tools/live-sports).*
 
 ---
 
@@ -67,7 +67,7 @@ Based on ten thousand tournament simulations, the AI has narrowed the field down
 3. **England:** Yes, it might finally be coming home. The AI favors England heavily due to their set-piece efficiency. In tight World Cup knockout matches, goals from corners and free-kicks are statistically vital, and England leads Europe in this metric.
 4. **Argentina:** The reigning champions still hold incredible statistical weight, primarily due to their cohesive pressing system and ability to win fouls in dangerous areas. 
 
-*Speaking of Argentina, will their captain lift the trophy again? Read our deep dive: [Will Messi win the World Cup?](#)* (Inbound Link)
+*Speaking of Argentina, will their captain lift the trophy again? Read our deep dive: [Will Messi win the World Cup?](/blog)*
 
 ---
 
@@ -90,7 +90,7 @@ While Brazil was a close second (losing to France in 54% of the simulated finals
 
 It is important to remember that football is played on grass, not on a spreadsheet. 
 
-If we look back at the [predictions for the 2022 World Cup](https://www.turing.com/kb/how-ai-predicted-world-cup-winner) (Outbound Link), various AI models successfully predicted Argentina's victory, though many struggled to foresee Morocco's incredible run to the semi-finals. 
+If we look back at the [predictions for the 2022 World Cup](https://www.turing.com/kb/how-ai-predicted-world-cup-winner), various AI models successfully predicted Argentina's victory, though many struggled to foresee Morocco's incredible run to the semi-finals. 
 
 AI struggles with the intangible aspects of the human spirit. It cannot quantify the sheer willpower of a captain carrying his team, the roar of a home crowd pushing exhausted players through extra time, or the unpredictable genius of a perfectly timed bicycle kick. 
 
@@ -104,5 +104,5 @@ The beauty of the World Cup lies in its unpredictability. While our AI predictio
 
 So, who will win the football FIFA World Cup? The data says France. Your heart might say someone else. The only way to find out is to watch it all unfold. 
 
-Make sure you don't miss a second of the action. Ensure you have the right setup by checking our guide on the [best apps to stream live the FIFA 2026 matches](#) (Inbound Link). Let the games begin!`
+Make sure you don't miss a second of the action. Ensure you have the right setup by checking our guide on the [best apps to stream live the FIFA 2026 matches](/tools/live-sports). Let the games begin!`
 };
