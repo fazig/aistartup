@@ -69,8 +69,10 @@ import { postBestSpinbotAlternativesFree } from "./articles/best-spinbot-alterna
 import { postMicroQrCodesGuide } from "./articles/micro-qr-codes-guide";
 import { postManusAiVsGoogleAntigravity } from "./articles/manus-ai-vs-google-antigravity";
 import { postSamsungAiVsGalaxyAiDifferences } from "./articles/samsung-ai-vs-galaxy-ai-differences";
+import { postBestFreeReminiAlternatives2026 } from "./articles/best-free-remini-alternatives-2026";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postBestFreeReminiAlternatives2026,
   postTopFreeAiPresentationMakers2026,
   postBestSpinbotAlternativesFree,
   postMicroQrCodesGuide,

@@ -11,6 +11,16 @@ export interface BlogPostMeta {
 
 export const BLOG_METADATA: BlogPostMeta[] = [
   {
+    "slug": "best-free-remini-alternatives-2026",
+    "title": "Best Free Remini Alternatives in 2026: 5 Free AI Image Upscalers (No Paywalls, No Annoying Ads)",
+    "description": "Tired of Remini forcing 30-second ads and charging weekly subscriptions just to fix a blurry photo? Here are the 5 best free AI image upscalers tested in 2026.",
+    "date": "2026-09-06",
+    "readTime": "16 min read",
+    "category": "AI Tools",
+    "author": "Faizan Arif",
+    "image": "/images/best-free-remini-alternatives-2026.jpg"
+  },
+  {
     "slug": "top-free-ai-presentation-makers-2026",
     "title": "Top Free AI Presentation Makers in 2026: Goodbye PowerPoint, Hello Instant Slides",
     "description": "Tired of spending 4 hours formatting slides? We tested the top free AI presentation makers in 2026 (Gamma, Beautiful.ai, Tome, Presentations.AI) so you don't have to.",
