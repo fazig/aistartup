@@ -517,8 +517,8 @@ export default function ResumeStudioApp() {
           {/* Mobile Preview Toggle */}
           <button
             onClick={() => setShowMobilePreview(!showMobilePreview)}
-            className="saas-btn saas-btn-secondary"
-            style={{ display: "none" }}
+            className="saas-btn saas-btn-secondary saas-mobile-toggle"
+            title="Toggle between Editor and Live Preview"
           >
             {showMobilePreview ? <Sliders size={14} /> : <Eye size={14} />}
             <span>{showMobilePreview ? "Editor" : "Preview"}</span>
@@ -529,7 +529,7 @@ export default function ResumeStudioApp() {
       {/* Main Dual-Pane Studio Desk */}
       <div className="saas-split-desk">
         {/* LEFT PANEL: Editor, Templates, Style & ATS Score */}
-        <aside className="saas-editor-side">
+        <aside className={`saas-editor-side ${showMobilePreview ? "saas-mobile-hide" : ""}`}>
           {/* Tabs */}
           <div className="saas-side-tabs">
             <button
@@ -1489,7 +1489,7 @@ export default function ResumeStudioApp() {
         </aside>
 
         {/* RIGHT PANEL: Live WYSIWYG Sheet Canvas */}
-        <main className="saas-canvas-side">
+        <main className={`saas-canvas-side ${!showMobilePreview ? "saas-mobile-hide" : ""}`}>
           {/* Floating Zoom Toolbar */}
           <div className="saas-canvas-bar">
             <span style={{ fontSize: "0.75rem", color: "var(--saas-text-muted)", fontFamily: "monospace" }}>Zoom:</span>

@@ -773,19 +773,34 @@
   gap: 1rem;
 }
 
+/* Mobile Toggle Controls */
+.saas-mobile-toggle {
+  display: none !important;
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 1024px) {
+  .saas-mobile-toggle {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .saas-mobile-hide {
+    display: none !important;
+  }
   .saas-split-desk {
     flex-direction: column;
     height: auto;
   }
   .saas-editor-side {
     width: 100%;
-    height: 700px;
+    height: calc(100vh - 120px);
+    max-height: 850px;
   }
   .saas-canvas-side {
     width: 100%;
-    height: 700px;
+    height: calc(100vh - 120px);
+    max-height: 850px;
   }
   .saas-nav-links {
     display: none;
