@@ -52,6 +52,13 @@ import {
 } from "../tools/resume-builder/defaultData";
 
 import { ROLE_PRESETS, POWER_VERBS } from "./rolePresets";
+import { ResumeDocument } from "./types";
+import {
+  improveBulletPoint,
+  transformToXYZFormula,
+  generateBulletsForRole,
+  generateSummaryForProfile
+} from "./aiAssistantEngine";
 import { analyzeResumeATS } from "./atsScoreEngine";
 import ResumeRenderer from "../tools/resume-builder/templates/ResumeRenderer";
 import "./resume-saas.css";
@@ -59,9 +66,19 @@ import "./resume-saas.css";
 const STORAGE_DATA_KEY = "resumecraft_saas_data_v1";
 const STORAGE_THEME_KEY = "resumecraft_saas_theme_v1";
 
-export default function ResumeStudioApp() {
-  const [data, setData] = useState<ResumeData>(DEFAULT_RESUME_DATA);
-  const [theme, setTheme] = useState<ResumeTheme>(DEFAULT_RESUME_THEME);
+interface ResumeStudioAppProps {
+  activeDoc?: ResumeDocument;
+  onUpdateDoc?: (doc: ResumeDocument) => void;
+  onOpenDashboard?: () => void;
+}
+
+export default function ResumeStudioApp({
+  activeDoc,
+  onUpdateDoc,
+  onOpenDashboard
+}: ResumeStudioAppProps = {}) {
+  const [data, setData] = useState<ResumeData>(() => (activeDoc ? activeDoc.data : DEFAULT_RESUME_DATA));
+  const [theme, setTheme] = useState<ResumeTheme>(() => (activeDoc ? activeDoc.theme : DEFAULT_RESUME_THEME));
   const [activeTab, setActiveTab] = useState<"content" | "templates" | "theme" | "ats">("content");
   const [activeSection, setActiveSection] = useState<string>("personal");
   const [activeRolePreset, setActiveRolePreset] = useState<string>("swe");
@@ -76,29 +93,43 @@ export default function ResumeStudioApp() {
 
   // Mount & load storage
   useEffect(() => {
-    try {
-      const savedD = localStorage.getItem(STORAGE_DATA_KEY);
-      const savedT = localStorage.getItem(STORAGE_THEME_KEY);
-      if (savedD) setData(JSON.parse(savedD));
-      if (savedT) setTheme(JSON.parse(savedT));
-    } catch (e) {
-      console.warn(e);
+    if (activeDoc) {
+      setData(activeDoc.data);
+      setTheme(activeDoc.theme);
+    } else {
+      try {
+        const savedD = localStorage.getItem(STORAGE_DATA_KEY);
+        const savedT = localStorage.getItem(STORAGE_THEME_KEY);
+        if (savedD) setData(JSON.parse(savedD));
+        if (savedT) setTheme(JSON.parse(savedT));
+      } catch (e) {
+        console.warn(e);
+      }
     }
     setIsMounted(true);
-  }, []);
+  }, [activeDoc?.id]);
 
   // Save changes
   useEffect(() => {
     if (!isMounted) return;
-    try {
-      localStorage.setItem(STORAGE_DATA_KEY, JSON.stringify(data));
-      localStorage.setItem(STORAGE_THEME_KEY, JSON.stringify(theme));
-      setSavedNotif(true);
-      const timer = setTimeout(() => setSavedNotif(false), 1400);
-      return () => clearTimeout(timer);
-    } catch (e) {
-      console.warn(e);
+    if (activeDoc && onUpdateDoc) {
+      onUpdateDoc({
+        ...activeDoc,
+        data,
+        theme,
+        updatedAt: new Date().toISOString()
+      });
+    } else {
+      try {
+        localStorage.setItem(STORAGE_DATA_KEY, JSON.stringify(data));
+        localStorage.setItem(STORAGE_THEME_KEY, JSON.stringify(theme));
+      } catch (e) {
+        console.warn(e);
+      }
     }
+    setSavedNotif(true);
+    const timer = setTimeout(() => setSavedNotif(false), 1400);
+    return () => clearTimeout(timer);
   }, [data, theme, isMounted]);
 
   // Live ATS Analysis
@@ -955,9 +986,22 @@ export default function ResumeStudioApp() {
                     <h4 style={{ fontSize: "0.75rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.05em", color: "#ffffff", margin: 0 }}>
                       Executive Summary
                     </h4>
-                    <span style={{ fontSize: "0.7rem", color: "var(--saas-text-muted)", fontFamily: "monospace" }}>
-                      {data.summary.length} characters
-                    </span>
+                    <div style={{ display: "flex", alignItems: "center", gap: "0.4rem" }}>
+                      <button
+                        onClick={() => {
+                          const newSummary = generateSummaryForProfile(data);
+                          setData(p => ({ ...p, summary: newSummary }));
+                        }}
+                        className="saas-btn saas-btn-primary"
+                        style={{ padding: "0.2rem 0.55rem", fontSize: "0.7rem" }}
+                        title="Draft a high-impact summary from your filled profile"
+                      >
+                        <Sparkles size={11} /> AI Generate
+                      </button>
+                      <span style={{ fontSize: "0.7rem", color: "var(--saas-text-muted)", fontFamily: "monospace" }}>
+                        {data.summary.length} chars
+                      </span>
+                    </div>
                   </div>
                   <textarea
                     rows={6}
@@ -1054,12 +1098,26 @@ export default function ResumeStudioApp() {
                           <label className="saas-label">
                             Key Bullet Points ({exp.highlights.length})
                           </label>
-                          <button
-                            onClick={() => addHighlight(expIdx)}
-                            style={{ background: "transparent", border: "none", color: "var(--saas-primary)", fontSize: "0.7rem", cursor: "pointer", display: "flex", alignItems: "center", gap: 2 }}
-                          >
-                            <Plus size={11} /> Add Bullet
-                          </button>
+                          <div style={{ display: "flex", gap: "0.4rem" }}>
+                            <button
+                              onClick={() => {
+                                const newBullets = generateBulletsForRole(exp.role);
+                                const updatedExp = [...data.experience];
+                                updatedExp[expIdx].highlights = [...updatedExp[expIdx].highlights, ...newBullets];
+                                setData(p => ({ ...p, experience: updatedExp }));
+                              }}
+                              style={{ background: "transparent", border: "none", color: "#38bdf8", fontSize: "0.7rem", cursor: "pointer", display: "flex", alignItems: "center", gap: 3 }}
+                              title="Generate 3 tailored bullets for this job title"
+                            >
+                              <Sparkles size={11} /> AI 3 Bullets
+                            </button>
+                            <button
+                              onClick={() => addHighlight(expIdx)}
+                              style={{ background: "transparent", border: "none", color: "var(--saas-primary)", fontSize: "0.7rem", cursor: "pointer", display: "flex", alignItems: "center", gap: 2 }}
+                            >
+                              <Plus size={11} /> Add Bullet
+                            </button>
+                          </div>
                         </div>
 
                         {/* Power Verbs Quick Helper */}
@@ -1097,12 +1155,37 @@ export default function ResumeStudioApp() {
                                 className="saas-textarea"
                                 style={{ padding: "0.35rem 0.5rem", fontSize: "0.75rem" }}
                               />
-                              <button
-                                onClick={() => removeHighlight(expIdx, hlIdx)}
-                                style={{ background: "transparent", border: "none", color: "var(--saas-text-subtle)", cursor: "pointer", padding: 4, marginTop: 2 }}
-                              >
-                                <Trash2 size={12} />
-                              </button>
+                              <div style={{ display: "flex", flexDirection: "column", gap: 2 }}>
+                                <button
+                                  onClick={() => {
+                                    const improved = improveBulletPoint(hl, exp.role);
+                                    updateHighlight(expIdx, hlIdx, improved);
+                                  }}
+                                  className="saas-icon-btn"
+                                  title="✨ Improve with AI (power verbs & metrics)"
+                                  style={{ width: 22, height: 22, color: "#34d399" }}
+                                >
+                                  <Sparkles size={11} />
+                                </button>
+                                <button
+                                  onClick={() => {
+                                    const xyz = transformToXYZFormula(hl);
+                                    updateHighlight(expIdx, hlIdx, xyz);
+                                  }}
+                                  className="saas-icon-btn"
+                                  title="📈 Apply Google XYZ Formula"
+                                  style={{ width: 22, height: 22, color: "#60a5fa" }}
+                                >
+                                  <Zap size={11} />
+                                </button>
+                                <button
+                                  onClick={() => removeHighlight(expIdx, hlIdx)}
+                                  style={{ background: "transparent", border: "none", color: "var(--saas-text-subtle)", cursor: "pointer", padding: 4 }}
+                                  title="Delete bullet"
+                                >
+                                  <Trash2 size={12} />
+                                </button>
+                              </div>
                             </div>
                           ))}
                         </div>

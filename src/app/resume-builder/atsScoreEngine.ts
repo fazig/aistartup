@@ -321,3 +321,5 @@ export function analyzeResumeATS(data: ResumeData): ATSAnalysisResult {
     }
   };
 }
+
+export const calculateATSScore = analyzeResumeATS;

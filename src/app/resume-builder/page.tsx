@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import ResumeStudioApp from "./ResumeStudioApp";
+import SaasProductWorkspace from "./components/SaasProductWorkspace";
 import {
   Sparkles,
   FileText,
@@ -138,7 +138,7 @@ export default function StandaloneResumeBuilderPage() {
           {/* Desktop Nav Links */}
           <nav className="saas-nav-links">
             <a href="#templates" className="saas-nav-link">Templates</a>
-            <a href="#studio" className="saas-nav-link">Studio Editor</a>
+            <a href="#studio" className="saas-nav-link">SaaS Workspace</a>
             <a href="#ats-engine" className="saas-nav-link">ATS Checker</a>
             <a href="#how-it-works" className="saas-nav-link">How It Works</a>
             <a href="#faq" className="saas-nav-link">FAQ</a>
@@ -251,8 +251,10 @@ export default function StandaloneResumeBuilderPage() {
         </div>
       </section>
 
-      {/* 4. THE LIVE STUDIO WORKSPACE */}
-      <ResumeStudioApp />
+      {/* 4. FULL-FLEDGED SAAS WORKSPACE (STUDIO, DASHBOARD, JOB MATCHER, COVER LETTER) */}
+      <section id="studio" style={{ padding: "0", margin: "0" }}>
+        <SaasProductWorkspace />
+      </section>
 
       {/* 5. ATS SCORING ENGINE DEEP DIVE */}
       <section id="ats-engine" className="saas-section">
