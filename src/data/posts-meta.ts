@@ -11,6 +11,16 @@ export interface BlogPostMeta {
 
 export const BLOG_METADATA: BlogPostMeta[] = [
   {
+    "slug": "best-free-grammarly-alternatives-2026",
+    "title": "Best Free Grammarly Alternatives in 2026: 5 Grammar Checkers With No Word Limit (No Sign-Up Required)",
+    "description": "Frustrated with Grammarly hiding basic clarity fixes behind a $12/month paywall and tracking your keystrokes? Here are the 5 best free Grammarly alternatives in 2026.",
+    "date": "2026-09-07",
+    "readTime": "17 min read",
+    "category": "Writing Tools",
+    "author": "Faizan Arif",
+    "image": "/images/best-free-grammarly-alternatives-2026.jpg"
+  },
+  {
     "slug": "best-free-remini-alternatives-2026",
     "title": "Best Free Remini Alternatives in 2026: 5 Free AI Image Upscalers (No Paywalls, No Annoying Ads)",
     "description": "Tired of Remini forcing 30-second ads and charging weekly subscriptions just to fix a blurry photo? Here are the 5 best free AI image upscalers tested in 2026.",

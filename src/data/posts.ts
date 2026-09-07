@@ -70,8 +70,10 @@ import { postMicroQrCodesGuide } from "./articles/micro-qr-codes-guide";
 import { postManusAiVsGoogleAntigravity } from "./articles/manus-ai-vs-google-antigravity";
 import { postSamsungAiVsGalaxyAiDifferences } from "./articles/samsung-ai-vs-galaxy-ai-differences";
 import { postBestFreeReminiAlternatives2026 } from "./articles/best-free-remini-alternatives-2026";
+import { postBestFreeGrammarlyAlternatives2026 } from "./articles/best-free-grammarly-alternatives-2026";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postBestFreeGrammarlyAlternatives2026,
   postBestFreeReminiAlternatives2026,
   postTopFreeAiPresentationMakers2026,
   postBestSpinbotAlternativesFree,
