@@ -73,6 +73,13 @@ export default function Home() {
 
           <aside className="home-panel" aria-label="Start with a popular tool">
             <div className="home-panel-label">Start here</div>
+            <Link href="/tools/resume-builder" className="home-jump">
+              <div>
+                <strong>Resume Studio</strong>
+                <span>10 Canva-style ATS templates</span>
+              </div>
+              <span className="home-jump-meta">New</span>
+            </Link>
             <Link href="/tools/ai-copilot" className="home-jump">
               <div>
                 <strong>ZenNote AI</strong>
@@ -113,6 +120,22 @@ export default function Home() {
           </div>
 
           <div className="home-tools">
+            <Link href="/tools/resume-builder" className="home-tool">
+              <span className="home-tool-ico" aria-hidden="true">
+                <FileText size={20} />
+              </span>
+              <div>
+                <h3>
+                  Canva-Style Resume Studio <span className="home-chip home-chip-new">New</span>
+                </h3>
+                <p>
+                  Create ATS-friendly, professional resumes with 10 customizable designer
+                  templates, live vector PDF export, and zero watermarks.
+                </p>
+              </div>
+              <span className="home-tool-go">Build Resume →</span>
+            </Link>
+
             <Link href="/tools/ai-copilot" className="home-tool">
               <span className="home-tool-ico" aria-hidden="true">
                 <Sparkles size={20} />

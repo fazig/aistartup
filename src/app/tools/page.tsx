@@ -30,6 +30,7 @@ export default function ToolsDirectory() {
       title: "AI & Agent Tools",
       icon: <Sparkles size={20} color="var(--primary)" />,
       tools: [
+        { name: "Canva-Style Resume Builder", path: "/tools/resume-builder", status: "new" },
         { name: "llms.txt & AI Bot Generator", path: "/tools/llms-txt-generator", status: "new" },
         { name: "ZenNote AI (Daily Organizer)", path: "/tools/ai-copilot", status: "live" },
         { name: "AI SEO Meta Title Generator", path: "/tools/meta-title-generator", status: "live" },
@@ -40,6 +41,7 @@ export default function ToolsDirectory() {
       title: "Text & Content Tools",
       icon: <FileText size={20} color="var(--primary)" />,
       tools: [
+        { name: "Professional Resume Builder", path: "/tools/resume-builder", status: "new" },
         { name: "Free Grammar Checker", path: "/tools/grammar-checker", status: "live" },
         { name: "Article Rewriter", path: "/tools/article-rewriter", status: "live" },
         { name: "Plagiarism Checker", path: "/tools/plagiarism-checker", status: "live" },
