@@ -71,8 +71,10 @@ import { postManusAiVsGoogleAntigravity } from "./articles/manus-ai-vs-google-an
 import { postSamsungAiVsGalaxyAiDifferences } from "./articles/samsung-ai-vs-galaxy-ai-differences";
 import { postBestFreeReminiAlternatives2026 } from "./articles/best-free-remini-alternatives-2026";
 import { postBestFreeGrammarlyAlternatives2026 } from "./articles/best-free-grammarly-alternatives-2026";
+import { postGenerativeEngineOptimizationGeoGuide2026 } from "./articles/generative-engine-optimization-geo-guide-2026";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postGenerativeEngineOptimizationGeoGuide2026,
   postBestFreeGrammarlyAlternatives2026,
   postBestFreeReminiAlternatives2026,
   postTopFreeAiPresentationMakers2026,

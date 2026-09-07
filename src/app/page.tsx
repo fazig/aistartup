@@ -18,6 +18,7 @@ import {
   Timer,
   ArrowRight,
   ChartCandlestick,
+  Bot,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -158,6 +159,21 @@ export default function Home() {
                 </p>
               </div>
               <span className="home-tool-go">Open Desk →</span>
+            </Link>
+
+            <Link href="/tools/llms-txt-generator" className="home-tool">
+              <span className="home-tool-ico" aria-hidden="true">
+                <Bot size={20} />
+              </span>
+              <div>
+                <h3>
+                  llms.txt Generator <span className="home-chip home-chip-hot">GEO</span>
+                </h3>
+                <p>
+                  Generate standardized llms.txt files and configure AI search bots for ChatGPT, Perplexity, and Claude.
+                </p>
+              </div>
+              <span className="home-tool-go">Build File →</span>
             </Link>
 
             <Link href="/tools/json-formatter" className="home-tool">

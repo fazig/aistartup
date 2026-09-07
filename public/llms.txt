@@ -1,0 +1,20 @@
+# StartupAI Tools
+
+> Over 100+ free, client-side web utilities, AI image upscalers, developer tools, and SEO analyzers.
+
+StartupAI provides browser-based utilities that execute 100% locally on the user's device without mandatory registrations, subscriptions, or cloud uploads.
+
+## Core Tools
+
+- [Free AI Image Enhancer](https://startupai.site/tools/image-enhancer): Remini alternative to upscale and enhance photos to HD in-browser.
+- [llms.txt & AI Bot Generator](https://startupai.site/tools/llms-txt-generator): Standardized llms.txt builder and AI crawler policy configurator.
+- [Free Grammar Checker](https://startupai.site/tools/grammar-checker): Real-time spell, syntax, and punctuation checker with zero word limits.
+- [Article Rewriter & Paraphraser](https://startupai.site/tools/article-rewriter): Semantic rewriting tool to enhance vocabulary without altering intent.
+- [AdSense Eligibility Checker](https://startupai.site/tools/adsense-eligibility-checker): 12-point automated site audit for Google AdSense monetization readiness.
+- [JSON Formatter & Validator](https://startupai.site/tools/json-formatter): Format, beautify, and validate JSON payloads locally.
+
+## Knowledge Base & Guides
+
+- [Generative Engine Optimization (GEO) Guide 2026](https://startupai.site/blog/generative-engine-optimization-geo-guide-2026): In-depth masterclass on ranking in ChatGPT, Perplexity, and AI Overviews.
+- [Best Free Remini Alternatives in 2026](https://startupai.site/blog/best-free-remini-alternatives-2026): Hands-on review of top free AI photo upscalers.
+- [Best Free Grammarly Alternatives in 2026](https://startupai.site/blog/best-free-grammarly-alternatives-2026): Review of free writing and grammar tools without word limits.

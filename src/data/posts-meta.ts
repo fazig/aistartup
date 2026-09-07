@@ -11,6 +11,16 @@ export interface BlogPostMeta {
 
 export const BLOG_METADATA: BlogPostMeta[] = [
   {
+    "slug": "generative-engine-optimization-geo-guide-2026",
+    "title": "Generative Engine Optimization (GEO) in 2026: The Complete Guide to Ranking in ChatGPT, Perplexity, and AI Overviews",
+    "description": "The definitive 2026 guide to Generative Engine Optimization (GEO). Learn how AI answer engines cite websites, configure llms.txt, and maximize Share of Model (SoM).",
+    "date": "2026-09-07",
+    "readTime": "18 min read",
+    "category": "SEO & Technology",
+    "author": "Faizan Arif",
+    "image": "/images/generative-engine-optimization-geo-guide-2026.jpg"
+  },
+  {
     "slug": "best-free-grammarly-alternatives-2026",
     "title": "Best Free Grammarly Alternatives in 2026: 5 Grammar Checkers With No Word Limit (No Sign-Up Required)",
     "description": "Frustrated with Grammarly hiding basic clarity fixes behind a $12/month paywall and tracking your keystrokes? Here are the 5 best free Grammarly alternatives in 2026.",
