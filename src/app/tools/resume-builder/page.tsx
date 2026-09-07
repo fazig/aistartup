@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import ClientResumeBuilder from "./ClientResumeBuilder";
-import { CheckCircle, ShieldCheck, Sparkles, Download, Award, HelpCircle } from "lucide-react";
+import { CheckCircle, ShieldCheck, Sparkles, Download, Award, HelpCircle, ArrowRight } from "lucide-react";
 import "./resume-builder.css";
 
 export const metadata: Metadata = {
@@ -90,6 +91,32 @@ export default function ResumeBuilderPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+
+      {/* SaaS Flagship Banner */}
+      <div style={{
+        background: "linear-gradient(90deg, rgba(79, 70, 229, 0.25) 0%, rgba(147, 51, 234, 0.25) 50%, rgba(6, 182, 212, 0.25) 100%)",
+        borderBottom: "1px solid rgba(255, 255, 255, 0.1)",
+        padding: "12px 20px",
+        textAlign: "center",
+        fontSize: "0.88rem",
+        color: "#cbd5e1"
+      }}>
+        ✨ Looking for the flagship standalone app with real-time ATS scoring & role presets?{" "}
+        <Link
+          href="/resume-builder"
+          style={{
+            color: "#38bdf8",
+            fontWeight: 700,
+            textDecoration: "underline",
+            display: "inline-flex",
+            alignItems: "center",
+            gap: "4px",
+            marginLeft: "6px"
+          }}
+        >
+          Launch ResumeCraft AI Studio <ArrowRight size={14} />
+        </Link>
+      </div>
 
       {/* Main Interactive Studio Canvas */}
       <ClientResumeBuilder />

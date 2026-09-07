@@ -2,11 +2,19 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Wrench, Menu, X, ChevronDown, Sparkles, ArrowRight } from "lucide-react";
+import { usePathname } from "next/navigation";
+import { Wrench, Menu, X, ChevronDown, Sparkles, ArrowRight, FileText } from "lucide-react";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const pathname = usePathname();
+
+  // On the standalone SaaS Resume Builder page, suppress the generic site header
+  // so the dedicated SaaS header takes over.
+  if (pathname?.startsWith("/resume-builder")) {
+    return null;
+  }
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -52,6 +60,32 @@ export default function Header() {
         <nav className="header-desktop-menu" style={{ gap: '1.75rem' }}>
           <Link href="/tools" className="nav-link" style={{ color: '#475569', fontWeight: 600, fontSize: '0.9rem' }}>
             All Tools
+          </Link>
+          <Link
+            href="/resume-builder"
+            className="nav-link"
+            style={{
+              color: '#0f172a',
+              fontWeight: 700,
+              fontSize: '0.9rem',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.4rem'
+            }}
+          >
+            <span>Resume Builder</span>
+            <span style={{
+              fontSize: '0.62rem',
+              fontWeight: 800,
+              padding: '0.15rem 0.4rem',
+              borderRadius: '4px',
+              background: 'linear-gradient(135deg, #10b981, #06b6d4)',
+              color: '#ffffff',
+              textTransform: 'uppercase',
+              letterSpacing: '0.04em'
+            }}>
+              SaaS
+            </span>
           </Link>
           <Link
             href="/tools/live-trading"
@@ -282,6 +316,10 @@ export default function Header() {
         <nav className="header-mobile-menu">
           <Link href="/tools/ai-copilot" className="mobile-nav-link nav-link-highlight" style={{ display: "flex", alignItems: "center", gap: "0.25rem" }} onClick={closeMenu}>
             <Sparkles size={14} /> ZenNote AI
+          </Link>
+          <Link href="/resume-builder" className="mobile-nav-link" style={{ color: '#0f172a', fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }} onClick={closeMenu}>
+            <span>Resume Builder (SaaS)</span>
+            <span style={{ fontSize: '0.62rem', fontWeight: 800, padding: '0.1rem 0.4rem', borderRadius: '4px', background: '#10b981', color: '#ffffff' }}>NEW</span>
           </Link>
           <Link href="/tools" className="mobile-nav-link" onClick={closeMenu}>
             All Tools
