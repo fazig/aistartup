@@ -49,9 +49,10 @@ import {
 } from "./defaultData";
 
 import ResumeRenderer from "./templates/ResumeRenderer";
+import "./resume-builder.css";
 
-const LOCAL_STORAGE_DATA_KEY = "startupai_resume_data_v2";
-const LOCAL_STORAGE_THEME_KEY = "startupai_resume_theme_v2";
+const LOCAL_STORAGE_DATA_KEY = "startupai_resume_data_v3";
+const LOCAL_STORAGE_THEME_KEY = "startupai_resume_theme_v3";
 
 export default function ClientResumeBuilder() {
   const [data, setData] = useState<ResumeData>(DEFAULT_RESUME_DATA);
@@ -66,7 +67,7 @@ export default function ClientResumeBuilder() {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const photoInputRef = useRef<HTMLInputElement>(null);
 
-  // Load from local storage on mount
+  // Load from local storage
   useEffect(() => {
     try {
       const savedData = localStorage.getItem(LOCAL_STORAGE_DATA_KEY);
@@ -79,7 +80,7 @@ export default function ClientResumeBuilder() {
     setIsLoaded(true);
   }, []);
 
-  // Save to local storage on change
+  // Save to local storage
   useEffect(() => {
     if (!isLoaded) return;
     try {
@@ -98,9 +99,9 @@ export default function ClientResumeBuilder() {
     window.print();
   }, []);
 
-  // Reset to default sample
+  // Reset to default sample data
   const handleResetSample = () => {
-    if (window.confirm("Load full sample data? Any unsaved edits will be replaced.")) {
+    if (window.confirm("Load complete sample profile? Any unsaved edits will be replaced.")) {
       setData(DEFAULT_RESUME_DATA);
       setTheme(DEFAULT_RESUME_THEME);
     }
@@ -160,7 +161,7 @@ export default function ClientResumeBuilder() {
         }
         alert("Resume imported successfully!");
       } catch (err) {
-        alert("Invalid resume JSON file.");
+        alert("Invalid resume JSON format.");
       }
     };
     reader.readAsText(file);
@@ -172,7 +173,7 @@ export default function ClientResumeBuilder() {
     const file = e.target.files?.[0];
     if (!file) return;
     if (file.size > 2 * 1024 * 1024) {
-      alert("Please select an image smaller than 2MB for fast vector PDF rendering.");
+      alert("Please upload an image smaller than 2MB for fast vector PDF rendering.");
       return;
     }
     const reader = new FileReader();
@@ -186,7 +187,7 @@ export default function ClientResumeBuilder() {
     reader.readAsDataURL(file);
   };
 
-  // Experience Handlers
+  // Updaters for Experience
   const addExperience = () => {
     const newItem: WorkExperience = {
       id: "exp-" + Date.now(),
@@ -197,8 +198,8 @@ export default function ClientResumeBuilder() {
       endDate: "Present",
       current: true,
       highlights: [
-        "Led core technical initiatives resulting in 30% performance improvements.",
-        "Collaborated across product and engineering to ship high-impact features."
+        "Architected core technical initiatives driving 35% improvements in system reliability.",
+        "Collaborated cross-functionally across product, design, and engineering to ship features."
       ]
     };
     setData(prev => ({ ...prev, experience: [newItem, ...prev.experience] }));
@@ -243,7 +244,7 @@ export default function ClientResumeBuilder() {
     });
   };
 
-  // Education Handlers
+  // Updaters for Education
   const addEducation = () => {
     const newItem: Education = {
       id: "edu-" + Date.now(),
@@ -272,7 +273,7 @@ export default function ClientResumeBuilder() {
     }));
   };
 
-  // Skills Handlers
+  // Updaters for Skills
   const addSkillCategory = () => {
     const newCat: SkillCategory = {
       id: "skill-" + Date.now(),
@@ -306,7 +307,7 @@ export default function ClientResumeBuilder() {
     }));
   };
 
-  // Projects Handlers
+  // Updaters for Projects
   const addProject = () => {
     const newItem: Project = {
       id: "proj-" + Date.now(),
@@ -314,7 +315,7 @@ export default function ClientResumeBuilder() {
       role: "Lead Developer",
       techStack: "React, TypeScript, Tailwind",
       link: "https://github.com/...",
-      description: "Built an open-source productivity app with 5,000+ stars."
+      description: "Built high-performance web utility serving thousands of daily active users."
     };
     setData(prev => ({ ...prev, projects: [...prev.projects, newItem] }));
   };
@@ -334,7 +335,7 @@ export default function ClientResumeBuilder() {
     }));
   };
 
-  // Certifications Handlers
+  // Updaters for Certifications
   const addCertification = () => {
     const newItem: Certification = {
       id: "cert-" + Date.now(),
@@ -360,7 +361,7 @@ export default function ClientResumeBuilder() {
     }));
   };
 
-  // Languages Handlers
+  // Updaters for Languages
   const addLanguage = () => {
     const newItem: Language = {
       id: "lang-" + Date.now(),
@@ -390,97 +391,90 @@ export default function ClientResumeBuilder() {
   const paperHeight = isLetter ? 1056 : 1123;
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans">
+    <div className="rb-studio">
       {/* Hidden File Inputs */}
       <input
         type="file"
         ref={fileInputRef}
         onChange={handleImportJSON}
         accept="application/json"
-        className="hidden"
+        style={{ display: "none" }}
       />
       <input
         type="file"
         ref={photoInputRef}
         onChange={handlePhotoUpload}
         accept="image/*"
-        className="hidden"
+        style={{ display: "none" }}
       />
 
       {/* Top Header Bar */}
-      <header className="sticky top-0 z-40 bg-slate-900/95 backdrop-blur border-b border-slate-800 px-4 py-3">
-        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
-          <div className="flex items-center gap-3">
-            <Link
-              href="/tools"
-              className="text-xs font-medium text-slate-400 hover:text-emerald-400 transition-colors flex items-center gap-1"
-            >
+      <header className="rb-header">
+        <div className="rb-header-inner">
+          <div className="rb-brand-group">
+            <Link href="/tools" className="rb-back-link">
               ← All Tools
             </Link>
-            <div className="h-4 w-px bg-slate-800 hidden sm:block" />
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-emerald-500 to-teal-400 flex items-center justify-center text-slate-950 font-bold shadow-md shadow-emerald-500/20">
-                <FileText size={18} />
-              </div>
-              <div>
-                <h1 className="text-sm sm:text-base font-bold text-white tracking-tight flex items-center gap-2">
-                  Canva-Style Resume Studio
-                  <span className="text-[10px] uppercase font-mono px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-                    Vector PDF
-                  </span>
-                </h1>
-              </div>
+            <div className="rb-brand-divider" />
+            <div className="rb-logo-badge">
+              <FileText size={18} />
+            </div>
+            <div>
+              <h1 className="rb-title">
+                Canva-Style Resume Studio
+                <span className="rb-badge-pill">Vector PDF</span>
+              </h1>
             </div>
           </div>
 
-          {/* Quick Actions */}
-          <div className="flex items-center gap-2 flex-wrap">
+          {/* Action Buttons */}
+          <div className="rb-actions-group">
             {savedNotification && (
-              <span className="text-xs text-emerald-400 flex items-center gap-1 font-mono mr-1">
-                <Check size={12} /> Saved
+              <span className="rb-saved-indicator">
+                <Check size={13} /> Auto-Saved
               </span>
             )}
 
             <button
               onClick={() => fileInputRef.current?.click()}
-              title="Import saved JSON resume"
-              className="text-xs px-2.5 py-1.5 rounded-md bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition flex items-center gap-1.5"
+              title="Import JSON resume"
+              className="rb-btn rb-btn-secondary"
             >
               <Upload size={13} />
-              <span className="hidden md:inline">Import</span>
+              <span>Import</span>
             </button>
 
             <button
               onClick={handleExportJSON}
-              title="Backup resume to JSON"
-              className="text-xs px-2.5 py-1.5 rounded-md bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition flex items-center gap-1.5"
+              title="Save JSON backup"
+              className="rb-btn rb-btn-secondary"
             >
               <FileDown size={13} />
-              <span className="hidden md:inline">Save JSON</span>
+              <span>Save JSON</span>
             </button>
 
             <button
               onClick={handleResetSample}
-              title="Load full sample profile"
-              className="text-xs px-2.5 py-1.5 rounded-md bg-slate-800 hover:bg-slate-700 text-amber-300 border border-amber-500/20 transition flex items-center gap-1.5"
+              title="Load complete sample profile"
+              className="rb-btn rb-btn-amber"
             >
               <RotateCcw size={13} />
-              <span className="hidden sm:inline">Sample Data</span>
+              <span>Sample Data</span>
             </button>
 
             {/* Print / Download Button */}
             <button
               onClick={handlePrint}
-              className="text-xs sm:text-sm font-semibold px-4 py-1.5 rounded-md bg-emerald-500 hover:bg-emerald-400 text-slate-950 shadow-lg shadow-emerald-500/20 transition flex items-center gap-2 active:scale-95"
+              className="rb-btn rb-btn-primary"
             >
               <Printer size={15} />
               <span>Download PDF</span>
             </button>
 
-            {/* Mobile Preview Toggle */}
+            {/* Mobile View Toggle */}
             <button
               onClick={() => setShowMobilePreview(!showMobilePreview)}
-              className="lg:hidden text-xs px-3 py-1.5 rounded-md bg-slate-800 text-slate-200 border border-slate-700 flex items-center gap-1.5"
+              className="rb-btn rb-btn-secondary rb-mobile-toggle"
             >
               {showMobilePreview ? <Sliders size={14} /> : <Eye size={14} />}
               <span>{showMobilePreview ? "Editor" : "Preview"}</span>
@@ -489,88 +483,63 @@ export default function ClientResumeBuilder() {
         </div>
       </header>
 
-      {/* Main Workspace Area */}
-      <div className="flex-1 flex flex-col lg:flex-row overflow-hidden relative">
+      {/* Main Studio Workspace */}
+      <div className="rb-workspace">
         {/* LEFT PANEL: Editor & Style Controls */}
-        <aside
-          className={`w-full lg:w-[480px] xl:w-[520px] lg:shrink-0 bg-slate-900 border-r border-slate-800 flex flex-col h-[calc(100vh-61px)] overflow-y-auto ${
-            showMobilePreview ? "hidden lg:flex" : "flex"
-          }`}
-        >
+        <aside className={`rb-sidebar ${showMobilePreview ? "mobile-hide" : ""}`}>
           {/* Top Tabs */}
-          <div className="flex border-b border-slate-800 bg-slate-950/60 sticky top-0 z-20">
+          <div className="rb-tabs">
             <button
               onClick={() => setActiveTab("content")}
-              className={`flex-1 py-3 text-xs font-semibold flex items-center justify-center gap-2 border-b-2 transition ${
-                activeTab === "content"
-                  ? "border-emerald-400 text-emerald-400 bg-slate-900/80"
-                  : "border-transparent text-slate-400 hover:text-slate-200"
-              }`}
+              className={`rb-tab-btn ${activeTab === "content" ? "is-active" : ""}`}
             >
               <FileText size={15} /> Content & Info
             </button>
             <button
               onClick={() => setActiveTab("templates")}
-              className={`flex-1 py-3 text-xs font-semibold flex items-center justify-center gap-2 border-b-2 transition ${
-                activeTab === "templates"
-                  ? "border-emerald-400 text-emerald-400 bg-slate-900/80"
-                  : "border-transparent text-slate-400 hover:text-slate-200"
-              }`}
+              className={`rb-tab-btn ${activeTab === "templates" ? "is-active" : ""}`}
             >
               <LayoutTemplate size={15} /> Templates (10)
             </button>
             <button
               onClick={() => setActiveTab("theme")}
-              className={`flex-1 py-3 text-xs font-semibold flex items-center justify-center gap-2 border-b-2 transition ${
-                activeTab === "theme"
-                  ? "border-emerald-400 text-emerald-400 bg-slate-900/80"
-                  : "border-transparent text-slate-400 hover:text-slate-200"
-              }`}
+              className={`rb-tab-btn ${activeTab === "theme" ? "is-active" : ""}`}
             >
               <Palette size={15} /> Styling & Colors
             </button>
           </div>
 
-          {/* TAB 1: TEMPLATES SELECTION */}
+          {/* TAB 1: TEMPLATES */}
           {activeTab === "templates" && (
-            <div className="p-4 space-y-4">
+            <div className="rb-sidebar-content">
               <div>
-                <h3 className="text-sm font-bold text-white">Select a Designer Archetype</h3>
-                <p className="text-xs text-slate-400">
-                  Choose from 10 ATS-optimized, recruiter-approved visual structures.
+                <h3 style={{ fontSize: "0.9rem", fontWeight: 700, margin: "0 0 0.25rem 0" }}>
+                  Select a Designer Archetype
+                </h3>
+                <p style={{ fontSize: "0.75rem", color: "var(--rb-text-muted)", margin: 0 }}>
+                  Choose from 10 ATS-optimized, recruiter-approved visual layouts.
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div className="rb-templates-grid">
                 {TEMPLATE_INFO.map(t => {
                   const isSelected = theme.templateId === t.id;
                   return (
                     <div
                       key={t.id}
                       onClick={() => setTheme(prev => ({ ...prev, templateId: t.id as TemplateId }))}
-                      className={`p-3.5 rounded-xl border cursor-pointer transition text-left flex flex-col justify-between ${
-                        isSelected
-                          ? "border-emerald-400 bg-emerald-950/20 ring-1 ring-emerald-400"
-                          : "border-slate-800 bg-slate-950/50 hover:border-slate-700 hover:bg-slate-950"
-                      }`}
+                      className={`rb-template-card ${isSelected ? "is-active" : ""}`}
                     >
                       <div>
-                        <div className="flex items-center justify-between mb-1.5">
-                          <span className="text-xs font-bold text-white">{t.name}</span>
-                          <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-slate-800 text-emerald-400">
-                            {t.badge}
-                          </span>
+                        <div className="rb-template-top">
+                          <span className="rb-template-name">{t.name}</span>
+                          <span className="rb-badge-pill">{t.badge}</span>
                         </div>
-                        <p className="text-[11px] text-slate-400 leading-relaxed mb-2">
-                          {t.description}
-                        </p>
+                        <p className="rb-template-desc">{t.desc}</p>
                       </div>
-
-                      <div className="pt-2 border-t border-slate-800/80 flex items-center justify-between">
-                        <span className="text-[10px] text-slate-500 font-mono">
-                          {isSelected ? "Active Template" : "Click to apply"}
-                        </span>
-                        {isSelected && <CheckCircle2 size={14} className="text-emerald-400" />}
+                      <div className="rb-template-foot">
+                        <span>{isSelected ? "Active Template" : "Click to apply"}</span>
+                        {isSelected && <CheckCircle2 size={14} color="var(--rb-primary)" />}
                       </div>
                     </div>
                   );
@@ -581,13 +550,13 @@ export default function ClientResumeBuilder() {
 
           {/* TAB 2: STYLING & PALETTE */}
           {activeTab === "theme" && (
-            <div className="p-4 space-y-6">
-              {/* Color Presets */}
+            <div className="rb-sidebar-content">
+              {/* Color Palette */}
               <div>
-                <label className="text-xs font-bold text-slate-200 block mb-2">
+                <label className="rb-label" style={{ display: "block", marginBottom: "0.5rem" }}>
                   Accent Color Palette
                 </label>
-                <div className="grid grid-cols-5 gap-2 mb-3">
+                <div className="rb-palette-grid">
                   {COLOR_PRESETS.map(preset => (
                     <button
                       key={preset.name}
@@ -598,56 +567,44 @@ export default function ClientResumeBuilder() {
                           accentColor: preset.accent
                         }))
                       }
-                      className={`p-2 rounded-lg border flex flex-col items-center gap-1 transition ${
-                        theme.primaryColor === preset.primary
-                          ? "border-emerald-400 bg-slate-800 shadow"
-                          : "border-slate-800 bg-slate-950/60 hover:border-slate-700"
-                      }`}
+                      className={`rb-palette-btn ${theme.primaryColor === preset.primary ? "is-active" : ""}`}
                     >
-                      <div
-                        className="w-5 h-5 rounded-full shadow-inner"
-                        style={{ backgroundColor: preset.primary }}
-                      />
-                      <span className="text-[9px] text-slate-300 font-medium truncate w-full text-center">
-                        {preset.name}
-                      </span>
+                      <div className="rb-palette-dot" style={{ backgroundColor: preset.primary }} />
+                      <span className="rb-palette-name">{preset.name}</span>
                     </button>
                   ))}
                 </div>
 
-                {/* Custom Hex Input */}
-                <div className="flex items-center gap-3 bg-slate-950 p-2.5 rounded-lg border border-slate-800">
-                  <div
-                    className="w-7 h-7 rounded-md border border-slate-700 shrink-0"
-                    style={{ backgroundColor: theme.primaryColor }}
-                  />
-                  <div className="flex-1">
-                    <label className="text-[10px] text-slate-400 block">Custom Hex Code</label>
+                <div className="rb-hex-row" style={{ marginTop: "0.75rem" }}>
+                  <div className="rb-hex-swatch" style={{ backgroundColor: theme.primaryColor }} />
+                  <div style={{ flex: 1 }}>
+                    <label className="rb-label" style={{ fontSize: "0.68rem", display: "block" }}>Custom Hex Code</label>
                     <input
                       type="text"
                       value={theme.primaryColor}
                       onChange={e => setTheme(prev => ({ ...prev, primaryColor: e.target.value }))}
-                      className="bg-transparent text-xs font-mono text-white focus:outline-none w-full"
-                      placeholder="#0ea5e9"
+                      className="rb-input"
+                      style={{ padding: "0.25rem 0.5rem", fontFamily: "monospace" }}
+                      placeholder="#10b981"
                     />
                   </div>
                   <input
                     type="color"
-                    value={theme.primaryColor.startsWith("#") && theme.primaryColor.length === 7 ? theme.primaryColor : "#0ea5e9"}
+                    value={theme.primaryColor.startsWith("#") && theme.primaryColor.length === 7 ? theme.primaryColor : "#10b981"}
                     onChange={e => setTheme(prev => ({ ...prev, primaryColor: e.target.value }))}
-                    className="w-7 h-7 rounded border-0 cursor-pointer bg-transparent"
+                    style={{ width: 28, height: 28, border: "none", background: "transparent", cursor: "pointer" }}
                   />
                 </div>
               </div>
 
               {/* Typography */}
               <div>
-                <label className="text-xs font-bold text-slate-200 block mb-2">
+                <label className="rb-label" style={{ display: "block", marginBottom: "0.5rem" }}>
                   Font Family Pairing
                 </label>
-                <div className="grid grid-cols-2 gap-2">
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.5rem" }}>
                   {[
-                    { id: "sans", name: "Modern Sans (Inter / System)" },
+                    { id: "sans", name: "Modern Sans (System / Inter)" },
                     { id: "serif", name: "Executive Serif (Georgia)" },
                     { id: "mono", name: "Clean Tech (Monospace)" },
                     { id: "geometric", name: "Editorial Prestige (Trebuchet)" }
@@ -655,14 +612,13 @@ export default function ClientResumeBuilder() {
                     <button
                       key={font.id}
                       onClick={() => setTheme(prev => ({ ...prev, fontFamily: font.id as any }))}
-                      className={`p-3 rounded-xl border text-left transition ${
-                        theme.fontFamily === font.id
-                          ? "border-emerald-400 bg-emerald-950/20 text-emerald-300"
-                          : "border-slate-800 bg-slate-950/50 hover:border-slate-700 text-slate-300"
-                      }`}
+                      className={`rb-card ${theme.fontFamily === font.id ? "rb-template-card is-active" : ""}`}
+                      style={{ padding: "0.75rem", textAlign: "left", cursor: "pointer" }}
                     >
-                      <div className="text-xs font-semibold">{font.name}</div>
-                      <div className="text-[10px] text-slate-500 mt-1">The quick brown fox</div>
+                      <div style={{ fontSize: "0.78rem", fontWeight: 700, color: "#ffffff" }}>{font.name}</div>
+                      <div style={{ fontSize: "0.7rem", color: "var(--rb-text-muted)", marginTop: "0.25rem" }}>
+                        The quick brown fox
+                      </div>
                     </button>
                   ))}
                 </div>
@@ -670,10 +626,10 @@ export default function ClientResumeBuilder() {
 
               {/* Spacing Density */}
               <div>
-                <label className="text-xs font-bold text-slate-200 block mb-2">
+                <label className="rb-label" style={{ display: "block", marginBottom: "0.5rem" }}>
                   Content Spacing (Density)
                 </label>
-                <div className="grid grid-cols-3 gap-2">
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "0.5rem" }}>
                   {[
                     { id: "compact", name: "Compact", desc: "Fits 1 Page" },
                     { id: "normal", name: "Comfortable", desc: "Balanced" },
@@ -682,14 +638,15 @@ export default function ClientResumeBuilder() {
                     <button
                       key={d.id}
                       onClick={() => setTheme(prev => ({ ...prev, density: d.id as any }))}
-                      className={`p-2.5 rounded-lg border text-center transition ${
-                        theme.density === d.id
-                          ? "border-emerald-400 bg-emerald-950/20 text-emerald-300"
-                          : "border-slate-800 bg-slate-950 text-slate-400 hover:border-slate-700"
-                      }`}
+                      className={`rb-card ${theme.density === d.id ? "rb-template-card is-active" : ""}`}
+                      style={{ padding: "0.6rem 0.3rem", textAlign: "center", cursor: "pointer" }}
                     >
-                      <div className="text-xs font-bold">{d.name}</div>
-                      <div className="text-[9px] text-slate-500 mt-0.5">{d.desc}</div>
+                      <div style={{ fontSize: "0.8rem", fontWeight: 700, color: theme.density === d.id ? "var(--rb-primary)" : "#ffffff" }}>
+                        {d.name}
+                      </div>
+                      <div style={{ fontSize: "0.68rem", color: "var(--rb-text-subtle)", marginTop: "0.2rem" }}>
+                        {d.desc}
+                      </div>
                     </button>
                   ))}
                 </div>
@@ -697,31 +654,33 @@ export default function ClientResumeBuilder() {
 
               {/* Paper Format */}
               <div>
-                <label className="text-xs font-bold text-slate-200 block mb-2">
-                  Print Standard Paper Size
+                <label className="rb-label" style={{ display: "block", marginBottom: "0.5rem" }}>
+                  Print Paper Standard
                 </label>
-                <div className="grid grid-cols-2 gap-2">
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.5rem" }}>
                   <button
                     onClick={() => setTheme(prev => ({ ...prev, paperSize: "a4" }))}
-                    className={`p-2.5 rounded-lg border text-center transition ${
-                      theme.paperSize === "a4"
-                        ? "border-emerald-400 bg-emerald-950/20 text-emerald-300"
-                        : "border-slate-800 bg-slate-950 text-slate-400 hover:border-slate-700"
-                    }`}
+                    className={`rb-card ${theme.paperSize === "a4" ? "rb-template-card is-active" : ""}`}
+                    style={{ padding: "0.75rem", textAlign: "center", cursor: "pointer" }}
                   >
-                    <div className="text-xs font-bold">A4 International</div>
-                    <div className="text-[9px] text-slate-500">210 × 297 mm (Global)</div>
+                    <div style={{ fontSize: "0.8rem", fontWeight: 700, color: theme.paperSize === "a4" ? "var(--rb-primary)" : "#ffffff" }}>
+                      A4 International
+                    </div>
+                    <div style={{ fontSize: "0.68rem", color: "var(--rb-text-subtle)", marginTop: "0.2rem" }}>
+                      210 × 297 mm
+                    </div>
                   </button>
                   <button
                     onClick={() => setTheme(prev => ({ ...prev, paperSize: "letter" }))}
-                    className={`p-2.5 rounded-lg border text-center transition ${
-                      theme.paperSize === "letter"
-                        ? "border-emerald-400 bg-emerald-950/20 text-emerald-300"
-                        : "border-slate-800 bg-slate-950 text-slate-400 hover:border-slate-700"
-                    }`}
+                    className={`rb-card ${theme.paperSize === "letter" ? "rb-template-card is-active" : ""}`}
+                    style={{ padding: "0.75rem", textAlign: "center", cursor: "pointer" }}
                   >
-                    <div className="text-xs font-bold">US Letter</div>
-                    <div className="text-[9px] text-slate-500">8.5 × 11 in (US & Canada)</div>
+                    <div style={{ fontSize: "0.8rem", fontWeight: 700, color: theme.paperSize === "letter" ? "var(--rb-primary)" : "#ffffff" }}>
+                      US Letter
+                    </div>
+                    <div style={{ fontSize: "0.68rem", color: "var(--rb-text-subtle)", marginTop: "0.2rem" }}>
+                      8.5 × 11 in
+                    </div>
                   </button>
                 </div>
               </div>
@@ -730,9 +689,9 @@ export default function ClientResumeBuilder() {
 
           {/* TAB 3: CONTENT EDITING */}
           {activeTab === "content" && (
-            <div className="p-4 space-y-4">
-              {/* Horizontal Section Selector */}
-              <div className="flex gap-1.5 overflow-x-auto pb-2 border-b border-slate-800/80 scrollbar-none">
+            <div className="rb-sidebar-content">
+              {/* Section Selector Pills */}
+              <div className="rb-pills-row">
                 {[
                   { id: "personal", label: "Contact", icon: <User size={12} /> },
                   { id: "summary", label: "Summary", icon: <Sparkles size={12} /> },
@@ -746,149 +705,167 @@ export default function ClientResumeBuilder() {
                   <button
                     key={s.id}
                     onClick={() => setActiveSection(s.id)}
-                    className={`px-2.5 py-1.5 rounded-lg text-xs font-medium whitespace-nowrap flex items-center gap-1.5 transition ${
-                      activeSection === s.id
-                        ? "bg-emerald-500/20 text-emerald-300 border border-emerald-500/30"
-                        : "bg-slate-950 text-slate-400 border border-slate-800 hover:text-slate-200"
-                    }`}
+                    className={`rb-pill ${activeSection === s.id ? "is-active" : ""}`}
                   >
                     {s.icon}
                     <span>{s.label}</span>
-                    {s.count !== undefined && (
-                      <span className="text-[10px] px-1 rounded-full bg-slate-800 text-slate-300">
-                        {s.count}
-                      </span>
-                    )}
+                    {s.count !== undefined && <span className="rb-pill-count">{s.count}</span>}
                   </button>
                 ))}
               </div>
 
               {/* 1. PERSONAL DETAILS */}
               {activeSection === "personal" && (
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between">
-                    <h4 className="text-xs font-bold text-white uppercase tracking-wider">
-                      Personal & Contact Details
-                    </h4>
-                  </div>
+                <div style={{ display: "flex", flexDirection: "column", gap: "0.85rem" }}>
+                  <h4 style={{ fontSize: "0.75rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.05em", color: "#ffffff", margin: 0 }}>
+                    Personal & Contact Details
+                  </h4>
 
                   {/* Photo Upload Card */}
-                  <div className="p-3 rounded-lg bg-slate-950 border border-slate-800 flex items-center gap-4">
+                  <div className="rb-card" style={{ flexDirection: "row", alignItems: "center", gap: "1rem" }}>
                     {data.personal.photoUrl ? (
-                      <div className="relative group">
+                      <div style={{ position: "relative", width: 56, height: 56, flexShrink: 0 }}>
                         <img
                           src={data.personal.photoUrl}
-                          alt="Avatar"
-                          className="w-14 h-14 rounded-full object-cover border border-slate-700"
+                          alt="Profile"
+                          style={{ width: 56, height: 56, borderRadius: "50%", objectFit: "cover", border: "2px solid var(--rb-border-light)" }}
                         />
                         <button
                           onClick={() => setData(p => ({ ...p, personal: { ...p.personal, photoUrl: "" } }))}
-                          className="absolute -top-1 -right-1 bg-red-500 text-white rounded-full p-0.5 text-xs shadow hover:bg-red-600"
                           title="Remove photo"
+                          style={{
+                            position: "absolute",
+                            top: -4,
+                            right: -4,
+                            background: "var(--rb-danger)",
+                            color: "#ffffff",
+                            border: "none",
+                            borderRadius: "50%",
+                            width: 20,
+                            height: 20,
+                            cursor: "pointer",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center"
+                          }}
                         >
                           <Trash2 size={11} />
                         </button>
                       </div>
                     ) : (
-                      <div className="w-14 h-14 rounded-full bg-slate-800 border border-dashed border-slate-700 flex items-center justify-center text-slate-500">
+                      <div
+                        style={{
+                          width: 56,
+                          height: 56,
+                          borderRadius: "50%",
+                          background: "var(--rb-bg-input)",
+                          border: "2px dashed var(--rb-border)",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          color: "var(--rb-text-subtle)",
+                          flexShrink: 0
+                        }}
+                      >
                         <Camera size={22} />
                       </div>
                     )}
-                    <div className="flex-1">
-                      <div className="text-xs font-medium text-slate-200 mb-0.5">
+                    <div style={{ flex: 1 }}>
+                      <div style={{ fontSize: "0.78rem", fontWeight: 600, color: "#ffffff", marginBottom: "0.2rem" }}>
                         Profile Photo (Optional)
                       </div>
-                      <div className="text-[10px] text-slate-500 mb-2">
-                        Displays in Nordic, Creative, and Executive templates.
+                      <div style={{ fontSize: "0.7rem", color: "var(--rb-text-muted)", marginBottom: "0.5rem" }}>
+                        Shows in Nordic, Creative, & Executive templates.
                       </div>
                       <button
                         onClick={() => photoInputRef.current?.click()}
-                        className="text-[11px] px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 flex items-center gap-1.5"
+                        className="rb-btn rb-btn-secondary"
+                        style={{ padding: "0.3rem 0.65rem", fontSize: "0.72rem" }}
                       >
                         <Upload size={12} /> Upload Photo
                       </button>
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <div>
-                      <label className="text-[11px] text-slate-400 block mb-1">Full Name</label>
+                  <div className="rb-form-row">
+                    <div className="rb-form-group">
+                      <label className="rb-label">Full Name</label>
                       <input
                         type="text"
                         value={data.personal.fullName}
                         onChange={e => setData(p => ({ ...p, personal: { ...p.personal, fullName: e.target.value } }))}
-                        placeholder="Alex Morgan"
-                        className="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none"
+                        placeholder="Alex Rivera"
+                        className="rb-input"
                       />
                     </div>
-                    <div>
-                      <label className="text-[11px] text-slate-400 block mb-1">Professional Job Title</label>
+                    <div className="rb-form-group">
+                      <label className="rb-label">Job Title</label>
                       <input
                         type="text"
                         value={data.personal.jobTitle}
                         onChange={e => setData(p => ({ ...p, personal: { ...p.personal, jobTitle: e.target.value } }))}
-                        placeholder="Lead AI & Cloud Engineer"
-                        className="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none"
+                        placeholder="Principal AI Engineer"
+                        className="rb-input"
                       />
                     </div>
-                    <div>
-                      <label className="text-[11px] text-slate-400 block mb-1">Email Address</label>
+                    <div className="rb-form-group">
+                      <label className="rb-label">Email Address</label>
                       <input
                         type="email"
                         value={data.personal.email}
                         onChange={e => setData(p => ({ ...p, personal: { ...p.personal, email: e.target.value } }))}
                         placeholder="alex@example.com"
-                        className="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none"
+                        className="rb-input"
                       />
                     </div>
-                    <div>
-                      <label className="text-[11px] text-slate-400 block mb-1">Phone Number</label>
+                    <div className="rb-form-group">
+                      <label className="rb-label">Phone Number</label>
                       <input
                         type="text"
                         value={data.personal.phone}
                         onChange={e => setData(p => ({ ...p, personal: { ...p.personal, phone: e.target.value } }))}
                         placeholder="+1 (555) 019-2834"
-                        className="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none"
+                        className="rb-input"
                       />
                     </div>
-                    <div>
-                      <label className="text-[11px] text-slate-400 block mb-1">Location</label>
+                    <div className="rb-form-group">
+                      <label className="rb-label">Location</label>
                       <input
                         type="text"
                         value={data.personal.location}
                         onChange={e => setData(p => ({ ...p, personal: { ...p.personal, location: e.target.value } }))}
                         placeholder="San Francisco, CA (or Remote)"
-                        className="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none"
+                        className="rb-input"
                       />
                     </div>
-                    <div>
-                      <label className="text-[11px] text-slate-400 block mb-1">Personal Website</label>
+                    <div className="rb-form-group">
+                      <label className="rb-label">Personal Website</label>
                       <input
                         type="text"
                         value={data.personal.website}
                         onChange={e => setData(p => ({ ...p, personal: { ...p.personal, website: e.target.value } }))}
-                        placeholder="https://alexmorgan.dev"
-                        className="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none"
+                        placeholder="https://alexrivera.dev"
+                        className="rb-input"
                       />
                     </div>
-                    <div>
-                      <label className="text-[11px] text-slate-400 block mb-1">LinkedIn</label>
+                    <div className="rb-form-group">
+                      <label className="rb-label">LinkedIn</label>
                       <input
                         type="text"
                         value={data.personal.linkedin}
                         onChange={e => setData(p => ({ ...p, personal: { ...p.personal, linkedin: e.target.value } }))}
-                        placeholder="linkedin.com/in/alexmorgan"
-                        className="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none"
+                        placeholder="linkedin.com/in/alexrivera"
+                        className="rb-input"
                       />
                     </div>
-                    <div>
-                      <label className="text-[11px] text-slate-400 block mb-1">GitHub</label>
+                    <div className="rb-form-group">
+                      <label className="rb-label">GitHub</label>
                       <input
                         type="text"
                         value={data.personal.github}
                         onChange={e => setData(p => ({ ...p, personal: { ...p.personal, github: e.target.value } }))}
-                        placeholder="github.com/alexmorgan"
-                        className="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none"
+                        placeholder="github.com/alexrivera"
+                        className="rb-input"
                       />
                     </div>
                   </div>
@@ -897,12 +874,12 @@ export default function ClientResumeBuilder() {
 
               {/* 2. SUMMARY */}
               {activeSection === "summary" && (
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between">
-                    <h4 className="text-xs font-bold text-white uppercase tracking-wider">
-                      Professional Executive Summary
+                <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                    <h4 style={{ fontSize: "0.75rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.05em", color: "#ffffff", margin: 0 }}>
+                      Executive Summary
                     </h4>
-                    <span className="text-[10px] text-slate-400 font-mono">
+                    <span style={{ fontSize: "0.7rem", color: "var(--rb-text-muted)", fontFamily: "monospace" }}>
                       {data.summary.length} characters
                     </span>
                   </div>
@@ -910,116 +887,119 @@ export default function ClientResumeBuilder() {
                     rows={6}
                     value={data.summary}
                     onChange={e => setData(p => ({ ...p, summary: e.target.value }))}
-                    placeholder="Results-driven engineering lead with 7+ years of experience in distributed systems..."
-                    className="w-full bg-slate-950 border border-slate-800 rounded-lg p-3 text-xs text-slate-200 focus:border-emerald-500 focus:outline-none leading-relaxed"
+                    placeholder="Results-driven software engineer with 7+ years of experience..."
+                    className="rb-textarea"
                   />
-                  <div className="p-3 bg-slate-950/60 rounded-lg border border-slate-800/80 text-[11px] text-slate-400 space-y-1">
-                    <strong className="text-slate-200 block">💡 ATS Optimization Tip:</strong>
-                    Recruiters spend an average of 6 seconds reviewing this section. Mention your exact title, core tech specialties, and one standout quantitative achievement.
+                  <div className="rb-card" style={{ background: "rgba(16, 185, 129, 0.05)", borderColor: "rgba(16, 185, 129, 0.2)" }}>
+                    <div style={{ fontSize: "0.75rem", color: "#34d399", fontWeight: 700, marginBottom: "0.2rem" }}>
+                      💡 ATS Matching Recommendation:
+                    </div>
+                    <div style={{ fontSize: "0.72rem", color: "var(--rb-text-muted)", lineHeight: 1.5 }}>
+                      Summarize your core specializations and include at least one concrete metric (e.g. &apos;scaled to 2M+ MAU&apos; or &apos;reduced latency by 45%&apos;).
+                    </div>
                   </div>
                 </div>
               )}
 
               {/* 3. EXPERIENCE */}
               {activeSection === "experience" && (
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <h4 className="text-xs font-bold text-white uppercase tracking-wider">
+                <div style={{ display: "flex", flexDirection: "column", gap: "0.85rem" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                    <h4 style={{ fontSize: "0.75rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.05em", color: "#ffffff", margin: 0 }}>
                       Work Experience ({data.experience.length})
                     </h4>
                     <button
                       onClick={addExperience}
-                      className="text-xs px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 hover:bg-emerald-500/30 transition flex items-center gap-1"
+                      className="rb-btn rb-btn-secondary"
+                      style={{ padding: "0.3rem 0.65rem", fontSize: "0.72rem", color: "var(--rb-primary)" }}
                     >
-                      <Plus size={12} /> Add Role
+                      <Plus size={12} /> Add Position
                     </button>
                   </div>
 
                   {data.experience.map((exp, expIdx) => (
-                    <div
-                      key={exp.id || expIdx}
-                      className="p-3.5 rounded-xl bg-slate-950 border border-slate-800 space-y-3"
-                    >
-                      <div className="flex items-center justify-between pb-2 border-b border-slate-800/60">
-                        <span className="text-xs font-bold text-emerald-400">
+                    <div key={exp.id || expIdx} className="rb-card">
+                      <div className="rb-card-header">
+                        <span className="rb-card-title">
                           #{expIdx + 1}: {exp.role || "Untitled Role"}
                         </span>
                         <button
                           onClick={() => removeExperience(expIdx)}
-                          className="text-slate-500 hover:text-red-400 transition"
                           title="Delete position"
+                          style={{ background: "transparent", border: "none", color: "var(--rb-text-subtle)", cursor: "pointer" }}
                         >
                           <Trash2 size={13} />
                         </button>
                       </div>
 
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                      <div className="rb-form-row">
                         <input
                           type="text"
                           placeholder="Company Name"
                           value={exp.company}
                           onChange={e => updateExperience(expIdx, "company", e.target.value)}
-                          className="bg-slate-900 border border-slate-800 rounded px-2.5 py-1.5 text-xs text-white"
+                          className="rb-input"
                         />
                         <input
                           type="text"
-                          placeholder="Job Title / Role"
+                          placeholder="Job Title"
                           value={exp.role}
                           onChange={e => updateExperience(expIdx, "role", e.target.value)}
-                          className="bg-slate-900 border border-slate-800 rounded px-2.5 py-1.5 text-xs text-white"
+                          className="rb-input"
                         />
                         <input
                           type="text"
-                          placeholder="Location (e.g. New York, NY)"
+                          placeholder="Location (e.g. San Francisco, CA)"
                           value={exp.location}
                           onChange={e => updateExperience(expIdx, "location", e.target.value)}
-                          className="bg-slate-900 border border-slate-800 rounded px-2.5 py-1.5 text-xs text-white"
+                          className="rb-input"
                         />
-                        <div className="flex gap-2">
+                        <div style={{ display: "flex", gap: "0.4rem" }}>
                           <input
                             type="text"
-                            placeholder="Start Date (e.g. 2022-01)"
+                            placeholder="Start (2022)"
                             value={exp.startDate}
                             onChange={e => updateExperience(expIdx, "startDate", e.target.value)}
-                            className="w-1/2 bg-slate-900 border border-slate-800 rounded px-2.5 py-1.5 text-xs text-white"
+                            className="rb-input"
                           />
                           <input
                             type="text"
-                            placeholder="End Date (or Present)"
+                            placeholder="End (Present)"
                             value={exp.endDate}
                             onChange={e => updateExperience(expIdx, "endDate", e.target.value)}
-                            className="w-1/2 bg-slate-900 border border-slate-800 rounded px-2.5 py-1.5 text-xs text-white"
+                            className="rb-input"
                           />
                         </div>
                       </div>
 
                       {/* Bullet Highlights */}
-                      <div className="pt-1">
-                        <div className="flex items-center justify-between mb-1.5">
-                          <label className="text-[11px] text-slate-400 font-medium">
-                            Key Bullet Achievements ({exp.highlights.length})
+                      <div style={{ marginTop: "0.5rem" }}>
+                        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.4rem" }}>
+                          <label className="rb-label">
+                            Key Bullet Points ({exp.highlights.length})
                           </label>
                           <button
                             onClick={() => addHighlight(expIdx)}
-                            className="text-[10px] text-emerald-400 hover:underline flex items-center gap-0.5"
+                            style={{ background: "transparent", border: "none", color: "var(--rb-primary)", fontSize: "0.7rem", cursor: "pointer", display: "flex", alignItems: "center", gap: 2 }}
                           >
-                            <Plus size={10} /> Add Bullet
+                            <Plus size={11} /> Add Bullet
                           </button>
                         </div>
 
-                        <div className="space-y-1.5">
+                        <div style={{ display: "flex", flexDirection: "column", gap: "0.4rem" }}>
                           {exp.highlights.map((hl, hlIdx) => (
-                            <div key={hlIdx} className="flex items-start gap-1.5">
-                              <span className="text-slate-500 text-xs mt-1.5">•</span>
+                            <div key={hlIdx} style={{ display: "flex", gap: "0.4rem", alignItems: "flex-start" }}>
+                              <span style={{ color: "var(--rb-text-subtle)", fontSize: "0.8rem", marginTop: 4 }}>•</span>
                               <textarea
                                 rows={2}
                                 value={hl}
                                 onChange={e => updateHighlight(expIdx, hlIdx, e.target.value)}
-                                className="flex-1 bg-slate-900 border border-slate-800 rounded px-2 py-1 text-xs text-slate-200 focus:outline-none focus:border-emerald-500"
+                                className="rb-textarea"
+                                style={{ padding: "0.35rem 0.5rem", fontSize: "0.75rem" }}
                               />
                               <button
                                 onClick={() => removeHighlight(expIdx, hlIdx)}
-                                className="text-slate-500 hover:text-red-400 p-1 mt-1"
+                                style={{ background: "transparent", border: "none", color: "var(--rb-text-subtle)", cursor: "pointer", padding: 4, marginTop: 2 }}
                               >
                                 <Trash2 size={12} />
                               </button>
@@ -1034,72 +1014,70 @@ export default function ClientResumeBuilder() {
 
               {/* 4. EDUCATION */}
               {activeSection === "education" && (
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <h4 className="text-xs font-bold text-white uppercase tracking-wider">
+                <div style={{ display: "flex", flexDirection: "column", gap: "0.85rem" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                    <h4 style={{ fontSize: "0.75rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.05em", color: "#ffffff", margin: 0 }}>
                       Education ({data.education.length})
                     </h4>
                     <button
                       onClick={addEducation}
-                      className="text-xs px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 hover:bg-emerald-500/30 transition flex items-center gap-1"
+                      className="rb-btn rb-btn-secondary"
+                      style={{ padding: "0.3rem 0.65rem", fontSize: "0.72rem", color: "var(--rb-primary)" }}
                     >
                       <Plus size={12} /> Add Degree
                     </button>
                   </div>
 
                   {data.education.map((edu, eduIdx) => (
-                    <div
-                      key={edu.id || eduIdx}
-                      className="p-3.5 rounded-xl bg-slate-950 border border-slate-800 space-y-2.5"
-                    >
-                      <div className="flex items-center justify-between pb-1.5 border-b border-slate-800/60">
-                        <span className="text-xs font-bold text-white">
+                    <div key={edu.id || eduIdx} className="rb-card">
+                      <div className="rb-card-header">
+                        <span className="rb-card-title">
                           #{eduIdx + 1}: {edu.school || "University"}
                         </span>
                         <button
                           onClick={() => removeEducation(eduIdx)}
-                          className="text-slate-500 hover:text-red-400 transition"
+                          style={{ background: "transparent", border: "none", color: "var(--rb-text-subtle)", cursor: "pointer" }}
                         >
                           <Trash2 size={13} />
                         </button>
                       </div>
 
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                      <div className="rb-form-row">
                         <input
                           type="text"
                           placeholder="School / University"
                           value={edu.school}
                           onChange={e => updateEducation(eduIdx, "school", e.target.value)}
-                          className="bg-slate-900 border border-slate-800 rounded px-2.5 py-1.5 text-xs text-white"
+                          className="rb-input"
                         />
                         <input
                           type="text"
                           placeholder="Degree (e.g. B.S. in Computer Science)"
                           value={edu.degree}
                           onChange={e => updateEducation(eduIdx, "degree", e.target.value)}
-                          className="bg-slate-900 border border-slate-800 rounded px-2.5 py-1.5 text-xs text-white"
+                          className="rb-input"
                         />
                         <input
                           type="text"
                           placeholder="Location (e.g. Stanford, CA)"
                           value={edu.location}
                           onChange={e => updateEducation(eduIdx, "location", e.target.value)}
-                          className="bg-slate-900 border border-slate-800 rounded px-2.5 py-1.5 text-xs text-white"
+                          className="rb-input"
                         />
-                        <div className="flex gap-2">
+                        <div style={{ display: "flex", gap: "0.4rem" }}>
                           <input
                             type="text"
-                            placeholder="Start"
+                            placeholder="Start (2018)"
                             value={edu.startDate}
                             onChange={e => updateEducation(eduIdx, "startDate", e.target.value)}
-                            className="w-1/2 bg-slate-900 border border-slate-800 rounded px-2.5 py-1.5 text-xs text-white"
+                            className="rb-input"
                           />
                           <input
                             type="text"
-                            placeholder="Graduation Date"
+                            placeholder="Graduation (2022)"
                             value={edu.endDate}
                             onChange={e => updateEducation(eduIdx, "endDate", e.target.value)}
-                            className="w-1/2 bg-slate-900 border border-slate-800 rounded px-2.5 py-1.5 text-xs text-white"
+                            className="rb-input"
                           />
                         </div>
                       </div>
@@ -1110,58 +1088,62 @@ export default function ClientResumeBuilder() {
 
               {/* 5. SKILLS */}
               {activeSection === "skills" && (
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <h4 className="text-xs font-bold text-white uppercase tracking-wider">
+                <div style={{ display: "flex", flexDirection: "column", gap: "0.85rem" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                    <h4 style={{ fontSize: "0.75rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.05em", color: "#ffffff", margin: 0 }}>
                       Skills & Technical Groups ({data.skills.length})
                     </h4>
                     <button
                       onClick={addSkillCategory}
-                      className="text-xs px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 hover:bg-emerald-500/30 transition flex items-center gap-1"
+                      className="rb-btn rb-btn-secondary"
+                      style={{ padding: "0.3rem 0.65rem", fontSize: "0.72rem", color: "var(--rb-primary)" }}
                     >
                       <Plus size={12} /> Add Category
                     </button>
                   </div>
 
                   {data.skills.map((cat, cIdx) => (
-                    <div
-                      key={cat.id || cIdx}
-                      className="p-3 rounded-xl bg-slate-950 border border-slate-800 space-y-2"
-                    >
-                      <div className="flex items-center justify-between">
+                    <div key={cat.id || cIdx} className="rb-card">
+                      <div className="rb-card-header">
                         <input
                           type="text"
-                          placeholder="Category (e.g. Languages & Frameworks)"
                           value={cat.name}
                           onChange={e => updateSkillName(cIdx, e.target.value)}
-                          className="bg-slate-900 border border-slate-800 rounded px-2.5 py-1 text-xs font-bold text-emerald-400 w-2/3"
+                          placeholder="Category Name (e.g. Languages)"
+                          className="rb-input"
+                          style={{ width: "70%", fontWeight: 700, color: "var(--rb-primary)" }}
                         />
                         <button
                           onClick={() => removeSkillCategory(cIdx)}
-                          className="text-slate-500 hover:text-red-400 transition"
+                          style={{ background: "transparent", border: "none", color: "var(--rb-text-subtle)", cursor: "pointer" }}
                         >
                           <Trash2 size={13} />
                         </button>
                       </div>
 
-                      <div>
-                        <label className="text-[10px] text-slate-500 block mb-1">
-                          Skills (Comma-separated)
-                        </label>
+                      <div style={{ display: "flex", flexDirection: "column", gap: "0.3rem" }}>
+                        <label className="rb-label">Skills (Comma-separated)</label>
                         <input
                           type="text"
                           value={cat.skills.join(", ")}
                           onChange={e => updateSkillItems(cIdx, e.target.value)}
-                          placeholder="TypeScript, React, Python, Docker..."
-                          className="w-full bg-slate-900 border border-slate-800 rounded px-2.5 py-1.5 text-xs text-slate-200"
+                          placeholder="TypeScript, React, Node.js, Next.js..."
+                          className="rb-input"
                         />
                       </div>
 
-                      <div className="flex flex-wrap gap-1 pt-1">
+                      <div style={{ display: "flex", flexWrap: "wrap", gap: "0.3rem", marginTop: "0.25rem" }}>
                         {cat.skills.map((item, i) => (
                           <span
                             key={i}
-                            className="text-[10px] px-2 py-0.5 rounded bg-slate-900 text-slate-300 border border-slate-800"
+                            style={{
+                              fontSize: "0.7rem",
+                              background: "var(--rb-bg-input)",
+                              border: "1px solid var(--rb-border)",
+                              padding: "0.2rem 0.5rem",
+                              borderRadius: 4,
+                              color: "var(--rb-text-muted)"
+                            }}
                           >
                             {item}
                           </span>
@@ -1174,63 +1156,62 @@ export default function ClientResumeBuilder() {
 
               {/* 6. PROJECTS */}
               {activeSection === "projects" && (
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <h4 className="text-xs font-bold text-white uppercase tracking-wider">
+                <div style={{ display: "flex", flexDirection: "column", gap: "0.85rem" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                    <h4 style={{ fontSize: "0.75rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.05em", color: "#ffffff", margin: 0 }}>
                       Notable Projects ({data.projects.length})
                     </h4>
                     <button
                       onClick={addProject}
-                      className="text-xs px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 hover:bg-emerald-500/30 transition flex items-center gap-1"
+                      className="rb-btn rb-btn-secondary"
+                      style={{ padding: "0.3rem 0.65rem", fontSize: "0.72rem", color: "var(--rb-primary)" }}
                     >
                       <Plus size={12} /> Add Project
                     </button>
                   </div>
 
                   {data.projects.map((proj, pIdx) => (
-                    <div
-                      key={proj.id || pIdx}
-                      className="p-3.5 rounded-xl bg-slate-950 border border-slate-800 space-y-2.5"
-                    >
-                      <div className="flex items-center justify-between">
+                    <div key={proj.id || pIdx} className="rb-card">
+                      <div className="rb-card-header">
                         <input
                           type="text"
-                          placeholder="Project Title"
                           value={proj.title}
                           onChange={e => updateProject(pIdx, "title", e.target.value)}
-                          className="bg-slate-900 border border-slate-800 rounded px-2.5 py-1 text-xs font-bold text-white w-2/3"
+                          placeholder="Project Title"
+                          className="rb-input"
+                          style={{ width: "70%", fontWeight: 700 }}
                         />
                         <button
                           onClick={() => removeProject(pIdx)}
-                          className="text-slate-500 hover:text-red-400 transition"
+                          style={{ background: "transparent", border: "none", color: "var(--rb-text-subtle)", cursor: "pointer" }}
                         >
                           <Trash2 size={13} />
                         </button>
                       </div>
 
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                      <div className="rb-form-row">
                         <input
                           type="text"
                           placeholder="Tech Stack (e.g. Next.js, PyTorch)"
                           value={proj.techStack}
                           onChange={e => updateProject(pIdx, "techStack", e.target.value)}
-                          className="bg-slate-900 border border-slate-800 rounded px-2.5 py-1.5 text-xs text-white"
+                          className="rb-input"
                         />
                         <input
                           type="text"
                           placeholder="URL / Repository"
                           value={proj.link}
                           onChange={e => updateProject(pIdx, "link", e.target.value)}
-                          className="bg-slate-900 border border-slate-800 rounded px-2.5 py-1.5 text-xs text-white"
+                          className="rb-input"
                         />
                       </div>
 
                       <textarea
                         rows={2}
-                        placeholder="Impact description and quantitative outcomes..."
                         value={proj.description}
                         onChange={e => updateProject(pIdx, "description", e.target.value)}
-                        className="w-full bg-slate-900 border border-slate-800 rounded px-2.5 py-1.5 text-xs text-slate-200"
+                        placeholder="Impact description and quantitative outcomes..."
+                        className="rb-textarea"
                       />
                     </div>
                   ))}
@@ -1239,54 +1220,53 @@ export default function ClientResumeBuilder() {
 
               {/* 7. CERTIFICATIONS */}
               {activeSection === "certifications" && (
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <h4 className="text-xs font-bold text-white uppercase tracking-wider">
+                <div style={{ display: "flex", flexDirection: "column", gap: "0.85rem" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                    <h4 style={{ fontSize: "0.75rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.05em", color: "#ffffff", margin: 0 }}>
                       Certifications ({data.certifications.length})
                     </h4>
                     <button
                       onClick={addCertification}
-                      className="text-xs px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 hover:bg-emerald-500/30 transition flex items-center gap-1"
+                      className="rb-btn rb-btn-secondary"
+                      style={{ padding: "0.3rem 0.65rem", fontSize: "0.72rem", color: "var(--rb-primary)" }}
                     >
                       <Plus size={12} /> Add Certification
                     </button>
                   </div>
 
                   {data.certifications.map((cert, cIdx) => (
-                    <div
-                      key={cert.id || cIdx}
-                      className="p-3 rounded-xl bg-slate-950 border border-slate-800 space-y-2"
-                    >
-                      <div className="flex items-center justify-between">
+                    <div key={cert.id || cIdx} className="rb-card">
+                      <div className="rb-card-header">
                         <input
                           type="text"
-                          placeholder="Certification Name"
                           value={cert.title}
                           onChange={e => updateCertification(cIdx, "title", e.target.value)}
-                          className="bg-slate-900 border border-slate-800 rounded px-2.5 py-1 text-xs font-bold text-white w-2/3"
+                          placeholder="Certification Name"
+                          className="rb-input"
+                          style={{ width: "70%", fontWeight: 700 }}
                         />
                         <button
                           onClick={() => removeCertification(cIdx)}
-                          className="text-slate-500 hover:text-red-400 transition"
+                          style={{ background: "transparent", border: "none", color: "var(--rb-text-subtle)", cursor: "pointer" }}
                         >
                           <Trash2 size={13} />
                         </button>
                       </div>
 
-                      <div className="grid grid-cols-2 gap-2">
+                      <div className="rb-form-row">
                         <input
                           type="text"
                           placeholder="Issuer (e.g. AWS, Google)"
                           value={cert.issuer}
                           onChange={e => updateCertification(cIdx, "issuer", e.target.value)}
-                          className="bg-slate-900 border border-slate-800 rounded px-2.5 py-1.5 text-xs text-white"
+                          className="rb-input"
                         />
                         <input
                           type="text"
-                          placeholder="Year / Date (e.g. 2024)"
+                          placeholder="Year / Date (2024)"
                           value={cert.date}
                           onChange={e => updateCertification(cIdx, "date", e.target.value)}
-                          className="bg-slate-900 border border-slate-800 rounded px-2.5 py-1.5 text-xs text-white"
+                          className="rb-input"
                         />
                       </div>
                     </div>
@@ -1296,41 +1276,41 @@ export default function ClientResumeBuilder() {
 
               {/* 8. LANGUAGES */}
               {activeSection === "languages" && (
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <h4 className="text-xs font-bold text-white uppercase tracking-wider">
+                <div style={{ display: "flex", flexDirection: "column", gap: "0.85rem" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                    <h4 style={{ fontSize: "0.75rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.05em", color: "#ffffff", margin: 0 }}>
                       Languages ({data.languages.length})
                     </h4>
                     <button
                       onClick={addLanguage}
-                      className="text-xs px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 hover:bg-emerald-500/30 transition flex items-center gap-1"
+                      className="rb-btn rb-btn-secondary"
+                      style={{ padding: "0.3rem 0.65rem", fontSize: "0.72rem", color: "var(--rb-primary)" }}
                     >
                       <Plus size={12} /> Add Language
                     </button>
                   </div>
 
                   {data.languages.map((lang, lIdx) => (
-                    <div
-                      key={lang.id || lIdx}
-                      className="p-3 rounded-xl bg-slate-950 border border-slate-800 flex items-center gap-2"
-                    >
+                    <div key={lang.id || lIdx} className="rb-card" style={{ flexDirection: "row", alignItems: "center", gap: "0.5rem" }}>
                       <input
                         type="text"
                         placeholder="Language (e.g. English)"
                         value={lang.language}
                         onChange={e => updateLanguage(lIdx, "language", e.target.value)}
-                        className="bg-slate-900 border border-slate-800 rounded px-2.5 py-1.5 text-xs text-white flex-1"
+                        className="rb-input"
+                        style={{ flex: 1 }}
                       />
                       <input
                         type="text"
-                        placeholder="Proficiency (Native, Fluent)"
+                        placeholder="Proficiency (Fluent)"
                         value={lang.proficiency}
                         onChange={e => updateLanguage(lIdx, "proficiency", e.target.value)}
-                        className="bg-slate-900 border border-slate-800 rounded px-2.5 py-1.5 text-xs text-white w-36"
+                        className="rb-input"
+                        style={{ width: 140 }}
                       />
                       <button
                         onClick={() => removeLanguage(lIdx)}
-                        className="text-slate-500 hover:text-red-400 p-1"
+                        style={{ background: "transparent", border: "none", color: "var(--rb-text-subtle)", cursor: "pointer", padding: 4 }}
                       >
                         <Trash2 size={13} />
                       </button>
@@ -1339,19 +1319,20 @@ export default function ClientResumeBuilder() {
                 </div>
               )}
 
-              {/* Clear / Reset Toolbar */}
-              <div className="pt-4 border-t border-slate-800/80 flex items-center justify-between">
+              {/* Reset / Clear Buttons */}
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", paddingTop: "1rem", borderTop: "1px solid var(--rb-border)" }}>
                 <button
                   onClick={handleClearAll}
-                  className="text-xs text-red-400 hover:text-red-300 transition flex items-center gap-1"
+                  className="rb-btn rb-btn-danger"
+                  style={{ fontSize: "0.75rem" }}
                 >
-                  <Trash2 size={12} /> Clear all fields
+                  <Trash2 size={13} /> Clear all fields
                 </button>
                 <button
                   onClick={handleResetSample}
-                  className="text-xs text-emerald-400 hover:underline flex items-center gap-1"
+                  style={{ background: "transparent", border: "none", color: "var(--rb-primary)", fontSize: "0.75rem", cursor: "pointer", display: "flex", alignItems: "center", gap: 4 }}
                 >
-                  <RotateCcw size={12} /> Reset Sample Data
+                  <RotateCcw size={13} /> Reset Sample Data
                 </button>
               </div>
             </div>
@@ -1359,48 +1340,36 @@ export default function ClientResumeBuilder() {
         </aside>
 
         {/* RIGHT PANEL: Live WYSIWYG Sheet Canvas */}
-        <main
-          className={`flex-1 bg-slate-950 flex flex-col items-center justify-start overflow-y-auto overflow-x-auto p-4 sm:p-8 h-[calc(100vh-61px)] ${
-            showMobilePreview ? "flex" : "hidden lg:flex"
-          }`}
-        >
-          {/* Canvas Floating Toolbar */}
-          <div className="sticky top-0 z-10 mb-6 bg-slate-900/90 backdrop-blur border border-slate-800 rounded-full px-4 py-1.5 flex items-center gap-3 shadow-xl">
-            <span className="text-[11px] text-slate-400 font-mono">Zoom:</span>
+        <main className={`rb-canvas ${!showMobilePreview ? "mobile-hide" : ""}`}>
+          {/* Floating Zoom Toolbar */}
+          <div className="rb-toolbar">
+            <span className="rb-toolbar-text">Zoom:</span>
             <button
               onClick={() => setZoom(prev => Math.max(prev - 10, 40))}
-              className="p-1 rounded hover:bg-slate-800 text-slate-300"
+              className="rb-toolbar-iconbtn"
               title="Zoom out"
             >
               <ZoomOut size={14} />
             </button>
-            <span className="text-xs font-mono font-bold text-white w-10 text-center">
-              {zoom}%
-            </span>
+            <span className="rb-toolbar-val">{zoom}%</span>
             <button
               onClick={() => setZoom(prev => Math.min(prev + 10, 150))}
-              className="p-1 rounded hover:bg-slate-800 text-slate-300"
+              className="rb-toolbar-iconbtn"
               title="Zoom in"
             >
               <ZoomIn size={14} />
             </button>
-            <div className="h-3 w-px bg-slate-800" />
-            <button
-              onClick={() => setZoom(85)}
-              className="text-[11px] text-slate-400 hover:text-emerald-400"
-            >
+            <div className="rb-toolbar-divider" />
+            <button onClick={() => setZoom(85)} className="rb-toolbar-link">
               Fit
             </button>
-            <button
-              onClick={() => setZoom(100)}
-              className="text-[11px] text-slate-400 hover:text-emerald-400 font-mono"
-            >
+            <button onClick={() => setZoom(100)} className="rb-toolbar-link">
               100%
             </button>
-            <div className="h-3 w-px bg-slate-800" />
+            <div className="rb-toolbar-divider" />
             <button
               onClick={handlePrint}
-              className="text-[11px] font-semibold text-emerald-400 hover:underline flex items-center gap-1"
+              style={{ background: "transparent", border: "none", color: "var(--rb-primary)", fontSize: "0.75rem", fontWeight: 700, cursor: "pointer", display: "flex", alignItems: "center", gap: 4 }}
             >
               <Printer size={13} /> Print
             </button>
@@ -1408,70 +1377,24 @@ export default function ClientResumeBuilder() {
 
           {/* Printable Sheet View */}
           <div
-            className="transition-transform origin-top flex justify-center pb-24"
+            className="rb-sheet-scaler"
             style={{
               transform: `scale(${zoom / 100})`
             }}
           >
             <div
               id="resume-preview-sheet"
+              className="rb-sheet"
               style={{
                 width: `${paperWidth}px`,
                 minHeight: `${paperHeight}px`
               }}
-              className="bg-white text-slate-900 shadow-2xl rounded-sm transition-all relative overflow-hidden"
             >
               <ResumeRenderer data={data} theme={theme} />
             </div>
           </div>
         </main>
       </div>
-
-      {/* Global CSS for Zero-Fuss Native Vector PDF Printing */}
-      <style jsx global>{`
-        @media print {
-          header,
-          aside,
-          nav,
-          footer,
-          .home-hero,
-          .sticky,
-          button {
-            display: none !important;
-          }
-
-          body,
-          html {
-            background: #ffffff !important;
-            color: #000000 !important;
-            margin: 0 !important;
-            padding: 0 !important;
-            overflow: visible !important;
-          }
-
-          #resume-preview-sheet {
-            position: fixed !important;
-            left: 0 !important;
-            top: 0 !important;
-            width: 100% !important;
-            min-height: 100% !important;
-            margin: 0 !important;
-            padding: 0 !important;
-            box-shadow: none !important;
-            border-radius: 0 !important;
-            transform: none !important;
-            z-index: 999999 !important;
-            background: #ffffff !important;
-            -webkit-print-color-adjust: exact !important;
-            print-color-adjust: exact !important;
-          }
-
-          @page {
-            margin: 0;
-            size: auto;
-          }
-        }
-      `}</style>
     </div>
   );
 }
