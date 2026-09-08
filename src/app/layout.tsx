@@ -55,6 +55,9 @@ export const metadata: Metadata = {
   verification: {
     google: "BN8r_18xTXqdWBekHRt95xIe5efvl8gg00Thn4qhMMI",
   },
+  other: {
+    monetag: "56c3d7a6cd087ba9ed4c76f8f538586d",
+  },
   manifest: "/manifest.webmanifest",
 };
 
@@ -66,6 +69,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta name="monetag" content="56c3d7a6cd087ba9ed4c76f8f538586d" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
