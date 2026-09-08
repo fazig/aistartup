@@ -73,8 +73,10 @@ import { postBestFreeReminiAlternatives2026 } from "./articles/best-free-remini-
 import { postBestFreeGrammarlyAlternatives2026 } from "./articles/best-free-grammarly-alternatives-2026";
 import { postGenerativeEngineOptimizationGeoGuide2026 } from "./articles/generative-engine-optimization-geo-guide-2026";
 import { postHowToCreateAndValidateLlmsTxt } from "./articles/how-to-create-and-validate-llms-txt";
+import { postBestFreeAtsResumeBuildersNoPaywall } from "./articles/best-free-ats-resume-builders-no-paywall";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postBestFreeAtsResumeBuildersNoPaywall,
   postHowToCreateAndValidateLlmsTxt,
   postGenerativeEngineOptimizationGeoGuide2026,
   postBestFreeGrammarlyAlternatives2026,

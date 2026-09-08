@@ -11,6 +11,16 @@ export interface BlogPostMeta {
 
 export const BLOG_METADATA: BlogPostMeta[] = [
   {
+    "slug": "best-free-ats-resume-builders-no-paywall",
+    "title": "Best Free ATS Resume Builders in 2026 (No Paywall, No Sign-Up, No Watermark): The Definitive Guide",
+    "description": "The definitive 2026 guide to actually free ATS resume builders. Compare top tools, avoid bait-and-switch paywalls, test machine readability, and download unwatermarked vector PDFs.",
+    "date": "2026-09-08",
+    "readTime": "24 min read",
+    "category": "Career & Productivity",
+    "author": "Faizan Arif",
+    "image": "/images/best-free-ats-resume-builders-no-paywall.jpg"
+  },
+  {
     "slug": "how-to-create-and-validate-llms-txt",
     "title": "The Ultimate Guide to llms.txt: How to Create, Validate, and Optimize Your Site for AI Search Engines (2026)",
     "description": "Master the /llms.txt standard in 2026. Discover how ChatGPT, Perplexity, and Claude crawl websites, format rules, syntax checkers, and generate AI manifests for free.",

@@ -6,6 +6,7 @@ StartupAI provides browser-based utilities that execute 100% locally on the user
 
 ## Core Tools
 
+- [Free ATS Resume Builder Studio](https://startupai.site/resume-builder): Full-featured Canva-style ATS resume builder with 10 designer templates, live ATS scoring, and unwatermarked vector PDF export.
 - [Free AI Image Enhancer](https://startupai.site/tools/image-enhancer): Remini alternative to upscale and enhance photos to HD in-browser.
 - [llms.txt & AI Bot Generator](https://startupai.site/tools/llms-txt-generator): Standardized llms.txt builder and AI crawler policy configurator.
 - [Free Grammar Checker](https://startupai.site/tools/grammar-checker): Real-time spell, syntax, and punctuation checker with zero word limits.
@@ -15,6 +16,9 @@ StartupAI provides browser-based utilities that execute 100% locally on the user
 
 ## Knowledge Base & Guides
 
+- [Best Free ATS Resume Builders in 2026](https://startupai.site/blog/best-free-ats-resume-builders-no-paywall): Definitive guide comparing top free resume makers, avoiding paywall traps, and achieving 95+ ATS pass rates.
+- [The Ultimate Guide to llms.txt](https://startupai.site/blog/how-to-create-and-validate-llms-txt): Complete technical guide to creating, validating, and optimizing llms.txt manifests for AI search engines.
+- [The Ultimate Guide to Micro QR Codes](https://startupai.site/blog/micro-qr-codes-guide): High-density barcode engineering guide for industrial, PCB, and medical labeling.
 - [Generative Engine Optimization (GEO) Guide 2026](https://startupai.site/blog/generative-engine-optimization-geo-guide-2026): In-depth masterclass on ranking in ChatGPT, Perplexity, and AI Overviews.
 - [Best Free Remini Alternatives in 2026](https://startupai.site/blog/best-free-remini-alternatives-2026): Hands-on review of top free AI photo upscalers.
 - [Best Free Grammarly Alternatives in 2026](https://startupai.site/blog/best-free-grammarly-alternatives-2026): Review of free writing and grammar tools without word limits.
