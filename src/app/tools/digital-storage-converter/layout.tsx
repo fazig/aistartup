@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Digital Storage Converter - StartupAI Tools",
+  title: "Digital Storage Converter",
   description: "Convert between bits, bytes, KB, MB, GB, TB, and PB. Compare Decimal (1000) vs Binary (1024) formats instantly.",
 };
 

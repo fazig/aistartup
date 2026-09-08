@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Class C IP Checker - StartupAI Tools",
+  title: "Class C IP Checker",
   description: "Analyze a bulk list of IP addresses to discover which ones share the exact same Class C server subnet.",
 };
 

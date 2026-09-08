@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Loan & EMI Calculator - StartupAI Tools",
+  title: "Loan & EMI Calculator",
   description: "Calculate your monthly EMI payments, total interest, and see a visual breakdown of your loan.",
 };
 

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Sales Tax Calculator - StartupAI Tools",
+  title: "Sales Tax Calculator",
   description: "Quickly calculate sales tax or reverse-calculate the pre-tax price. Includes common tax rate presets.",
 };
 

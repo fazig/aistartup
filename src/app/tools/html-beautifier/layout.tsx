@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Beautify HTML! - StartupAI Tools",
+  title: "Beautify HTML!",
   description: "Transform messy, nested, or compressed HTML code into clean, well-spaced, and perfectly indented code instantly.",
 };
 

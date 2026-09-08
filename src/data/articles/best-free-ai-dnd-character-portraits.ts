@@ -133,7 +133,7 @@ When prompting for a token, add the phrase: *"A portrait shot from the shoulders
 
 By forcing the AI to generate a solid white background, you can easily drag the resulting image into a free background remover tool (like Remove.bg), and then drop the transparent image directly into your Virtual Tabletop token maker. You can generate an entire goblin ambush squad with unique facial expressions in five minutes.
 
-*(Want to learn how AI can help you write better campaign stories? Read our article on the [Best AI for Writing Podcast Show Notes](/blog/best-ai-podcast-show-notes) to see how natural language models are evolving.)*
+*(Want to learn how AI can help you write better campaign stories? Read our article on the [Best AI for Writing Podcast Show Notes](/blog/best-ai-for-writing-podcast-show-notes) to see how natural language models are evolving.)*
 
 ---
 

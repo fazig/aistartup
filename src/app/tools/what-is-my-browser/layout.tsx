@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "What is my Browser? - StartupAI Tools",
+  title: "What is my Browser?",
   description: "Instantly detect your browser, operating system, and screen specifications.",
 };
 

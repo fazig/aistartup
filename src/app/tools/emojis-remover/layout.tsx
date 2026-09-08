@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Emojis Remover Tool - StartupAI Tools",
+  title: "Emojis Remover Tool",
   description: "Instantly strip all emojis from any block of text to clean it up for professional use.",
 };
 

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "TDEE Calculator - StartupAI Tools",
+  title: "TDEE Calculator",
   description: "Find your Total Daily Energy Expenditure (TDEE) using Mifflin-St Jeor or Katch-McArdle formulas. Check your BMI, estimate ideal body weight, and design a custom macronutrient plan.",
 };
 

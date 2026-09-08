@@ -98,7 +98,7 @@ Because the entire image processing engine runs directly inside your web browser
 * **Complete Privacy**: Everything happens locally in your browser memory. When you close the tab, the image data is completely gone.
 * **No Waxy AI Hallucinations**: Because it focuses on structural edge enhancement, local contrast correction, and bicubic interpolation rather than generative hallucination, it won't distort facial anatomy, change someone's eye shape, or turn skin into plastic.
 * **Instant Processing Speed**: No server queues, no waiting for busy GPU nodes. Most photos render in under 400 milliseconds.
-* **Integrated Toolkit Workflow**: If you need to make additional tweaks, you can immediately jump straight into complementary utilities like our [Free Background Remover](/tools/remove-background) or convert your finished files using the [PNG to WebP Converter](/tools/png-to-webp) for ultra-fast website loading.
+* **Integrated Toolkit Workflow**: If you need to make additional tweaks, you can immediately jump straight into complementary utilities like our [Free Background Remover](/remove-background) or convert your finished files using the [PNG to WebP Converter](/tools/png-to-webp) for ultra-fast website loading.
 
 ### What Could Be Better:
 * If you have an ancient black-and-white photo from 1920 where the subject's face is literally a cluster of 8 blurry pixels, this tool won't paint brand new synthetic eyes onto them. For severe physical photo damage where 90% of the visual data is missing, you will need a heavy generative model like Upscayl or CodeFormer.
@@ -265,7 +265,7 @@ graph TD
 ### Step 1: Digitize and Crop Properly
 If you don't have a flatbed scanner, don't just snap a casual photo of the print with your phone under a yellow ceiling lamp. Take the photograph near a bright window with indirect natural daylight to avoid reflections and glare. Keep your phone parallel to the photo so you don't introduce perspective distortion. 
 
-Crop out any torn photo album cardboard or table borders using a clean image cropper or clean up the background using our [Free Background Remover](/tools/remove-background).
+Crop out any torn photo album cardboard or table borders using a clean image cropper or clean up the background using our [Free Background Remover](/remove-background).
 
 ### Step 2: Run the Initial Enhancement Pass
 Open the [StartupAI Free Image Enhancer HD](/tools/image-enhancer) in your browser. Drop your photo onto the canvas. 

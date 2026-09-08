@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Rotate Image Tool - StartupAI Tools",
+  title: "Rotate Image Tool",
   description: "Rotate your images 90°, 180°, or 270° instantly using local browser processing.",
 };
 

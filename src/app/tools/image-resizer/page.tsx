@@ -265,16 +265,59 @@ export default function ImageResizer() {
       </div>
 
       {/* SEO Content */}
-      <div className="prose">
-        <h2>Why resize images and lock aspect ratios?</h2>
+      <div className="prose" style={{ marginTop: "4rem", borderTop: "1px solid var(--border-light)", paddingTop: "3rem" }}>
+        <h2>Why Image Resizing Matters for Page Speed and Core Web Vitals</h2>
         <p>
-          High-resolution photos from modern phones are often huge (exceeding 4000px width and 5MB size). While great for printing,
-          uploading these directly to a blog or portfolio slows down page loading speeds dramatically, hurting your website SEO rankings.
+          High-resolution photos captured by modern digital cameras and smartphones frequently exceed 4000 pixels in width and 5MB to 15MB in raw file size. While this fidelity is ideal for billboard printing or fine-art reproductions, serving oversized images directly on your blog, portfolio, or web application is one of the most common causes of slow page load times and poor Google search rankings.
         </p>
         <p>
-          Resizing images reduces file size. Locking the **aspect ratio** ensures that as you shrink the width, the height scales
-          down proportionally. If the ratio is unlocked, the image will stretch or compress, making shapes look distorted.
+          According to Google's Search Central guidelines, heavy uncompressed images severely degrade <strong>Largest Contentful Paint (LCP)</strong>, leading to higher bounce rates and missed organic visibility. Resizing your images to their exact target display dimensions—before publishing them online—slashes file weight by up to 80%, resulting in lightning-fast page transitions and optimal mobile performance.
         </p>
+
+        <h3 style={{ marginTop: "2rem" }}>Understanding Aspect Ratios and Proportional Scaling</h3>
+        <p>
+          An image's aspect ratio describes the proportional relationship between its width and its height (e.g. 16:9 widescreen, 4:3 standard, or 1:1 square):
+        </p>
+        <ul>
+          <li><strong>Locked Aspect Ratio (Recommended)</strong>: When you enable aspect ratio locking, modifying either the width or height automatically recalculates the opposite dimension. This ensures people, typography, and geometric subjects never appear stretched or horizontally squished.</li>
+          <li><strong>Unlocked Custom Sizing</strong>: Useful when fitting graphics into rigid layout containers or custom ad slot dimensions where exact pixel specifications are mandated by an advertising network.</li>
+          <li><strong>Zero Layout Shift (CLS)</strong>: Delivering images at specified dimensions helps modern browsers pre-allocate layout boxes, preventing jarring Cumulative Layout Shifts while users read your content.</li>
+        </ul>
+
+        <h3 style={{ marginTop: "2rem" }}>Recommended Image Dimensions for Modern Platforms</h3>
+        <ul>
+          <li><strong>OpenGraph / Social Sharing Banners</strong>: 1200 x 630 pixels (optimal 1.91:1 ratio for Facebook, LinkedIn, Twitter cards, and Slack previews).</li>
+          <li><strong>Full-Width Website Hero Images</strong>: 1920 x 1080 pixels (Full HD standard ensuring crisp display on retina and 4K desktop screens).</li>
+          <li><strong>Standard Blog Article Inline Images</strong>: 800 x 500 to 1200 x 800 pixels (striking the ideal balance between crisp photography and low kilobyte weight).</li>
+          <li><strong>Square Avatars and E-Commerce Thumbnails</strong>: 400 x 400 or 800 x 800 pixels (clean 1:1 square framing for Shopify, Amazon, and profile pictures).</li>
+        </ul>
+
+        <h3 style={{ marginTop: "2rem" }}>100% Private, Client-Side HTML5 Processing</h3>
+        <p>
+          Security and privacy are built into our image resizer by design. Unlike cloud-based resizing APIs that upload your proprietary media, sensitive company documents, or private photos to external third-party servers, this tool executes 100% in your browser using the HTML5 Canvas API. Your pictures never leave your local device, and processing happens instantaneously without network latency.
+        </p>
+
+        <h3 style={{ marginTop: "2rem" }}>Frequently Asked Questions (FAQ)</h3>
+        <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem", marginTop: "1rem" }}>
+          <details style={{ background: "var(--bg-card)", border: "1px solid var(--border-light)", borderRadius: "8px", padding: "0.85rem 1.15rem" }}>
+            <summary style={{ fontWeight: 700, cursor: "pointer" }}>Will shrinking an image degrade its visual sharpness?</summary>
+            <p style={{ marginTop: "0.5rem", color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: 1.6 }}>
+              No. Downscaling an image actually concentrates pixel density, making photos appear crisper and sharper on standard display screens while drastically reducing file size. However, enlarging an image past its original native pixel dimensions (upscaling) can lead to blurriness or pixelation.
+            </p>
+          </details>
+          <details style={{ background: "var(--bg-card)", border: "1px solid var(--border-light)", borderRadius: "8px", padding: "0.85rem 1.15rem" }}>
+            <summary style={{ fontWeight: 700, cursor: "pointer" }}>Which image formats does this tool support?</summary>
+            <p style={{ marginTop: "0.5rem", color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: 1.6 }}>
+              Our tool seamlessly supports PNG, JPEG, JPG, and WebP images. Transparent backgrounds in PNG files are preserved automatically during the resize operation.
+            </p>
+          </details>
+          <details style={{ background: "var(--bg-card)", border: "1px solid var(--border-light)", borderRadius: "8px", padding: "0.85rem 1.15rem" }}>
+            <summary style={{ fontWeight: 700, cursor: "pointer" }}>Are there any file size or daily upload limits?</summary>
+            <p style={{ marginTop: "0.5rem", color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: 1.6 }}>
+              None at all. Because computation is executed locally inside your device&apos;s browser memory, you can resize an unlimited number of images without subscription fees, watermarks, or account registration.
+            </p>
+          </details>
+        </div>
       </div>
     </div>
   );

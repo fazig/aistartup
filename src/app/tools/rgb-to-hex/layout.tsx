@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "RGB to Hex Converter - StartupAI Tools",
+  title: "RGB to Hex Converter",
   description: "Instantly convert RGB color codes into HEX format, or vice-versa.",
 };
 

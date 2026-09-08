@@ -120,7 +120,7 @@ However, in the underground world of DJing and Soundcloud remixes, "bootlegs" (u
 
 Always use your best judgment, respect the original artists, and never try to monetize a sample you do not own.
 
-*(Curious about how AI is impacting content creation? Read our guide on the [Best AI for Writing Podcast Show Notes](/blog/best-ai-podcast-show-notes).)*
+*(Curious about how AI is impacting content creation? Read our guide on the [Best AI for Writing Podcast Show Notes](/blog/best-ai-for-writing-podcast-show-notes).)*
 
 ---
 

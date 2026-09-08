@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Calorie Calculator - StartupAI Tools",
+  title: "Calorie Calculator",
   description: "Accurately calculate your daily caloric needs using the Mifflin-St Jeor equation and instantly map out your macro breakdowns for muscle gain, fat loss, or maintenance.",
 };
 

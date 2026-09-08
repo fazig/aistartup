@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Lorem Ipsum Generator - StartupAI Tools",
+  title: "Lorem Ipsum Generator",
   description: "Generate placeholder text for your designs, mockups, and layouts instantly.",
 };
 

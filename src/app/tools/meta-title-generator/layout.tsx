@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "AI SEO Meta Title Generator - StartupAI Tools",
+  title: "AI SEO Meta Title Generator",
   description: "Instantly generate highly clickable, SEO-optimized title tags engineered to maximize your Google Click-Through Rate (CTR).",
 };
 

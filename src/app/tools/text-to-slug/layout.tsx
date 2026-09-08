@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Text to Slug Converter - StartupAI Tools",
+  title: "Text to Slug Converter",
   description: "Instantly transform messy titles and strings into clean, SEO-friendly URL slugs.",
 };
 

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Power Converter - StartupAI Tools",
+  title: "Power Converter",
   description: "Convert horsepower, kilowatts, megawatts, BTU/hr, and more. Compare real-world power scales dynamically.",
 };
 

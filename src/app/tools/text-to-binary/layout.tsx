@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Text to Binary Converter - StartupAI Tools",
+  title: "Text to Binary Converter",
   description: "Convert plain text into binary code (zeros and ones) instantly in your browser.",
 };
 

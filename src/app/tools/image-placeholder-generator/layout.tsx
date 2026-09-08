@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Image Placeholder Generator - StartupAI Tools",
+  title: "Image Placeholder Generator",
   description: "Instantly generate dummy images with custom dimensions, colors, and text for your web design mockups.",
 };
 

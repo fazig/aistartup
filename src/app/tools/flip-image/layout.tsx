@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Flip Image Tool - StartupAI Tools",
+  title: "Flip Image Tool",
   description: "Mirror your images vertically or horizontally instantly right in your browser.",
 };
 

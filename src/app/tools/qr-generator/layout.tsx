@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     canonical: "/tools/qr-generator",
   },
   openGraph: {
-    title: "Free QR Code Generator & Micro QR Maker | StartupAI Tools",
+    title: "Free QR Code Generator & Micro QR Maker",
     description: "Generate standard and micro QR codes for URLs, WiFi, and contact info.",
     url: "/tools/qr-generator",
     type: "website",

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Free Word & Character Counter - StartupAI Tools",
+  title: "Free Word & Character Counter",
   description: "Instantly count words, characters, sentences, and estimate reading time.",
 };
 

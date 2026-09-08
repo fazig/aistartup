@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "ASCII to Text Converter - StartupAI Tools",
+  title: "ASCII to Text Converter",
   description: "Convert numeric ASCII decimal codes back into readable text characters instantly.",
 };
 

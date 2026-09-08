@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Voltage Converter - StartupAI Tools",
+  title: "Voltage Converter",
   description: "Convert between Volts, Millivolts, Microvolts, Kilovolts, Megavolts, Statvolts, and Abvolts.",
 };
 

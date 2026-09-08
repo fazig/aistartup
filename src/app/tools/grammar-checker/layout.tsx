@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Free Grammar Checker | StartupAI Tools",
+  title: "Free Grammar Checker",
   description: "Analyze your texts, correct spelling mistakes, optimize syntax structure, and improve readability with our professional grammar analyzer.",
 };
 

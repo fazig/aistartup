@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     canonical: "/tools/article-rewriter",
   },
   openGraph: {
-    title: "Free Article Rewriter & Spinbot Alternative | StartupAI Tools",
+    title: "Free Article Rewriter & Spinbot Alternative",
     description: "Instantly paraphrase essays, rewrite articles, and rephrase text for free.",
     url: "/tools/article-rewriter",
     type: "website",

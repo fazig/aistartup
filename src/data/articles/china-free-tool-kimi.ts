@@ -74,6 +74,6 @@ The narrative that true AI innovation only happens in Silicon Valley is official
 
 By offering a staggering 2 million token context window, robust multimodal capabilities, and seamless web browsing—all for free—Moonshot AI has fundamentally altered the competitive landscape. While concerns regarding geopolitical data security will undoubtedly persist for enterprise users, the sheer utility and raw power of the China free tool Kimi make it an indispensable asset for students, researchers, developers, and everyday users worldwide. As the AI wars continue to escalate, Kimi has proven that the next great leap forward can come from anywhere.
 
-*Interested in how AI is changing software development? Read our in-depth guide on [how to vibe code using codex](/how-to-vibe-code-using-codex). Curious about the ultra-premium end of the market? Don't miss our analysis asking if [claude fable 5 is the most expensive tool yet](/claude-fable-5-is-the-most-expensive-tool-yet).*
+*Interested in how AI is changing software development? Read our in-depth guide on [how to vibe code using codex](/blog/how-to-vibe-code-using-codex). Curious about the ultra-premium end of the market? Don't miss our analysis asking if [claude fable 5 is the most expensive tool yet](/blog/claude-fable-5-is-the-most-expensive-tool-yet).*
 `
 };

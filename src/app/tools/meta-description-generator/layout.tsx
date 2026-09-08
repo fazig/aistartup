@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "AI SEO Meta Description Generator - StartupAI Tools",
+  title: "AI SEO Meta Description Generator",
   description: "Generate compelling, click-worthy Meta Descriptions perfectly tailored to Google's 160-character limit.",
 };
 

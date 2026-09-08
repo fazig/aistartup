@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "WWW Redirect Checker - StartupAI Tools",
+  title: "WWW Redirect Checker",
   description: "Analyze your domain's server headers to ensure canonical WWW & Non-WWW redirects are properly configured for SEO.",
 };
 

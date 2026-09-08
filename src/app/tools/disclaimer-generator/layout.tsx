@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Disclaimer Generator - StartupAI Tools",
+  title: "Disclaimer Generator",
   description: "Create a customized, professional disclaimer statement for your blog, application, or website instantly.",
 };
 

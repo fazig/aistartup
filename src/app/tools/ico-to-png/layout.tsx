@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "ICO to PNG Converter - StartupAI Tools",
+  title: "ICO to PNG Converter",
   description: "Extract and convert individual frames from an .ico file into transparent PNG images completely in your browser.",
 };
 

@@ -7,7 +7,7 @@ import {
 import ToolsDirectoryClient, { ToolCategory } from "./ToolsDirectoryClient";
 
 export const metadata: Metadata = {
-  title: "Web Utilities Directory - All Free Tools | StartupAI Tools",
+  title: "Web Utilities Directory - All Free Tools",
   description: "Browse our complete list of free developer utilities, SEO calculators, unit converters, and text editing tools. All processed safely in-browser.",
 };
 
@@ -268,6 +268,77 @@ export default function ToolsDirectory() {
       </div>
 
       <ToolsDirectoryClient categories={categories as ToolCategory[]} totalLive={totalLive} />
+
+      {/* Editorial & SEO Depth Section */}
+      <div style={{ marginTop: '5rem', borderTop: '1px solid var(--border-light)', paddingTop: '4rem', maxWidth: '900px', marginInline: 'auto' }}>
+        <h2 style={{ fontSize: '1.85rem', fontWeight: 800, color: 'var(--text-main)', marginBottom: '1.25rem', letterSpacing: '-0.02em' }}>
+          Why Use StartupAI Free Web Utilities?
+        </h2>
+        <p style={{ color: 'var(--text-muted)', lineHeight: 1.8, fontSize: '1.05rem', marginBottom: '1.5rem' }}>
+          StartupAI Tools provides a curated collection of over 100 browser-native utilities engineered specifically for software developers, SEO professionals, digital marketers, designers, and students. Unlike traditional websites that clutter your screen with intrusive pop-up ads, mandatory account registrations, and weekly subscription paywalls, every single utility in our directory is 100% free forever with no limits on usage.
+        </p>
+
+        <h3 style={{ fontSize: '1.35rem', fontWeight: 700, color: 'var(--text-main)', marginTop: '2.5rem', marginBottom: '1rem' }}>
+          100% Client-Side Processing: Zero Data Retention Guarantee
+        </h3>
+        <p style={{ color: 'var(--text-muted)', lineHeight: 1.8, fontSize: '1rem', marginBottom: '1.5rem' }}>
+          Your digital privacy is our top engineering priority. More than 90% of our tools—including our <Link href="/tools/json-formatter" style={{ color: 'var(--primary)', fontWeight: 600 }}>JSON Formatter</Link>, <Link href="/tools/image-resizer" style={{ color: 'var(--primary)', fontWeight: 600 }}>Image Resizer</Link>, <Link href="/tools/image-cropper" style={{ color: 'var(--primary)', fontWeight: 600 }}>Image Cropper</Link>, <Link href="/tools/grammar-checker" style={{ color: 'var(--primary)', fontWeight: 600 }}>Free Grammar Checker</Link>, and <Link href="/resume-builder" style={{ color: 'var(--primary)', fontWeight: 600 }}>ResumeCraft AI Studio</Link>—execute 100% locally within your device browser using modern WebAssembly, JavaScript, and HTML5 Canvas APIs. Your sensitive JSON files, personal photos, resumes, and text documents are never transmitted over the internet to remote servers, safeguarding you against data leaks and unauthorized telemetry.
+        </p>
+
+        <h3 style={{ fontSize: '1.35rem', fontWeight: 700, color: 'var(--text-main)', marginTop: '2.5rem', marginBottom: '1rem' }}>
+          Four Essential Tool Pillars
+        </h3>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.5rem', marginTop: '1.5rem', marginBottom: '2.5rem' }}>
+          <div style={{ padding: '1.25rem', background: 'var(--bg-card)', border: '1px solid var(--border-light)', borderRadius: '12px' }}>
+            <h4 style={{ fontWeight: 700, fontSize: '1.05rem', color: 'var(--text-main)', marginBottom: '0.5rem' }}>🔍 Search Engine & Webmaster</h4>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', lineHeight: 1.6 }}>
+              Audit your web pages before applying for Google AdSense with our <Link href="/tools/adsense-eligibility-checker" style={{ color: 'var(--primary)' }}>AdSense Eligibility Checker</Link>, configure AI crawler manifests with our <Link href="/tools/llms-txt-generator" style={{ color: 'var(--primary)' }}>llms.txt Generator</Link>, and create sitemaps and meta tags effortlessly.
+            </p>
+          </div>
+          <div style={{ padding: '1.25rem', background: 'var(--bg-card)', border: '1px solid var(--border-light)', borderRadius: '12px' }}>
+            <h4 style={{ fontWeight: 700, fontSize: '1.05rem', color: 'var(--text-main)', marginBottom: '0.5rem' }}>🖼️ Image & Vector Graphics</h4>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', lineHeight: 1.6 }}>
+              Crop photos to standard social media aspect ratios, upscale blurry portraits with <Link href="/tools/image-enhancer" style={{ color: 'var(--primary)' }}>Image Enhancer HD</Link>, extract EXIF camera metadata, or convert between JPG, PNG, and WebP for optimal page speed.
+            </p>
+          </div>
+          <div style={{ padding: '1.25rem', background: 'var(--bg-card)', border: '1px solid var(--border-light)', borderRadius: '12px' }}>
+            <h4 style={{ fontWeight: 700, fontSize: '1.05rem', color: 'var(--text-main)', marginBottom: '0.5rem' }}>✍️ Content & Copywriting</h4>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', lineHeight: 1.6 }}>
+              Draft error-free articles with our Grammar Checker, paraphrase complex sentences using the <Link href="/tools/article-rewriter" style={{ color: 'var(--primary)' }}>Article Rewriter</Link>, and build ATS-friendly resumes with instant vector PDF export on <Link href="/resume-builder" style={{ color: 'var(--primary)' }}>ResumeCraft AI Studio</Link>.
+            </p>
+          </div>
+          <div style={{ padding: '1.25rem', background: 'var(--bg-card)', border: '1px solid var(--border-light)', borderRadius: '12px' }}>
+            <h4 style={{ fontWeight: 700, fontSize: '1.05rem', color: 'var(--text-main)', marginBottom: '0.5rem' }}>⚙️ Code & Data Conversion</h4>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', lineHeight: 1.6 }}>
+              Format, beautify, and minify HTML, CSS, and JavaScript. Convert binary, octal, decimal, and hexadecimal notations, and generate cryptographic MD5 or UUID hashes in milliseconds.
+            </p>
+          </div>
+        </div>
+
+        <h3 style={{ fontSize: '1.35rem', fontWeight: 700, color: 'var(--text-main)', marginTop: '2.5rem', marginBottom: '1rem' }}>
+          Frequently Asked Questions (FAQ)
+        </h3>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '1rem' }}>
+          <details style={{ background: 'var(--bg-card)', border: '1px solid var(--border-light)', borderRadius: '10px', padding: '1rem 1.25rem' }}>
+            <summary style={{ fontWeight: 700, cursor: 'pointer', color: 'var(--text-main)' }}>Are all tools on this website really free?</summary>
+            <p style={{ color: 'var(--text-muted)', marginTop: '0.75rem', lineHeight: 1.6, fontSize: '0.95rem' }}>
+              Yes, unconditionally. There are no paid tiers, hidden subscriptions, or usage quotas. You can use every converter, formatter, scanner, and generator as many times as you need without providing payment details or credit cards.
+            </p>
+          </details>
+          <details style={{ background: 'var(--bg-card)', border: '1px solid var(--border-light)', borderRadius: '10px', padding: '1rem 1.25rem' }}>
+            <summary style={{ fontWeight: 700, cursor: 'pointer', color: 'var(--text-main)' }}>Do I need to create an account or sign up?</summary>
+            <p style={{ color: 'var(--text-muted)', marginTop: '0.75rem', lineHeight: 1.6, fontSize: '0.95rem' }}>
+              No. None of our utility tools require you to create an account, log in, or verify an email address. You can bookmark the pages and access all features immediately upon landing.
+            </p>
+          </details>
+          <details style={{ background: 'var(--bg-card)', border: '1px solid var(--border-light)', borderRadius: '10px', padding: '1rem 1.25rem' }}>
+            <summary style={{ fontWeight: 700, cursor: 'pointer', color: 'var(--text-main)' }}>Can I use these tools on mobile devices and tablets?</summary>
+            <p style={{ color: 'var(--text-muted)', marginTop: '0.75rem', lineHeight: 1.6, fontSize: '0.95rem' }}>
+              Yes. All StartupAI tools are responsive and mobile-optimized, allowing you to crop photos, format code, shorten URLs, and calculate formulas seamlessly across iPhone, Android, iPad, and desktop viewports.
+            </p>
+          </details>
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Free Typing Speed Test Online - StartupAI Tools",
+  title: "Free Typing Speed Test Online",
   description: "Test your typing speed and accuracy with our free online typing test. Improve your words per minute (WPM) today.",
 };
 

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Domain into IP - StartupAI Tools",
+  title: "Domain into IP",
   description: "Instantly resolve any website domain name to discover the underlying IP address of its hosting server.",
 };
 

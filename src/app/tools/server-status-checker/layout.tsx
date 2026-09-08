@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Server Status Checker - StartupAI Tools",
+  title: "Server Status Checker",
   description: "Instantly check if a website is online or offline, and analyze its HTTP response codes.",
 };
 

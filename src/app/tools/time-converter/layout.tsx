@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Time Converter - StartupAI Tools",
+  title: "Time Converter",
   description: "Convert between seconds, minutes, hours, days, weeks, months, years, and centuries instantly.",
 };
 

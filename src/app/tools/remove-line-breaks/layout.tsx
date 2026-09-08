@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Remove Line Breaks - StartupAI Tools",
+  title: "Remove Line Breaks",
   description: "Strip or replace line breaks from your text. Perfect for cleaning up copied content.",
 };
 

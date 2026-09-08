@@ -4,7 +4,7 @@ import { BLOG_METADATA } from "@/data/posts-meta";
 import { Calendar, User, Clock, ArrowRight, BookOpen } from "lucide-react";
 
 export const metadata = {
-  title: "Blog | Web Publishing & SEO Blueprint - StartupAI Tools",
+  title: "Blog & Web Publishing Guides",
   description: "Read expert articles on SEO, AdSense approvals, technical web performance, and developer utility tools to scale your online audience.",
 };
 

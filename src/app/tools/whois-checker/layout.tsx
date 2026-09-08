@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "WHOIS Domain Lookup - StartupAI Tools",
+  title: "WHOIS Domain Lookup",
   description: "Instantly discover who owns a domain, when it was registered, and when it expires.",
 };
 

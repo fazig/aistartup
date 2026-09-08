@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Speed Converter - StartupAI Tools",
+  title: "Speed Converter",
   description: "Convert velocity values between metric, imperial, maritime, and acoustic units instantly.",
 };
 

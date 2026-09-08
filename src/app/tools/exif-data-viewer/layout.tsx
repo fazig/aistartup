@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "EXIF Data Viewer - StartupAI Tools",
+  title: "EXIF Data Viewer",
   description: "Extract and read the hidden metadata (camera settings, date, GPS location) secretly embedded inside your photos.",
 };
 

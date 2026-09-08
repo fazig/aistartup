@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Percentage Calculator - StartupAI Tools",
+  title: "Percentage Calculator",
   description: "Three calculation modes to solve any percentage problem — results update instantly as you type.",
 };
 

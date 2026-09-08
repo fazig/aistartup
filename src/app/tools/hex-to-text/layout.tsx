@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Hex to Text Converter - StartupAI Tools",
+  title: "Hex to Text Converter",
   description: "Decode hexadecimal character strings back into readable plain text instantly.",
 };
 

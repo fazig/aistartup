@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Secure Password Generator - StartupAI Tools",
+  title: "Secure Password Generator",
   description: "Generate unbreakable, highly-secure passwords locally in your browser.",
 };
 

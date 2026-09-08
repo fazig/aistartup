@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy Generator - StartupAI Tools",
+  title: "Privacy Policy Generator",
   description: "Instantly generate a basic privacy policy for your website, blog, or app to comply with AdSense and app store requirements.",
 };
 

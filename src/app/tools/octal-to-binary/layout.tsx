@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Octal to Binary Converter - StartupAI Tools",
+  title: "Octal to Binary Converter",
   description: "Convert octal values (Base 8) to binary numbers (Base 2) with a live visual digit-by-digit mapping representation.",
 };
 

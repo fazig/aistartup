@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Volume Converter - StartupAI Tools",
+  title: "Volume Converter",
   description: "Convert between liters, gallons, cups, fluid ounces, milliliters, and cubic dimensions instantly.",
 };
 

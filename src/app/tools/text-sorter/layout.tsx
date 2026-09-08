@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Online Text Sorter & Line Organizer - StartupAI Tools",
+  title: "Online Text Sorter & Line Organizer",
   description: "Sort, shuffle, reverse, and deduplicate lines of text instantly.",
 };
 

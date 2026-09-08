@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "GST Calculator - StartupAI Tools",
+  title: "GST Calculator",
   description: "Calculate Goods and Services Tax (GST) easily by adding or removing tax values for invoices.",
 };
 

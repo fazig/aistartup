@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Random Word Generator - StartupAI Tools",
+  title: "Random Word Generator",
   description: "Generate random English words for brainstorming, writing exercises, games, or just for fun.",
 };
 

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Free AI Copilot Online - StartupAI Tools",
+  title: "Free AI Copilot Online",
   description: "Use our free online AI Copilot to generate text, fix grammar, and brainstorm ideas instantly. No signup required.",
 };
 

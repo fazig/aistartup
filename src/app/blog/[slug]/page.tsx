@@ -20,7 +20,7 @@ export async function generateMetadata({
   const post = BLOG_METADATA.find((p) => p.slug === slug);
   if (!post) return {};
   return {
-    title: `${post.title} | StartupAI Tools Blog`,
+    title: post.title,
     description: post.description,
     alternates: { canonical: `/blog/${slug}` },
     openGraph: {
@@ -31,7 +31,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: `${post.title} | StartupAI Tools Blog`,
+      title: `${post.title} | StartupAI Tools`,
       description: post.description,
       images: [post.image || "/og-image.jpg"],
     },

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Hours Calculator - StartupAI Tools",
+  title: "Hours Calculator",
   description: "Calculate elapsed time between hours, or compute weekly timesheets and wages instantly.",
 };
 

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Website Link Analyzer - StartupAI Tools",
+  title: "Website Link Analyzer",
   description: "Scan any webpage to instantly calculate the exact ratio of Internal vs. External outbound links for SEO auditing.",
 };
 

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Text Repeater - StartupAI Tools",
+  title: "Text Repeater",
   description: "Repeat any text as many times as you want with custom separators and numbering.",
 };
 

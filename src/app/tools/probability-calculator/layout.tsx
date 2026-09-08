@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Probability Calculator - StartupAI Tools",
+  title: "Probability Calculator",
   description: "Calculate the probability of single and multiple independent events occurring.",
 };
 

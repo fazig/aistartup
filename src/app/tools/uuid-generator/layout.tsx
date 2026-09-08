@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "UUID Generator - StartupAI Tools",
+  title: "UUID Generator",
   description: "Generate random UUID v4 identifiers instantly. Bulk create up to 100 at once.",
 };
 

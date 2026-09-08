@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Area Converter - StartupAI Tools",
+  title: "Area Converter",
   description: "Convert between metric and imperial area units including square meters, feet, acres, and hectares.",
 };
 

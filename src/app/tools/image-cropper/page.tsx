@@ -303,16 +303,54 @@ export default function ImageCropper() {
       </div>
 
       {/* SEO Content */}
-      <div className="prose">
-        <h2>What is image cropping and how is it used?</h2>
+      <div className="prose" style={{ marginTop: "4rem", borderTop: "1px solid var(--border-light)", paddingTop: "3rem" }}>
+        <h2>What is Image Cropping and Why is It Important?</h2>
         <p>
-          Cropping is the process of removing unwanted outer areas from a photographic or illustrated image. It is used to:
+          Image cropping is the digital process of removing unwanted outer borders, margins, or background distractions from a photograph or illustration. Whether you are preparing product photos for an e-commerce catalog, designing YouTube video thumbnails, or aligning a professional headshot for LinkedIn, precise cropping allows you to:
         </p>
         <ul>
-          <li><strong>Improve Composition</strong>: Align subjects with the rule of thirds or center focus.</li>
-          <li><strong>Adjust Aspect Ratios</strong>: Fit images into standard template frames (like square 1:1 for Instagram, 16:9 for YouTube headers).</li>
-          <li><strong>Focus on details</strong>: Trim off distracting background elements.</li>
+          <li><strong>Improve Visual Composition</strong>: Align your focal subject with classic aesthetic guidelines, such as the Rule of Thirds or golden ratio framing.</li>
+          <li><strong>Match Social Media & Web Aspect Ratios</strong>: Prevent awkward platform stretching by trimming photos directly into standard aspect ratios (such as square 1:1, widescreen 16:9, or vertical 9:16).</li>
+          <li><strong>Eliminate Unwanted Artifacts</strong>: Easily remove photobombers, awkward room corners, shadows, or unwanted border margins.</li>
         </ul>
+
+        <h3 style={{ marginTop: "2rem" }}>Popular Aspect Ratios for Digital Creators</h3>
+        <p>
+          Selecting the correct aspect ratio ensures your photos render sharply without black bars or letterboxing across social platforms:
+        </p>
+        <ul>
+          <li><strong>1:1 Square (e.g. 1080x1080)</strong>: The standard format for Instagram feed posts, square profile avatars, and e-commerce product listings.</li>
+          <li><strong>16:9 Widescreen (e.g. 1920x1080)</strong>: The universal standard for YouTube video thumbnails, blog hero banners, presentation slides, and Twitter/X landscape previews.</li>
+          <li><strong>4:3 Classic Standard (e.g. 1600x1200)</strong>: Ideal for photography portfolios, editorial web features, and traditional print displays.</li>
+          <li><strong>9:16 Vertical Story / Reel (e.g. 1080x1920)</strong>: The required full-screen format for TikTok videos, Instagram Stories, YouTube Shorts, and mobile phone wallpapers.</li>
+        </ul>
+
+        <h3 style={{ marginTop: "2rem" }}>100% Client-Side Privacy: No Server Uploads</h3>
+        <p>
+          Unlike traditional online photo editors that upload your family pictures, identification documents, or proprietary business graphics to remote cloud servers, our <strong>Free Image Cropper</strong> executes 100% locally within your browser using the HTML5 Canvas API. Your image never leaves your device memory, guaranteeing zero risk of data retention, server snooping, or privacy breaches.
+        </p>
+
+        <h3 style={{ marginTop: "2rem" }}>Frequently Asked Questions (FAQ)</h3>
+        <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem", marginTop: "1rem" }}>
+          <details style={{ background: "var(--bg-card)", border: "1px solid var(--border-light)", borderRadius: "8px", padding: "0.85rem 1.15rem" }}>
+            <summary style={{ fontWeight: 700, cursor: "pointer" }}>Does cropping an image reduce its resolution or quality?</summary>
+            <p style={{ marginTop: "0.5rem", color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: 1.6 }}>
+              Cropping removes outer pixels from the perimeter, meaning the total pixel count of the cropped area will naturally be smaller than the original full-size photo. However, our tool preserves 100% of the pixel sharpness within the selected boundary using lossless canvas extraction, ensuring zero compression artifacts.
+            </p>
+          </details>
+          <details style={{ background: "var(--bg-card)", border: "1px solid var(--border-light)", borderRadius: "8px", padding: "0.85rem 1.15rem" }}>
+            <summary style={{ fontWeight: 700, cursor: "pointer" }}>Which file formats can I crop?</summary>
+            <p style={{ marginTop: "0.5rem", color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: 1.6 }}>
+              Our tool supports all major raster formats including PNG, JPG, JPEG, and WebP. Transparent backgrounds in PNG files are fully preserved during export.
+            </p>
+          </details>
+          <details style={{ background: "var(--bg-card)", border: "1px solid var(--border-light)", borderRadius: "8px", padding: "0.85rem 1.15rem" }}>
+            <summary style={{ fontWeight: 700, cursor: "pointer" }}>Can I crop photos on my smartphone?</summary>
+            <p style={{ marginTop: "0.5rem", color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: 1.6 }}>
+              Yes. The tool is fully responsive and supports touch drag gestures, allowing you to crop and download pictures seamlessly on iPhone, iPad, and Android mobile browsers.
+            </p>
+          </details>
+        </div>
       </div>
     </div>
   );

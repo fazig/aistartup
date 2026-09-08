@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "URL Rewriting Tool - StartupAI Tools",
+  title: "URL Rewriting Tool",
   description: "Convert long, ugly dynamic URLs with query parameters into clean, SEO-friendly static URLs.",
 };
 

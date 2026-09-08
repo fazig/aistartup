@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Discount Calculator - StartupAI Tools",
+  title: "Discount Calculator",
   description: "Quickly figure out how much you save with any discount — enter a percentage or fixed amount and see the final price instantly.",
 };
 

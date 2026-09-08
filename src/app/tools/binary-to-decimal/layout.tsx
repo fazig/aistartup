@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Binary to Decimal Converter - StartupAI Tools",
+  title: "Binary to Decimal Converter",
   description: "Convert binary numbers (Base 2) to decimal numbers (Base 10) with detailed mathematical explanations.",
 };
 

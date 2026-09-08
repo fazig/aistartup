@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "URL Encoder / Decoder - StartupAI Tools",
+  title: "URL Encoder / Decoder",
   description: "Safely encode URL parameters or decode messy web addresses back to plain text.",
 };
 

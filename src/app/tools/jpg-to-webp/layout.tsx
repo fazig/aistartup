@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "JPG to WebP Converter - StartupAI Tools",
+  title: "JPG to WebP Converter",
   description: "Convert JPG/JPEG images to modern, highly compressed WebP files. Custom quality settings and lossless compression options are available.",
 };
 

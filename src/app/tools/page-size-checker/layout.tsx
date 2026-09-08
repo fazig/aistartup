@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Website Page Size Checker - StartupAI Tools",
+  title: "Website Page Size Checker",
   description: "Analyze the total HTML byte size of any webpage to optimize load times and improve SEO rankings.",
 };
 

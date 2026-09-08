@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "JSON Formatter & Validator - StartupAI Tools",
+  title: "JSON Formatter & Validator",
   description: "Format, beautify, and validate your JSON data instantly in the browser.",
 };
 

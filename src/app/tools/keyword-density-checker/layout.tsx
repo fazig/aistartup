@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Keyword Density Checker - StartupAI Tools",
+  title: "Keyword Density Checker",
   description: "Analyze your text to prevent keyword stuffing and optimize your SEO content strategy.",
 };
 

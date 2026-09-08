@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Pressure Converter - StartupAI Tools",
+  title: "Pressure Converter",
   description: "Convert values between Pascal, Kilopascal, PSI, Bar, Atmosphere, Torr, and more. Visualise equivalents in real time.",
 };
 

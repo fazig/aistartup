@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Image Resizer - StartupAI Tools",
+  title: "Image Resizer",
   description: "Resize images to custom width/height dimensions or percentage scales without uploading files to any server.",
 };
 

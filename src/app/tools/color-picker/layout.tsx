@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "HTML Color Picker Tool - StartupAI Tools",
+  title: "HTML Color Picker Tool",
   description: "Visually select any color and instantly get the HTML, CSS HEX, and RGB codes.",
 };
 

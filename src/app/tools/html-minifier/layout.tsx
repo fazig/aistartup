@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Welcome to the Sumo Page - StartupAI Tools",
+  title: "Welcome to the Sumo Page",
   description: "Compress and optimize your HTML source code in real time. Strip comments, collapse whitespace, and track byte savings.",
 };
 

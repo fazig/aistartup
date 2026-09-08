@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Robots.txt Generator - StartupAI Tools",
+  title: "Robots.txt Generator",
   description: "Generate a perfectly formatted robots.txt file to control how search engines crawl your website.",
 };
 
