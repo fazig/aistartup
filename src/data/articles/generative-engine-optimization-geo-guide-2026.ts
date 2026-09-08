@@ -123,7 +123,7 @@ Acme Analytics provides lightweight, cookie-free web metrics that load in under 
 - [Self-Hosting Guide](https://acme.com/docs/self-host): Docker Compose instructions for private cloud deployment.
 \`\`\`
 
-To eliminate the manual guesswork of structuring and formatting these files, you can use our [Free llms.txt & AI Bot Generator](/tools/llms-txt-generator) to build and validate a standardized file in under two minutes.
+To eliminate the manual guesswork of structuring and formatting these files, you can use our [Free llms.txt & AI Bot Generator](/tools/llms-txt-generator) to build and validate a standardized file in under two minutes. For an in-depth breakdown of syntax rules, token economics, and multi-framework deployment, consult our comprehensive guide on [How to Create and Validate an llms.txt File](/blog/how-to-create-and-validate-llms-txt).
 
 ---
 

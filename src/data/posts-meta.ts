@@ -11,6 +11,16 @@ export interface BlogPostMeta {
 
 export const BLOG_METADATA: BlogPostMeta[] = [
   {
+    "slug": "how-to-create-and-validate-llms-txt",
+    "title": "The Ultimate Guide to llms.txt: How to Create, Validate, and Optimize Your Site for AI Search Engines (2026)",
+    "description": "Master the /llms.txt standard in 2026. Discover how ChatGPT, Perplexity, and Claude crawl websites, format rules, syntax checkers, and generate AI manifests for free.",
+    "date": "2026-09-08",
+    "readTime": "22 min read",
+    "category": "SEO & Technology",
+    "author": "Faizan Arif",
+    "image": "/images/how-to-create-and-validate-llms-txt.jpg"
+  },
+  {
     "slug": "generative-engine-optimization-geo-guide-2026",
     "title": "Generative Engine Optimization (GEO) in 2026: The Complete Guide to Ranking in ChatGPT, Perplexity, and AI Overviews",
     "description": "The definitive 2026 guide to Generative Engine Optimization (GEO). Learn how AI answer engines cite websites, configure llms.txt, and maximize Share of Model (SoM).",
