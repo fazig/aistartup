@@ -11,6 +11,36 @@ export interface BlogPostMeta {
 
 export const BLOG_METADATA: BlogPostMeta[] = [
   {
+    "slug": "how-to-resize-images-without-losing-quality",
+    "title": "How to Resize Images Without Losing Quality: Web Vitals & Aspect Ratio Guide (2026)",
+    "description": "Learn how to resize images without losing quality in 2026. Master aspect ratio locking math, Lanczos resampling, circular photo cropping, and Core Web Vitals.",
+    "date": "2026-09-08",
+    "readTime": "20 min read",
+    "category": "Design & Media",
+    "author": "Faizan Arif",
+    "image": "/images/how-to-resize-images-without-losing-quality.jpg"
+  },
+  {
+    "slug": "how-to-convert-webp-to-jpg-png-without-losing-quality",
+    "title": "How to Convert WebP to JPG or PNG Without Losing Quality: The 2026 Webmaster Guide",
+    "description": "Learn how to convert WebP to JPG or PNG without losing quality in 2026. Discover client-side batch converters, lossy vs lossless compression, and CLI automation.",
+    "date": "2026-09-08",
+    "readTime": "21 min read",
+    "category": "Design & Media",
+    "author": "Faizan Arif",
+    "image": "/images/how-to-convert-webp-to-jpg-png-without-losing-quality.jpg"
+  },
+  {
+    "slug": "how-to-make-transparent-background-free",
+    "title": "How to Make a Transparent Background on Any Picture for Free (2026 Guide)",
+    "description": "Learn how to make a transparent background on any picture for free in 2026. Discover client-side AI background removers, PNG vs WebP alpha channels, edge refinement, and e-commerce product cutout workflows.",
+    "date": "2026-09-08",
+    "readTime": "22 min read",
+    "category": "Design & Media",
+    "author": "Faizan Arif",
+    "image": "/images/how-to-make-transparent-background-free.jpg"
+  },
+  {
     "slug": "best-free-ats-resume-builders-no-paywall",
     "title": "Best Free ATS Resume Builders in 2026 (No Paywall, No Sign-Up, No Watermark): The Definitive Guide",
     "description": "The definitive 2026 guide to actually free ATS resume builders. Compare top tools, avoid bait-and-switch paywalls, test machine readability, and download unwatermarked vector PDFs.",

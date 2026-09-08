@@ -74,8 +74,14 @@ import { postBestFreeGrammarlyAlternatives2026 } from "./articles/best-free-gram
 import { postGenerativeEngineOptimizationGeoGuide2026 } from "./articles/generative-engine-optimization-geo-guide-2026";
 import { postHowToCreateAndValidateLlmsTxt } from "./articles/how-to-create-and-validate-llms-txt";
 import { postBestFreeAtsResumeBuildersNoPaywall } from "./articles/best-free-ats-resume-builders-no-paywall";
+import { postTransparentBackgroundGuide } from "./articles/how-to-make-transparent-background-free";
+import { postConvertWebpToJpgGuide } from "./articles/how-to-convert-webp-to-jpg-png-without-losing-quality";
+import { postResizeImagesWithoutLosingQualityGuide } from "./articles/how-to-resize-images-without-losing-quality";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postResizeImagesWithoutLosingQualityGuide,
+  postConvertWebpToJpgGuide,
+  postTransparentBackgroundGuide,
   postBestFreeAtsResumeBuildersNoPaywall,
   postHowToCreateAndValidateLlmsTxt,
   postGenerativeEngineOptimizationGeoGuide2026,

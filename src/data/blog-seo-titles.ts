@@ -1,4 +1,7 @@
 export const BLOG_SEO_TITLES: Record<string, string> = {
+  'how-to-resize-images-without-losing-quality': 'How to Resize Images Without Losing Quality (2026)',
+  'how-to-convert-webp-to-jpg-png-without-losing-quality': 'How to Convert WebP to JPG or PNG Without Quality Loss',
+  'how-to-make-transparent-background-free': 'How to Make a Transparent Background on Photos Free',
   'best-free-ats-resume-builders-no-paywall': 'Best Free ATS Resume Builders in 2026 (No Paywall)',
   'how-to-create-and-validate-llms-txt': 'How to Create and Validate llms.txt (2026 Guide)',
   'generative-engine-optimization-geo-guide-2026': 'Generative Engine Optimization (GEO) Guide 2026',
