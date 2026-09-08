@@ -62,13 +62,13 @@ export const BLOG_METADATA: BlogPostMeta[] = [
   },
   {
     "slug": "micro-qr-codes-guide",
-    "title": "Micro QR Codes: What They Are, How They Work, and When to Use Them",
-    "description": "Everything you need to know about Micro QR codes vs standard QR codes. Learn printing dimensions, minimum scan distances, and generate high-density barcodes for free.",
-    "date": "2026-09-05",
-    "readTime": "7 min read",
+    "title": "The Ultimate Guide to Micro QR Codes: How to Generate, Size, and Print High-Density Barcodes (2026)",
+    "description": "Master Micro QR codes in 2026. Discover ISO/IEC 18004 specs, M1-M4 versions, minimum print sizing math, smartphone scanning limitations, and how to generate tiny barcodes for free.",
+    "date": "2026-09-08",
+    "readTime": "24 min read",
     "category": "Tech Guides",
     "author": "Faizan Arif",
-    "image": "/images/micro-qr-codes-guide.webp"
+    "image": "/images/micro-qr-codes-guide.jpg"
   },
   {
     "slug": "manus-ai-vs-google-antigravity",

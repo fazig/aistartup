@@ -406,7 +406,7 @@ Integrating clear links within your layouts establishes navigational authority. 
 
 For example, publishers struggling with programmatic rejection notices should review our detailed guide on [Why Google AdSense Rejects Good Websites](/blog/why-google-adsense-rejects-websites), which details structural solutions for "Low Value Content" blocks. 
 
-Additionally, if you are designing small-size marketing materials or business cards that integrate barcode routing to drive mobile traffic to your ad-monetized pages, consult our comprehensive documentation on [QR Code Generator Small Size](/blog/qr-code-generator-small-size). This post covers printing specifications, vector exports, and minimum camera focal distance requirements to ensure high-density barcodes scan correctly.
+Additionally, if you are designing small-size marketing materials or business cards that integrate barcode routing to drive mobile traffic to your ad-monetized pages, consult our comprehensive documentation on [Micro QR Codes Guide](/blog/micro-qr-codes-guide). This post covers printing specifications, vector exports, and minimum camera focal distance requirements to ensure high-density barcodes scan correctly.
 
 ---
 
