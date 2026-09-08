@@ -19,7 +19,7 @@ import {
 import "./resume-saas.css";
 
 export const metadata: Metadata = {
-  title: "ResumeCraft AI Studio | 100% Free Canva-Style ATS Resume Builder",
+  title: "Free ATS Resume Builder",
   description:
     "The intelligent, free SaaS resume builder. 10 recruiter-approved archetypes, live ATS score analyzer, power verbs assistant, 1-click career presets, and vector PDF exports with zero watermarks.",
   keywords:
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     canonical: "/resume-builder",
   },
   openGraph: {
-    title: "ResumeCraft AI Studio | 100% Free Canva-Style ATS Resume Builder",
+    title: "Free ATS Resume Builder",
     description:
       "Design interview-winning resumes with 10 designer archetypes, live ATS score checking, and instant vector PDF export. 100% free with zero watermarks.",
     url: "/resume-builder",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ResumeCraft AI Studio | Free Canva-Style ATS Resume Builder",
+    title: "Free ATS Resume Builder",
     description:
       "Craft ATS-friendly, professional resumes with 10 designer archetypes. 100% free vector PDF export with zero watermarks.",
   },

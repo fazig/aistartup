@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Free QR Code Generator & Micro QR Maker - High Quality Barcodes",
+  title: "Free QR Code Generator",
   description: "Free online QR code generator and Micro QR maker. Create standard and small-size QR codes for URLs, contact cards, text, and WiFi. Free instant high-res PNG download.",
   alternates: {
     canonical: "/tools/qr-generator",

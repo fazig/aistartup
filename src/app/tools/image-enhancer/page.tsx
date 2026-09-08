@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import ClientEnhancer from './ClientEnhancer';
 
 export const metadata: Metadata = {
-  title: "Free AI Image Enhancer | Upscale to HD like Remini",
+  title: "Free AI Image Enhancer",
   description: "Enhance and upscale your images to Full HD quality instantly for free. A lightning-fast, 100% free Remini alternative that runs in your browser without losing quality.",
   keywords: ["free AI image enhancer", "Remini alternative free", "upscale image to HD", "enhance photo quality", "online image enhancer", "free photo upscaler", "improve image resolution free"],
 };

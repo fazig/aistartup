@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Us - Support & Feedback | StartupAI Tools",
+  title: "Contact Us - Support",
   description: "Reach out to the StartupAI Tools team for support, feature suggestions, partnership requests, or feedback.",
   alternates: { canonical: "/contact" },
-  openGraph: { title: "Contact Us - Support & Feedback | StartupAI Tools", description: "Reach out to the StartupAI Tools team for support, feature suggestions, partnership requests, or feedback.", url: "/contact", type: "website" },
-  twitter: { card: "summary_large_image", title: "Contact Us - Support & Feedback | StartupAI Tools", description: "Reach out to the StartupAI Tools team for support, feature suggestions, partnership requests, or feedback." },
+  openGraph: { title: "Contact Us - Support", description: "Reach out to the StartupAI Tools team for support, feature suggestions, partnership requests, or feedback.", url: "/contact", type: "website" },
+  twitter: { card: "summary_large_image", title: "Contact Us - Support", description: "Reach out to the StartupAI Tools team for support, feature suggestions, partnership requests, or feedback." },
 };
 
 export default function ContactPage() {

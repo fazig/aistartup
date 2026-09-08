@@ -5,7 +5,7 @@ import { CheckCircle, ShieldCheck, Sparkles, Download, Award, HelpCircle, ArrowR
 import "./resume-builder.css";
 
 export const metadata: Metadata = {
-  title: "Free Online Resume Builder (10 Canva-Style ATS Templates) | StartupAI",
+  title: "Free Online Resume Builder",
   description:
     "Build and export professional, ATS-friendly resumes in seconds. Choose from 10 customizable designer templates, live vector PDF export, auto-fill sample data, and 100% free with no watermark or sign-up.",
   keywords:
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     canonical: "/tools/resume-builder",
   },
   openGraph: {
-    title: "Free Online Resume Builder (10 Canva-Style ATS Templates) | StartupAI",
+    title: "Free Online Resume Builder",
     description:
       "Craft high-converting, professional resumes with 10 designer archetypes. 100% free vector PDF export with no sign-up or watermarks.",
     url: "/tools/resume-builder",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Free Online Resume Builder (10 Canva-Style ATS Templates) | StartupAI",
+    title: "Free Online Resume Builder",
     description:
       "Design ATS-friendly, professional resumes with 10 designer archetypes. 100% free vector PDF export with zero watermarks.",
   },

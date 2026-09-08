@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Legal Disclaimer - Terms of Accuracy | StartupAI Tools",
+  title: "Legal Disclaimer",
   description: "Read the StartupAI Tools disclaimer. Understand our limitations regarding tool accuracy, professional advice, and external links.",
   alternates: { canonical: "/disclaimer" },
-  openGraph: { title: "Legal Disclaimer - Terms of Accuracy | StartupAI Tools", description: "Read the StartupAI Tools disclaimer. Understand our limitations regarding tool accuracy, professional advice, and external links.", url: "/disclaimer", type: "website" },
+  openGraph: { title: "Legal Disclaimer", description: "Read the StartupAI Tools disclaimer. Understand our limitations regarding tool accuracy, professional advice, and external links.", url: "/disclaimer", type: "website" },
 };
 
 export default function DisclaimerPage() {

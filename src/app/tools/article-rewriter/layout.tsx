@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Free Article Rewriter & Spinbot Alternative (100% Free Paraphrasing Tool)",
+  title: "Free Article Rewriter",
   description: "Free online article rewriter and Spinbot alternative. Instantly paraphrase essays, rewrite articles, and rephrase text with intelligent synonym matching. No limits, 100% free.",
   alternates: {
     canonical: "/tools/article-rewriter",

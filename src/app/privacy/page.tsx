@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy - Data Security & Usage | StartupAI Tools",
+  title: "Privacy Policy",
   description: "Read the StartupAI Tools privacy policy. Learn how we handle your tool inputs, cookies, Google Analytics, and ad partners.",
   alternates: { canonical: "/privacy" },
-  openGraph: { title: "Privacy Policy - Data Security & Usage | StartupAI Tools", description: "Read the StartupAI Tools privacy policy. Learn how we handle your tool inputs, cookies, Google Analytics, and ad partners.", url: "/privacy", type: "website" },
+  openGraph: { title: "Privacy Policy", description: "Read the StartupAI Tools privacy policy. Learn how we handle your tool inputs, cookies, Google Analytics, and ad partners.", url: "/privacy", type: "website" },
 };
 
 export default function PrivacyPage() {

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About Us | StartupAI Tools on aitoolspro.tech",
+  title: "About Us",
   description:
     "StartupAI Tools is built by Faizan Arif. Learn about our privacy-first free web utilities on aitoolspro.tech.",
   alternates: { canonical: "/about" },

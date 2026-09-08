@@ -7,7 +7,7 @@ import {
 import ToolsDirectoryClient, { ToolCategory } from "./ToolsDirectoryClient";
 
 export const metadata: Metadata = {
-  title: "Web Utilities Directory - All Free Tools",
+  title: "Free Web Utilities Directory",
   description: "Browse our complete list of free developer utilities, SEO calculators, unit converters, and text editing tools. All processed safely in-browser.",
 };
 

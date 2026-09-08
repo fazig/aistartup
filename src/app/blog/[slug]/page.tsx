@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { BLOG_POSTS, BLOG_METADATA } from "@/data/posts";
+import { getBlogSeoTitle } from "@/data/blog-seo-titles";
 import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
 
 export async function generateStaticParams() {
@@ -19,19 +20,23 @@ export async function generateMetadata({
   const { slug } = await params;
   const post = BLOG_METADATA.find((p) => p.slug === slug);
   if (!post) return {};
+  const seoTitle = getBlogSeoTitle(slug, post.title);
   return {
-    title: post.title,
+    title: {
+      absolute: seoTitle,
+    },
     description: post.description,
     alternates: { canonical: `/blog/${slug}` },
     openGraph: {
       type: "article",
+      title: seoTitle,
       publishedTime: post.date,
       authors: [post.author],
       images: [post.image || "/og-image.jpg"],
     },
     twitter: {
       card: "summary_large_image",
-      title: `${post.title} | StartupAI Tools`,
+      title: seoTitle,
       description: post.description,
       images: [post.image || "/og-image.jpg"],
     },

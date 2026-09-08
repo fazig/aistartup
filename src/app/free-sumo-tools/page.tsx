@@ -5,7 +5,7 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-  title: "Free Sumo Tools | 100+ Free Online Web Tools - StartupAI",
+  title: "Free Sumo Tools Directory",
   description: "Access 100+ free online tools for text editing, image conversion, calculators, unit converters, and developer utilities. No signup required, works right in your browser.",
 };
 

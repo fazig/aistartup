@@ -22,7 +22,7 @@ const mono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "TradingFEST — Live Trading, USDT Rates & Currency Converter",
+  title: "TradingFEST - Live Rates",
   description:
     "TradingFEST is a free professional trading board with live crypto, stocks, forex, a multi-currency converter, and USDT prices from Binance, OKX, Bitget and 15 more exchanges.",
   keywords:

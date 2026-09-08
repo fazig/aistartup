@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import ClientLlmsTxtGenerator from './ClientLlmsTxtGenerator';
 
 export const metadata: Metadata = {
-  title: "Free llms.txt Generator & AI Bot Configurator",
+  title: "Free llms.txt Generator",
   description: "Generate standardized llms.txt and llms-full.txt files to optimize your website for ChatGPT, Perplexity, and AI Overviews. Configure AI search crawler permissions in seconds.",
   keywords: [
     "llms.txt generator",

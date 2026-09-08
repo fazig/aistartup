@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Service - Usage Guidelines | StartupAI Tools",
+  title: "Terms of Service",
   description: "Read the StartupAI Tools terms of service. Understand our website guidelines, acceptable usage parameters, and liability exclusions.",
   alternates: { canonical: "/terms" },
-  openGraph: { title: "Terms of Service - Usage Guidelines | StartupAI Tools", description: "Read the StartupAI Tools terms of service. Understand our website guidelines, acceptable usage parameters, and liability exclusions.", url: "/terms", type: "website" },
+  openGraph: { title: "Terms of Service", description: "Read the StartupAI Tools terms of service. Understand our website guidelines, acceptable usage parameters, and liability exclusions.", url: "/terms", type: "website" },
 };
 
 export default function TermsPage() {
