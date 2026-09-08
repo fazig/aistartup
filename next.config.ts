@@ -85,6 +85,8 @@ const nextConfig: NextConfig = {
       { source: "/blog/ai-free-kissing-video-generator", destination: "/blog", permanent: true },
       { source: "/blog/iphone-18-pro-max-new-features", destination: "/blog", permanent: true },
       { source: "/blog/samsung-s27-ultra-upcoming-mobile", destination: "/blog", permanent: true },
+      { source: "/pricing", destination: "/", permanent: true },
+      { source: "/pricing/", destination: "/", permanent: true },
     ];
   },
   async headers() {
