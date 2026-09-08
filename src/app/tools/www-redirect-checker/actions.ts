@@ -1,7 +1,7 @@
 "use server";
 
 export async function checkWwwRedirect(url: string) {
-  let targetUrl = url.trim().toLowerCase();
+  const targetUrl = url.trim().toLowerCase();
   if (!targetUrl) return { error: "Please enter a valid URL." };
 
   // Strip protocols and www to get the bare domain
@@ -37,7 +37,7 @@ export async function checkWwwRedirect(url: string) {
         is301: wwwStatus === 301
       }
     };
-  } catch (error: any) {
+  } catch {
     return {
       success: false,
       error: "Could not reach the server to verify redirect rules. The domain may not exist.",

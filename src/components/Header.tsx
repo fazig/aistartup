@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Wrench, Menu, X, ChevronDown, Sparkles, ArrowRight, FileText } from "lucide-react";
+import { Wrench, Menu, X, ChevronDown, Sparkles, ArrowRight } from "lucide-react";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);

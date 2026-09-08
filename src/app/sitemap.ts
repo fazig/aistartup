@@ -41,14 +41,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/terms",
     "/cookie-policy",
     "/disclaimer",
-    "/remove-background"
+    "/remove-background",
+    "/resume-builder"
   ];
 
   const staticEntries: MetadataRoute.Sitemap = staticRoutes.map(route => ({
     url: `${baseUrl}${route}`,
     lastModified: buildDate,
-    changeFrequency: ["", "/tools", "/free-sumo-tools", "/blog"].includes(route) ? "daily" : "monthly",
-    priority: route === "" ? 1.0 : (["/tools", "/free-sumo-tools", "/blog", "/remove-background"].includes(route) ? 0.9 : (["/about", "/contact"].includes(route) ? 0.5 : 0.3)),
+    changeFrequency: ["", "/tools", "/free-sumo-tools", "/blog", "/resume-builder"].includes(route) ? "daily" : "monthly",
+    priority: route === "" ? 1.0 : (["/tools", "/free-sumo-tools", "/blog", "/remove-background", "/resume-builder"].includes(route) ? 0.9 : (["/about", "/contact"].includes(route) ? 0.5 : 0.3)),
   }));
 
   const toolEntries: MetadataRoute.Sitemap = toolRoutes.map(route => {

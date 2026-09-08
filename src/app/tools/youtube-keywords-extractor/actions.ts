@@ -1,7 +1,7 @@
 "use server";
 
 export async function extractYoutubeKeywords(url: string) {
-  let targetUrl = url.trim();
+  const targetUrl = url.trim();
   if (!targetUrl) return { error: "Please enter a valid URL." };
 
   if (!targetUrl.includes("youtube.com/watch?v=") && !targetUrl.includes("youtu.be/")) {
@@ -41,7 +41,7 @@ export async function extractYoutubeKeywords(url: string) {
       title: titleMatch ? titleMatch[1].replace(" - YouTube", "") : "Unknown Video",
       keywords: keywordsArray
     };
-  } catch (error: any) {
+  } catch {
     return {
       success: false,
       error: "Could not fetch data from YouTube. The video might be private or deleted.",

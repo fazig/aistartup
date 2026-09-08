@@ -43,7 +43,7 @@ export default function BlogIndex() {
       {/* Articles Grid */}
       <div style={{
         display: "grid",
-        gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+        gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 300px), 1fr))",
         gap: "2.5rem",
         maxWidth: "1100px",
         margin: "0 auto 4rem auto"

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import { Upload, Download, Trash2, ArrowLeft, Image as ImageIcon, Sliders, Check, Copy } from "lucide-react";
 import Link from "next/link";
 
@@ -28,18 +28,7 @@ export default function WebpToJpg() {
     }
   };
 
-  useEffect(() => {
-    if (!imageSrc) return;
-
-    const img = new Image();
-    img.src = imageSrc;
-    img.onload = () => {
-      imgRef.current = img;
-      renderImage();
-    };
-  }, [imageSrc, bgColor, quality]);
-
-  const renderImage = () => {
+  const renderImage = useCallback(() => {
     const img = imgRef.current;
     const canvas = canvasRef.current;
     if (!img || !canvas) return;
@@ -68,7 +57,18 @@ export default function WebpToJpg() {
       "image/jpeg",
       qValue
     );
-  };
+  }, [bgColor, quality]);
+
+  useEffect(() => {
+    if (!imageSrc) return;
+
+    const img = new Image();
+    img.src = imageSrc;
+    img.onload = () => {
+      imgRef.current = img;
+      renderImage();
+    };
+  }, [imageSrc, renderImage]);
 
   const handleDownload = () => {
     const canvas = canvasRef.current;

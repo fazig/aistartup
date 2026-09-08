@@ -38,6 +38,63 @@ export async function generateMetadata({
   };
 }
 
+function getRelatedTool(post: { slug: string; category?: string; title?: string }) {
+  const combined = `${post.slug} ${post.category || ''} ${post.title || ''}`.toLowerCase();
+  
+  if (combined.includes("adsense") || combined.includes("monetiz") || combined.includes("approval")) {
+    return {
+      title: "Scan Your Website for AdSense Approval",
+      desc: "Run our free 2026 AdSense Eligibility Checker to diagnose content depth, policy pages, HTTPS, and crawlability before applying.",
+      link: "/tools/adsense-eligibility-checker",
+      btnText: "Run Free AdSense Audit →",
+      badge: "Flagship Utility"
+    };
+  }
+  if (combined.includes("resume") || combined.includes("cv") || combined.includes("job") || combined.includes("career") || combined.includes("vibe code") || combined.includes("codex")) {
+    return {
+      title: "Build an ATS-Friendly Resume in 5 Minutes",
+      desc: "Use ResumeCraft AI Studio with 10 designer archetypes, live ATS score analyzer, and instant vector PDF export with zero watermarks.",
+      link: "/resume-builder",
+      btnText: "Launch Resume Studio →",
+      badge: "Free SaaS App"
+    };
+  }
+  if (combined.includes("qr") || combined.includes("barcode")) {
+    return {
+      title: "Generate Custom High-Resolution QR Codes",
+      desc: "Create free, scannable QR codes for websites, WiFi networks, and plain text with instant PNG/SVG download.",
+      link: "/tools/qr-generator",
+      btnText: "Generate QR Code →",
+      badge: "Fast & Free"
+    };
+  }
+  if (combined.includes("image") || combined.includes("photo") || combined.includes("remini") || combined.includes("face")) {
+    return {
+      title: "Upscale & Enhance Photos to Full HD",
+      desc: "Restore blurry pictures, enhance resolution, or remove backgrounds safely in your browser with zero upload to external servers.",
+      link: "/tools/image-enhancer",
+      btnText: "Try Image Enhancer HD →",
+      badge: "Edge AI Tool"
+    };
+  }
+  if (combined.includes("grammar") || combined.includes("write") || combined.includes("word") || combined.includes("article") || combined.includes("show notes")) {
+    return {
+      title: "Analyze Text & Polish Readability",
+      desc: "Check syntax, fix spelling mistakes, compute word counts, and optimize readability in seconds.",
+      link: "/tools/grammar-checker",
+      btnText: "Check Grammar Free →",
+      badge: "Writer Toolkit"
+    };
+  }
+  return {
+    title: "Access 100+ Free Browser Web Utilities",
+    desc: "From JSON formatters and URL shorteners to live currency markets, enjoy fast developer tools with zero registration.",
+    link: "/tools",
+    btnText: "Explore 100+ Tools →",
+    badge: "StartupAI Tools"
+  };
+}
+
 export default async function BlogPostPage({
   params,
 }: {
@@ -49,6 +106,8 @@ export default async function BlogPostPage({
   if (!post) {
     notFound();
   }
+
+  const relatedTool = getRelatedTool(post);
 
   return (
     <div className="container" style={{ padding: "3rem 1.25rem", maxWidth: "860px" }}>
@@ -170,22 +229,40 @@ export default async function BlogPostPage({
         {parseMarkdownToJSX(post.content)}
       </div>
 
-      {/* Bottom Footer Section */}
+      {/* Dynamic Context-Aware Tool Recommendation CTA */}
       <div style={{ 
-        marginTop: "4rem", 
-        padding: "2rem", 
-        background: "var(--bg-card)", 
-        border: "1px solid var(--border-light)", 
-        borderRadius: "16px",
-        textAlign: "center"
+        marginTop: "3.5rem", 
+        padding: "2.25rem", 
+        background: "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)", 
+        border: "1px solid #334155", 
+        borderRadius: "18px",
+        color: "#ffffff",
+        boxShadow: "0 20px 25px -5px rgba(15, 23, 42, 0.2)"
       }}>
-        <h3 style={{ fontSize: "1.25rem", marginBottom: "0.75rem" }}>Need web utility tools?</h3>
-        <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", marginBottom: "1.5rem", maxWidth: "500px", margin: "0 auto 1.5rem auto" }}>
-          Check out our collection of 100% free web utilities including URL shorteners, JSON formatters, QR code decoders, and SEO calculators.
+        <div style={{ display: "inline-block", background: "rgba(37, 99, 235, 0.2)", border: "1px solid rgba(37, 99, 235, 0.4)", padding: "0.25rem 0.75rem", borderRadius: "100px", fontSize: "0.75rem", fontWeight: 700, color: "#60a5fa", textTransform: "uppercase", marginBottom: "0.75rem" }}>
+          {relatedTool.badge}
+        </div>
+        <h3 style={{ fontSize: "1.45rem", marginBottom: "0.65rem", color: "#ffffff", fontWeight: 800 }}>
+          {relatedTool.title}
+        </h3>
+        <p style={{ color: "#94a3b8", fontSize: "0.95rem", lineHeight: "1.6", marginBottom: "1.5rem", maxWidth: "680px" }}>
+          {relatedTool.desc}
         </p>
-        <Link href="/tools" className="btn btn-primary">
-          Explore All Tools
-        </Link>
+        <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", alignItems: "center" }}>
+          <Link 
+            href={relatedTool.link} 
+            className="btn btn-primary"
+            style={{ padding: "0.75rem 1.5rem", fontSize: "0.95rem", fontWeight: 700 }}
+          >
+            {relatedTool.btnText}
+          </Link>
+          <Link 
+            href="/tools" 
+            style={{ color: "#94a3b8", fontSize: "0.9rem", textDecoration: "underline", marginLeft: "0.5rem" }}
+          >
+            Or browse all 100+ free tools →
+          </Link>
+        </div>
       </div>
     </div>
   );

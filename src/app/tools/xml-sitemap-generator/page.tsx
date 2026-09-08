@@ -149,7 +149,7 @@ export default function XmlSitemapGenerator() {
           
           <div style={{ flexGrow: 1, background: '#1e293b', color: '#f8fafc', borderRadius: '8px', padding: '1.5rem', overflowX: 'auto', fontFamily: 'monospace', fontSize: '0.9rem', lineHeight: 1.6 }}>
             {!generatedSitemap ? (
-              <span style={{ color: '#64748b' }}>// Your XML markup will appear here...</span>
+              <span style={{ color: '#64748b' }}>{"// Your XML markup will appear here..."}</span>
             ) : (
               <pre style={{ margin: 0, whiteSpace: 'pre-wrap' }}>
                 {generatedSitemap}

@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import Link from "next/link";
 import { Wrench } from "lucide-react";
 import Header from "@/components/Header";
+import Script from "next/script";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import CookieConsent from "@/components/CookieConsent";
@@ -54,6 +55,7 @@ export const metadata: Metadata = {
   verification: {
     google: "BN8r_18xTXqdWBekHRt95xIe5efvl8gg00Thn4qhMMI",
   },
+  manifest: "/manifest.webmanifest",
 };
 
 export default function RootLayout({
@@ -68,10 +70,11 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
         <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
-        <script
-          async
+        <Script
+          id="google-adsense"
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9930705663590635"
           crossOrigin="anonymous"
+          strategy="afterInteractive"
         />
       </head>
       <body className={inter.variable}>

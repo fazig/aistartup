@@ -363,7 +363,9 @@ textarea.input-field {
 }
 
 .header-mobile-drawer.is-open {
-  max-height: 400px;
+  max-height: calc(100dvh - var(--nav-height));
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .header-mobile-menu {

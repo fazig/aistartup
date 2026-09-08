@@ -23,20 +23,25 @@ export default function CookieConsent() {
     setShowConsent(false);
   };
 
+  const declineCookies = () => {
+    localStorage.setItem("cookie_consent", "declined");
+    setShowConsent(false);
+  };
+
   if (!showConsent) return null;
 
   return (
     <div style={{
       position: "fixed",
       bottom: "20px",
-      left: "20px",
-      right: "20px",
+      left: "16px",
+      right: "16px",
       maxWidth: "1000px",
       margin: "0 auto",
       backgroundColor: "#0f172a",
       color: "#e2e8f0",
-      padding: "1.5rem",
-      borderRadius: "12px",
+      padding: "1.25rem 1.5rem",
+      borderRadius: "14px",
       boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.3)",
       display: "flex",
       flexDirection: "column",
@@ -45,23 +50,23 @@ export default function CookieConsent() {
       border: "1px solid #334155"
     }}>
       <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
-        <h3 style={{ fontSize: "1.1rem", fontWeight: 700, margin: 0, color: "white" }}>We Value Your Privacy</h3>
-        <p style={{ fontSize: "0.875rem", margin: 0, lineHeight: 1.5, color: "#94a3b8" }}>
+        <h3 style={{ fontSize: "1.05rem", fontWeight: 700, margin: 0, color: "white" }}>We Value Your Privacy</h3>
+        <p style={{ fontSize: "0.85rem", margin: 0, lineHeight: 1.5, color: "#94a3b8" }}>
           We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking &quot;Accept All&quot;, you consent to our use of cookies. Read our <Link href="/cookie-policy" style={{ color: "var(--primary)", textDecoration: "none" }}>Cookie Policy</Link> for more information.
         </p>
       </div>
-      <div style={{ display: "flex", gap: "1rem", alignSelf: "flex-end" }}>
+      <div style={{ display: "flex", gap: "0.75rem", justifyContent: "flex-end", flexWrap: "wrap" }}>
         <button 
-          onClick={() => setShowConsent(false)}
+          onClick={declineCookies}
           style={{
             background: "transparent",
             border: "1px solid #334155",
             color: "#e2e8f0",
-            padding: "0.5rem 1rem",
+            padding: "0.5rem 1.15rem",
             borderRadius: "6px",
             cursor: "pointer",
             fontWeight: 600,
-            fontSize: "0.875rem",
+            fontSize: "0.85rem",
             transition: "all 0.2s"
           }}
         >

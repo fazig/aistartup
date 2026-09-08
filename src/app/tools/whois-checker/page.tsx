@@ -14,7 +14,7 @@ export default function WhoisChecker() {
     if (!domain.trim()) return;
     
     // Clean domain
-    let cleanDomain = domain.replace(/^https?:\/\//, '').split('/')[0].toLowerCase();
+    const cleanDomain = domain.replace(/^https?:\/\//, '').split('/')[0].toLowerCase();
     
     setLoading(true);
     setError(null);

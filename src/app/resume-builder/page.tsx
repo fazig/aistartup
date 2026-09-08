@@ -268,7 +268,7 @@ export default function StandaloneResumeBuilderPage() {
           </p>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "1.5rem" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))", gap: "1.5rem" }}>
           <div className="saas-card" style={{ padding: "1.5rem" }}>
             <div style={{ width: 40, height: 40, borderRadius: 10, background: "rgba(16, 185, 129, 0.12)", color: "var(--saas-primary)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "0.75rem" }}>
               <Target size={20} />
