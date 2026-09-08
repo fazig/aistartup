@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Wrench, Menu, X, ChevronDown, Sparkles, ArrowRight } from "lucide-react";
+import { Wrench, Menu, X, ChevronDown, Sparkles, ArrowRight, FileText } from "lucide-react";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -57,56 +57,9 @@ export default function Header() {
         </button>
 
         {/* Desktop Menu Links */}
-        <nav className="header-desktop-menu" style={{ gap: '1.75rem' }}>
+        <nav className="header-desktop-menu" style={{ gap: '1.6rem', alignItems: 'center' }}>
           <Link href="/tools" className="nav-link" style={{ color: '#475569', fontWeight: 600, fontSize: '0.9rem' }}>
             All Tools
-          </Link>
-          <Link
-            href="/resume-builder"
-            className="nav-link"
-            style={{
-              color: '#0f172a',
-              fontWeight: 700,
-              fontSize: '0.9rem',
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '0.4rem'
-            }}
-          >
-            <span>Resume Builder</span>
-            <span style={{
-              fontSize: '0.62rem',
-              fontWeight: 800,
-              padding: '0.15rem 0.4rem',
-              borderRadius: '4px',
-              background: 'linear-gradient(135deg, #10b981, #06b6d4)',
-              color: '#ffffff',
-              textTransform: 'uppercase',
-              letterSpacing: '0.04em'
-            }}>
-              SaaS
-            </span>
-          </Link>
-          <Link
-            href="/tools/live-trading"
-            className="nav-link"
-            style={{
-              color: '#b45309',
-              fontWeight: 700,
-              fontSize: '0.9rem',
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '0.4rem'
-            }}
-          >
-            <span style={{
-              width: 7,
-              height: 7,
-              borderRadius: 99,
-              background: '#10b981',
-              boxShadow: '0 0 0 3px rgba(16, 185, 129, 0.18)'
-            }} />
-            TradingFEST
           </Link>
 
           {/* Dropdown for Popular Tools */}
@@ -259,38 +212,62 @@ export default function Header() {
             )}
           </div>
 
-          <Link href="/blog" className="nav-link" style={{ color: '#475569', fontWeight: 600, fontSize: '0.9rem' }}>
-            Blog
+          <Link
+            href="/tools/live-trading"
+            className="nav-link"
+            style={{
+              color: '#475569',
+              fontWeight: 600,
+              fontSize: '0.9rem',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.4rem'
+            }}
+          >
+            <span style={{
+              width: 7,
+              height: 7,
+              borderRadius: 99,
+              background: '#10b981',
+              boxShadow: '0 0 0 3px rgba(16, 185, 129, 0.18)'
+            }} />
+            TradingFEST
           </Link>
+
           <Link href="/tools/url-shortener" className="nav-link" style={{ color: '#475569', fontWeight: 600, fontSize: '0.9rem' }}>
             URL Shortener
+          </Link>
+
+          <Link href="/blog" className="nav-link" style={{ color: '#475569', fontWeight: 600, fontSize: '0.9rem' }}>
+            Blog
           </Link>
         </nav>
 
         {/* Right CTA Action Buttons (HackerRank Pill Style) */}
-        <div className="header-desktop-menu" style={{ gap: '0.75rem' }}>
+        <div className="header-desktop-menu" style={{ gap: '0.75rem', alignItems: 'center' }}>
           <Link 
-            href="/tools/ai-copilot" 
+            href="/resume-builder" 
             style={{ 
               display: 'inline-flex', 
               alignItems: 'center', 
-              gap: '0.4rem', 
+              gap: '0.45rem', 
               background: '#f8fafc',
               color: '#0f172a',
               border: '1px solid #cbd5e1',
               padding: '0.5rem 1.15rem',
               borderRadius: '100px',
-              fontWeight: 700,
+              fontWeight: 600,
               fontSize: '0.85rem',
               textDecoration: 'none',
+              boxShadow: '0 1px 2px rgba(0, 0, 0, 0.04)',
               transition: 'all 0.2s ease'
             }}
           >
-            <Sparkles size={14} color="#9333ea" /> ZenNote AI
+            <FileText size={15} color="#2563eb" /> Resume Builder
           </Link>
           
           <Link 
-            href="#tools" 
+            href="/tools" 
             style={{ 
               display: 'inline-flex', 
               alignItems: 'center', 
@@ -299,7 +276,7 @@ export default function Header() {
               color: '#ffffff',
               padding: '0.5rem 1.25rem',
               borderRadius: '100px',
-              fontWeight: 700,
+              fontWeight: 600,
               fontSize: '0.85rem',
               textDecoration: 'none',
               boxShadow: '0 4px 14px rgba(5, 150, 105, 0.25)',
@@ -314,42 +291,35 @@ export default function Header() {
       {/* Mobile Dropdown Menu Drawer */}
       <div className={`header-mobile-drawer ${isOpen ? "is-open" : ""}`}>
         <nav className="header-mobile-menu">
-          <Link href="/tools/ai-copilot" className="mobile-nav-link nav-link-highlight" style={{ display: "flex", alignItems: "center", gap: "0.25rem" }} onClick={closeMenu}>
-            <Sparkles size={14} /> ZenNote AI
-          </Link>
-          <Link href="/resume-builder" className="mobile-nav-link" style={{ color: '#0f172a', fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }} onClick={closeMenu}>
-            <span>Resume Builder (SaaS)</span>
-            <span style={{ fontSize: '0.62rem', fontWeight: 800, padding: '0.1rem 0.4rem', borderRadius: '4px', background: '#10b981', color: '#ffffff' }}>NEW</span>
+          <Link href="/resume-builder" className="mobile-nav-link" style={{ color: '#0f172a', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '0.5rem' }} onClick={closeMenu}>
+            <FileText size={16} color="#2563eb" /> Resume Builder
           </Link>
           <Link href="/tools" className="mobile-nav-link" onClick={closeMenu}>
             All Tools
           </Link>
-          <Link href="/tools/live-trading" className="mobile-nav-link" style={{ color: '#b45309', fontWeight: 700 }} onClick={closeMenu}>
-            TradingFEST
-          </Link>
-          <Link href="/blog" className="mobile-nav-link" onClick={closeMenu}>
-            Blog
+          <Link href="/tools/live-trading" className="mobile-nav-link" style={{ color: '#b45309', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '0.5rem' }} onClick={closeMenu}>
+            <span style={{ width: 7, height: 7, borderRadius: 99, background: '#10b981' }} /> TradingFEST
           </Link>
           <Link href="/tools/url-shortener" className="mobile-nav-link" onClick={closeMenu}>
             URL Shortener
           </Link>
+          <Link href="/blog" className="mobile-nav-link" onClick={closeMenu}>
+            Blog
+          </Link>
           
-          <div style={{ padding: "0.25rem 0", fontWeight: 700, fontSize: "0.85rem", color: "#64748b", textTransform: "uppercase", marginTop: "0.5rem" }}>
+          <div style={{ padding: "0.5rem 0 0.25rem", fontWeight: 700, fontSize: "0.8rem", color: "#94a3b8", textTransform: "uppercase", letterSpacing: "0.05em", borderTop: "1px solid #f1f5f9", marginTop: "0.5rem" }}>
             Popular Tools
           </div>
-          <Link href="/tools/image-enhancer" className="mobile-nav-link" style={{ paddingLeft: "1rem", color: '#ec4899', display: 'flex', alignItems: 'center', gap: '0.25rem' }} onClick={closeMenu}>
+          <Link href="/tools/image-enhancer" className="mobile-nav-link" style={{ paddingLeft: "0.75rem", color: '#ec4899', display: 'flex', alignItems: 'center', gap: '0.35rem' }} onClick={closeMenu}>
             <Sparkles size={14} /> Image Enhancer HD
           </Link>
-          <Link href="/tools/live-trading" className="mobile-nav-link" style={{ paddingLeft: "1rem", color: '#b45309' }} onClick={closeMenu}>
-            TradingFEST
-          </Link>
-          <Link href="/tools/grammar-checker" className="mobile-nav-link" style={{ paddingLeft: "1rem" }} onClick={closeMenu}>
+          <Link href="/tools/grammar-checker" className="mobile-nav-link" style={{ paddingLeft: "0.75rem" }} onClick={closeMenu}>
             Free Grammar Checker
           </Link>
-          <Link href="/tools/adsense-eligibility-checker" className="mobile-nav-link" style={{ paddingLeft: "1rem" }} onClick={closeMenu}>
+          <Link href="/tools/adsense-eligibility-checker" className="mobile-nav-link" style={{ paddingLeft: "0.75rem" }} onClick={closeMenu}>
             AdSense Checker
           </Link>
-          <Link href="/free-sumo-tools" className="mobile-nav-link nav-link-highlight" style={{ paddingLeft: "1rem" }} onClick={closeMenu}>
+          <Link href="/free-sumo-tools" className="mobile-nav-link" style={{ paddingLeft: "0.75rem", color: '#2563eb', fontWeight: 600 }} onClick={closeMenu}>
             Free Sumo Tools
           </Link>
         </nav>
