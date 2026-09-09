@@ -77,8 +77,14 @@ import { postBestFreeAtsResumeBuildersNoPaywall } from "./articles/best-free-ats
 import { postTransparentBackgroundGuide } from "./articles/how-to-make-transparent-background-free";
 import { postConvertWebpToJpgGuide } from "./articles/how-to-convert-webp-to-jpg-png-without-losing-quality";
 import { postResizeImagesWithoutLosingQualityGuide } from "./articles/how-to-resize-images-without-losing-quality";
+import { postAdsenseAlternativesBestAdNetworks } from "./articles/adsense-alternatives-best-ad-networks";
+import { postBestFreeAiHumanizerToolsBypassDetection } from "./articles/best-free-ai-humanizer-tools-bypass-detection";
+import { postDeepseekApiPricingFreeKeysGuide } from "./articles/deepseek-api-pricing-free-keys-guide";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postAdsenseAlternativesBestAdNetworks,
+  postBestFreeAiHumanizerToolsBypassDetection,
+  postDeepseekApiPricingFreeKeysGuide,
   postResizeImagesWithoutLosingQualityGuide,
   postConvertWebpToJpgGuide,
   postTransparentBackgroundGuide,

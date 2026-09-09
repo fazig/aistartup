@@ -1,4 +1,7 @@
 export const BLOG_SEO_TITLES: Record<string, string> = {
+  'adsense-alternatives-best-ad-networks': 'Best AdSense Alternatives for Publishers (2026)',
+  'best-free-ai-humanizer-tools-bypass-detection': '7 Best Free AI Humanizer Tools to Bypass AI (2026)',
+  'deepseek-api-pricing-free-keys-guide': 'DeepSeek API Guide: Pricing, Free Keys & Setup (2026)',
   'how-to-resize-images-without-losing-quality': 'How to Resize Images Without Losing Quality (2026)',
   'how-to-convert-webp-to-jpg-png-without-losing-quality': 'How to Convert WebP to JPG or PNG Without Quality Loss',
   'how-to-make-transparent-background-free': 'How to Make a Transparent Background on Photos Free',
