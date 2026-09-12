@@ -11,6 +11,56 @@ export interface BlogPostMeta {
 
 export const BLOG_METADATA: BlogPostMeta[] = [
   {
+    "slug": "photo-enhancer-online-ai-free-guide",
+    "title": "5 Best Free Online Photo Enhancers in 2026: Unblur & Restore Without Sign-Up",
+    "description": "Discover the 5 best free online photo enhancers in 2026. Compare AI unblurring, face restoration, and 4K upscaling tools without paywalls or watermarks.",
+    "date": "2026-09-12",
+    "readTime": "24 min read",
+    "category": "Design & Media",
+    "author": "Faizan Arif",
+    "image": "/ai_tools_cover_generic.webp"
+  },
+  {
+    "slug": "cursor-ai-alternatives-free-coding-assistants",
+    "title": "6 Best Free Cursor AI Alternatives in 2026: Open-Source AI Code Editors",
+    "description": "The definitive 2026 developer guide to Cursor AI alternatives. Compare Windsurf, Continue.dev, Codeium, Antigravity, and local LLM coding setups.",
+    "date": "2026-09-12",
+    "readTime": "26 min read",
+    "category": "Developer Tools",
+    "author": "Faizan Arif",
+    "image": "/ai_tools_cover_generic.webp"
+  },
+  {
+    "slug": "elevenlabs-alternatives-free-ai-voice-cloning",
+    "title": "5 Best Free ElevenLabs Alternatives for AI Voice Cloning in 2026",
+    "description": "Looking for free ElevenLabs alternatives in 2026? Compare top AI voice generators, open-source voice cloners, and text-to-speech tools without character limits.",
+    "date": "2026-09-12",
+    "readTime": "23 min read",
+    "category": "Audio & AI",
+    "author": "Faizan Arif",
+    "image": "/ai_tools_cover_generic.webp"
+  },
+  {
+    "slug": "online-curriculum-vitae-creator-free-no-watermark",
+    "title": "Best Free Online Curriculum Vitae (CV) Creators in 2026: No Paywall or Watermark",
+    "description": "The definitive 2026 guide to free online curriculum vitae (CV) creators. Build ATS-compliant international CVs with vector PDF downloads and zero paywalls.",
+    "date": "2026-09-12",
+    "readTime": "25 min read",
+    "category": "Career & Productivity",
+    "author": "Faizan Arif",
+    "image": "/images/best-free-ats-resume-builders-no-paywall.jpg"
+  },
+  {
+    "slug": "generate-barcode-online",
+    "title": "Free Barcode Generator Online: UPC, EAN-13 & Code 128 Complete Guide (2026)",
+    "description": "Learn how to use a free barcode generator online in 2026. Create vector SVG labels for Amazon FBA, retail UPC-A, global EAN-13, and warehouse Code 128.",
+    "date": "2026-09-12",
+    "readTime": "25 min read",
+    "category": "Business Tools",
+    "author": "Faizan Arif",
+    "image": "/barcode_cover.webp"
+  },
+  {
     "slug": "adsense-alternatives-best-ad-networks",
     "title": "Best Google AdSense Alternatives for Publishers in 2026: High CPM Ad Networks Compared",
     "description": "The definitive 2026 comparison of Google AdSense alternatives for publishers. Discover top high-CPM ad networks including Monetag, Mediavine, Ezoic, and Adsterra.",

@@ -1,4 +1,9 @@
 export const BLOG_SEO_TITLES: Record<string, string> = {
+  'photo-enhancer-online-ai-free-guide': '5 Best Free Online Photo Enhancers (2026 Guide)',
+  'cursor-ai-alternatives-free-coding-assistants': '6 Best Free Cursor AI Alternatives in 2026',
+  'elevenlabs-alternatives-free-ai-voice-cloning': '5 Best Free ElevenLabs Alternatives (2026 Guide)',
+  'online-curriculum-vitae-creator-free-no-watermark': 'Best Free Online CV Creators in 2026 (No Paywall)',
+  'generate-barcode-online': 'Free Barcode Generator Online: UPC, EAN & Code 128',
   'adsense-alternatives-best-ad-networks': 'Best AdSense Alternatives for Publishers (2026)',
   'best-free-ai-humanizer-tools-bypass-detection': '7 Best Free AI Humanizer Tools to Bypass AI (2026)',
   'deepseek-api-pricing-free-keys-guide': 'DeepSeek API Guide: Pricing, Free Keys & Setup (2026)',
@@ -34,7 +39,6 @@ export const BLOG_SEO_TITLES: Record<string, string> = {
   'ai-tool-hunt': 'AI Tool Hunt: How to Find the Best New AI Tools',
   'count-number-of-words-online': 'Count Number of Words Online: Free Word Counter',
   'free-qr-code-builder': 'Free QR Code Builder: Create Custom Vector QRs',
-  'generate-barcode-online': 'Generate Barcode Online: Free 1D & 2D Barcode Maker',
   'remove-image-background-comprehensive-guide': 'Remove Image Background Free: Complete Guide (2026)',
   'premium-pizza-delivery-website-ai-prompt': 'Build a 3D Pizza Delivery App with AI Prompts',
   'faizankishop-management-software-ai': 'FaizanKiShop: Building Shop Management with AI',

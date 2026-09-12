@@ -26,7 +26,6 @@ import { postDidNotReceiveAdsensePayment } from "./articles/did-not-receive-adse
 import { postAiToolHunt } from "./articles/ai-tool-hunt";
 import { postCountWordsOnline } from "./articles/count-words-online";
 import { postFreeQrCodeBuilder } from "./articles/free-qr-code-builder";
-import { postBarcodeMakerWebsite } from "./articles/barcode-maker-website";
 import { postRemoveImageBg8k } from "./articles/remove-image-background-guide";
 import { postPremiumPizzaDeliveryWebsite } from "./articles/premium-pizza-delivery-website-ai-prompt";
 import { postFaizanKiShop } from "./articles/faizan-ki-shop";
@@ -80,8 +79,18 @@ import { postResizeImagesWithoutLosingQualityGuide } from "./articles/how-to-res
 import { postAdsenseAlternativesBestAdNetworks } from "./articles/adsense-alternatives-best-ad-networks";
 import { postBestFreeAiHumanizerToolsBypassDetection } from "./articles/best-free-ai-humanizer-tools-bypass-detection";
 import { postDeepseekApiPricingFreeKeysGuide } from "./articles/deepseek-api-pricing-free-keys-guide";
+import { postPhotoEnhancerOnlineAiFreeGuide } from "./articles/photo-enhancer-online-ai-free-guide";
+import { postCursorAiAlternativesFreeCodingAssistants } from "./articles/cursor-ai-alternatives-free-coding-assistants";
+import { postElevenlabsAlternativesFreeAiVoiceCloning } from "./articles/elevenlabs-alternatives-free-ai-voice-cloning";
+import { postOnlineCurriculumVitaeCreatorFreeNoWatermark } from "./articles/online-curriculum-vitae-creator-free-no-watermark";
+import { postBarcodeMakerWebsite } from "./articles/barcode-maker-website";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postPhotoEnhancerOnlineAiFreeGuide,
+  postCursorAiAlternativesFreeCodingAssistants,
+  postElevenlabsAlternativesFreeAiVoiceCloning,
+  postOnlineCurriculumVitaeCreatorFreeNoWatermark,
+  postBarcodeMakerWebsite,
   postAdsenseAlternativesBestAdNetworks,
   postBestFreeAiHumanizerToolsBypassDetection,
   postDeepseekApiPricingFreeKeysGuide,
@@ -117,7 +126,6 @@ export const BLOG_POSTS: BlogPost[] = [
   postAiToolHunt,
   postCountWordsOnline,
   postFreeQrCodeBuilder,
-  postBarcodeMakerWebsite,
   postRemoveImageBg8k,
   postPremiumPizzaDeliveryWebsite,
   postFaizanKiShop,
