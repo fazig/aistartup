@@ -11,6 +11,16 @@ export interface BlogPostMeta {
 
 export const BLOG_METADATA: BlogPostMeta[] = [
   {
+    "slug": "best-free-perplexity-alternatives-2026",
+    "title": "Best Free Perplexity Alternatives in 2026 (Cited AI Search)",
+    "description": "The best free Perplexity alternatives in 2026: ChatGPT, Gemini, Claude, You.com, Brave Search, DeepSeek and self-hosted Vane — cited AI search without the subscription.",
+    "date": "2026-09-21",
+    "readTime": "6 min read",
+    "category": "AI Tools",
+    "author": "Faizan Arif",
+    "image": "/best-free-perplexity-alternatives-2026_cover.webp"
+  },
+  {
     "slug": "best-free-midjourney-alternatives-2026",
     "title": "Best Free Midjourney Alternatives in 2026 (Tested Picks)",
     "description": "Best free Midjourney alternatives in 2026: Leonardo.ai, Ideogram, Adobe Firefly, FLUX.1 and ImageFX compared for free AI image generation.",

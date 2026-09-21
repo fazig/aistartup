@@ -85,8 +85,10 @@ import { postElevenlabsAlternativesFreeAiVoiceCloning } from "./articles/elevenl
 import { postOnlineCurriculumVitaeCreatorFreeNoWatermark } from "./articles/online-curriculum-vitae-creator-free-no-watermark";
 import { postBarcodeMakerWebsite } from "./articles/barcode-maker-website";
 import { postBestFreeMidjourneyAlternatives2026 } from "./articles/best-free-midjourney-alternatives-2026";
+import { postBestFreePerplexityAlternatives2026 } from "./articles/best-free-perplexity-alternatives-2026";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postBestFreePerplexityAlternatives2026,
   postBestFreeMidjourneyAlternatives2026,
   postPhotoEnhancerOnlineAiFreeGuide,
   postCursorAiAlternativesFreeCodingAssistants,
