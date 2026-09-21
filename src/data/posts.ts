@@ -97,8 +97,10 @@ import { postBestFreeLeonardoAiAlternativesImageGeneration } from "./articles/be
 import { postBestFreeSudowriteAlternatives2026 } from "./articles/best-free-sudowrite-alternatives-2026";
 import { postBestFreeFramerAlternativesWebsiteBuilder } from "./articles/best-free-framer-alternatives-website-builder";
 import { postHowToUseOllamaLocally2026 } from "./articles/how-to-use-ollama-locally-2026";
+import { postHowToRunStableDiffusionLocallyFree } from "./articles/how-to-run-stable-diffusion-locally-free";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postHowToRunStableDiffusionLocallyFree,
   postHowToUseOllamaLocally2026,
   postBestFreeFramerAlternativesWebsiteBuilder,
   postBestFreeSudowriteAlternatives2026,
