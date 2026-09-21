@@ -15,7 +15,7 @@ Framer's design-first builder is brilliant, but its free plan stops at a Framer 
 
 ## Why people look for a free Framer alternative
 
-Framer genuinely has a free plan: you get 1,000 design pages, 10 CMS collections and a published site at no cost. The catch is what the free tier takes away — no custom domain, Framer branding on your site, and only around 1 GB of bandwidth. The moment you want your own domain, the entry ticket is the Basic plan at $10/month on annual billing, which caps you at 30 site pages and a couple of CMS collections. Serious sites tend to land on Pro at $30/month for 150 pages, staging and real CMS capacity.
+Framer genuinely has a free plan: you get 1,000 design pages, 10 CMS collections and a published site at no cost. The catch is what the free tier takes away — no custom domain, Framer branding on your site, and only around 100 MB of monthly bandwidth. The moment you want your own domain, the entry ticket is the Basic plan at $10/month on annual billing, which caps you at 30 site pages and a couple of CMS collections. Serious sites tend to land on Pro at $30/month for 150 pages, staging and real CMS capacity.
 
 Add-ons push the real cost higher still: extra full editors run $20/month each after Framer's May 2026 billing changes, and localisation and A/B testing are billed separately. There is also no built-in e-commerce — you are wiring up third-party embeds for that. If you are a freelancer, student, or founder who just needs a great-looking site without the monthly invoice, the tools below are worth a serious look.
 
@@ -45,7 +45,7 @@ The AI features are lighter than Framer's, but the visual builder is genuinely c
 
 ## 4. Dorik AI — the most generous free tier
 
-Dorik's free plan stands out in 2026 for sheer generosity: unlimited sites and pages, and even custom-domain support without paying. Its AI page generator produces decent starting layouts from a prompt, and the editor is lightweight and fast.
+Dorik's free plan stands out in 2026 for sheer volume: up to 5 free sites with 5 pages each on a Dorik subdomain, at no cost. One caveat — Dorik's marketing and its FAQ currently disagree on whether custom domains work on the free plan, and recent third-party reviews say connecting a custom domain needs a paid tier, so confirm before relying on it. Its AI page generator produces decent starting layouts from a prompt, and the editor is lightweight and fast.
 
 The design ceiling is lower than Framer's — you will not get Framer-grade scroll animations — but for landing pages, portfolios and simple marketing sites, the value equation is unmatched.
 
@@ -69,9 +69,7 @@ You will not get Framer's design expressiveness, but for small businesses alread
 
 ## 7. Lovable — prompt-to-website with a real free plan
 
-Lovable takes the AI-first route Framer only half-commits to: describe your site in plain language and it generates a working site or web app, with GitHub sync and custom domains on paid tiers. The free plan is credit-based, so you can build and iterate a real project before spending anything.
-
-The free plan is credit-based, so you can build and iterate a real project before spending anything. Paid plans start around $25/month, so the free tier is best treated as a proving ground.
+Lovable takes the AI-first route Framer only half-commits to: describe your site in plain language and it generates a working site or web app, with GitHub sync and custom domains on paid tiers. The free plan is credit-based, so you can build and iterate a real project before spending anything. Paid plans start around $25/month, so the free tier is best treated as a proving ground.
 
 **Best for:** founders and developers who want to prompt-build functional web apps and MVPs.
 
@@ -90,7 +88,7 @@ Like Lovable, it trades Framer's design finesse for backend capability — logge
 | Webflow | Yes (webflow.io) | No | HTML/CSS | 1,000 credits/mo | ~$14/mo |
 | Wix Studio | Yes (Wix subdomain) | No | No | Strong AI layout gen | ~$17/mo |
 | Plasmic | Yes (10K views) | Limited | Full React | Limited | Free → paid tiers |
-| Dorik AI | Yes (generous) | Yes | Limited | AI page generation | Paid tiers |
+| Dorik AI | Yes (5 sites) | No (paid) | Limited | AI page generation | Paid tiers |
 | WordPress | Yes (self-hosted) | Yes | Open source | Plugin-dependent | ~$3/mo hosting |
 | HubSpot | Yes (builder tier) | Limited | Limited | Strong | ~$20/mo |
 | Lovable | Yes (credit-based) | No | GitHub sync | Prompt-to-app | ~$25/mo |
@@ -105,9 +103,9 @@ Match the tool to the constraint that bothers you about Framer. Hit by the free 
 For most Framer-style use cases — portfolios, landing pages, marketing sites — Webflow is the strongest like-for-like swap, Wix Studio is the easiest to learn, and Dorik is the cheapest to run. None of them charges you $30/month to remove a logo from your own website.
 
 ## Key takeaways
-- Framer's free plan gives you 1,000 pages but no custom domain, Framer branding and ~1 GB bandwidth; real sites start at $10/month.
+- Framer's free plan gives you 1,000 pages but no custom domain, Framer branding and ~100 MB/month bandwidth; real sites start at $10/month.
 - Webflow is the closest design peer with a free tier, stronger CMS and HTML/CSS export.
-- Dorik's free plan is the most generous: unlimited sites and pages plus custom domains at no cost.
+- Dorik's free plan is the most generous for volume (up to 5 sites on a Dorik subdomain); custom domains need a paid plan.
 - Plasmic and WordPress give you code and ownership that Framer never will.
 - Lovable and Base44 beat Framer for prompt-built apps with real backends, but trade design finesse.`,
 };
