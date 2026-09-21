@@ -11,6 +11,16 @@ export interface BlogPostMeta {
 
 export const BLOG_METADATA: BlogPostMeta[] = [
   {
+    "slug": "best-free-midjourney-alternatives-2026",
+    "title": "Best Free Midjourney Alternatives in 2026 (Tested Picks)",
+    "description": "Best free Midjourney alternatives in 2026: Leonardo.ai, Ideogram, Adobe Firefly, FLUX.1 and ImageFX compared for free AI image generation.",
+    "date": "2026-09-21",
+    "readTime": "6 min read",
+    "category": "AI Tools",
+    "author": "Faizan Arif",
+    "image": "/best-free-midjourney-alternatives-2026_cover.webp",
+  },
+  {
     "slug": "photo-enhancer-online-ai-free-guide",
     "title": "5 Best Free Online Photo Enhancers in 2026: Unblur & Restore Without Sign-Up",
     "description": "Discover the 5 best free online photo enhancers in 2026. Compare AI unblurring, face restoration, and 4K upscaling tools without paywalls or watermarks.",

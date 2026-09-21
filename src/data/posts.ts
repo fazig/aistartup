@@ -84,8 +84,10 @@ import { postCursorAiAlternativesFreeCodingAssistants } from "./articles/cursor-
 import { postElevenlabsAlternativesFreeAiVoiceCloning } from "./articles/elevenlabs-alternatives-free-ai-voice-cloning";
 import { postOnlineCurriculumVitaeCreatorFreeNoWatermark } from "./articles/online-curriculum-vitae-creator-free-no-watermark";
 import { postBarcodeMakerWebsite } from "./articles/barcode-maker-website";
+import { postBestFreeMidjourneyAlternatives2026 } from "./articles/best-free-midjourney-alternatives-2026";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postBestFreeMidjourneyAlternatives2026,
   postPhotoEnhancerOnlineAiFreeGuide,
   postCursorAiAlternativesFreeCodingAssistants,
   postElevenlabsAlternativesFreeAiVoiceCloning,
