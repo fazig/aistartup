@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "What is my Browser?",
   description: "Instantly detect your browser, operating system, and screen specifications.",
+  alternates: { canonical: "/tools/what-is-my-browser" },
+  openGraph: {
+    title: "What is my Browser?",
+    description: "Instantly detect your browser, operating system, and screen specifications.",
+    url: "/tools/what-is-my-browser",
+  },
+  twitter: {
+    title: "What is my Browser?",
+    description: "Instantly detect your browser, operating system, and screen specifications.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

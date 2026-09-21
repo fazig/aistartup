@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "JavaScript Minifier",
   description: "Compress your scripts in real time. Remove comments, spaces, and line breaks to minimize asset files and load pages instantly.",
+  alternates: { canonical: "/tools/javascript-minifier" },
+  openGraph: {
+    title: "JavaScript Minifier",
+    description: "Compress your scripts in real time. Remove comments, spaces, and line breaks to minimize asset files and load pages instantly.",
+    url: "/tools/javascript-minifier",
+  },
+  twitter: {
+    title: "JavaScript Minifier",
+    description: "Compress your scripts in real time. Remove comments, spaces, and line breaks to minimize asset files and load pages instantly.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

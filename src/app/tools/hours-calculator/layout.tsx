@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Hours Calculator",
   description: "Calculate elapsed time between hours, or compute weekly timesheets and wages instantly.",
+  alternates: { canonical: "/tools/hours-calculator" },
+  openGraph: {
+    title: "Hours Calculator",
+    description: "Calculate elapsed time between hours, or compute weekly timesheets and wages instantly.",
+    url: "/tools/hours-calculator",
+  },
+  twitter: {
+    title: "Hours Calculator",
+    description: "Calculate elapsed time between hours, or compute weekly timesheets and wages instantly.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

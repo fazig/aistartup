@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Text to Slug Converter",
   description: "Instantly transform messy titles and strings into clean, SEO-friendly URL slugs.",
+  alternates: { canonical: "/tools/text-to-slug" },
+  openGraph: {
+    title: "Text to Slug Converter",
+    description: "Instantly transform messy titles and strings into clean, SEO-friendly URL slugs.",
+    url: "/tools/text-to-slug",
+  },
+  twitter: {
+    title: "Text to Slug Converter",
+    description: "Instantly transform messy titles and strings into clean, SEO-friendly URL slugs.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

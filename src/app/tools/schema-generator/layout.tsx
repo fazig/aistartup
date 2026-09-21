@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Schema Markup Generator",
   description: "Build fully compliant JSON-LD structured data. Select a schema type below, fill in the fields, and watch the snippet update in real time.",
+  alternates: { canonical: "/tools/schema-generator" },
+  openGraph: {
+    title: "Schema Markup Generator",
+    description: "Build fully compliant JSON-LD structured data. Select a schema type below, fill in the fields, and watch the snippet update in real time.",
+    url: "/tools/schema-generator",
+  },
+  twitter: {
+    title: "Schema Markup Generator",
+    description: "Build fully compliant JSON-LD structured data. Select a schema type below, fill in the fields, and watch the snippet update in real time.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

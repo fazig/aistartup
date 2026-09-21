@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Average & Statistics Calculator",
   description: "Find the mean, median, mode, standard deviation, and variance for any list of numbers instantly.",
+  alternates: { canonical: "/tools/average-calculator" },
+  openGraph: {
+    title: "Average & Statistics Calculator",
+    description: "Find the mean, median, mode, standard deviation, and variance for any list of numbers instantly.",
+    url: "/tools/average-calculator",
+  },
+  twitter: {
+    title: "Average & Statistics Calculator",
+    description: "Find the mean, median, mode, standard deviation, and variance for any list of numbers instantly.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Pressure Converter",
   description: "Convert values between Pascal, Kilopascal, PSI, Bar, Atmosphere, Torr, and more. Visualise equivalents in real time.",
+  alternates: { canonical: "/tools/pressure-converter" },
+  openGraph: {
+    title: "Pressure Converter",
+    description: "Convert values between Pascal, Kilopascal, PSI, Bar, Atmosphere, Torr, and more. Visualise equivalents in real time.",
+    url: "/tools/pressure-converter",
+  },
+  twitter: {
+    title: "Pressure Converter",
+    description: "Convert values between Pascal, Kilopascal, PSI, Bar, Atmosphere, Torr, and more. Visualise equivalents in real time.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

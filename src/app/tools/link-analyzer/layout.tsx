@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Website Link Analyzer",
   description: "Scan any webpage to instantly calculate the exact ratio of Internal vs. External outbound links for SEO auditing.",
+  alternates: { canonical: "/tools/link-analyzer" },
+  openGraph: {
+    title: "Website Link Analyzer",
+    description: "Scan any webpage to instantly calculate the exact ratio of Internal vs. External outbound links for SEO auditing.",
+    url: "/tools/link-analyzer",
+  },
+  twitter: {
+    title: "Website Link Analyzer",
+    description: "Scan any webpage to instantly calculate the exact ratio of Internal vs. External outbound links for SEO auditing.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

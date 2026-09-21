@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "EXIF Data Viewer",
   description: "Extract and read the hidden metadata (camera settings, date, GPS location) secretly embedded inside your photos.",
+  alternates: { canonical: "/tools/exif-data-viewer" },
+  openGraph: {
+    title: "EXIF Data Viewer",
+    description: "Extract and read the hidden metadata (camera settings, date, GPS location) secretly embedded inside your photos.",
+    url: "/tools/exif-data-viewer",
+  },
+  twitter: {
+    title: "EXIF Data Viewer",
+    description: "Extract and read the hidden metadata (camera settings, date, GPS location) secretly embedded inside your photos.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

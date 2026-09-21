@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "HEX to Decimal Converter",
   description: "Convert hexadecimal numbers (Base 16) to decimal values (Base 10) with an interactive step-by-step guide.",
+  alternates: { canonical: "/tools/hex-to-decimal" },
+  openGraph: {
+    title: "HEX to Decimal Converter",
+    description: "Convert hexadecimal numbers (Base 16) to decimal values (Base 10) with an interactive step-by-step guide.",
+    url: "/tools/hex-to-decimal",
+  },
+  twitter: {
+    title: "HEX to Decimal Converter",
+    description: "Convert hexadecimal numbers (Base 16) to decimal values (Base 10) with an interactive step-by-step guide.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Power Converter",
   description: "Convert horsepower, kilowatts, megawatts, BTU/hr, and more. Compare real-world power scales dynamically.",
+  alternates: { canonical: "/tools/power-converter" },
+  openGraph: {
+    title: "Power Converter",
+    description: "Convert horsepower, kilowatts, megawatts, BTU/hr, and more. Compare real-world power scales dynamically.",
+    url: "/tools/power-converter",
+  },
+  twitter: {
+    title: "Power Converter",
+    description: "Convert horsepower, kilowatts, megawatts, BTU/hr, and more. Compare real-world power scales dynamically.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

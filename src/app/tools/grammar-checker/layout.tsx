@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Free Grammar Checker",
   description: "Analyze your texts, correct spelling mistakes, optimize syntax structure, and improve readability with our professional grammar analyzer.",
+  alternates: { canonical: "/tools/grammar-checker" },
+  openGraph: {
+    title: "Free Grammar Checker",
+    description: "Analyze your texts, correct spelling mistakes, optimize syntax structure, and improve readability with our professional grammar analyzer.",
+    url: "/tools/grammar-checker",
+  },
+  twitter: {
+    title: "Free Grammar Checker",
+    description: "Analyze your texts, correct spelling mistakes, optimize syntax structure, and improve readability with our professional grammar analyzer.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

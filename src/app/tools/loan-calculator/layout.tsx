@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Loan & EMI Calculator",
   description: "Calculate your monthly EMI payments, total interest, and see a visual breakdown of your loan.",
+  alternates: { canonical: "/tools/loan-calculator" },
+  openGraph: {
+    title: "Loan & EMI Calculator",
+    description: "Calculate your monthly EMI payments, total interest, and see a visual breakdown of your loan.",
+    url: "/tools/loan-calculator",
+  },
+  twitter: {
+    title: "Loan & EMI Calculator",
+    description: "Calculate your monthly EMI payments, total interest, and see a visual breakdown of your loan.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

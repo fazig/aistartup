@@ -2,27 +2,33 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Free AI Background Remover",
-  description: "Use our free AI Background Remover to easily make image backgrounds transparent. Add custom colors and download instantly. Fast, private, and 100% free.",
-  alternates: {
-    canonical: "/remove-background",
-  },
+  description: "Remove image backgrounds instantly in your browser. 100% free, fully private edge-AI — download as transparent PNG or add vibrant solid colors.",
+  alternates: { canonical: "/remove-background" },
   openGraph: {
     title: "Free AI Background Remover",
-    description: "Use our free AI Background Remover to easily make image backgrounds transparent. Add custom colors and download instantly. Fast, private, and 100% free.",
+    description: "Remove image backgrounds instantly in your browser. 100% free and fully private.",
     url: "/remove-background",
-    type: "website",
   },
   twitter: {
-    card: "summary_large_image",
     title: "Free AI Background Remover",
-    description: "Use our free AI Background Remover to easily make image backgrounds transparent. Add custom colors and download instantly. Fast, private, and 100% free.",
+    description: "Remove image backgrounds instantly in your browser. 100% free and fully private.",
   },
 };
 
-export default function RemoveBackgroundLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return children;
+export default function Layout({ children }: { children: React.ReactNode }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "Free AI Background Remover",
+    description: "Remove image backgrounds instantly in your browser. 100% free, fully private edge-AI.",
+    applicationCategory: "MultimediaApplication",
+    operatingSystem: "All",
+    offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+  };
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      {children}
+    </>
+  );
 }

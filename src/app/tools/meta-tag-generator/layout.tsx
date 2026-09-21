@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Meta Tag Generator",
   description: "Create perfectly optimized SEO meta tags for your HTML documents to rank higher on Google.",
+  alternates: { canonical: "/tools/meta-tag-generator" },
+  openGraph: {
+    title: "Meta Tag Generator",
+    description: "Create perfectly optimized SEO meta tags for your HTML documents to rank higher on Google.",
+    url: "/tools/meta-tag-generator",
+  },
+  twitter: {
+    title: "Meta Tag Generator",
+    description: "Create perfectly optimized SEO meta tags for your HTML documents to rank higher on Google.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

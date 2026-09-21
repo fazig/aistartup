@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Percentage Calculator",
   description: "Three calculation modes to solve any percentage problem — results update instantly as you type.",
+  alternates: { canonical: "/tools/percentage-calculator" },
+  openGraph: {
+    title: "Percentage Calculator",
+    description: "Three calculation modes to solve any percentage problem — results update instantly as you type.",
+    url: "/tools/percentage-calculator",
+  },
+  twitter: {
+    title: "Percentage Calculator",
+    description: "Three calculation modes to solve any percentage problem — results update instantly as you type.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

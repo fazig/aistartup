@@ -6,6 +6,16 @@ import { Calendar, User, Clock, ArrowRight, BookOpen } from "lucide-react";
 export const metadata = {
   title: "Blog & Web Publishing Guides",
   description: "Read expert articles on SEO, AdSense approvals, technical web performance, and developer utility tools to scale your online audience.",
+  alternates: { canonical: "/blog" },
+  openGraph: {
+    title: "Blog & Web Publishing Guides",
+    description: "Read expert articles on SEO, AdSense approvals, technical web performance, and developer utility tools to scale your online audience.",
+    url: "/blog",
+  },
+  twitter: {
+    title: "Blog & Web Publishing Guides",
+    description: "Read expert articles on SEO, AdSense approvals, technical web performance, and developer utility tools to scale your online audience.",
+  },
 };
 
 export default function BlogIndex() {

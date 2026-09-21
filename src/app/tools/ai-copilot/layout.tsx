@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Free AI Copilot Online",
   description: "Use our free online AI Copilot to generate text, fix grammar, and brainstorm ideas instantly. No signup required.",
+  alternates: { canonical: "/tools/ai-copilot" },
+  openGraph: {
+    title: "Free AI Copilot Online",
+    description: "Use our free online AI Copilot to generate text, fix grammar, and brainstorm ideas instantly. No signup required.",
+    url: "/tools/ai-copilot",
+  },
+  twitter: {
+    title: "Free AI Copilot Online",
+    description: "Use our free online AI Copilot to generate text, fix grammar, and brainstorm ideas instantly. No signup required.",
+  },
 };
 
 export default function Layout({

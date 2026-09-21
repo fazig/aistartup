@@ -9,6 +9,16 @@ import ToolsDirectoryClient, { ToolCategory } from "./ToolsDirectoryClient";
 export const metadata: Metadata = {
   title: "Free Web Utilities Directory",
   description: "Browse our complete list of free developer utilities, SEO calculators, unit converters, and text editing tools. All processed safely in-browser.",
+  alternates: { canonical: "/tools" },
+  openGraph: {
+    title: "Free Web Utilities Directory",
+    description: "Browse our complete list of free developer utilities, SEO calculators, unit converters, and text editing tools. All processed safely in-browser.",
+    url: "/tools",
+  },
+  twitter: {
+    title: "Free Web Utilities Directory",
+    description: "Browse our complete list of free developer utilities, SEO calculators, unit converters, and text editing tools. All processed safely in-browser.",
+  },
 };
 
 export default function ToolsDirectory() {

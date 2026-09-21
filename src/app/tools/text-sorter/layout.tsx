@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Online Text Sorter & Line Organizer",
   description: "Sort, shuffle, reverse, and deduplicate lines of text instantly.",
+  alternates: { canonical: "/tools/text-sorter" },
+  openGraph: {
+    title: "Online Text Sorter & Line Organizer",
+    description: "Sort, shuffle, reverse, and deduplicate lines of text instantly.",
+    url: "/tools/text-sorter",
+  },
+  twitter: {
+    title: "Online Text Sorter & Line Organizer",
+    description: "Sort, shuffle, reverse, and deduplicate lines of text instantly.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

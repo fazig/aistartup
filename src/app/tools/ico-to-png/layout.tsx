@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "ICO to PNG Converter",
   description: "Extract and convert individual frames from an .ico file into transparent PNG images completely in your browser.",
+  alternates: { canonical: "/tools/ico-to-png" },
+  openGraph: {
+    title: "ICO to PNG Converter",
+    description: "Extract and convert individual frames from an .ico file into transparent PNG images completely in your browser.",
+    url: "/tools/ico-to-png",
+  },
+  twitter: {
+    title: "ICO to PNG Converter",
+    description: "Extract and convert individual frames from an .ico file into transparent PNG images completely in your browser.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

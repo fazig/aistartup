@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Terms & Conditions Generator",
   description: "Instantly create a standard legal agreement for your website to protect your intellectual property and limit your liability.",
+  alternates: { canonical: "/tools/terms-conditions-generator" },
+  openGraph: {
+    title: "Terms & Conditions Generator",
+    description: "Instantly create a standard legal agreement for your website to protect your intellectual property and limit your liability.",
+    url: "/tools/terms-conditions-generator",
+  },
+  twitter: {
+    title: "Terms & Conditions Generator",
+    description: "Instantly create a standard legal agreement for your website to protect your intellectual property and limit your liability.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

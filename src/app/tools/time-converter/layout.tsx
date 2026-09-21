@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Time Converter",
   description: "Convert between seconds, minutes, hours, days, weeks, months, years, and centuries instantly.",
+  alternates: { canonical: "/tools/time-converter" },
+  openGraph: {
+    title: "Time Converter",
+    description: "Convert between seconds, minutes, hours, days, weeks, months, years, and centuries instantly.",
+    url: "/tools/time-converter",
+  },
+  twitter: {
+    title: "Time Converter",
+    description: "Convert between seconds, minutes, hours, days, weeks, months, years, and centuries instantly.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

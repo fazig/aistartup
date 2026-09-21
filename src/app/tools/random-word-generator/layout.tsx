@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Random Word Generator",
   description: "Generate random English words for brainstorming, writing exercises, games, or just for fun.",
+  alternates: { canonical: "/tools/random-word-generator" },
+  openGraph: {
+    title: "Random Word Generator",
+    description: "Generate random English words for brainstorming, writing exercises, games, or just for fun.",
+    url: "/tools/random-word-generator",
+  },
+  twitter: {
+    title: "Random Word Generator",
+    description: "Generate random English words for brainstorming, writing exercises, games, or just for fun.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

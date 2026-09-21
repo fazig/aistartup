@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Voltage Converter",
   description: "Convert between Volts, Millivolts, Microvolts, Kilovolts, Megavolts, Statvolts, and Abvolts.",
+  alternates: { canonical: "/tools/voltage-converter" },
+  openGraph: {
+    title: "Voltage Converter",
+    description: "Convert between Volts, Millivolts, Microvolts, Kilovolts, Megavolts, Statvolts, and Abvolts.",
+    url: "/tools/voltage-converter",
+  },
+  twitter: {
+    title: "Voltage Converter",
+    description: "Convert between Volts, Millivolts, Microvolts, Kilovolts, Megavolts, Statvolts, and Abvolts.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

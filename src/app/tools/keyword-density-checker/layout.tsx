@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Keyword Density Checker",
   description: "Analyze your text to prevent keyword stuffing and optimize your SEO content strategy.",
+  alternates: { canonical: "/tools/keyword-density-checker" },
+  openGraph: {
+    title: "Keyword Density Checker",
+    description: "Analyze your text to prevent keyword stuffing and optimize your SEO content strategy.",
+    url: "/tools/keyword-density-checker",
+  },
+  twitter: {
+    title: "Keyword Density Checker",
+    description: "Analyze your text to prevent keyword stuffing and optimize your SEO content strategy.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

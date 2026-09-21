@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Length Converter",
   description: "Convert between metric and imperial length units instantly. Check conversions for all units in a single click.",
+  alternates: { canonical: "/tools/length-converter" },
+  openGraph: {
+    title: "Length Converter",
+    description: "Convert between metric and imperial length units instantly. Check conversions for all units in a single click.",
+    url: "/tools/length-converter",
+  },
+  twitter: {
+    title: "Length Converter",
+    description: "Convert between metric and imperial length units instantly. Check conversions for all units in a single click.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

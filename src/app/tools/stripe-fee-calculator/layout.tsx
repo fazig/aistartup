@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Stripe Fee Calculator",
   description: "Calculate Stripe processing fees and know exactly how much to invoice to receive your target amount.",
+  alternates: { canonical: "/tools/stripe-fee-calculator" },
+  openGraph: {
+    title: "Stripe Fee Calculator",
+    description: "Calculate Stripe processing fees and know exactly how much to invoice to receive your target amount.",
+    url: "/tools/stripe-fee-calculator",
+  },
+  twitter: {
+    title: "Stripe Fee Calculator",
+    description: "Calculate Stripe processing fees and know exactly how much to invoice to receive your target amount.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

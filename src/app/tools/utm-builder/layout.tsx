@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "UTM Link Builder",
   description: "Build campaign-tracked URLs with UTM parameters. See your link update in real time.",
+  alternates: { canonical: "/tools/utm-builder" },
+  openGraph: {
+    title: "UTM Link Builder",
+    description: "Build campaign-tracked URLs with UTM parameters. See your link update in real time.",
+    url: "/tools/utm-builder",
+  },
+  twitter: {
+    title: "UTM Link Builder",
+    description: "Build campaign-tracked URLs with UTM parameters. See your link update in real time.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

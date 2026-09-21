@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Temperature Converter",
   description: "Convert temperatures between Celsius, Fahrenheit, and Kelvin with step-by-step mathematical formulas.",
+  alternates: { canonical: "/tools/temperature-converter" },
+  openGraph: {
+    title: "Temperature Converter",
+    description: "Convert temperatures between Celsius, Fahrenheit, and Kelvin with step-by-step mathematical formulas.",
+    url: "/tools/temperature-converter",
+  },
+  twitter: {
+    title: "Temperature Converter",
+    description: "Convert temperatures between Celsius, Fahrenheit, and Kelvin with step-by-step mathematical formulas.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

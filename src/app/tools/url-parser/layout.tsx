@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "URL Parser & Builder",
   description: "Break down any complex URL into its constituent parts instantly. Edit search queries, hostname, port, or path values, and watch the reconstructed URL update live.",
+  alternates: { canonical: "/tools/url-parser" },
+  openGraph: {
+    title: "URL Parser & Builder",
+    description: "Break down any complex URL into its constituent parts instantly. Edit search queries, hostname, port, or path values, and watch the reconstructed URL update live.",
+    url: "/tools/url-parser",
+  },
+  twitter: {
+    title: "URL Parser & Builder",
+    description: "Break down any complex URL into its constituent parts instantly. Edit search queries, hostname, port, or path values, and watch the reconstructed URL update live.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

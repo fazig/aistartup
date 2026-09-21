@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "HTML Color Picker Tool",
   description: "Visually select any color and instantly get the HTML, CSS HEX, and RGB codes.",
+  alternates: { canonical: "/tools/color-picker" },
+  openGraph: {
+    title: "HTML Color Picker Tool",
+    description: "Visually select any color and instantly get the HTML, CSS HEX, and RGB codes.",
+    url: "/tools/color-picker",
+  },
+  twitter: {
+    title: "HTML Color Picker Tool",
+    description: "Visually select any color and instantly get the HTML, CSS HEX, and RGB codes.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

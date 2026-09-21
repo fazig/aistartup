@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Binary to Decimal Converter",
   description: "Convert binary numbers (Base 2) to decimal numbers (Base 10) with detailed mathematical explanations.",
+  alternates: { canonical: "/tools/binary-to-decimal" },
+  openGraph: {
+    title: "Binary to Decimal Converter",
+    description: "Convert binary numbers (Base 2) to decimal numbers (Base 10) with detailed mathematical explanations.",
+    url: "/tools/binary-to-decimal",
+  },
+  twitter: {
+    title: "Binary to Decimal Converter",
+    description: "Convert binary numbers (Base 2) to decimal numbers (Base 10) with detailed mathematical explanations.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

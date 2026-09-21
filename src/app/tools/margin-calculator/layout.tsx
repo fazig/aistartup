@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Margin & Markup Calculator",
   description: "Solve for profit margins, markups, and calculate selling prices to hit target profit goals.",
+  alternates: { canonical: "/tools/margin-calculator" },
+  openGraph: {
+    title: "Margin & Markup Calculator",
+    description: "Solve for profit margins, markups, and calculate selling prices to hit target profit goals.",
+    url: "/tools/margin-calculator",
+  },
+  twitter: {
+    title: "Margin & Markup Calculator",
+    description: "Solve for profit margins, markups, and calculate selling prices to hit target profit goals.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

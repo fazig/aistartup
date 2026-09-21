@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "WebP to JPG Converter",
   description: "Convert WebP images into high-quality JPEG files. Features a customizable background color picker to replace alpha transparency channels.",
+  alternates: { canonical: "/tools/webp-to-jpg" },
+  openGraph: {
+    title: "WebP to JPG Converter",
+    description: "Convert WebP images into high-quality JPEG files. Features a customizable background color picker to replace alpha transparency channels.",
+    url: "/tools/webp-to-jpg",
+  },
+  twitter: {
+    title: "WebP to JPG Converter",
+    description: "Convert WebP images into high-quality JPEG files. Features a customizable background color picker to replace alpha transparency channels.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

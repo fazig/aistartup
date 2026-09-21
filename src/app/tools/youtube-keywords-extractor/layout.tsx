@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "YouTube Keywords Extractor",
   description: "Spy on your competitors by extracting the hidden SEO tags and keywords from any YouTube video.",
+  alternates: { canonical: "/tools/youtube-keywords-extractor" },
+  openGraph: {
+    title: "YouTube Keywords Extractor",
+    description: "Spy on your competitors by extracting the hidden SEO tags and keywords from any YouTube video.",
+    url: "/tools/youtube-keywords-extractor",
+  },
+  twitter: {
+    title: "YouTube Keywords Extractor",
+    description: "Spy on your competitors by extracting the hidden SEO tags and keywords from any YouTube video.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

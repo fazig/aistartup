@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: ".htaccess Redirect Generator",
   description: "Instantly generate Apache server redirect rules to safely move your web pages without losing SEO rankings.",
+  alternates: { canonical: "/tools/htaccess-generator" },
+  openGraph: {
+    title: ".htaccess Redirect Generator",
+    description: "Instantly generate Apache server redirect rules to safely move your web pages without losing SEO rankings.",
+    url: "/tools/htaccess-generator",
+  },
+  twitter: {
+    title: ".htaccess Redirect Generator",
+    description: "Instantly generate Apache server redirect rules to safely move your web pages without losing SEO rankings.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "ICO Converter",
   description: "Convert PNG, JPG, or WebP images into real single or multi-resolution Windows ICO files instantly in your browser.",
+  alternates: { canonical: "/tools/ico-converter" },
+  openGraph: {
+    title: "ICO Converter",
+    description: "Convert PNG, JPG, or WebP images into real single or multi-resolution Windows ICO files instantly in your browser.",
+    url: "/tools/ico-converter",
+  },
+  twitter: {
+    title: "ICO Converter",
+    description: "Convert PNG, JPG, or WebP images into real single or multi-resolution Windows ICO files instantly in your browser.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Robots.txt Generator",
   description: "Generate a perfectly formatted robots.txt file to control how search engines crawl your website.",
+  alternates: { canonical: "/tools/robots-txt-generator" },
+  openGraph: {
+    title: "Robots.txt Generator",
+    description: "Generate a perfectly formatted robots.txt file to control how search engines crawl your website.",
+    url: "/tools/robots-txt-generator",
+  },
+  twitter: {
+    title: "Robots.txt Generator",
+    description: "Generate a perfectly formatted robots.txt file to control how search engines crawl your website.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Discount Calculator",
   description: "Quickly figure out how much you save with any discount — enter a percentage or fixed amount and see the final price instantly.",
+  alternates: { canonical: "/tools/discount-calculator" },
+  openGraph: {
+    title: "Discount Calculator",
+    description: "Quickly figure out how much you save with any discount — enter a percentage or fixed amount and see the final price instantly.",
+    url: "/tools/discount-calculator",
+  },
+  twitter: {
+    title: "Discount Calculator",
+    description: "Quickly figure out how much you save with any discount — enter a percentage or fixed amount and see the final price instantly.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

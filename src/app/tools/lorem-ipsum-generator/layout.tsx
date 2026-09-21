@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Lorem Ipsum Generator",
   description: "Generate placeholder text for your designs, mockups, and layouts instantly.",
+  alternates: { canonical: "/tools/lorem-ipsum-generator" },
+  openGraph: {
+    title: "Lorem Ipsum Generator",
+    description: "Generate placeholder text for your designs, mockups, and layouts instantly.",
+    url: "/tools/lorem-ipsum-generator",
+  },
+  twitter: {
+    title: "Lorem Ipsum Generator",
+    description: "Generate placeholder text for your designs, mockups, and layouts instantly.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

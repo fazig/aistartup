@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "CPM (Cost Per Mille) Calculator",
   description: "Solve for campaign CPM, budget cost, or impressions based on your marketing metrics.",
+  alternates: { canonical: "/tools/cpm-calculator" },
+  openGraph: {
+    title: "CPM (Cost Per Mille) Calculator",
+    description: "Solve for campaign CPM, budget cost, or impressions based on your marketing metrics.",
+    url: "/tools/cpm-calculator",
+  },
+  twitter: {
+    title: "CPM (Cost Per Mille) Calculator",
+    description: "Solve for campaign CPM, budget cost, or impressions based on your marketing metrics.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

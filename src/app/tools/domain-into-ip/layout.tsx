@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Domain into IP",
   description: "Instantly resolve any website domain name to discover the underlying IP address of its hosting server.",
+  alternates: { canonical: "/tools/domain-into-ip" },
+  openGraph: {
+    title: "Domain into IP",
+    description: "Instantly resolve any website domain name to discover the underlying IP address of its hosting server.",
+    url: "/tools/domain-into-ip",
+  },
+  twitter: {
+    title: "Domain into IP",
+    description: "Instantly resolve any website domain name to discover the underlying IP address of its hosting server.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

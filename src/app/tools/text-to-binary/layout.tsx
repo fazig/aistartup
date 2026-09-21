@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Text to Binary Converter",
   description: "Convert plain text into binary code (zeros and ones) instantly in your browser.",
+  alternates: { canonical: "/tools/text-to-binary" },
+  openGraph: {
+    title: "Text to Binary Converter",
+    description: "Convert plain text into binary code (zeros and ones) instantly in your browser.",
+    url: "/tools/text-to-binary",
+  },
+  twitter: {
+    title: "Text to Binary Converter",
+    description: "Convert plain text into binary code (zeros and ones) instantly in your browser.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

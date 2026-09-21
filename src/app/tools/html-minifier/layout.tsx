@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Welcome to the Sumo Page",
   description: "Compress and optimize your HTML source code in real time. Strip comments, collapse whitespace, and track byte savings.",
+  alternates: { canonical: "/tools/html-minifier" },
+  openGraph: {
+    title: "Welcome to the Sumo Page",
+    description: "Compress and optimize your HTML source code in real time. Strip comments, collapse whitespace, and track byte savings.",
+    url: "/tools/html-minifier",
+  },
+  twitter: {
+    title: "Welcome to the Sumo Page",
+    description: "Compress and optimize your HTML source code in real time. Strip comments, collapse whitespace, and track byte savings.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

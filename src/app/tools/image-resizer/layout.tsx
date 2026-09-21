@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Image Resizer",
   description: "Resize images to custom width/height dimensions or percentage scales without uploading files to any server.",
+  alternates: { canonical: "/tools/image-resizer" },
+  openGraph: {
+    title: "Image Resizer",
+    description: "Resize images to custom width/height dimensions or percentage scales without uploading files to any server.",
+    url: "/tools/image-resizer",
+  },
+  twitter: {
+    title: "Image Resizer",
+    description: "Resize images to custom width/height dimensions or percentage scales without uploading files to any server.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

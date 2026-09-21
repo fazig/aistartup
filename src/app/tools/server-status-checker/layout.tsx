@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Server Status Checker",
   description: "Instantly check if a website is online or offline, and analyze its HTTP response codes.",
+  alternates: { canonical: "/tools/server-status-checker" },
+  openGraph: {
+    title: "Server Status Checker",
+    description: "Instantly check if a website is online or offline, and analyze its HTTP response codes.",
+    url: "/tools/server-status-checker",
+  },
+  twitter: {
+    title: "Server Status Checker",
+    description: "Instantly check if a website is online or offline, and analyze its HTTP response codes.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

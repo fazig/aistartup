@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "ASCII to Text Converter",
   description: "Convert numeric ASCII decimal codes back into readable text characters instantly.",
+  alternates: { canonical: "/tools/ascii-to-text" },
+  openGraph: {
+    title: "ASCII to Text Converter",
+    description: "Convert numeric ASCII decimal codes back into readable text characters instantly.",
+    url: "/tools/ascii-to-text",
+  },
+  twitter: {
+    title: "ASCII to Text Converter",
+    description: "Convert numeric ASCII decimal codes back into readable text characters instantly.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

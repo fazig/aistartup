@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Days & Date Calculator",
   description: "Calculate the number of days between two dates, or add/subtract days to find a future or past date.",
+  alternates: { canonical: "/tools/days-calculator" },
+  openGraph: {
+    title: "Days & Date Calculator",
+    description: "Calculate the number of days between two dates, or add/subtract days to find a future or past date.",
+    url: "/tools/days-calculator",
+  },
+  twitter: {
+    title: "Days & Date Calculator",
+    description: "Calculate the number of days between two dates, or add/subtract days to find a future or past date.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

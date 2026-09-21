@@ -7,6 +7,16 @@ import {
 export const metadata = {
   title: "Free Sumo Tools Directory",
   description: "Access 100+ free online tools for text editing, image conversion, calculators, unit converters, and developer utilities. No signup required, works right in your browser.",
+  alternates: { canonical: "/free-sumo-tools" },
+  openGraph: {
+    title: "Free Sumo Tools Directory",
+    description: "Access 100+ free online tools for text editing, image conversion, calculators, unit converters, and developer utilities. No signup required, works right in your browser.",
+    url: "/free-sumo-tools",
+  },
+  twitter: {
+    title: "Free Sumo Tools Directory",
+    description: "Access 100+ free online tools for text editing, image conversion, calculators, unit converters, and developer utilities. No signup required, works right in your browser.",
+  },
 };
 
 export default function FreeSumoToolsPage() {

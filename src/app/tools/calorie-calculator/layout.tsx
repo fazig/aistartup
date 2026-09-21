@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Calorie Calculator",
   description: "Accurately calculate your daily caloric needs using the Mifflin-St Jeor equation and instantly map out your macro breakdowns for muscle gain, fat loss, or maintenance.",
+  alternates: { canonical: "/tools/calorie-calculator" },
+  openGraph: {
+    title: "Calorie Calculator",
+    description: "Accurately calculate your daily caloric needs using the Mifflin-St Jeor equation and instantly map out your macro breakdowns for muscle gain, fat loss, or maintenance.",
+    url: "/tools/calorie-calculator",
+  },
+  twitter: {
+    title: "Calorie Calculator",
+    description: "Accurately calculate your daily caloric needs using the Mifflin-St Jeor equation and instantly map out your macro breakdowns for muscle gain, fat loss, or maintenance.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

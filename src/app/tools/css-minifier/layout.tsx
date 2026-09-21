@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "CSS Minifier",
   description: "Compress and optimize your CSS stylesheet files in real time. Strip comments, spaces, and duplicate rules to speed up page loads.",
+  alternates: { canonical: "/tools/css-minifier" },
+  openGraph: {
+    title: "CSS Minifier",
+    description: "Compress and optimize your CSS stylesheet files in real time. Strip comments, spaces, and duplicate rules to speed up page loads.",
+    url: "/tools/css-minifier",
+  },
+  twitter: {
+    title: "CSS Minifier",
+    description: "Compress and optimize your CSS stylesheet files in real time. Strip comments, spaces, and duplicate rules to speed up page loads.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

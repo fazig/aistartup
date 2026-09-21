@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Webpage Screen Resolution Simulator",
   description: "Instantly test how any website looks across different devices, smartphones, and desktop monitors.",
+  alternates: { canonical: "/tools/screen-resolution-simulator" },
+  openGraph: {
+    title: "Webpage Screen Resolution Simulator",
+    description: "Instantly test how any website looks across different devices, smartphones, and desktop monitors.",
+    url: "/tools/screen-resolution-simulator",
+  },
+  twitter: {
+    title: "Webpage Screen Resolution Simulator",
+    description: "Instantly test how any website looks across different devices, smartphones, and desktop monitors.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

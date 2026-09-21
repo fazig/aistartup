@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Website Page Size Checker",
   description: "Analyze the total HTML byte size of any webpage to optimize load times and improve SEO rankings.",
+  alternates: { canonical: "/tools/page-size-checker" },
+  openGraph: {
+    title: "Website Page Size Checker",
+    description: "Analyze the total HTML byte size of any webpage to optimize load times and improve SEO rankings.",
+    url: "/tools/page-size-checker",
+  },
+  twitter: {
+    title: "Website Page Size Checker",
+    description: "Analyze the total HTML byte size of any webpage to optimize load times and improve SEO rankings.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

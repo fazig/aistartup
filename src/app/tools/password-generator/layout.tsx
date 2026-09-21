@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Secure Password Generator",
   description: "Generate unbreakable, highly-secure passwords locally in your browser.",
+  alternates: { canonical: "/tools/password-generator" },
+  openGraph: {
+    title: "Secure Password Generator",
+    description: "Generate unbreakable, highly-secure passwords locally in your browser.",
+    url: "/tools/password-generator",
+  },
+  twitter: {
+    title: "Secure Password Generator",
+    description: "Generate unbreakable, highly-secure passwords locally in your browser.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Pace Converter & Estimator",
   description: "Convert running paces between minutes/km and minutes/mile. View speed equivalents and estimate race finish times.",
+  alternates: { canonical: "/tools/pace-converter" },
+  openGraph: {
+    title: "Pace Converter & Estimator",
+    description: "Convert running paces between minutes/km and minutes/mile. View speed equivalents and estimate race finish times.",
+    url: "/tools/pace-converter",
+  },
+  twitter: {
+    title: "Pace Converter & Estimator",
+    description: "Convert running paces between minutes/km and minutes/mile. View speed equivalents and estimate race finish times.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

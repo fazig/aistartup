@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Age Calculator",
   description: "Find out your exact age in years, months, days, hours, and minutes — plus your zodiac sign, birth day, and next birthday countdown.",
+  alternates: { canonical: "/tools/age-calculator" },
+  openGraph: {
+    title: "Age Calculator",
+    description: "Find out your exact age in years, months, days, hours, and minutes — plus your zodiac sign, birth day, and next birthday countdown.",
+    url: "/tools/age-calculator",
+  },
+  twitter: {
+    title: "Age Calculator",
+    description: "Find out your exact age in years, months, days, hours, and minutes — plus your zodiac sign, birth day, and next birthday countdown.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

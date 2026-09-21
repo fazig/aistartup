@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Decimal to Text Converter",
   description: "Translate a sequence of Unicode decimal values back into readable text characters with immediate safety validations.",
+  alternates: { canonical: "/tools/decimal-to-text" },
+  openGraph: {
+    title: "Decimal to Text Converter",
+    description: "Translate a sequence of Unicode decimal values back into readable text characters with immediate safety validations.",
+    url: "/tools/decimal-to-text",
+  },
+  twitter: {
+    title: "Decimal to Text Converter",
+    description: "Translate a sequence of Unicode decimal values back into readable text characters with immediate safety validations.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

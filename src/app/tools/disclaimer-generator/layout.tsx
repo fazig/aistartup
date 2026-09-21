@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Disclaimer Generator",
   description: "Create a customized, professional disclaimer statement for your blog, application, or website instantly.",
+  alternates: { canonical: "/tools/disclaimer-generator" },
+  openGraph: {
+    title: "Disclaimer Generator",
+    description: "Create a customized, professional disclaimer statement for your blog, application, or website instantly.",
+    url: "/tools/disclaimer-generator",
+  },
+  twitter: {
+    title: "Disclaimer Generator",
+    description: "Create a customized, professional disclaimer statement for your blog, application, or website instantly.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

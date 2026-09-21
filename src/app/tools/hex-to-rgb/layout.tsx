@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "HEX to RGB Converter",
   description: "Instantly convert hexadecimal web colors into standard RGB values for CSS and graphic design.",
+  alternates: { canonical: "/tools/hex-to-rgb" },
+  openGraph: {
+    title: "HEX to RGB Converter",
+    description: "Instantly convert hexadecimal web colors into standard RGB values for CSS and graphic design.",
+    url: "/tools/hex-to-rgb",
+  },
+  twitter: {
+    title: "HEX to RGB Converter",
+    description: "Instantly convert hexadecimal web colors into standard RGB values for CSS and graphic design.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

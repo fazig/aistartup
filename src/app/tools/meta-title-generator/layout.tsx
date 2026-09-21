@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "AI SEO Meta Title Generator",
   description: "Instantly generate highly clickable, SEO-optimized title tags engineered to maximize your Google Click-Through Rate (CTR).",
+  alternates: { canonical: "/tools/meta-title-generator" },
+  openGraph: {
+    title: "AI SEO Meta Title Generator",
+    description: "Instantly generate highly clickable, SEO-optimized title tags engineered to maximize your Google Click-Through Rate (CTR).",
+    url: "/tools/meta-title-generator",
+  },
+  twitter: {
+    title: "AI SEO Meta Title Generator",
+    description: "Instantly generate highly clickable, SEO-optimized title tags engineered to maximize your Google Click-Through Rate (CTR).",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

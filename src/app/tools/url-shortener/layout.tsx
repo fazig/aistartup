@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Premium URL Shortener",
   description: "Instantly transform long, messy URLs into neat, trackable, and brand-friendly short links.",
+  alternates: { canonical: "/tools/url-shortener" },
+  openGraph: {
+    title: "Premium URL Shortener",
+    description: "Instantly transform long, messy URLs into neat, trackable, and brand-friendly short links.",
+    url: "/tools/url-shortener",
+  },
+  twitter: {
+    title: "Premium URL Shortener",
+    description: "Instantly transform long, messy URLs into neat, trackable, and brand-friendly short links.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

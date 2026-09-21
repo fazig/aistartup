@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "PNG to WebP Converter",
   description: "Convert PNG images to optimized, modern WebP files while preserving transparency. Includes quality sliders and lossless compilation toggles.",
+  alternates: { canonical: "/tools/png-to-webp" },
+  openGraph: {
+    title: "PNG to WebP Converter",
+    description: "Convert PNG images to optimized, modern WebP files while preserving transparency. Includes quality sliders and lossless compilation toggles.",
+    url: "/tools/png-to-webp",
+  },
+  twitter: {
+    title: "PNG to WebP Converter",
+    description: "Convert PNG images to optimized, modern WebP files while preserving transparency. Includes quality sliders and lossless compilation toggles.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

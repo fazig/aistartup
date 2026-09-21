@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Sales Tax Calculator",
   description: "Quickly calculate sales tax or reverse-calculate the pre-tax price. Includes common tax rate presets.",
+  alternates: { canonical: "/tools/sales-tax-calculator" },
+  openGraph: {
+    title: "Sales Tax Calculator",
+    description: "Quickly calculate sales tax or reverse-calculate the pre-tax price. Includes common tax rate presets.",
+    url: "/tools/sales-tax-calculator",
+  },
+  twitter: {
+    title: "Sales Tax Calculator",
+    description: "Quickly calculate sales tax or reverse-calculate the pre-tax price. Includes common tax rate presets.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

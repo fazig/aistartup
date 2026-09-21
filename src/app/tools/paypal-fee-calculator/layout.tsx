@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "PayPal Fee Calculator",
   description: "Figure out exactly how much PayPal will take from your transaction—or how much to invoice so you get the full amount.",
+  alternates: { canonical: "/tools/paypal-fee-calculator" },
+  openGraph: {
+    title: "PayPal Fee Calculator",
+    description: "Figure out exactly how much PayPal will take from your transaction—or how much to invoice so you get the full amount.",
+    url: "/tools/paypal-fee-calculator",
+  },
+  twitter: {
+    title: "PayPal Fee Calculator",
+    description: "Figure out exactly how much PayPal will take from your transaction—or how much to invoice so you get the full amount.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Beautify HTML!",
   description: "Transform messy, nested, or compressed HTML code into clean, well-spaced, and perfectly indented code instantly.",
+  alternates: { canonical: "/tools/html-beautifier" },
+  openGraph: {
+    title: "Beautify HTML!",
+    description: "Transform messy, nested, or compressed HTML code into clean, well-spaced, and perfectly indented code instantly.",
+    url: "/tools/html-beautifier",
+  },
+  twitter: {
+    title: "Beautify HTML!",
+    description: "Transform messy, nested, or compressed HTML code into clean, well-spaced, and perfectly indented code instantly.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

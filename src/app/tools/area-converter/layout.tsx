@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Area Converter",
   description: "Convert between metric and imperial area units including square meters, feet, acres, and hectares.",
+  alternates: { canonical: "/tools/area-converter" },
+  openGraph: {
+    title: "Area Converter",
+    description: "Convert between metric and imperial area units including square meters, feet, acres, and hectares.",
+    url: "/tools/area-converter",
+  },
+  twitter: {
+    title: "Area Converter",
+    description: "Convert between metric and imperial area units including square meters, feet, acres, and hectares.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

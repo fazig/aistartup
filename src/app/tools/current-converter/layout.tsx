@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Current Converter",
   description: "Convert electric current values between Amperes, Milliamperes, Microamperes, Kiliamperes, Biots, Abamperes, and Statamperes.",
+  alternates: { canonical: "/tools/current-converter" },
+  openGraph: {
+    title: "Current Converter",
+    description: "Convert electric current values between Amperes, Milliamperes, Microamperes, Kiliamperes, Biots, Abamperes, and Statamperes.",
+    url: "/tools/current-converter",
+  },
+  twitter: {
+    title: "Current Converter",
+    description: "Convert electric current values between Amperes, Milliamperes, Microamperes, Kiliamperes, Biots, Abamperes, and Statamperes.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

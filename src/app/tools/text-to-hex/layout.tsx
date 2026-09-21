@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Text to Hex Converter",
   description: "Convert plain text strings into hexadecimal codes. Perfect for developers working with raw buffers and encodings.",
+  alternates: { canonical: "/tools/text-to-hex" },
+  openGraph: {
+    title: "Text to Hex Converter",
+    description: "Convert plain text strings into hexadecimal codes. Perfect for developers working with raw buffers and encodings.",
+    url: "/tools/text-to-hex",
+  },
+  twitter: {
+    title: "Text to Hex Converter",
+    description: "Convert plain text strings into hexadecimal codes. Perfect for developers working with raw buffers and encodings.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

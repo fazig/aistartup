@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Get Source Code of Webpage",
   description: "Instantly extract and view the raw HTML source code of any URL on the internet.",
+  alternates: { canonical: "/tools/get-source-code" },
+  openGraph: {
+    title: "Get Source Code of Webpage",
+    description: "Instantly extract and view the raw HTML source code of any URL on the internet.",
+    url: "/tools/get-source-code",
+  },
+  twitter: {
+    title: "Get Source Code of Webpage",
+    description: "Instantly extract and view the raw HTML source code of any URL on the internet.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

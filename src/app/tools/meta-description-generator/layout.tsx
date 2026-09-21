@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "AI SEO Meta Description Generator",
   description: "Generate compelling, click-worthy Meta Descriptions perfectly tailored to Google's 160-character limit.",
+  alternates: { canonical: "/tools/meta-description-generator" },
+  openGraph: {
+    title: "AI SEO Meta Description Generator",
+    description: "Generate compelling, click-worthy Meta Descriptions perfectly tailored to Google's 160-character limit.",
+    url: "/tools/meta-description-generator",
+  },
+  twitter: {
+    title: "AI SEO Meta Description Generator",
+    description: "Generate compelling, click-worthy Meta Descriptions perfectly tailored to Google's 160-character limit.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

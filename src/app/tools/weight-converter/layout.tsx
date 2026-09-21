@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Weight Converter",
   description: "Convert weight and mass units instantly. Translate between kilograms, pounds, ounces, grams, and carats.",
+  alternates: { canonical: "/tools/weight-converter" },
+  openGraph: {
+    title: "Weight Converter",
+    description: "Convert weight and mass units instantly. Translate between kilograms, pounds, ounces, grams, and carats.",
+    url: "/tools/weight-converter",
+  },
+  twitter: {
+    title: "Weight Converter",
+    description: "Convert weight and mass units instantly. Translate between kilograms, pounds, ounces, grams, and carats.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

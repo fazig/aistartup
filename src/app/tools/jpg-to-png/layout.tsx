@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "JPG to PNG Converter",
   description: "Convert JPG images into high-quality, transparent PNG files in your browser. Includes custom background-color removal.",
+  alternates: { canonical: "/tools/jpg-to-png" },
+  openGraph: {
+    title: "JPG to PNG Converter",
+    description: "Convert JPG images into high-quality, transparent PNG files in your browser. Includes custom background-color removal.",
+    url: "/tools/jpg-to-png",
+  },
+  twitter: {
+    title: "JPG to PNG Converter",
+    description: "Convert JPG images into high-quality, transparent PNG files in your browser. Includes custom background-color removal.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

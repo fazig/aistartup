@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Code to Text Ratio Checker",
   description: "Calculate the percentage of actual human-readable text compared to the raw HTML code on any webpage.",
+  alternates: { canonical: "/tools/code-to-text-ratio" },
+  openGraph: {
+    title: "Code to Text Ratio Checker",
+    description: "Calculate the percentage of actual human-readable text compared to the raw HTML code on any webpage.",
+    url: "/tools/code-to-text-ratio",
+  },
+  twitter: {
+    title: "Code to Text Ratio Checker",
+    description: "Calculate the percentage of actual human-readable text compared to the raw HTML code on any webpage.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Open All URLs",
   description: "Paste a massive list of website links and instantly open all of them simultaneously in new browser tabs.",
+  alternates: { canonical: "/tools/open-all-urls" },
+  openGraph: {
+    title: "Open All URLs",
+    description: "Paste a massive list of website links and instantly open all of them simultaneously in new browser tabs.",
+    url: "/tools/open-all-urls",
+  },
+  twitter: {
+    title: "Open All URLs",
+    description: "Paste a massive list of website links and instantly open all of them simultaneously in new browser tabs.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

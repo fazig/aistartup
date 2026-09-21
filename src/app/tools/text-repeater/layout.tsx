@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Text Repeater",
   description: "Repeat any text as many times as you want with custom separators and numbering.",
+  alternates: { canonical: "/tools/text-repeater" },
+  openGraph: {
+    title: "Text Repeater",
+    description: "Repeat any text as many times as you want with custom separators and numbering.",
+    url: "/tools/text-repeater",
+  },
+  twitter: {
+    title: "Text Repeater",
+    description: "Repeat any text as many times as you want with custom separators and numbering.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

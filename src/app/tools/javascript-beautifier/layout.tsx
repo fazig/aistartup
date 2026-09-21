@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "JavaScript Beautifier",
   description: "Clean up messy, minified, or compressed JavaScript files. Format braces, indent loops, and space out operators for clean code.",
+  alternates: { canonical: "/tools/javascript-beautifier" },
+  openGraph: {
+    title: "JavaScript Beautifier",
+    description: "Clean up messy, minified, or compressed JavaScript files. Format braces, indent loops, and space out operators for clean code.",
+    url: "/tools/javascript-beautifier",
+  },
+  twitter: {
+    title: "JavaScript Beautifier",
+    description: "Clean up messy, minified, or compressed JavaScript files. Format braces, indent loops, and space out operators for clean code.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Class C IP Checker",
   description: "Analyze a bulk list of IP addresses to discover which ones share the exact same Class C server subnet.",
+  alternates: { canonical: "/tools/class-c-ip-checker" },
+  openGraph: {
+    title: "Class C IP Checker",
+    description: "Analyze a bulk list of IP addresses to discover which ones share the exact same Class C server subnet.",
+    url: "/tools/class-c-ip-checker",
+  },
+  twitter: {
+    title: "Class C IP Checker",
+    description: "Analyze a bulk list of IP addresses to discover which ones share the exact same Class C server subnet.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Remove Line Breaks",
   description: "Strip or replace line breaks from your text. Perfect for cleaning up copied content.",
+  alternates: { canonical: "/tools/remove-line-breaks" },
+  openGraph: {
+    title: "Remove Line Breaks",
+    description: "Strip or replace line breaks from your text. Perfect for cleaning up copied content.",
+    url: "/tools/remove-line-breaks",
+  },
+  twitter: {
+    title: "Remove Line Breaks",
+    description: "Strip or replace line breaks from your text. Perfect for cleaning up copied content.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

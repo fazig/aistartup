@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Probability Calculator",
   description: "Calculate the probability of single and multiple independent events occurring.",
+  alternates: { canonical: "/tools/probability-calculator" },
+  openGraph: {
+    title: "Probability Calculator",
+    description: "Calculate the probability of single and multiple independent events occurring.",
+    url: "/tools/probability-calculator",
+  },
+  twitter: {
+    title: "Probability Calculator",
+    description: "Calculate the probability of single and multiple independent events occurring.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

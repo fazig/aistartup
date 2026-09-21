@@ -26,22 +26,31 @@ export const metadata: Metadata = {
     absolute: "StartupAI Tools | Free Web Utilities & AI Tools",
   },
   description:
-    "Access over 100+ free, lightning-fast web tools including a free HD AI Image Enhancer (Remini alternative), JSON formatters, and SEO utilities. No registration required.",
+    "100+ free web tools: HD AI image enhancer (Remini alternative), JSON formatters, QR generators & SEO utilities. No sign-up needed.",
   keywords:
     "free AI image enhancer, Remini alternative free, web tools, developer utilities, upscale image to HD",
   alternates: { canonical: "/" },
   openGraph: {
     title: "StartupAI Tools | Free Web Utilities & AI Tools",
     description:
-      "Access over 100+ free, lightning-fast web tools including a free HD AI Image Enhancer (Remini alternative), JSON formatters, and SEO utilities. No registration required.",
+      "100+ free web tools: HD AI image enhancer (Remini alternative), JSON formatters, QR generators & SEO utilities. No sign-up needed.",
     url: "/",
     type: "website",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "StartupAI Tools - Free Developer & Web Utilities",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "StartupAI Tools | Free Web Utilities & AI Tools",
     description:
-      "Access over 100+ free, lightning-fast web tools including a free HD AI Image Enhancer (Remini alternative), JSON formatters, and SEO utilities. No registration required.",
+      "100+ free web tools: HD AI image enhancer (Remini alternative), JSON formatters, QR generators & SEO utilities. No sign-up needed.",
+    images: ["/og-image.jpg"],
   },
 };
 

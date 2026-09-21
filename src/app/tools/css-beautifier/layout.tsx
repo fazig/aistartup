@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "CSS Beautifier",
   description: "Transform compact or ugly CSS rules into perfectly formatted, beautifully indented stylesheets instantly.",
+  alternates: { canonical: "/tools/css-beautifier" },
+  openGraph: {
+    title: "CSS Beautifier",
+    description: "Transform compact or ugly CSS rules into perfectly formatted, beautifully indented stylesheets instantly.",
+    url: "/tools/css-beautifier",
+  },
+  twitter: {
+    title: "CSS Beautifier",
+    description: "Transform compact or ugly CSS rules into perfectly formatted, beautifully indented stylesheets instantly.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Binary to Octal Converter",
   description: "Convert binary numbers (Base 2) to octal string values (Base 8) with a detailed triplet grouping visualizer.",
+  alternates: { canonical: "/tools/binary-to-octal" },
+  openGraph: {
+    title: "Binary to Octal Converter",
+    description: "Convert binary numbers (Base 2) to octal string values (Base 8) with a detailed triplet grouping visualizer.",
+    url: "/tools/binary-to-octal",
+  },
+  twitter: {
+    title: "Binary to Octal Converter",
+    description: "Convert binary numbers (Base 2) to octal string values (Base 8) with a detailed triplet grouping visualizer.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

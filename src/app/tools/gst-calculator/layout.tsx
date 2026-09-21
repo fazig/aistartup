@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "GST Calculator",
   description: "Calculate Goods and Services Tax (GST) easily by adding or removing tax values for invoices.",
+  alternates: { canonical: "/tools/gst-calculator" },
+  openGraph: {
+    title: "GST Calculator",
+    description: "Calculate Goods and Services Tax (GST) easily by adding or removing tax values for invoices.",
+    url: "/tools/gst-calculator",
+  },
+  twitter: {
+    title: "GST Calculator",
+    description: "Calculate Goods and Services Tax (GST) easily by adding or removing tax values for invoices.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

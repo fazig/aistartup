@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Volume Converter",
   description: "Convert between liters, gallons, cups, fluid ounces, milliliters, and cubic dimensions instantly.",
+  alternates: { canonical: "/tools/volume-converter" },
+  openGraph: {
+    title: "Volume Converter",
+    description: "Convert between liters, gallons, cups, fluid ounces, milliliters, and cubic dimensions instantly.",
+    url: "/tools/volume-converter",
+  },
+  twitter: {
+    title: "Volume Converter",
+    description: "Convert between liters, gallons, cups, fluid ounces, milliliters, and cubic dimensions instantly.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

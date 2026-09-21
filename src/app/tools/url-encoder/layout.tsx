@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "URL Encoder / Decoder",
   description: "Safely encode URL parameters or decode messy web addresses back to plain text.",
+  alternates: { canonical: "/tools/url-encoder" },
+  openGraph: {
+    title: "URL Encoder / Decoder",
+    description: "Safely encode URL parameters or decode messy web addresses back to plain text.",
+    url: "/tools/url-encoder",
+  },
+  twitter: {
+    title: "URL Encoder / Decoder",
+    description: "Safely encode URL parameters or decode messy web addresses back to plain text.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

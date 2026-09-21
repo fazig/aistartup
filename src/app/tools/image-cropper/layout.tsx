@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Image Cropper",
   description: "Crop images using custom coordinate dimensions or standard ratios locally in your browser.",
+  alternates: { canonical: "/tools/image-cropper" },
+  openGraph: {
+    title: "Image Cropper",
+    description: "Crop images using custom coordinate dimensions or standard ratios locally in your browser.",
+    url: "/tools/image-cropper",
+  },
+  twitter: {
+    title: "Image Cropper",
+    description: "Crop images using custom coordinate dimensions or standard ratios locally in your browser.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

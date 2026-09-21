@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description: "Generate standardized llms.txt and llms-full.txt files to optimize your website for ChatGPT, Perplexity, and AI Overviews.",
     url: "/tools/llms-txt-generator",
     type: "website"
-  }
+  },
 };
 
 export default function LlmsTxtGeneratorPage() {

@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Image Converter",
   description: "Convert images between WebP, PNG, JPEG, and BMP formats instantly inside your browser.",
+  alternates: { canonical: "/tools/image-converter" },
+  openGraph: {
+    title: "Image Converter",
+    description: "Convert images between WebP, PNG, JPEG, and BMP formats instantly inside your browser.",
+    url: "/tools/image-converter",
+  },
+  twitter: {
+    title: "Image Converter",
+    description: "Convert images between WebP, PNG, JPEG, and BMP formats instantly inside your browser.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

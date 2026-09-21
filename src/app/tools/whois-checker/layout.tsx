@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "WHOIS Domain Lookup",
   description: "Instantly discover who owns a domain, when it was registered, and when it expires.",
+  alternates: { canonical: "/tools/whois-checker" },
+  openGraph: {
+    title: "WHOIS Domain Lookup",
+    description: "Instantly discover who owns a domain, when it was registered, and when it expires.",
+    url: "/tools/whois-checker",
+  },
+  twitter: {
+    title: "WHOIS Domain Lookup",
+    description: "Instantly discover who owns a domain, when it was registered, and when it expires.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

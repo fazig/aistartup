@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Speed Converter",
   description: "Convert velocity values between metric, imperial, maritime, and acoustic units instantly.",
+  alternates: { canonical: "/tools/speed-converter" },
+  openGraph: {
+    title: "Speed Converter",
+    description: "Convert velocity values between metric, imperial, maritime, and acoustic units instantly.",
+    url: "/tools/speed-converter",
+  },
+  twitter: {
+    title: "Speed Converter",
+    description: "Convert velocity values between metric, imperial, maritime, and acoustic units instantly.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
