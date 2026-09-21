@@ -10,7 +10,7 @@ export const postBestFreeMidjourneyAlternatives2026: BlogPost = {
   image: "/best-free-midjourney-alternatives-2026_cover.webp",
   content: `![Best Free Midjourney Alternatives in 2026 (Tested Picks)](/best-free-midjourney-alternatives-2026_cover.webp)
 
-Midjourney removed its free trial in late 2024, and in 2026 the cheapest plan still starts at $10 a month with no free tier at all. If you generate fewer than a couple dozen images a month, that subscription is hard to justify — especially since the free competition has caught up fast. FLUX.1 from Black Forest Labs reset the bar for photorealism, Ideogram solved readable text inside images, and Leonardo.ai ships a daily free allowance that covers casual use easily. Here are the genuinely free Midjourney alternatives worth your time in 2026, and which one fits your actual workflow.
+Midjourney removed its free trial in 2023, and in 2026 the cheapest plan still starts at $10 a month with no free tier at all. If you generate fewer than a couple dozen images a month, that subscription is hard to justify — especially since the free competition has caught up fast. FLUX.1 from Black Forest Labs reset the bar for photorealism, Ideogram solved readable text inside images, and Leonardo.ai ships a daily free allowance that covers casual use easily. Here are the genuinely free Midjourney alternatives worth your time in 2026, and which one fits your actual workflow.
 
 ## 1. Leonardo.ai — best overall free pick
 
@@ -62,7 +62,7 @@ For power users, running Stable Diffusion 3.5 locally remains the only truly unl
 Most heavy users do not pick just one. The common 2026 stack is Leonardo.ai for daily generations, Ideogram for text work, and Stable Diffusion or FLUX when you need full control — a combination that costs nothing and covers nearly every use case Midjourney handles. Cancel the $10/month plan if you are generating fewer than 20–30 images a month; the free tools are now close enough that you will not miss it.
 
 ## Key takeaways
-- Midjourney has had no free tier since late 2024, with paid plans from $10/month — but free alternatives have closed the quality gap in 2026.
+- Midjourney has had no free tier since 2023, with paid plans from $10/month — but free alternatives have closed the quality gap in 2026.
 - Leonardo.ai's daily free tokens make it the best general free Midjourney replacement; ImageFX offers the highest free volume.
 - Ideogram is unmatched for readable text inside images, and Adobe Firefly is the only free option with licensed, commercially indemnified output.
 - FLUX.1 Schnell and Stable Diffusion 3.5 run free and unlimited locally if you have the GPU for it.
