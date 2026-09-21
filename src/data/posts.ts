@@ -94,8 +94,10 @@ import { postBestFreeSynthesiaAlternatives2026 } from "./articles/best-free-synt
 import { postBestFreeDescriptAlternatives2026 } from "./articles/best-free-descript-alternatives-2026";
 import { postBestFreeRunwayAlternativesAiVideo } from "./articles/best-free-runway-alternatives-ai-video";
 import { postBestFreeLeonardoAiAlternativesImageGeneration } from "./articles/best-free-leonardo-ai-alternatives-image-generation";
+import { postBestFreeSudowriteAlternatives2026 } from "./articles/best-free-sudowrite-alternatives-2026";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postBestFreeSudowriteAlternatives2026,
   postBestFreeLeonardoAiAlternativesImageGeneration,
   postBestFreeRunwayAlternativesAiVideo,
   postBestFreeDescriptAlternatives2026,
