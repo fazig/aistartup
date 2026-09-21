@@ -10,6 +10,7 @@ export interface BlogPostMeta {
 }
 
 export const BLOG_METADATA: BlogPostMeta[] = [
+  {"slug": "best-free-murf-ai-alternatives-voiceover", "title": "Best Free Murf AI Alternatives in 2026 (8 Tested Picks)", "description": "Free Murf AI alternatives for AI voiceovers: compare the best free text-to-speech tools with honest free-plan limits, voice quality, and exports.", "date": "2026-09-21", "readTime": "6 min read", "category": "AI Tools", "author": "Faizan Arif", "image": "/best-free-murf-ai-alternatives-voiceover_cover.webp"},
   {
     "slug": "best-free-otter-ai-alternatives-meeting-transcription",
     "title": "Best Free Otter.ai Alternatives in 2026 (8 Tested Picks)",

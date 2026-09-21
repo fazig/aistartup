@@ -89,8 +89,10 @@ import { postBestFreePerplexityAlternatives2026 } from "./articles/best-free-per
 import { postBestFreeJasperAiAlternatives2026 } from "./articles/best-free-jasper-ai-alternatives-2026";
 import { postBestFreeCopyAiAlternatives2026 } from "./articles/best-free-copy-ai-alternatives-2026";
 import { postBestFreeOtterAiAlternativesMeetingTranscription } from "./articles/best-free-otter-ai-alternatives-meeting-transcription";
+import { postBestFreeMurfAiAlternativesVoiceover } from "./articles/best-free-murf-ai-alternatives-voiceover";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postBestFreeMurfAiAlternativesVoiceover,
   postBestFreeOtterAiAlternativesMeetingTranscription,
   postBestFreeCopyAiAlternatives2026,
   postBestFreeJasperAiAlternatives2026,
