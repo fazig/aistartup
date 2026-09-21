@@ -88,8 +88,10 @@ import { postBestFreeMidjourneyAlternatives2026 } from "./articles/best-free-mid
 import { postBestFreePerplexityAlternatives2026 } from "./articles/best-free-perplexity-alternatives-2026";
 import { postBestFreeJasperAiAlternatives2026 } from "./articles/best-free-jasper-ai-alternatives-2026";
 import { postBestFreeCopyAiAlternatives2026 } from "./articles/best-free-copy-ai-alternatives-2026";
+import { postBestFreeOtterAiAlternativesMeetingTranscription } from "./articles/best-free-otter-ai-alternatives-meeting-transcription";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postBestFreeOtterAiAlternativesMeetingTranscription,
   postBestFreeCopyAiAlternatives2026,
   postBestFreeJasperAiAlternatives2026,
   postBestFreePerplexityAlternatives2026,

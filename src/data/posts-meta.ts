@@ -11,6 +11,16 @@ export interface BlogPostMeta {
 
 export const BLOG_METADATA: BlogPostMeta[] = [
   {
+    "slug": "best-free-otter-ai-alternatives-meeting-transcription",
+    "title": "Best Free Otter.ai Alternatives in 2026 (8 Tested Picks)",
+    "description": "Best free Otter.ai alternatives for meeting transcription: 8 tested picks including Fathom, Fireflies.ai and tl;dv, with free-plan limits, languages and privacy compared.",
+    "date": "2026-09-21",
+    "readTime": "7 min read",
+    "category": "AI Tools",
+    "author": "Faizan Arif",
+    "image": "/best-free-otter-ai-alternatives-meeting-transcription_cover.webp"
+  },
+  {
     "slug": "best-free-copy-ai-alternatives-2026",
     "title": "Best Free Copy.ai Alternatives in 2026 (7 Tested Picks)",
     "description": "Best free Copy.ai alternatives in 2026: Rytr, Writesonic, Simplified, ChatGPT and more compared on free plans, features and limits for marketers.",
