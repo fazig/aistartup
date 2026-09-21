@@ -92,8 +92,10 @@ import { postBestFreeOtterAiAlternativesMeetingTranscription } from "./articles/
 import { postBestFreeMurfAiAlternativesVoiceover } from "./articles/best-free-murf-ai-alternatives-voiceover";
 import { postBestFreeSynthesiaAlternatives2026 } from "./articles/best-free-synthesia-alternatives-2026";
 import { postBestFreeDescriptAlternatives2026 } from "./articles/best-free-descript-alternatives-2026";
+import { postBestFreeRunwayAlternativesAiVideo } from "./articles/best-free-runway-alternatives-ai-video";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postBestFreeRunwayAlternativesAiVideo,
   postBestFreeDescriptAlternatives2026,
   postBestFreeSynthesiaAlternatives2026,
   postBestFreeMurfAiAlternativesVoiceover,
