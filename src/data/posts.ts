@@ -96,8 +96,10 @@ import { postBestFreeRunwayAlternativesAiVideo } from "./articles/best-free-runw
 import { postBestFreeLeonardoAiAlternativesImageGeneration } from "./articles/best-free-leonardo-ai-alternatives-image-generation";
 import { postBestFreeSudowriteAlternatives2026 } from "./articles/best-free-sudowrite-alternatives-2026";
 import { postBestFreeFramerAlternativesWebsiteBuilder } from "./articles/best-free-framer-alternatives-website-builder";
+import { postHowToUseOllamaLocally2026 } from "./articles/how-to-use-ollama-locally-2026";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postHowToUseOllamaLocally2026,
   postBestFreeFramerAlternativesWebsiteBuilder,
   postBestFreeSudowriteAlternatives2026,
   postBestFreeLeonardoAiAlternativesImageGeneration,
