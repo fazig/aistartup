@@ -93,8 +93,10 @@ import { postBestFreeMurfAiAlternativesVoiceover } from "./articles/best-free-mu
 import { postBestFreeSynthesiaAlternatives2026 } from "./articles/best-free-synthesia-alternatives-2026";
 import { postBestFreeDescriptAlternatives2026 } from "./articles/best-free-descript-alternatives-2026";
 import { postBestFreeRunwayAlternativesAiVideo } from "./articles/best-free-runway-alternatives-ai-video";
+import { postBestFreeLeonardoAiAlternativesImageGeneration } from "./articles/best-free-leonardo-ai-alternatives-image-generation";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postBestFreeLeonardoAiAlternativesImageGeneration,
   postBestFreeRunwayAlternativesAiVideo,
   postBestFreeDescriptAlternatives2026,
   postBestFreeSynthesiaAlternatives2026,
