@@ -98,8 +98,10 @@ import { postBestFreeSudowriteAlternatives2026 } from "./articles/best-free-sudo
 import { postBestFreeFramerAlternativesWebsiteBuilder } from "./articles/best-free-framer-alternatives-website-builder";
 import { postHowToUseOllamaLocally2026 } from "./articles/how-to-use-ollama-locally-2026";
 import { postHowToRunStableDiffusionLocallyFree } from "./articles/how-to-run-stable-diffusion-locally-free";
+import { postHowToBuildRagChatbotFreeTools } from "./articles/how-to-build-rag-chatbot-free-tools";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postHowToBuildRagChatbotFreeTools,
   postHowToRunStableDiffusionLocallyFree,
   postHowToUseOllamaLocally2026,
   postBestFreeFramerAlternativesWebsiteBuilder,
