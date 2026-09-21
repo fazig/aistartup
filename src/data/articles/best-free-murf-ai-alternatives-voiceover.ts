@@ -50,7 +50,7 @@ The free tier is time-boxed rather than a permanent free plan, so treat it as an
 
 ## 7. Google Text-to-Speech
 
-Google's Cloud Text-to-Speech has a generous free tier (1 million characters per month for standard voices at the time of writing, and up to 4 million for Neural2 voices depending on current quotas — check Google Cloud's pricing page for the current numbers). It is not a Murf-style studio: there is no script editor or project workspace. But the WaveNet and Neural2 voices are genuinely natural, and the API and web interfaces make it practical for developers.
+Google's Cloud Text-to-Speech has a generous free tier: 4 million characters per month free for Standard and WaveNet voices, and 1 million per month for Neural2 voices (billing must be enabled on the GCP project; quotas can change, so check Google Cloud's pricing page for the current numbers). It is not a Murf-style studio: there is no script editor or project workspace. But the WaveNet and Neural2 voices are genuinely natural, and the API and web interfaces make it practical for developers.
 
 If you are comfortable with a technical workflow — type or paste text, generate audio, download the file — Google TTS is one of the highest-quality free options available. It is especially good for app integrations, accessibility features, and bulk generation where a GUI studio would slow you down.
 
