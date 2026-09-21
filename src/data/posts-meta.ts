@@ -11,6 +11,16 @@ export interface BlogPostMeta {
 
 export const BLOG_METADATA: BlogPostMeta[] = [
   {
+    "slug": "best-free-copy-ai-alternatives-2026",
+    "title": "Best Free Copy.ai Alternatives in 2026 (7 Tested Picks)",
+    "description": "Best free Copy.ai alternatives in 2026: Rytr, Writesonic, Simplified, ChatGPT and more compared on free plans, features and limits for marketers.",
+    "date": "2026-09-21",
+    "readTime": "6 min read",
+    "category": "AI Tools",
+    "author": "Faizan Arif",
+    "image": "/best-free-copy-ai-alternatives-2026_cover.webp"
+  },
+  {
     "slug": "best-free-jasper-ai-alternatives-2026",
     "title": "Best Free Jasper AI Alternatives in 2026 (Tested Picks)",
     "description": "Free Jasper AI alternatives in 2026: Rytr, Copy.ai, Writesonic, ChatGPT, Claude and Simplified compared on real free-plan limits — stop paying $59+ a month.",
