@@ -101,8 +101,10 @@ import { postHowToRunStableDiffusionLocallyFree } from "./articles/how-to-run-st
 import { postHowToBuildRagChatbotFreeTools } from "./articles/how-to-build-rag-chatbot-free-tools";
 import { postHowToCompressVideoWithoutLosingQualityFree } from "./articles/how-to-compress-video-without-losing-quality-free";
 import { postHowToAutomateExcelPythonOpenpyxl } from "./articles/how-to-automate-excel-python-openpyxl";
+import { postHowToConvertPdfToWordFreeNoSignup } from "./articles/how-to-convert-pdf-to-word-free-no-signup";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postHowToConvertPdfToWordFreeNoSignup,
   postHowToCompressVideoWithoutLosingQualityFree,
   postHowToAutomateExcelPythonOpenpyxl,
   postHowToBuildRagChatbotFreeTools,
