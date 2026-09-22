@@ -116,8 +116,10 @@ import { postFreeRegexTesterToolsCompared } from "./articles/free-regex-tester-t
 import { postBestFreeCodeSnippetManagersDevelopers } from "./articles/best-free-code-snippet-managers-developers";
 import { postOpenSourceGithubCopilotAlternativesSelfHosted } from "./articles/open-source-github-copilot-alternatives-self-hosted";
 import { postBestFreeUptimeMonitorsSideProjects } from "./articles/best-free-uptime-monitors-side-projects";
+import { postFreeSslCheckerToolsCompared } from "./articles/free-ssl-checker-tools-compared";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postFreeSslCheckerToolsCompared,
   postBestFreeUptimeMonitorsSideProjects,
   postOpenSourceGithubCopilotAlternativesSelfHosted,
   postBestFreeCodeSnippetManagersDevelopers,
