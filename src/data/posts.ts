@@ -114,8 +114,10 @@ import { postBestFreeApiTestingToolsPostmanAlternatives } from "./articles/best-
 import { postBestFreeJsonToolsBeyondFormatter } from "./articles/best-free-json-tools-beyond-formatter";
 import { postFreeRegexTesterToolsCompared } from "./articles/free-regex-tester-tools-compared";
 import { postBestFreeCodeSnippetManagersDevelopers } from "./articles/best-free-code-snippet-managers-developers";
+import { postOpenSourceGithubCopilotAlternativesSelfHosted } from "./articles/open-source-github-copilot-alternatives-self-hosted";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postOpenSourceGithubCopilotAlternativesSelfHosted,
   postBestFreeCodeSnippetManagersDevelopers,
   postFreeRegexTesterToolsCompared,
   postBestFreeJsonToolsBeyondFormatter,
