@@ -115,8 +115,10 @@ import { postBestFreeJsonToolsBeyondFormatter } from "./articles/best-free-json-
 import { postFreeRegexTesterToolsCompared } from "./articles/free-regex-tester-tools-compared";
 import { postBestFreeCodeSnippetManagersDevelopers } from "./articles/best-free-code-snippet-managers-developers";
 import { postOpenSourceGithubCopilotAlternativesSelfHosted } from "./articles/open-source-github-copilot-alternatives-self-hosted";
+import { postBestFreeUptimeMonitorsSideProjects } from "./articles/best-free-uptime-monitors-side-projects";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postBestFreeUptimeMonitorsSideProjects,
   postOpenSourceGithubCopilotAlternativesSelfHosted,
   postBestFreeCodeSnippetManagersDevelopers,
   postFreeRegexTesterToolsCompared,
