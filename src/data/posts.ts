@@ -107,8 +107,10 @@ import { postHowToCloneVoiceEthicallyFreeTools } from "./articles/how-to-clone-v
 import { postHowToUpscaleVideoTo4kFreeAi } from "./articles/how-to-upscale-video-to-4k-free-ai";
 import { postHowToCreateAiMusicFree2026 } from "./articles/how-to-create-ai-music-free-2026";
 import { postHowToFactCheckAiGeneratedContent } from "./articles/how-to-fact-check-ai-generated-content";
+import { postHowToWritePromptsForImageGeneration } from "./articles/how-to-write-prompts-for-image-generation";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postHowToWritePromptsForImageGeneration,
   postHowToFactCheckAiGeneratedContent,
   postHowToCreateAiMusicFree2026,
   postHowToCloneVoiceEthicallyFreeTools,
