@@ -113,8 +113,10 @@ import { postHowToUseGoogleNotebooklmForResearch } from "./articles/how-to-use-g
 import { postBestFreeApiTestingToolsPostmanAlternatives } from "./articles/best-free-api-testing-tools-postman-alternatives";
 import { postBestFreeJsonToolsBeyondFormatter } from "./articles/best-free-json-tools-beyond-formatter";
 import { postFreeRegexTesterToolsCompared } from "./articles/free-regex-tester-tools-compared";
+import { postBestFreeCodeSnippetManagersDevelopers } from "./articles/best-free-code-snippet-managers-developers";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postBestFreeCodeSnippetManagersDevelopers,
   postFreeRegexTesterToolsCompared,
   postBestFreeJsonToolsBeyondFormatter,
   postBestFreeApiTestingToolsPostmanAlternatives,
