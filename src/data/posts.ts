@@ -99,9 +99,11 @@ import { postBestFreeFramerAlternativesWebsiteBuilder } from "./articles/best-fr
 import { postHowToUseOllamaLocally2026 } from "./articles/how-to-use-ollama-locally-2026";
 import { postHowToRunStableDiffusionLocallyFree } from "./articles/how-to-run-stable-diffusion-locally-free";
 import { postHowToBuildRagChatbotFreeTools } from "./articles/how-to-build-rag-chatbot-free-tools";
+import { postHowToCompressVideoWithoutLosingQualityFree } from "./articles/how-to-compress-video-without-losing-quality-free";
 import { postHowToAutomateExcelPythonOpenpyxl } from "./articles/how-to-automate-excel-python-openpyxl";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postHowToCompressVideoWithoutLosingQualityFree,
   postHowToAutomateExcelPythonOpenpyxl,
   postHowToBuildRagChatbotFreeTools,
   postHowToRunStableDiffusionLocallyFree,
