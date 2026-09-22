@@ -119,8 +119,10 @@ import { postBestFreeUptimeMonitorsSideProjects } from "./articles/best-free-upt
 import { postFreeSslCheckerToolsCompared } from "./articles/free-ssl-checker-tools-compared";
 import { postBestFreeCronJobMonitors } from "./articles/best-free-cron-job-monitors";
 import { postBestFreeFigmaAlternatives2026 } from "./articles/best-free-figma-alternatives-2026";
+import { postFreeSvgEditorsCompared2026 } from "./articles/free-svg-editors-compared-2026";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postFreeSvgEditorsCompared2026,
   postBestFreeFigmaAlternatives2026,
   postBestFreeCronJobMonitors,
   postFreeSslCheckerToolsCompared,
