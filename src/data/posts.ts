@@ -117,8 +117,10 @@ import { postBestFreeCodeSnippetManagersDevelopers } from "./articles/best-free-
 import { postOpenSourceGithubCopilotAlternativesSelfHosted } from "./articles/open-source-github-copilot-alternatives-self-hosted";
 import { postBestFreeUptimeMonitorsSideProjects } from "./articles/best-free-uptime-monitors-side-projects";
 import { postFreeSslCheckerToolsCompared } from "./articles/free-ssl-checker-tools-compared";
+import { postBestFreeCronJobMonitors } from "./articles/best-free-cron-job-monitors";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postBestFreeCronJobMonitors,
   postFreeSslCheckerToolsCompared,
   postBestFreeUptimeMonitorsSideProjects,
   postOpenSourceGithubCopilotAlternativesSelfHosted,
