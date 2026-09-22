@@ -103,9 +103,11 @@ import { postHowToCompressVideoWithoutLosingQualityFree } from "./articles/how-t
 import { postHowToAutomateExcelPythonOpenpyxl } from "./articles/how-to-automate-excel-python-openpyxl";
 import { postHowToConvertPdfToWordFreeNoSignup } from "./articles/how-to-convert-pdf-to-word-free-no-signup";
 import { postHowToRemoveObjectFromPhotoFreeAi } from "./articles/how-to-remove-object-from-photo-free-ai";
+import { postHowToCloneVoiceEthicallyFreeTools } from "./articles/how-to-clone-voice-ethically-free-tools";
 import { postHowToUpscaleVideoTo4kFreeAi } from "./articles/how-to-upscale-video-to-4k-free-ai";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postHowToCloneVoiceEthicallyFreeTools,
   postHowToUpscaleVideoTo4kFreeAi,
   postHowToRemoveObjectFromPhotoFreeAi,
   postHowToConvertPdfToWordFreeNoSignup,
