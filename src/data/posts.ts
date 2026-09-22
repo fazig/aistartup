@@ -102,8 +102,10 @@ import { postHowToBuildRagChatbotFreeTools } from "./articles/how-to-build-rag-c
 import { postHowToCompressVideoWithoutLosingQualityFree } from "./articles/how-to-compress-video-without-losing-quality-free";
 import { postHowToAutomateExcelPythonOpenpyxl } from "./articles/how-to-automate-excel-python-openpyxl";
 import { postHowToConvertPdfToWordFreeNoSignup } from "./articles/how-to-convert-pdf-to-word-free-no-signup";
+import { postHowToRemoveObjectFromPhotoFreeAi } from "./articles/how-to-remove-object-from-photo-free-ai";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postHowToRemoveObjectFromPhotoFreeAi,
   postHowToConvertPdfToWordFreeNoSignup,
   postHowToCompressVideoWithoutLosingQualityFree,
   postHowToAutomateExcelPythonOpenpyxl,
