@@ -122,8 +122,10 @@ import { postBestFreeFigmaAlternatives2026 } from "./articles/best-free-figma-al
 import { postFreeSvgEditorsCompared2026 } from "./articles/free-svg-editors-compared-2026";
 import { postBestFreePhotoBackgroundRemoversTested } from "./articles/best-free-photo-background-removers-tested";
 import { postFreeColorPaletteGeneratorsDevelopers } from "./articles/free-color-palette-generators-developers";
+import { postBestFreeMockupGenerators2026 } from "./articles/best-free-mockup-generators-2026";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postBestFreeMockupGenerators2026,
   postFreeColorPaletteGeneratorsDevelopers,
   postBestFreePhotoBackgroundRemoversTested,
   postFreeSvgEditorsCompared2026,
