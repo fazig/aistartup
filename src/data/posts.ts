@@ -110,8 +110,10 @@ import { postHowToFactCheckAiGeneratedContent } from "./articles/how-to-fact-che
 import { postHowToWritePromptsForImageGeneration } from "./articles/how-to-write-prompts-for-image-generation";
 import { postHowToSelfHostN8nAutomationFree } from "./articles/how-to-self-host-n8n-automation-free";
 import { postHowToUseGoogleNotebooklmForResearch } from "./articles/how-to-use-google-notebooklm-for-research";
+import { postBestFreeApiTestingToolsPostmanAlternatives } from "./articles/best-free-api-testing-tools-postman-alternatives";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postBestFreeApiTestingToolsPostmanAlternatives,
   postHowToUseGoogleNotebooklmForResearch,
   postHowToSelfHostN8nAutomationFree,
   postHowToWritePromptsForImageGeneration,
