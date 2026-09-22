@@ -121,8 +121,10 @@ import { postBestFreeCronJobMonitors } from "./articles/best-free-cron-job-monit
 import { postBestFreeFigmaAlternatives2026 } from "./articles/best-free-figma-alternatives-2026";
 import { postFreeSvgEditorsCompared2026 } from "./articles/free-svg-editors-compared-2026";
 import { postBestFreePhotoBackgroundRemoversTested } from "./articles/best-free-photo-background-removers-tested";
+import { postFreeColorPaletteGeneratorsDevelopers } from "./articles/free-color-palette-generators-developers";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postFreeColorPaletteGeneratorsDevelopers,
   postBestFreePhotoBackgroundRemoversTested,
   postFreeSvgEditorsCompared2026,
   postBestFreeFigmaAlternatives2026,
