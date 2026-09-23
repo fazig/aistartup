@@ -135,8 +135,10 @@ import { postHowToAddSchemaMarkupWithoutPlugins } from "./articles/how-to-add-sc
 import { postHowToFindBrokenLinksFree } from "./articles/how-to-find-broken-links-free";
 import { postFreeCoreWebVitalsTestingTools } from "./articles/free-core-web-vitals-testing-tools";
 import { postWhatIsMcpModelContextProtocolExplained } from "./articles/what-is-mcp-model-context-protocol-explained";
+import { postAiAgentsVsChatbotsExplained } from "./articles/ai-agents-vs-chatbots-explained";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postAiAgentsVsChatbotsExplained,
   postWhatIsMcpModelContextProtocolExplained,
   postHowToFindBrokenLinksFree,
   postFreeCoreWebVitalsTestingTools,
