@@ -129,8 +129,10 @@ import { postBestFreeTodoistAlternatives2026 } from "./articles/best-free-todois
 import { postFreeAiMeetingNotesToolsCompared } from "./articles/free-ai-meeting-notes-tools-compared";
 import { postBestFreeHabitTrackersNoSubscription } from "./articles/best-free-habit-trackers-no-subscription";
 import { postFreeInvoiceGeneratorsFreelancersCompared } from "./articles/free-invoice-generators-freelancers-compared";
+import { postFreeKeywordResearchTools2026Compared } from "./articles/free-keyword-research-tools-2026-compared";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postFreeKeywordResearchTools2026Compared,
   postFreeInvoiceGeneratorsFreelancersCompared,
   postBestFreeHabitTrackersNoSubscription,
   postFreeAiMeetingNotesToolsCompared,
