@@ -140,8 +140,10 @@ import { postVectorDatabasesExplainedBeginners } from "./articles/vector-databas
 import { postWhatIsRagRetrievalAugmentedGeneration } from "./articles/what-is-rag-retrieval-augmented-generation";
 import { postLlmsTxtExplainedWebmasters } from "./articles/llms-txt-explained-webmasters";
 import { postWhatIsVibeCodingRisksExplained } from "./articles/what-is-vibe-coding-risks-explained";
+import { postOpenWeightsVsOpenSourceAiModelsExplained } from "./articles/open-weights-vs-open-source-ai-models-explained";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postOpenWeightsVsOpenSourceAiModelsExplained,
   postWhatIsVibeCodingRisksExplained,
   postLlmsTxtExplainedWebmasters,
   postWhatIsRagRetrievalAugmentedGeneration,
