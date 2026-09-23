@@ -137,8 +137,10 @@ import { postFreeCoreWebVitalsTestingTools } from "./articles/free-core-web-vita
 import { postWhatIsMcpModelContextProtocolExplained } from "./articles/what-is-mcp-model-context-protocol-explained";
 import { postAiAgentsVsChatbotsExplained } from "./articles/ai-agents-vs-chatbots-explained";
 import { postVectorDatabasesExplainedBeginners } from "./articles/vector-databases-explained-beginners";
+import { postWhatIsRagRetrievalAugmentedGeneration } from "./articles/what-is-rag-retrieval-augmented-generation";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postWhatIsRagRetrievalAugmentedGeneration,
   postVectorDatabasesExplainedBeginners,
   postAiAgentsVsChatbotsExplained,
   postWhatIsMcpModelContextProtocolExplained,
