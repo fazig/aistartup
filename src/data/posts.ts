@@ -142,8 +142,10 @@ import { postLlmsTxtExplainedWebmasters } from "./articles/llms-txt-explained-we
 import { postWhatIsVibeCodingRisksExplained } from "./articles/what-is-vibe-coding-risks-explained";
 import { postOpenWeightsVsOpenSourceAiModelsExplained } from "./articles/open-weights-vs-open-source-ai-models-explained";
 import { postSoraVsVeoVideoModelsCompared } from "./articles/sora-vs-veo-video-models-compared";
+import { postHowToBuildAnAiAgentWithNoCodeFreeTools } from "./articles/how-to-build-an-ai-agent-with-no-code-free-tools";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postHowToBuildAnAiAgentWithNoCodeFreeTools,
   postSoraVsVeoVideoModelsCompared,
   postOpenWeightsVsOpenSourceAiModelsExplained,
   postWhatIsVibeCodingRisksExplained,
