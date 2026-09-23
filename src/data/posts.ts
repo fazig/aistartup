@@ -128,8 +128,10 @@ import { postBestFreeNotionAlternatives2026 } from "./articles/best-free-notion-
 import { postBestFreeTodoistAlternatives2026 } from "./articles/best-free-todoist-alternatives-2026";
 import { postFreeAiMeetingNotesToolsCompared } from "./articles/free-ai-meeting-notes-tools-compared";
 import { postBestFreeHabitTrackersNoSubscription } from "./articles/best-free-habit-trackers-no-subscription";
+import { postFreeInvoiceGeneratorsFreelancersCompared } from "./articles/free-invoice-generators-freelancers-compared";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postFreeInvoiceGeneratorsFreelancersCompared,
   postBestFreeHabitTrackersNoSubscription,
   postFreeAiMeetingNotesToolsCompared,
   postBestFreeTodoistAlternatives2026,
