@@ -134,8 +134,10 @@ import { postFreeBacklinkCheckersThatActuallyWork } from "./articles/free-backli
 import { postHowToAddSchemaMarkupWithoutPlugins } from "./articles/how-to-add-schema-markup-without-plugins";
 import { postHowToFindBrokenLinksFree } from "./articles/how-to-find-broken-links-free";
 import { postFreeCoreWebVitalsTestingTools } from "./articles/free-core-web-vitals-testing-tools";
+import { postWhatIsMcpModelContextProtocolExplained } from "./articles/what-is-mcp-model-context-protocol-explained";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postWhatIsMcpModelContextProtocolExplained,
   postHowToFindBrokenLinksFree,
   postFreeCoreWebVitalsTestingTools,
   postHowToAddSchemaMarkupWithoutPlugins,
