@@ -136,8 +136,10 @@ import { postHowToFindBrokenLinksFree } from "./articles/how-to-find-broken-link
 import { postFreeCoreWebVitalsTestingTools } from "./articles/free-core-web-vitals-testing-tools";
 import { postWhatIsMcpModelContextProtocolExplained } from "./articles/what-is-mcp-model-context-protocol-explained";
 import { postAiAgentsVsChatbotsExplained } from "./articles/ai-agents-vs-chatbots-explained";
+import { postVectorDatabasesExplainedBeginners } from "./articles/vector-databases-explained-beginners";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postVectorDatabasesExplainedBeginners,
   postAiAgentsVsChatbotsExplained,
   postWhatIsMcpModelContextProtocolExplained,
   postHowToFindBrokenLinksFree,
