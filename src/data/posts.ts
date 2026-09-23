@@ -143,8 +143,10 @@ import { postWhatIsVibeCodingRisksExplained } from "./articles/what-is-vibe-codi
 import { postOpenWeightsVsOpenSourceAiModelsExplained } from "./articles/open-weights-vs-open-source-ai-models-explained";
 import { postSoraVsVeoVideoModelsCompared } from "./articles/sora-vs-veo-video-models-compared";
 import { postHowToBuildAnAiAgentWithNoCodeFreeTools } from "./articles/how-to-build-an-ai-agent-with-no-code-free-tools";
+import { postEdgeComputingVsCloudExplained2026 } from "./articles/edge-computing-vs-cloud-explained-2026";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postEdgeComputingVsCloudExplained2026,
   postHowToBuildAnAiAgentWithNoCodeFreeTools,
   postSoraVsVeoVideoModelsCompared,
   postOpenWeightsVsOpenSourceAiModelsExplained,
