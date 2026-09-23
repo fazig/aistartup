@@ -144,8 +144,10 @@ import { postOpenWeightsVsOpenSourceAiModelsExplained } from "./articles/open-we
 import { postSoraVsVeoVideoModelsCompared } from "./articles/sora-vs-veo-video-models-compared";
 import { postHowToBuildAnAiAgentWithNoCodeFreeTools } from "./articles/how-to-build-an-ai-agent-with-no-code-free-tools";
 import { postEdgeComputingVsCloudExplained2026 } from "./articles/edge-computing-vs-cloud-explained-2026";
+import { postBestFreeAiAgentFrameworks2026 } from "./articles/best-free-ai-agent-frameworks-2026";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postBestFreeAiAgentFrameworks2026,
   postEdgeComputingVsCloudExplained2026,
   postHowToBuildAnAiAgentWithNoCodeFreeTools,
   postSoraVsVeoVideoModelsCompared,
