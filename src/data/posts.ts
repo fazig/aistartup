@@ -127,8 +127,10 @@ import { postFreeVideoCompressorsWhatsappSharing } from "./articles/free-video-c
 import { postBestFreeNotionAlternatives2026 } from "./articles/best-free-notion-alternatives-2026";
 import { postBestFreeTodoistAlternatives2026 } from "./articles/best-free-todoist-alternatives-2026";
 import { postFreeAiMeetingNotesToolsCompared } from "./articles/free-ai-meeting-notes-tools-compared";
+import { postBestFreeHabitTrackersNoSubscription } from "./articles/best-free-habit-trackers-no-subscription";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postBestFreeHabitTrackersNoSubscription,
   postFreeAiMeetingNotesToolsCompared,
   postBestFreeTodoistAlternatives2026,
   postBestFreeNotionAlternatives2026,
