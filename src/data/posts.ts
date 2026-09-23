@@ -131,8 +131,10 @@ import { postBestFreeHabitTrackersNoSubscription } from "./articles/best-free-ha
 import { postFreeInvoiceGeneratorsFreelancersCompared } from "./articles/free-invoice-generators-freelancers-compared";
 import { postFreeKeywordResearchTools2026Compared } from "./articles/free-keyword-research-tools-2026-compared";
 import { postFreeBacklinkCheckersThatActuallyWork } from "./articles/free-backlink-checkers-that-actually-work";
+import { postHowToAddSchemaMarkupWithoutPlugins } from "./articles/how-to-add-schema-markup-without-plugins";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postHowToAddSchemaMarkupWithoutPlugins,
   postFreeBacklinkCheckersThatActuallyWork,
   postFreeKeywordResearchTools2026Compared,
   postFreeInvoiceGeneratorsFreelancersCompared,
