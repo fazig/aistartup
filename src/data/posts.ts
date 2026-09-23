@@ -141,8 +141,10 @@ import { postWhatIsRagRetrievalAugmentedGeneration } from "./articles/what-is-ra
 import { postLlmsTxtExplainedWebmasters } from "./articles/llms-txt-explained-webmasters";
 import { postWhatIsVibeCodingRisksExplained } from "./articles/what-is-vibe-coding-risks-explained";
 import { postOpenWeightsVsOpenSourceAiModelsExplained } from "./articles/open-weights-vs-open-source-ai-models-explained";
+import { postSoraVsVeoVideoModelsCompared } from "./articles/sora-vs-veo-video-models-compared";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postSoraVsVeoVideoModelsCompared,
   postOpenWeightsVsOpenSourceAiModelsExplained,
   postWhatIsVibeCodingRisksExplained,
   postLlmsTxtExplainedWebmasters,
