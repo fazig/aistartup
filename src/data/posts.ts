@@ -138,8 +138,10 @@ import { postWhatIsMcpModelContextProtocolExplained } from "./articles/what-is-m
 import { postAiAgentsVsChatbotsExplained } from "./articles/ai-agents-vs-chatbots-explained";
 import { postVectorDatabasesExplainedBeginners } from "./articles/vector-databases-explained-beginners";
 import { postWhatIsRagRetrievalAugmentedGeneration } from "./articles/what-is-rag-retrieval-augmented-generation";
+import { postLlmsTxtExplainedWebmasters } from "./articles/llms-txt-explained-webmasters";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postLlmsTxtExplainedWebmasters,
   postWhatIsRagRetrievalAugmentedGeneration,
   postVectorDatabasesExplainedBeginners,
   postAiAgentsVsChatbotsExplained,
