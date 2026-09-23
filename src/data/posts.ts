@@ -123,8 +123,10 @@ import { postFreeSvgEditorsCompared2026 } from "./articles/free-svg-editors-comp
 import { postBestFreePhotoBackgroundRemoversTested } from "./articles/best-free-photo-background-removers-tested";
 import { postFreeColorPaletteGeneratorsDevelopers } from "./articles/free-color-palette-generators-developers";
 import { postBestFreeMockupGenerators2026 } from "./articles/best-free-mockup-generators-2026";
+import { postFreeVideoCompressorsWhatsappSharing } from "./articles/free-video-compressors-whatsapp-sharing";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postFreeVideoCompressorsWhatsappSharing,
   postBestFreeMockupGenerators2026,
   postFreeColorPaletteGeneratorsDevelopers,
   postBestFreePhotoBackgroundRemoversTested,
