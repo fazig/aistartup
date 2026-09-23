@@ -18,7 +18,7 @@ Every app below has a real free plan — not a trial that expires after two week
 
 ## 1. TickTick — best all-rounder for personal productivity
 
-TickTick is the closest thing to Todoist with extras. It has the fast quick-add, labels, lists, and recurring tasks you already know, then adds habit tracking and a built-in Pomodoro timer — two things Todoist has never offered natively. The free plan covers the core of it, with premium starting at $2.99 per month ($49.99 per year) if you ever want it.
+TickTick is the closest thing to Todoist with extras. It has the fast quick-add, labels, lists, and recurring tasks you already know, then adds habit tracking and a built-in Pomodoro timer — two things Todoist has never offered natively. The free plan covers the core of it, with premium at $3.99 per month or $35.99 per year ($49.99 list price) if you ever want it.
 
 The calendar view is genuinely useful, and the mobile apps are among the best in this roundup. If you liked Todoist but wanted it to do more for your day as a whole, TickTick is the easiest switch: you can rebuild your projects in an afternoon and barely notice the change.
 
@@ -44,7 +44,7 @@ There is no catch and no upsell — this is just a free utility from Google.
 
 Any.do merges your tasks, calendar, and reminders into a single planner, which makes it ideal if you plan your day by time rather than by list. The signature Moment feature walks you through a daily planning ritual each morning, and the design is cleaner than most competitors.
 
-The free plan covers basic personal use, with premium starting at $4 per user per month for teams and power features. The apps are polished on every platform, and voice entry works better here than in most rivals.
+The free plan covers basic personal use, with premium starting at $4.99 per month billed annually ($4.99 per user per month for Teams) for teams and power features. The apps are polished on every platform, and voice entry works better here than in most rivals.
 
 **Watch out for:** team collaboration and some advanced reminder features are paywalled, so it suits solo planners best.
 
@@ -68,13 +68,13 @@ For shared household lists, editorial pipelines, or job hunts, the board metapho
 
 This is the pick for the team that outgrew Todoist's five-collaborator limit. Asana's free plan supports up to 10 users with unlimited tasks and projects, plus list, board, and calendar views — a remarkable amount for free. Paid plans start at $10.99 per user per month.
 
-Collaboration is where Asana earns its place: task assignments, comments, custom fields, dependencies, and project timelines that Todoist's flat structure cannot match. For a student group, a freelance crew, or a small startup, it is hard to beat.
+Collaboration is where Asana earns its place: task assignments, comments, dependencies, custom fields, and project timelines that Todoist's flat structure cannot match — though note that custom fields and timelines are paid-plan features, not on the free tier. For a student group, a freelance crew, or a small startup, it is hard to beat.
 
 **Watch out for:** solo users may find it heavy, and advanced automations and reporting require a paid plan.
 
 ## 8. ClickUp — best feature-packed free tier
 
-ClickUp's free tier is famously generous: unlimited tasks and members, multiple views (list, board, calendar, Gantt), docs, goals, chat, and native time tracking. Paid plans start at $5 per user per month. If you left Todoist because you wanted everything in one place — tasks, notes, docs, and time tracking — ClickUp is the answer.
+ClickUp's free tier is famously generous: unlimited tasks and members, multiple views (list, board, calendar, and limited Gantt), docs, goals, chat, and native time tracking. Paid plans start at $7 per user per month billed annually ($10 month-to-month). If you left Todoist because you wanted everything in one place — tasks, notes, docs, and time tracking — ClickUp is the answer.
 
 The customization goes deep: custom statuses, custom fields, and automations let you build exactly the workflow you want. It is the most complete free offering in this roundup by a wide margin.
 
