@@ -124,8 +124,10 @@ import { postBestFreePhotoBackgroundRemoversTested } from "./articles/best-free-
 import { postFreeColorPaletteGeneratorsDevelopers } from "./articles/free-color-palette-generators-developers";
 import { postBestFreeMockupGenerators2026 } from "./articles/best-free-mockup-generators-2026";
 import { postFreeVideoCompressorsWhatsappSharing } from "./articles/free-video-compressors-whatsapp-sharing";
+import { postBestFreeNotionAlternatives2026 } from "./articles/best-free-notion-alternatives-2026";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postBestFreeNotionAlternatives2026,
   postFreeVideoCompressorsWhatsappSharing,
   postBestFreeMockupGenerators2026,
   postFreeColorPaletteGeneratorsDevelopers,
