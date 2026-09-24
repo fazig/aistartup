@@ -159,8 +159,10 @@ import { postAiBackgroundMusicGeneratorsYoutubeCompared } from "./articles/ai-ba
 import { postHowToMakeAiVideoWithConsistentCharacters2026 } from "./articles/how-to-make-ai-video-with-consistent-characters-2026";
 import { postFreeAiLipSyncToolsTested2026 } from "./articles/free-ai-lip-sync-tools-tested-2026";
 import { postBestAiDubbingToolsYoutube2026 } from "./articles/best-ai-dubbing-tools-youtube-2026";
+import { postHowToCreateAiThumbnailsThatGetClicks } from "./articles/how-to-create-ai-thumbnails-that-get-clicks";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postHowToCreateAiThumbnailsThatGetClicks,
   postBestAiDubbingToolsYoutube2026,
   postFreeAiLipSyncToolsTested2026,
   postHowToMakeAiVideoWithConsistentCharacters2026,
