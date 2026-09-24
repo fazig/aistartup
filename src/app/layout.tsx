@@ -81,12 +81,6 @@ export default function RootLayout({
           async
           data-cfasync="false"
         />
-        <script
-          src="https://nap5k.com/tag.min.js"
-          data-zone="11882077"
-          async
-          data-cfasync="false"
-        />
         <meta name="monetag" content="56c3d7a6cd087ba9ed4c76f8f538586d" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
@@ -101,6 +95,15 @@ export default function RootLayout({
       </head>
       <body className={inter.variable}>
         <Header />
+        {/* Monetag banner ad (zone 11882077) */}
+        <div style={{ display: "flex", justifyContent: "center", width: "100%" }}>
+          <script
+            src="https://nap5k.com/tag.min.js"
+            data-zone="11882077"
+            async
+            data-cfasync="false"
+          />
+        </div>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
