@@ -149,8 +149,10 @@ import { postBestFreeAiImageUpscalersPrintQuality } from "./articles/best-free-a
 import { postPasskeysVsPasswordsSetupGuide } from "./articles/passkeys-vs-passwords-setup-guide";
 import { postWhatIsWebgpuBrowserAiExplained } from "./articles/what-is-webgpu-browser-ai-explained";
 import { postRssIsBackWhy2026 } from "./articles/rss-is-back-why-2026";
+import { postBestFreeLinkInBioTools2026 } from "./articles/best-free-link-in-bio-tools-2026";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postBestFreeLinkInBioTools2026,
   postRssIsBackWhy2026,
   postWhatIsWebgpuBrowserAiExplained,
   postPasskeysVsPasswordsSetupGuide,
