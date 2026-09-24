@@ -146,9 +146,11 @@ import { postHowToBuildAnAiAgentWithNoCodeFreeTools } from "./articles/how-to-bu
 import { postEdgeComputingVsCloudExplained2026 } from "./articles/edge-computing-vs-cloud-explained-2026";
 import { postBestFreeAiAgentFrameworks2026 } from "./articles/best-free-ai-agent-frameworks-2026";
 import { postBestFreeAiImageUpscalersPrintQuality } from "./articles/best-free-ai-image-upscalers-print-quality";
+import { postPasskeysVsPasswordsSetupGuide } from "./articles/passkeys-vs-passwords-setup-guide";
 
 export const BLOG_POSTS: BlogPost[] = [
-  postBestFreeAiImageUpscalersPrintQuality,
+  postPasskeysVsPasswordsSetupGuide,
+postBestFreeAiImageUpscalersPrintQuality,
   postBestFreeAiAgentFrameworks2026,
   postEdgeComputingVsCloudExplained2026,
   postHowToBuildAnAiAgentWithNoCodeFreeTools,
