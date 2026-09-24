@@ -168,8 +168,10 @@ import { postOllamaVsLmStudioComparedBeginners } from "./articles/ollama-vs-lm-s
 import { postHowToFineTuneSmallLlmOnYourOwnDataFree } from "./articles/how-to-fine-tune-small-llm-on-your-own-data-free";
 import { postFreeGpuOptionsForRunningLlms } from "./articles/free-gpu-options-for-running-llms";
 import { postHowToQuantizeLlmModelsExplainedGguf } from "./articles/how-to-quantize-llm-models-explained-gguf";
+import { postBestFreeAiTranscriptionSpeakerDiarization } from "./articles/best-free-ai-transcription-speaker-diarization";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postBestFreeAiTranscriptionSpeakerDiarization,
   postHowToQuantizeLlmModelsExplainedGguf,
   postFreeGpuOptionsForRunningLlms,
   postHowToFineTuneSmallLlmOnYourOwnDataFree,
