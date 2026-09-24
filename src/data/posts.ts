@@ -163,7 +163,10 @@ import { postHowToCreateAiThumbnailsThatGetClicks } from "./articles/how-to-crea
 import { postAiSeoContentWritersComparedFreeTrials } from "./articles/ai-seo-content-writers-compared-free-trials";
 
 import { postHowToWriteAiPromptsForCodingAssistants } from "./articles/how-to-write-ai-prompts-for-coding-assistants";
+import { postBestOpenWeightLlmForCoding2026 } from "./articles/best-open-weight-llm-for-coding-2026";
+
 export const BLOG_POSTS: BlogPost[] = [
+  postBestOpenWeightLlmForCoding2026,
   postHowToWriteAiPromptsForCodingAssistants,
   postAiSeoContentWritersComparedFreeTrials,
   postHowToCreateAiThumbnailsThatGetClicks,
