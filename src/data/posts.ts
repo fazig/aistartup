@@ -157,8 +157,10 @@ import { postAiAgentsVsChatbotsWhichToUse2026 } from "./articles/ai-agents-vs-ch
 import { postHowToConnectClaudeToGoogleDriveWithMcp } from "./articles/how-to-connect-claude-to-google-drive-with-mcp";
 import { postAiBackgroundMusicGeneratorsYoutubeCompared } from "./articles/ai-background-music-generators-youtube-compared";
 import { postHowToMakeAiVideoWithConsistentCharacters2026 } from "./articles/how-to-make-ai-video-with-consistent-characters-2026";
+import { postFreeAiLipSyncToolsTested2026 } from "./articles/free-ai-lip-sync-tools-tested-2026";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postFreeAiLipSyncToolsTested2026,
   postHowToMakeAiVideoWithConsistentCharacters2026,
   postAiBackgroundMusicGeneratorsYoutubeCompared,
   postHowToConnectClaudeToGoogleDriveWithMcp,
