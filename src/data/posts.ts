@@ -155,8 +155,10 @@ import { postBestFreeNewsletterPlatforms2026 } from "./articles/best-free-newsle
 import { postWhatIsMcpServerHowToSetUp } from "./articles/what-is-mcp-server-how-to-set-up";
 import { postAiAgentsVsChatbotsWhichToUse2026 } from "./articles/ai-agents-vs-chatbots-which-to-use-2026";
 import { postHowToConnectClaudeToGoogleDriveWithMcp } from "./articles/how-to-connect-claude-to-google-drive-with-mcp";
+import { postAiBackgroundMusicGeneratorsYoutubeCompared } from "./articles/ai-background-music-generators-youtube-compared";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postAiBackgroundMusicGeneratorsYoutubeCompared,
   postHowToConnectClaudeToGoogleDriveWithMcp,
   postWhatIsMcpServerHowToSetUp,
   postAiAgentsVsChatbotsWhichToUse2026,
