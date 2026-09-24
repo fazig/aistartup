@@ -162,7 +162,9 @@ import { postBestAiDubbingToolsYoutube2026 } from "./articles/best-ai-dubbing-to
 import { postHowToCreateAiThumbnailsThatGetClicks } from "./articles/how-to-create-ai-thumbnails-that-get-clicks";
 import { postAiSeoContentWritersComparedFreeTrials } from "./articles/ai-seo-content-writers-compared-free-trials";
 
+import { postHowToWriteAiPromptsForCodingAssistants } from "./articles/how-to-write-ai-prompts-for-coding-assistants";
 export const BLOG_POSTS: BlogPost[] = [
+  postHowToWriteAiPromptsForCodingAssistants,
   postAiSeoContentWritersComparedFreeTrials,
   postHowToCreateAiThumbnailsThatGetClicks,
   postBestAiDubbingToolsYoutube2026,
