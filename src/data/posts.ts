@@ -147,8 +147,10 @@ import { postEdgeComputingVsCloudExplained2026 } from "./articles/edge-computing
 import { postBestFreeAiAgentFrameworks2026 } from "./articles/best-free-ai-agent-frameworks-2026";
 import { postBestFreeAiImageUpscalersPrintQuality } from "./articles/best-free-ai-image-upscalers-print-quality";
 import { postPasskeysVsPasswordsSetupGuide } from "./articles/passkeys-vs-passwords-setup-guide";
+import { postWhatIsWebgpuBrowserAiExplained } from "./articles/what-is-webgpu-browser-ai-explained";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postWhatIsWebgpuBrowserAiExplained,
   postPasskeysVsPasswordsSetupGuide,
 postBestFreeAiImageUpscalersPrintQuality,
   postBestFreeAiAgentFrameworks2026,
