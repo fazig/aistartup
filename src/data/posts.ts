@@ -165,8 +165,10 @@ import { postAiSeoContentWritersComparedFreeTrials } from "./articles/ai-seo-con
 import { postHowToWriteAiPromptsForCodingAssistants } from "./articles/how-to-write-ai-prompts-for-coding-assistants";
 import { postBestOpenWeightLlmForCoding2026 } from "./articles/best-open-weight-llm-for-coding-2026";
 import { postOllamaVsLmStudioComparedBeginners } from "./articles/ollama-vs-lm-studio-compared-beginners";
+import { postHowToFineTuneSmallLlmOnYourOwnDataFree } from "./articles/how-to-fine-tune-small-llm-on-your-own-data-free";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postHowToFineTuneSmallLlmOnYourOwnDataFree,
   postOllamaVsLmStudioComparedBeginners,
   postBestOpenWeightLlmForCoding2026,
   postHowToWriteAiPromptsForCodingAssistants,
