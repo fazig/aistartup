@@ -160,8 +160,10 @@ import { postHowToMakeAiVideoWithConsistentCharacters2026 } from "./articles/how
 import { postFreeAiLipSyncToolsTested2026 } from "./articles/free-ai-lip-sync-tools-tested-2026";
 import { postBestAiDubbingToolsYoutube2026 } from "./articles/best-ai-dubbing-tools-youtube-2026";
 import { postHowToCreateAiThumbnailsThatGetClicks } from "./articles/how-to-create-ai-thumbnails-that-get-clicks";
+import { postAiSeoContentWritersComparedFreeTrials } from "./articles/ai-seo-content-writers-compared-free-trials";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postAiSeoContentWritersComparedFreeTrials,
   postHowToCreateAiThumbnailsThatGetClicks,
   postBestAiDubbingToolsYoutube2026,
   postFreeAiLipSyncToolsTested2026,
