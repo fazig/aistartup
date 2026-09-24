@@ -152,9 +152,11 @@ import { postRssIsBackWhy2026 } from "./articles/rss-is-back-why-2026";
 import { postBestFreeLinkInBioTools2026 } from "./articles/best-free-link-in-bio-tools-2026";
 import { postFreeMediaKitsCreatorsCompared } from "./articles/free-media-kits-creators-compared";
 import { postBestFreeNewsletterPlatforms2026 } from "./articles/best-free-newsletter-platforms-2026";
+import { postWhatIsMcpServerHowToSetUp } from "./articles/what-is-mcp-server-how-to-set-up";
 import { postAiAgentsVsChatbotsWhichToUse2026 } from "./articles/ai-agents-vs-chatbots-which-to-use-2026";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postWhatIsMcpServerHowToSetUp,
   postAiAgentsVsChatbotsWhichToUse2026,
   postBestFreeNewsletterPlatforms2026,
   postFreeMediaKitsCreatorsCompared,
