@@ -186,7 +186,9 @@ import { postBestFreeScreenRecordersForTutorials2026 } from "./articles/best-fre
 import { postHowToCompressImagesForWebWithoutLosingQuality } from "./articles/how-to-compress-images-for-web-without-losing-quality";
 import { postBestFreeBulkImageResizersCompared } from "./articles/best-free-bulk-image-resizers-compared";
 import { postHowToScheduleSocialMediaPostsFreeTools } from "./articles/how-to-schedule-social-media-posts-free-tools";
+import { postBestFreeAiCaptionGeneratorsReels } from "./articles/best-free-ai-caption-generators-reels";
 export const BLOG_POSTS: BlogPost[] = [
+  postBestFreeAiCaptionGeneratorsReels,
   postHowToScheduleSocialMediaPostsFreeTools,
   postBestFreeBulkImageResizersCompared,
   postHowToCompressImagesForWebWithoutLosingQuality,
