@@ -191,7 +191,9 @@ import { postHowToAddSubtitlesToVideoAutomaticallyFree } from "./articles/how-to
 import { postBestOpenWeightVideoModels2026 } from "./articles/best-open-weight-video-models-2026";
 import { postBestFreeAiSummarizersForLongArticles } from "./articles/best-free-ai-summarizers-for-long-articles";
 import { postBestFreeAiMindMappingToolsCompared } from "./articles/best-free-ai-mind-mapping-tools-compared";
+import { postHowToCreateQuizzesWithAiForTeachers } from "./articles/how-to-create-quizzes-with-ai-for-teachers";
 export const BLOG_POSTS: BlogPost[] = [
+  postHowToCreateQuizzesWithAiForTeachers,
   postBestFreeAiMindMappingToolsCompared,
   postBestFreeAiSummarizersForLongArticles,
   postBestOpenWeightVideoModels2026,
