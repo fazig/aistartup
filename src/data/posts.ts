@@ -192,7 +192,9 @@ import { postBestOpenWeightVideoModels2026 } from "./articles/best-open-weight-v
 import { postBestFreeAiSummarizersForLongArticles } from "./articles/best-free-ai-summarizers-for-long-articles";
 import { postBestFreeAiMindMappingToolsCompared } from "./articles/best-free-ai-mind-mapping-tools-compared";
 import { postHowToCreateQuizzesWithAiForTeachers } from "./articles/how-to-create-quizzes-with-ai-for-teachers";
+import { postBestFreeAiLessonPlanGenerators } from "./articles/best-free-ai-lesson-plan-generators";
 export const BLOG_POSTS: BlogPost[] = [
+  postBestFreeAiLessonPlanGenerators,
   postHowToCreateQuizzesWithAiForTeachers,
   postBestFreeAiMindMappingToolsCompared,
   postBestFreeAiSummarizersForLongArticles,
