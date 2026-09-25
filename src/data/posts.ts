@@ -174,8 +174,10 @@ import { postAiNoteTakingAppsStudentsCompared2026 } from "./articles/ai-note-tak
 import { postFreeAiPlagiarismCheckersThatWork } from "./articles/free-ai-plagiarism-checkers-that-work";
 import { postHowToReduceLlmApiCostsWithPromptCaching } from "./articles/how-to-reduce-llm-api-costs-with-prompt-caching";
 import { postHowToDetectAiGeneratedTextReliably } from "./articles/how-to-detect-ai-generated-text-reliably";
+import { postAiMeetingSummariesZoomVsTeams } from "./articles/ai-meeting-summaries-zoom-vs-teams";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postAiMeetingSummariesZoomVsTeams,
   postHowToDetectAiGeneratedTextReliably,
   postHowToReduceLlmApiCostsWithPromptCaching,
   postAiNoteTakingAppsStudentsCompared2026,
