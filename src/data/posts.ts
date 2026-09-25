@@ -185,7 +185,9 @@ import { postHowToTranscribeYoutubeVideosToTextFree } from "./articles/how-to-tr
 import { postBestFreeScreenRecordersForTutorials2026 } from "./articles/best-free-screen-recorders-for-tutorials-2026";
 import { postHowToCompressImagesForWebWithoutLosingQuality } from "./articles/how-to-compress-images-for-web-without-losing-quality";
 import { postBestFreeBulkImageResizersCompared } from "./articles/best-free-bulk-image-resizers-compared";
+import { postHowToScheduleSocialMediaPostsFreeTools } from "./articles/how-to-schedule-social-media-posts-free-tools";
 export const BLOG_POSTS: BlogPost[] = [
+  postHowToScheduleSocialMediaPostsFreeTools,
   postBestFreeBulkImageResizersCompared,
   postHowToCompressImagesForWebWithoutLosingQuality,
   postBestFreeScreenRecordersForTutorials2026,
