@@ -176,8 +176,10 @@ import { postHowToReduceLlmApiCostsWithPromptCaching } from "./articles/how-to-r
 import { postHowToDetectAiGeneratedTextReliably } from "./articles/how-to-detect-ai-generated-text-reliably";
 import { postAiMeetingSummariesZoomVsTeams } from "./articles/ai-meeting-summaries-zoom-vs-teams";
 import { postBestFreeAiHeadshotGeneratorsLinkedin } from "./articles/best-free-ai-headshot-generators-linkedin";
+import { postHowToStartAFacelessYoutubeChannelWithAiTools } from "./articles/how-to-start-a-faceless-youtube-channel-with-ai-tools";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postHowToStartAFacelessYoutubeChannelWithAiTools,
   postBestFreeAiHeadshotGeneratorsLinkedin,
   postAiMeetingSummariesZoomVsTeams,
   postHowToDetectAiGeneratedTextReliably,
