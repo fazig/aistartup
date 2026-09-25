@@ -170,8 +170,10 @@ import { postFreeGpuOptionsForRunningLlms } from "./articles/free-gpu-options-fo
 import { postHowToQuantizeLlmModelsExplainedGguf } from "./articles/how-to-quantize-llm-models-explained-gguf";
 import { postHowToBuildAiVoiceAssistantWithLocalModels } from "./articles/how-to-build-ai-voice-assistant-with-local-models";
 import { postBestFreeAiTranscriptionSpeakerDiarization } from "./articles/best-free-ai-transcription-speaker-diarization";
+import { postAiNoteTakingAppsStudentsCompared2026 } from "./articles/ai-note-taking-apps-students-compared-2026";
 
 export const BLOG_POSTS: BlogPost[] = [
+  postAiNoteTakingAppsStudentsCompared2026,
   postHowToBuildAiVoiceAssistantWithLocalModels,
   postBestFreeAiTranscriptionSpeakerDiarization,
   postHowToQuantizeLlmModelsExplainedGguf,
