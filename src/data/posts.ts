@@ -180,7 +180,9 @@ import { postHowToStartAFacelessYoutubeChannelWithAiTools } from "./articles/how
 import { postBestFreeAiVideoEditorsBeginners } from "./articles/best-free-ai-video-editors-beginners";
 
 import { postHowToRemoveBackgroundNoiseFromAudioFreeAi } from "./articles/how-to-remove-background-noise-from-audio-free-ai";
+import { postBestFreeAiPodcastEditingTools } from "./articles/best-free-ai-podcast-editing-tools";
 export const BLOG_POSTS: BlogPost[] = [
+  postBestFreeAiPodcastEditingTools,
   postHowToRemoveBackgroundNoiseFromAudioFreeAi,
   postBestFreeAiVideoEditorsBeginners,
   postHowToStartAFacelessYoutubeChannelWithAiTools,
