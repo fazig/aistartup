@@ -181,7 +181,9 @@ import { postBestFreeAiVideoEditorsBeginners } from "./articles/best-free-ai-vid
 
 import { postHowToRemoveBackgroundNoiseFromAudioFreeAi } from "./articles/how-to-remove-background-noise-from-audio-free-ai";
 import { postBestFreeAiPodcastEditingTools } from "./articles/best-free-ai-podcast-editing-tools";
+import { postHowToTranscribeYoutubeVideosToTextFree } from "./articles/how-to-transcribe-youtube-videos-to-text-free";
 export const BLOG_POSTS: BlogPost[] = [
+  postHowToTranscribeYoutubeVideosToTextFree,
   postBestFreeAiPodcastEditingTools,
   postHowToRemoveBackgroundNoiseFromAudioFreeAi,
   postBestFreeAiVideoEditorsBeginners,
