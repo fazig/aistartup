@@ -179,7 +179,9 @@ import { postBestFreeAiHeadshotGeneratorsLinkedin } from "./articles/best-free-a
 import { postHowToStartAFacelessYoutubeChannelWithAiTools } from "./articles/how-to-start-a-faceless-youtube-channel-with-ai-tools";
 import { postBestFreeAiVideoEditorsBeginners } from "./articles/best-free-ai-video-editors-beginners";
 
+import { postHowToRemoveBackgroundNoiseFromAudioFreeAi } from "./articles/how-to-remove-background-noise-from-audio-free-ai";
 export const BLOG_POSTS: BlogPost[] = [
+  postHowToRemoveBackgroundNoiseFromAudioFreeAi,
   postBestFreeAiVideoEditorsBeginners,
   postHowToStartAFacelessYoutubeChannelWithAiTools,
   postBestFreeAiHeadshotGeneratorsLinkedin,
