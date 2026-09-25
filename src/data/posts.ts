@@ -183,7 +183,9 @@ import { postHowToRemoveBackgroundNoiseFromAudioFreeAi } from "./articles/how-to
 import { postBestFreeAiPodcastEditingTools } from "./articles/best-free-ai-podcast-editing-tools";
 import { postHowToTranscribeYoutubeVideosToTextFree } from "./articles/how-to-transcribe-youtube-videos-to-text-free";
 import { postBestFreeScreenRecordersForTutorials2026 } from "./articles/best-free-screen-recorders-for-tutorials-2026";
+import { postHowToCompressImagesForWebWithoutLosingQuality } from "./articles/how-to-compress-images-for-web-without-losing-quality";
 export const BLOG_POSTS: BlogPost[] = [
+  postHowToCompressImagesForWebWithoutLosingQuality,
   postBestFreeScreenRecordersForTutorials2026,
   postHowToTranscribeYoutubeVideosToTextFree,
   postBestFreeAiPodcastEditingTools,
