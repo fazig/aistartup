@@ -194,7 +194,9 @@ import { postBestFreeAiMindMappingToolsCompared } from "./articles/best-free-ai-
 import { postHowToCreateQuizzesWithAiForTeachers } from "./articles/how-to-create-quizzes-with-ai-for-teachers";
 import { postBestFreeAiLessonPlanGenerators } from "./articles/best-free-ai-lesson-plan-generators";
 import { postHowToUseAiForLanguageLearningEffectively } from "./articles/how-to-use-ai-for-language-learning-effectively";
+import { postFreeAiTextToSpeechVoicesCompared } from "./articles/free-ai-text-to-speech-voices-compared";
 export const BLOG_POSTS: BlogPost[] = [
+  postFreeAiTextToSpeechVoicesCompared,
   postHowToUseAiForLanguageLearningEffectively,
   postBestFreeAiLessonPlanGenerators,
   postHowToCreateQuizzesWithAiForTeachers,
