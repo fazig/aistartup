@@ -172,9 +172,10 @@ import { postHowToBuildAiVoiceAssistantWithLocalModels } from "./articles/how-to
 import { postBestFreeAiTranscriptionSpeakerDiarization } from "./articles/best-free-ai-transcription-speaker-diarization";
 import { postAiNoteTakingAppsStudentsCompared2026 } from "./articles/ai-note-taking-apps-students-compared-2026";
 import { postFreeAiPlagiarismCheckersThatWork } from "./articles/free-ai-plagiarism-checkers-that-work";
+import { postHowToReduceLlmApiCostsWithPromptCaching } from "./articles/how-to-reduce-llm-api-costs-with-prompt-caching";
 
 export const BLOG_POSTS: BlogPost[] = [
-  postFreeAiPlagiarismCheckersThatWork,
+  postHowToReduceLlmApiCostsWithPromptCaching,
   postAiNoteTakingAppsStudentsCompared2026,
   postHowToBuildAiVoiceAssistantWithLocalModels,
   postBestFreeAiTranscriptionSpeakerDiarization,
