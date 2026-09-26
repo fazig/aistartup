@@ -201,7 +201,9 @@ import { postBestFreeAiInterviewPracticeTools } from "./articles/best-free-ai-in
 import { postBestFreeAiDictationToolsWisprFlowAlternatives } from "./articles/best-free-ai-dictation-tools-wispr-flow-alternatives";
 import { postHowToUseGammaAiToCreatePresentationsFast } from "./articles/how-to-use-gamma-ai-to-create-presentations-fast";
 import { postBestFreeAiSpreadsheetTools2026 } from "./articles/best-free-ai-spreadsheet-tools-2026";
+import { postHowToAutomateInstagramDmsWithManychatFreePlan } from "./articles/how-to-automate-instagram-dms-with-manychat-free-plan";
 export const BLOG_POSTS: BlogPost[] = [
+  postHowToAutomateInstagramDmsWithManychatFreePlan,
   postBestFreeAiSpreadsheetTools2026,
   postHowToUseGammaAiToCreatePresentationsFast,
   postBestFreeAiDictationToolsWisprFlowAlternatives,
