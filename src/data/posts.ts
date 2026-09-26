@@ -199,7 +199,9 @@ import { postHowToUseChatgptForJobApplications2026 } from "./articles/how-to-use
 import { postHowToUseGranolaAiMeetingNotes } from "./articles/how-to-use-granola-ai-meeting-notes";
 import { postBestFreeAiInterviewPracticeTools } from "./articles/best-free-ai-interview-practice-tools";
 import { postBestFreeAiDictationToolsWisprFlowAlternatives } from "./articles/best-free-ai-dictation-tools-wispr-flow-alternatives";
+import { postHowToUseGammaAiToCreatePresentationsFast } from "./articles/how-to-use-gamma-ai-to-create-presentations-fast";
 export const BLOG_POSTS: BlogPost[] = [
+  postHowToUseGammaAiToCreatePresentationsFast,
   postBestFreeAiDictationToolsWisprFlowAlternatives,
   postHowToUseGranolaAiMeetingNotes,
   postBestFreeAiInterviewPracticeTools,
