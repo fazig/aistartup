@@ -204,7 +204,9 @@ import { postBestFreeAiSpreadsheetTools2026 } from "./articles/best-free-ai-spre
 import { postHowToAutomateInstagramDmsWithManychatFreePlan } from "./articles/how-to-automate-instagram-dms-with-manychat-free-plan";
 import { postBestFreeAiEmailAssistants2026 } from "./articles/best-free-ai-email-assistants-2026";
 import { postHowToBreakDownTasksWithGoblinTools } from "./articles/how-to-break-down-tasks-with-goblin-tools";
+import { postHowToOptimizeLinkedinProfileWithAiTools } from "./articles/how-to-optimize-linkedin-profile-with-ai-tools";
 export const BLOG_POSTS: BlogPost[] = [
+  postHowToOptimizeLinkedinProfileWithAiTools,
   postHowToBreakDownTasksWithGoblinTools,
   postBestFreeAiEmailAssistants2026,
   postHowToAutomateInstagramDmsWithManychatFreePlan,
