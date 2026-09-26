@@ -195,7 +195,9 @@ import { postHowToCreateQuizzesWithAiForTeachers } from "./articles/how-to-creat
 import { postBestFreeAiLessonPlanGenerators } from "./articles/best-free-ai-lesson-plan-generators";
 import { postHowToUseAiForLanguageLearningEffectively } from "./articles/how-to-use-ai-for-language-learning-effectively";
 import { postFreeAiTextToSpeechVoicesCompared } from "./articles/free-ai-text-to-speech-voices-compared";
+import { postHowToUseChatgptForJobApplications2026 } from "./articles/how-to-use-chatgpt-for-job-applications-2026";
 export const BLOG_POSTS: BlogPost[] = [
+  postHowToUseChatgptForJobApplications2026,
   postFreeAiTextToSpeechVoicesCompared,
   postHowToUseAiForLanguageLearningEffectively,
   postBestFreeAiLessonPlanGenerators,
