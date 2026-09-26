@@ -198,7 +198,9 @@ import { postFreeAiTextToSpeechVoicesCompared } from "./articles/free-ai-text-to
 import { postHowToUseChatgptForJobApplications2026 } from "./articles/how-to-use-chatgpt-for-job-applications-2026";
 import { postHowToUseGranolaAiMeetingNotes } from "./articles/how-to-use-granola-ai-meeting-notes";
 import { postBestFreeAiInterviewPracticeTools } from "./articles/best-free-ai-interview-practice-tools";
+import { postBestFreeAiDictationToolsWisprFlowAlternatives } from "./articles/best-free-ai-dictation-tools-wispr-flow-alternatives";
 export const BLOG_POSTS: BlogPost[] = [
+  postBestFreeAiDictationToolsWisprFlowAlternatives,
   postHowToUseGranolaAiMeetingNotes,
   postBestFreeAiInterviewPracticeTools,
   postHowToUseChatgptForJobApplications2026,
