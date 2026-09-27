@@ -207,7 +207,9 @@ import { postHowToBreakDownTasksWithGoblinTools } from "./articles/how-to-break-
 import { postHowToOptimizeLinkedinProfileWithAiTools } from "./articles/how-to-optimize-linkedin-profile-with-ai-tools";
 import { postHowToWriteAltTextForImagesWithAiHelp } from "./articles/how-to-write-alt-text-for-images-with-ai-help";
 import { postBestFreeAiResumeBuilders2026 } from "./articles/best-free-ai-resume-builders-2026";
+import { postHowToUseClaudeProjectsForTeamWorkflows } from "./articles/how-to-use-claude-projects-for-team-workflows";
 export const BLOG_POSTS: BlogPost[] = [
+  postHowToUseClaudeProjectsForTeamWorkflows,
   postBestFreeAiResumeBuilders2026,
   postHowToWriteAltTextForImagesWithAiHelp,
   postHowToOptimizeLinkedinProfileWithAiTools,
