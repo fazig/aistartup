@@ -211,7 +211,9 @@ import { postHowToUseClaudeProjectsForTeamWorkflows } from "./articles/how-to-us
 import { postBestFreeAiCodingEditorsCursorAlternatives } from "./articles/best-free-ai-coding-editors-cursor-alternatives";
 import { postBestFreeAiVideoGeneratorsSeedanceAlternatives2026 } from "./articles/best-free-ai-video-generators-seedance-alternatives-2026";
 import { postHowToMakeAiThumbnailsPikzelsAlternativesFree } from "./articles/how-to-make-ai-thumbnails-pikzels-alternatives-free";
+import { postBestOpenWeightMusicModels2026 } from "./articles/best-open-weight-music-models-2026";
 export const BLOG_POSTS: BlogPost[] = [
+  postBestOpenWeightMusicModels2026,
   postHowToMakeAiThumbnailsPikzelsAlternativesFree,
   postBestFreeAiCodingEditorsCursorAlternatives,
   postHowToUseClaudeProjectsForTeamWorkflows,
