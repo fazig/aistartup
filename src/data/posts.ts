@@ -209,7 +209,9 @@ import { postHowToWriteAltTextForImagesWithAiHelp } from "./articles/how-to-writ
 import { postBestFreeAiResumeBuilders2026 } from "./articles/best-free-ai-resume-builders-2026";
 import { postHowToUseClaudeProjectsForTeamWorkflows } from "./articles/how-to-use-claude-projects-for-team-workflows";
 import { postBestFreeAiCodingEditorsCursorAlternatives } from "./articles/best-free-ai-coding-editors-cursor-alternatives";
+import { postBestFreeAiVideoGeneratorsSeedanceAlternatives2026 } from "./articles/best-free-ai-video-generators-seedance-alternatives-2026";
 export const BLOG_POSTS: BlogPost[] = [
+  postBestFreeAiVideoGeneratorsSeedanceAlternatives2026,
   postBestFreeAiCodingEditorsCursorAlternatives,
   postHowToUseClaudeProjectsForTeamWorkflows,
   postBestFreeAiResumeBuilders2026,
