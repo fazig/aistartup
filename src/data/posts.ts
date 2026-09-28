@@ -210,8 +210,9 @@ import { postBestFreeAiResumeBuilders2026 } from "./articles/best-free-ai-resume
 import { postHowToUseClaudeProjectsForTeamWorkflows } from "./articles/how-to-use-claude-projects-for-team-workflows";
 import { postBestFreeAiCodingEditorsCursorAlternatives } from "./articles/best-free-ai-coding-editors-cursor-alternatives";
 import { postBestFreeAiVideoGeneratorsSeedanceAlternatives2026 } from "./articles/best-free-ai-video-generators-seedance-alternatives-2026";
+import { postHowToMakeAiThumbnailsPikzelsAlternativesFree } from "./articles/how-to-make-ai-thumbnails-pikzels-alternatives-free";
 export const BLOG_POSTS: BlogPost[] = [
-  postBestFreeAiVideoGeneratorsSeedanceAlternatives2026,
+  postHowToMakeAiThumbnailsPikzelsAlternativesFree,
   postBestFreeAiCodingEditorsCursorAlternatives,
   postHowToUseClaudeProjectsForTeamWorkflows,
   postBestFreeAiResumeBuilders2026,
