@@ -212,7 +212,9 @@ import { postBestFreeAiCodingEditorsCursorAlternatives } from "./articles/best-f
 import { postBestFreeAiVideoGeneratorsSeedanceAlternatives2026 } from "./articles/best-free-ai-video-generators-seedance-alternatives-2026";
 import { postHowToMakeAiThumbnailsPikzelsAlternativesFree } from "./articles/how-to-make-ai-thumbnails-pikzels-alternatives-free";
 import { postBestOpenWeightMusicModels2026 } from "./articles/best-open-weight-music-models-2026";
+import { postBestFreeAiAppBuildersLovableAlternatives } from "./articles/best-free-ai-app-builders-lovable-alternatives";
 export const BLOG_POSTS: BlogPost[] = [
+  postBestFreeAiAppBuildersLovableAlternatives,
   postBestOpenWeightMusicModels2026,
   postHowToMakeAiThumbnailsPikzelsAlternativesFree,
   postBestFreeAiCodingEditorsCursorAlternatives,
