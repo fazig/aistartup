@@ -214,7 +214,9 @@ import { postHowToMakeAiThumbnailsPikzelsAlternativesFree } from "./articles/how
 import { postBestOpenWeightMusicModels2026 } from "./articles/best-open-weight-music-models-2026";
 import { postBestFreeAiAppBuildersLovableAlternatives } from "./articles/best-free-ai-app-builders-lovable-alternatives";
 import { postHowToUseBoltNewFreeCreditsWorkflow } from "./articles/how-to-use-bolt-new-free-credits-workflow";
+import { postFreeAiDesignToolsCanvaMagicStudioAlternatives } from "./articles/free-ai-design-tools-canva-magic-studio-alternatives";
 export const BLOG_POSTS: BlogPost[] = [
+  postFreeAiDesignToolsCanvaMagicStudioAlternatives,
   postHowToUseBoltNewFreeCreditsWorkflow,
   postBestFreeAiAppBuildersLovableAlternatives,
   postBestOpenWeightMusicModels2026,
