@@ -215,7 +215,9 @@ import { postBestOpenWeightMusicModels2026 } from "./articles/best-open-weight-m
 import { postBestFreeAiAppBuildersLovableAlternatives } from "./articles/best-free-ai-app-builders-lovable-alternatives";
 import { postHowToUseBoltNewFreeCreditsWorkflow } from "./articles/how-to-use-bolt-new-free-credits-workflow";
 import { postFreeAiDesignToolsCanvaMagicStudioAlternatives } from "./articles/free-ai-design-tools-canva-magic-studio-alternatives";
+import { postHowToBuildSecondBrainWithNotionAi } from "./articles/how-to-build-second-brain-with-notion-ai";
 export const BLOG_POSTS: BlogPost[] = [
+  postHowToBuildSecondBrainWithNotionAi,
   postFreeAiDesignToolsCanvaMagicStudioAlternatives,
   postHowToUseBoltNewFreeCreditsWorkflow,
   postBestFreeAiAppBuildersLovableAlternatives,
