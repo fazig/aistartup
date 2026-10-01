@@ -219,7 +219,9 @@ import { postHowToBuildSecondBrainWithNotionAi } from "./articles/how-to-build-s
 import { postHowToFactCheckWithGrokRealTimeSearch } from "./articles/how-to-fact-check-with-grok-real-time-search";
 import { postBestFreeAiResearchAssistants2026 } from "./articles/best-free-ai-research-assistants-2026";
 import { postHowToCreateAiVoiceoversElevenlabsFree } from "./articles/how-to-create-ai-voiceovers-elevenlabs-free";
+import { postHowToUseMicrosoftCopilotPagesFreeWorkflow } from "./articles/how-to-use-microsoft-copilot-pages-free-workflow";
 export const BLOG_POSTS: BlogPost[] = [
+  postHowToUseMicrosoftCopilotPagesFreeWorkflow,
   postHowToCreateAiVoiceoversElevenlabsFree,
   postBestFreeAiResearchAssistants2026,
   postHowToFactCheckWithGrokRealTimeSearch,
