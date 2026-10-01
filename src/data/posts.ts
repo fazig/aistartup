@@ -220,7 +220,9 @@ import { postHowToFactCheckWithGrokRealTimeSearch } from "./articles/how-to-fact
 import { postBestFreeAiResearchAssistants2026 } from "./articles/best-free-ai-research-assistants-2026";
 import { postHowToCreateAiVoiceoversElevenlabsFree } from "./articles/how-to-create-ai-voiceovers-elevenlabs-free";
 import { postHowToUseMicrosoftCopilotPagesFreeWorkflow } from "./articles/how-to-use-microsoft-copilot-pages-free-workflow";
+import { postHowToAutomateLeadCaptureWithChatMarketingTools } from "./articles/how-to-automate-lead-capture-with-chat-marketing-tools";
 export const BLOG_POSTS: BlogPost[] = [
+  postHowToAutomateLeadCaptureWithChatMarketingTools,
   postHowToUseMicrosoftCopilotPagesFreeWorkflow,
   postHowToCreateAiVoiceoversElevenlabsFree,
   postBestFreeAiResearchAssistants2026,
