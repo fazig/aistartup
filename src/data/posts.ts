@@ -218,7 +218,9 @@ import { postFreeAiDesignToolsCanvaMagicStudioAlternatives } from "./articles/fr
 import { postHowToBuildSecondBrainWithNotionAi } from "./articles/how-to-build-second-brain-with-notion-ai";
 import { postHowToFactCheckWithGrokRealTimeSearch } from "./articles/how-to-fact-check-with-grok-real-time-search";
 import { postBestFreeAiResearchAssistants2026 } from "./articles/best-free-ai-research-assistants-2026";
+import { postHowToCreateAiVoiceoversElevenlabsFree } from "./articles/how-to-create-ai-voiceovers-elevenlabs-free";
 export const BLOG_POSTS: BlogPost[] = [
+  postHowToCreateAiVoiceoversElevenlabsFree,
   postBestFreeAiResearchAssistants2026,
   postHowToFactCheckWithGrokRealTimeSearch,
   postHowToBuildSecondBrainWithNotionAi,
