@@ -221,7 +221,9 @@ import { postBestFreeAiResearchAssistants2026 } from "./articles/best-free-ai-re
 import { postHowToCreateAiVoiceoversElevenlabsFree } from "./articles/how-to-create-ai-voiceovers-elevenlabs-free";
 import { postHowToUseMicrosoftCopilotPagesFreeWorkflow } from "./articles/how-to-use-microsoft-copilot-pages-free-workflow";
 import { postHowToAutomateLeadCaptureWithChatMarketingTools } from "./articles/how-to-automate-lead-capture-with-chat-marketing-tools";
+import { postHowToUseChatgptAgentsApiWorkflow2026 } from "./articles/how-to-use-chatgpt-agents-api-workflow-2026";
 export const BLOG_POSTS: BlogPost[] = [
+  postHowToUseChatgptAgentsApiWorkflow2026,
   postHowToAutomateLeadCaptureWithChatMarketingTools,
   postHowToUseMicrosoftCopilotPagesFreeWorkflow,
   postHowToCreateAiVoiceoversElevenlabsFree,
