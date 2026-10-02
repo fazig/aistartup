@@ -223,7 +223,9 @@ import { postHowToUseMicrosoftCopilotPagesFreeWorkflow } from "./articles/how-to
 import { postHowToAutomateLeadCaptureWithChatMarketingTools } from "./articles/how-to-automate-lead-capture-with-chat-marketing-tools";
 import { postHowToUseChatgptAgentsApiWorkflow2026 } from "./articles/how-to-use-chatgpt-agents-api-workflow-2026";
 import { postBestFreeAiSurveyMakers2026 } from "./articles/best-free-ai-survey-makers-2026";
+import { postBestFreeAiPresentationMakersGammaAlternatives2026 } from "./articles/best-free-ai-presentation-makers-gamma-alternatives-2026";
 export const BLOG_POSTS: BlogPost[] = [
+  postBestFreeAiPresentationMakersGammaAlternatives2026,
   postBestFreeAiSurveyMakers2026,
   postHowToUseChatgptAgentsApiWorkflow2026,
   postHowToAutomateLeadCaptureWithChatMarketingTools,
