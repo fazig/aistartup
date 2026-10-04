@@ -229,7 +229,9 @@ import { postBestFreeNoCodeAutomationToolsN8nVsZapier2026 } from "./articles/bes
 import { postBestFreeAiDiagramGenerators2026 } from "./articles/best-free-ai-diagram-generators-2026";
 import { postHowToUseAiForResumeTailoring2026 } from "./articles/how-to-use-ai-for-resume-tailoring-2026";
 import { postHowToBuildAiCodingAgentAgenticCliTools } from "./articles/how-to-build-ai-coding-agent-agentic-cli-tools";
+import { postFreeAiMeetingAgendaBuildersCompared } from "./articles/free-ai-meeting-agenda-builders-compared";
 export const BLOG_POSTS: BlogPost[] = [
+  postFreeAiMeetingAgendaBuildersCompared,
   postHowToBuildAiCodingAgentAgenticCliTools,
   postHowToUseAiForResumeTailoring2026,
   postBestFreeAiDiagramGenerators2026,
