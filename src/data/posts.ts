@@ -227,7 +227,9 @@ import { postBestFreeAiPresentationMakersGammaAlternatives2026 } from "./article
 import { postTurnYoutubeVideosIntoBlogPostsAi } from "./articles/turn-youtube-videos-into-blog-posts-ai";
 import { postBestFreeNoCodeAutomationToolsN8nVsZapier2026 } from "./articles/best-free-no-code-automation-tools-n8n-vs-zapier-2026";
 import { postBestFreeAiDiagramGenerators2026 } from "./articles/best-free-ai-diagram-generators-2026";
+import { postHowToUseAiForResumeTailoring2026 } from "./articles/how-to-use-ai-for-resume-tailoring-2026";
 export const BLOG_POSTS: BlogPost[] = [
+  postHowToUseAiForResumeTailoring2026,
   postBestFreeAiDiagramGenerators2026,
   postBestFreeNoCodeAutomationToolsN8nVsZapier2026,
   postTurnYoutubeVideosIntoBlogPostsAi,
