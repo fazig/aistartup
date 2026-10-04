@@ -228,7 +228,9 @@ import { postTurnYoutubeVideosIntoBlogPostsAi } from "./articles/turn-youtube-vi
 import { postBestFreeNoCodeAutomationToolsN8nVsZapier2026 } from "./articles/best-free-no-code-automation-tools-n8n-vs-zapier-2026";
 import { postBestFreeAiDiagramGenerators2026 } from "./articles/best-free-ai-diagram-generators-2026";
 import { postHowToUseAiForResumeTailoring2026 } from "./articles/how-to-use-ai-for-resume-tailoring-2026";
+import { postHowToBuildAiCodingAgentAgenticCliTools } from "./articles/how-to-build-ai-coding-agent-agentic-cli-tools";
 export const BLOG_POSTS: BlogPost[] = [
+  postHowToBuildAiCodingAgentAgenticCliTools,
   postHowToUseAiForResumeTailoring2026,
   postBestFreeAiDiagramGenerators2026,
   postBestFreeNoCodeAutomationToolsN8nVsZapier2026,
