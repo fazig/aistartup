@@ -231,7 +231,9 @@ import { postHowToUseAiForResumeTailoring2026 } from "./articles/how-to-use-ai-f
 import { postHowToBuildAiCodingAgentAgenticCliTools } from "./articles/how-to-build-ai-coding-agent-agentic-cli-tools";
 import { postFreeAiMeetingAgendaBuildersCompared } from "./articles/free-ai-meeting-agenda-builders-compared";
 import { postBestFreeAiLogoMakers2026 } from "./articles/best-free-ai-logo-makers-2026";
+import { postRepurposePodcastEpisodesIntoShortsWithAi } from "./articles/repurpose-podcast-episodes-into-shorts-with-ai";
 export const BLOG_POSTS: BlogPost[] = [
+  postRepurposePodcastEpisodesIntoShortsWithAi,
   postBestFreeAiLogoMakers2026,
   postFreeAiMeetingAgendaBuildersCompared,
   postHowToBuildAiCodingAgentAgenticCliTools,
