@@ -235,7 +235,9 @@ import { postRepurposePodcastEpisodesIntoShortsWithAi } from "./articles/repurpo
 import { postHowToRunMultimodalModelsLocallyAppleSilicon } from "./articles/how-to-run-multimodal-models-locally-apple-silicon";
 import { postBestFreeAiDocumentScannersCompared } from "./articles/best-free-ai-document-scanners-compared";
 import { postBestFreeOpenrouterAlternatives2026 } from "./articles/best-free-openrouter-alternatives-2026";
+import { postBestFreeAiApiGateways2026Compared } from "./articles/best-free-ai-api-gateways-2026-compared";
 export const BLOG_POSTS: BlogPost[] = [
+  postBestFreeAiApiGateways2026Compared,
   postBestFreeOpenrouterAlternatives2026,
   postBestFreeAiDocumentScannersCompared,
   postHowToRunMultimodalModelsLocallyAppleSilicon,
