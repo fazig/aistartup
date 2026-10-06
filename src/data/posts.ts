@@ -233,7 +233,9 @@ import { postFreeAiMeetingAgendaBuildersCompared } from "./articles/free-ai-meet
 import { postBestFreeAiLogoMakers2026 } from "./articles/best-free-ai-logo-makers-2026";
 import { postRepurposePodcastEpisodesIntoShortsWithAi } from "./articles/repurpose-podcast-episodes-into-shorts-with-ai";
 import { postHowToRunMultimodalModelsLocallyAppleSilicon } from "./articles/how-to-run-multimodal-models-locally-apple-silicon";
+import { postBestFreeAiDocumentScannersCompared } from "./articles/best-free-ai-document-scanners-compared";
 export const BLOG_POSTS: BlogPost[] = [
+  postBestFreeAiDocumentScannersCompared,
   postHowToRunMultimodalModelsLocallyAppleSilicon,
   postRepurposePodcastEpisodesIntoShortsWithAi,
   postBestFreeAiLogoMakers2026,
