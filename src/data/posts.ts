@@ -236,7 +236,9 @@ import { postHowToRunMultimodalModelsLocallyAppleSilicon } from "./articles/how-
 import { postBestFreeAiDocumentScannersCompared } from "./articles/best-free-ai-document-scanners-compared";
 import { postBestFreeOpenrouterAlternatives2026 } from "./articles/best-free-openrouter-alternatives-2026";
 import { postBestFreeAiApiGateways2026Compared } from "./articles/best-free-ai-api-gateways-2026-compared";
+import { postHowToUseLitellmSelfHostedOpenrouterAlternative } from "./articles/how-to-use-litellm-self-hosted-openrouter-alternative";
 export const BLOG_POSTS: BlogPost[] = [
+  postHowToUseLitellmSelfHostedOpenrouterAlternative,
   postBestFreeAiApiGateways2026Compared,
   postBestFreeOpenrouterAlternatives2026,
   postBestFreeAiDocumentScannersCompared,
