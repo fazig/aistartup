@@ -238,7 +238,9 @@ import { postBestFreeOpenrouterAlternatives2026 } from "./articles/best-free-ope
 import { postBestFreeAiApiGateways2026Compared } from "./articles/best-free-ai-api-gateways-2026-compared";
 import { postHowToUseLitellmSelfHostedOpenrouterAlternative } from "./articles/how-to-use-litellm-self-hosted-openrouter-alternative";
 import { postHowToUseGroqFreeTierLlmInference } from "./articles/how-to-use-groq-free-tier-llm-inference";
+import { postHowToSwitchOpenrouterVercelAiGateway } from "./articles/how-to-switch-openrouter-vercel-ai-gateway";
 export const BLOG_POSTS: BlogPost[] = [
+  postHowToSwitchOpenrouterVercelAiGateway,
   postHowToUseGroqFreeTierLlmInference,
   postHowToUseLitellmSelfHostedOpenrouterAlternative,
   postBestFreeAiApiGateways2026Compared,
