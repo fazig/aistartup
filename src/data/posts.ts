@@ -239,7 +239,9 @@ import { postBestFreeAiApiGateways2026Compared } from "./articles/best-free-ai-a
 import { postHowToUseLitellmSelfHostedOpenrouterAlternative } from "./articles/how-to-use-litellm-self-hosted-openrouter-alternative";
 import { postHowToUseGroqFreeTierLlmInference } from "./articles/how-to-use-groq-free-tier-llm-inference";
 import { postHowToSwitchOpenrouterVercelAiGateway } from "./articles/how-to-switch-openrouter-vercel-ai-gateway";
+import { postFreeAiMeetingNotetakersGranolaVsFathomVsOtter } from "./articles/free-ai-meeting-notetakers-granola-vs-fathom-vs-otter";
 export const BLOG_POSTS: BlogPost[] = [
+  postFreeAiMeetingNotetakersGranolaVsFathomVsOtter,
   postHowToSwitchOpenrouterVercelAiGateway,
   postHowToUseGroqFreeTierLlmInference,
   postHowToUseLitellmSelfHostedOpenrouterAlternative,
