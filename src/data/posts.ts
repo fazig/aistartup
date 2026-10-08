@@ -241,7 +241,9 @@ import { postHowToUseGroqFreeTierLlmInference } from "./articles/how-to-use-groq
 import { postHowToSwitchOpenrouterVercelAiGateway } from "./articles/how-to-switch-openrouter-vercel-ai-gateway";
 import { postFreeAiMeetingNotetakersGranolaVsFathomVsOtter } from "./articles/free-ai-meeting-notetakers-granola-vs-fathom-vs-otter";
 import { postFreeAiEmailWritersCompared2026 } from "./articles/free-ai-email-writers-compared-2026";
+import { postFreeAiInvoiceGeneratorsForFreelancers } from "./articles/free-ai-invoice-generators-for-freelancers";
 export const BLOG_POSTS: BlogPost[] = [
+  postFreeAiInvoiceGeneratorsForFreelancers,
   postFreeAiEmailWritersCompared2026,
   postFreeAiMeetingNotetakersGranolaVsFathomVsOtter,
   postHowToSwitchOpenrouterVercelAiGateway,
