@@ -240,7 +240,9 @@ import { postHowToUseLitellmSelfHostedOpenrouterAlternative } from "./articles/h
 import { postHowToUseGroqFreeTierLlmInference } from "./articles/how-to-use-groq-free-tier-llm-inference";
 import { postHowToSwitchOpenrouterVercelAiGateway } from "./articles/how-to-switch-openrouter-vercel-ai-gateway";
 import { postFreeAiMeetingNotetakersGranolaVsFathomVsOtter } from "./articles/free-ai-meeting-notetakers-granola-vs-fathom-vs-otter";
+import { postFreeAiEmailWritersCompared2026 } from "./articles/free-ai-email-writers-compared-2026";
 export const BLOG_POSTS: BlogPost[] = [
+  postFreeAiEmailWritersCompared2026,
   postFreeAiMeetingNotetakersGranolaVsFathomVsOtter,
   postHowToSwitchOpenrouterVercelAiGateway,
   postHowToUseGroqFreeTierLlmInference,
