@@ -246,7 +246,9 @@ import { postBestFreeAiWorkoutPlannersCompared } from "./articles/best-free-ai-w
 import { postHowToGetFreeGeminiApiKey2026 } from "./articles/how-to-get-free-gemini-api-key-2026";
 import { postFreeAiVideoModels12gbGpu } from "./articles/free-ai-video-models-12gb-gpu";
 import { postHowToCreateAiProductPhotosForEcommerceFree } from "./articles/how-to-create-ai-product-photos-for-ecommerce-free";
+import { postFreeAiAdCopyGeneratorsCompared2026 } from "./articles/free-ai-ad-copy-generators-compared-2026";
 export const BLOG_POSTS: BlogPost[] = [
+  postFreeAiAdCopyGeneratorsCompared2026,
   postHowToCreateAiProductPhotosForEcommerceFree,
   postFreeAiVideoModels12gbGpu,
   postHowToGetFreeGeminiApiKey2026,
