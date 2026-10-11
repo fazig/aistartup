@@ -249,7 +249,9 @@ import { postHowToCreateAiProductPhotosForEcommerceFree } from "./articles/how-t
 import { postFreeAiAdCopyGeneratorsCompared2026 } from "./articles/free-ai-ad-copy-generators-compared-2026";
 import { postBestFreeAiNoteTakersForPhoneCalls } from "./articles/best-free-ai-note-takers-for-phone-calls";
 import { postHowToTranscribePodcastsWithAiFreeWorkflow } from "./articles/how-to-transcribe-podcasts-with-ai-free-workflow";
+import { postHowToMakeAiFlashcardsForStudyingFree } from "./articles/how-to-make-ai-flashcards-for-studying-free";
 export const BLOG_POSTS: BlogPost[] = [
+  postHowToMakeAiFlashcardsForStudyingFree,
   postHowToTranscribePodcastsWithAiFreeWorkflow,
   postBestFreeAiNoteTakersForPhoneCalls,
   postFreeAiAdCopyGeneratorsCompared2026,
