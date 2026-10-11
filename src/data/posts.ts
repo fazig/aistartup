@@ -248,7 +248,9 @@ import { postFreeAiVideoModels12gbGpu } from "./articles/free-ai-video-models-12
 import { postHowToCreateAiProductPhotosForEcommerceFree } from "./articles/how-to-create-ai-product-photos-for-ecommerce-free";
 import { postFreeAiAdCopyGeneratorsCompared2026 } from "./articles/free-ai-ad-copy-generators-compared-2026";
 import { postBestFreeAiNoteTakersForPhoneCalls } from "./articles/best-free-ai-note-takers-for-phone-calls";
+import { postHowToTranscribePodcastsWithAiFreeWorkflow } from "./articles/how-to-transcribe-podcasts-with-ai-free-workflow";
 export const BLOG_POSTS: BlogPost[] = [
+  postHowToTranscribePodcastsWithAiFreeWorkflow,
   postBestFreeAiNoteTakersForPhoneCalls,
   postFreeAiAdCopyGeneratorsCompared2026,
   postHowToCreateAiProductPhotosForEcommerceFree,
