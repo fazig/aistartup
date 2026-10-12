@@ -252,7 +252,9 @@ import { postHowToTranscribePodcastsWithAiFreeWorkflow } from "./articles/how-to
 import { postHowToMakeAiFlashcardsForStudyingFree } from "./articles/how-to-make-ai-flashcards-for-studying-free";
 import { postBestFreeAiStoryGeneratorsForWriters } from "./articles/best-free-ai-story-generators-for-writers";
 import { postFreeAiGrammarCheckersBeyondGrammarlyCompared } from "./articles/free-ai-grammar-checkers-beyond-grammarly-compared";
+import { postFreeAiBudgetPlannersCompared2026 } from "./articles/free-ai-budget-planners-compared-2026";
 export const BLOG_POSTS: BlogPost[] = [
+  postFreeAiBudgetPlannersCompared2026,
   postFreeAiGrammarCheckersBeyondGrammarlyCompared,
   postBestFreeAiStoryGeneratorsForWriters,
   postHowToTranscribePodcastsWithAiFreeWorkflow,
