@@ -10,6 +10,7 @@ export interface BlogPostMeta {
 }
 
 export const BLOG_METADATA: BlogPostMeta[] = [
+  {"slug": "how-to-use-ai-to-learn-coding-faster-2026", "title": "How to Use AI to Learn Coding Faster in 2026", "description": "Learn coding faster with AI tools like ChatGPT, GitHub Copilot, Cursor and Claude. This 2026 guide covers prompting, debugging and a daily workflow that actually works.", "date": "2026-10-13", "readTime": "6 min read", "category": "How-To Guides", "author": "Faizan Arif", "image": "/how-to-use-ai-to-learn-coding-faster-2026_cover.webp"},
   {"slug": "best-free-ai-travel-planners-compared", "title": "Best Free AI Travel Planners Compared (8 Picks for 2026)", "description": "Best free AI travel planners compared: Mindtrip, Wanderlog, Wonderplan and GuideGeek — free tiers, pricing, maps and booking compared for 2026.", "date": "2026-10-13", "readTime": "6 min read", "category": "AI Tools", "author": "Faizan Arif", "image": "/best-free-ai-travel-planners-compared_cover.webp"},
   {
     "slug": "best-free-cloudflare-workers-ai-use-cases-2026",
