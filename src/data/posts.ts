@@ -256,7 +256,9 @@ import { postFreeAiBudgetPlannersCompared2026 } from "./articles/free-ai-budget-
 import { postBestFreeCloudflareWorkersAiUseCases2026 } from "./articles/best-free-cloudflare-workers-ai-use-cases-2026";
 import { postBestFreeAiTravelPlannersCompared } from "./articles/best-free-ai-travel-planners-compared";
 import { postHowToUseAiToLearnCodingFaster2026 } from "./articles/how-to-use-ai-to-learn-coding-faster-2026";
+import { postBestFreeAiImageEditorsMagicEraser } from "./articles/best-free-ai-image-editors-magic-eraser";
 export const BLOG_POSTS: BlogPost[] = [
+  postBestFreeAiImageEditorsMagicEraser,
   postHowToUseAiToLearnCodingFaster2026,
   postBestFreeAiTravelPlannersCompared,
   postBestFreeCloudflareWorkersAiUseCases2026,
