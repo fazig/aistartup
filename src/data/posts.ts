@@ -258,7 +258,9 @@ import { postBestFreeAiTravelPlannersCompared } from "./articles/best-free-ai-tr
 import { postHowToUseAiToLearnCodingFaster2026 } from "./articles/how-to-use-ai-to-learn-coding-faster-2026";
 import { postHowToRemoveWatermarksFromPhotosAiFree } from "./articles/how-to-remove-watermarks-from-photos-ai-free";
 import { postBestFreeAiImageEditorsMagicEraser } from "./articles/best-free-ai-image-editors-magic-eraser";
+import { postFreeAiSpeechToTextDesktopAppsCompared } from "./articles/free-ai-speech-to-text-desktop-apps-compared";
 export const BLOG_POSTS: BlogPost[] = [
+  postFreeAiSpeechToTextDesktopAppsCompared,
   postHowToRemoveWatermarksFromPhotosAiFree,
   postBestFreeAiImageEditorsMagicEraser,
   postHowToUseAiToLearnCodingFaster2026,
