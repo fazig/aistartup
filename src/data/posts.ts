@@ -261,7 +261,9 @@ import { postBestFreeAiImageEditorsMagicEraser } from "./articles/best-free-ai-i
 import { postFreeAiSpeechToTextDesktopAppsCompared } from "./articles/free-ai-speech-to-text-desktop-apps-compared";
 import { postBestSmallAgenticLlmsOnDevice2026 } from "./articles/best-small-agentic-llms-on-device-2026";
 import { postBestFreeAiGatewaysOpenaiCompatibleApi } from "./articles/best-free-ai-gateways-openai-compatible-api";
+import { postBestFreeAiCalendarAssistants2026 } from "./articles/best-free-ai-calendar-assistants-2026";
 export const BLOG_POSTS: BlogPost[] = [
+  postBestFreeAiCalendarAssistants2026,
   postBestFreeAiGatewaysOpenaiCompatibleApi,
   postBestSmallAgenticLlmsOnDevice2026,
   postFreeAiSpeechToTextDesktopAppsCompared,
