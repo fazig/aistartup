@@ -260,7 +260,9 @@ import { postHowToRemoveWatermarksFromPhotosAiFree } from "./articles/how-to-rem
 import { postBestFreeAiImageEditorsMagicEraser } from "./articles/best-free-ai-image-editors-magic-eraser";
 import { postFreeAiSpeechToTextDesktopAppsCompared } from "./articles/free-ai-speech-to-text-desktop-apps-compared";
 import { postBestSmallAgenticLlmsOnDevice2026 } from "./articles/best-small-agentic-llms-on-device-2026";
+import { postBestFreeAiGatewaysOpenaiCompatibleApi } from "./articles/best-free-ai-gateways-openai-compatible-api";
 export const BLOG_POSTS: BlogPost[] = [
+  postBestFreeAiGatewaysOpenaiCompatibleApi,
   postBestSmallAgenticLlmsOnDevice2026,
   postFreeAiSpeechToTextDesktopAppsCompared,
   postHowToRemoveWatermarksFromPhotosAiFree,
