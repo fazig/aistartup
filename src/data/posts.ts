@@ -264,7 +264,9 @@ import { postBestFreeAiGatewaysOpenaiCompatibleApi } from "./articles/best-free-
 import { postBestFreeAiCalendarAssistants2026 } from "./articles/best-free-ai-calendar-assistants-2026";
 import { postBestFreeLlmPlaygroundToolsCompared2026 } from "./articles/best-free-llm-playground-tools-compared-2026";
 import { postHowToAutomateCustomerReviewsWithAiTools } from "./articles/how-to-automate-customer-reviews-with-ai-tools";
+import { postFreeAiContractSummarizersFreelancers } from "./articles/free-ai-contract-summarizers-freelancers";
 export const BLOG_POSTS: BlogPost[] = [
+  postFreeAiContractSummarizersFreelancers,
   postHowToAutomateCustomerReviewsWithAiTools,
   postBestFreeLlmPlaygroundToolsCompared2026,
   postBestFreeAiCalendarAssistants2026,
