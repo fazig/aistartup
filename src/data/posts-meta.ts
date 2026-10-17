@@ -10,6 +10,16 @@ export interface BlogPostMeta {
 }
 
 export const BLOG_METADATA: BlogPostMeta[] = [
+  {
+    slug: "gpt-6-sol-vs-luna-vs-astra-explained",
+    title: "GPT-6 Sol vs Luna vs Astra: Which Model Fits Your Work?",
+    description: "GPT-6 Sol vs Luna vs Astra explained: OpenAI's 2026 lineup compared on price, benchmarks and use cases — flagship Astra, balanced Sol and budget Luna.",
+    date: "2026-10-17",
+    readTime: "7 min read",
+    category: "AI Tools",
+    author: "Faizan Arif",
+    image: "/gpt-6-sol-vs-luna-vs-astra-explained_cover.webp",
+  },
   {"slug": "ai-model-tracker-tools-compared-2026", "title": "AI Model Tracker Tools Compared (2026 Guide)", "description": "AI model tracker tools compared: how LMArena, Artificial Analysis, OpenRouter rankings, LiveBench and more rank models \u2014 and how to use each in 2026.", "date": "2026-10-17", "readTime": "7 min read", "category": "Tech News", "author": "Faizan Arif", "image": "/ai-model-tracker-tools-compared-2026_cover.webp"},
   {"slug": "how-to-use-openrouter-free-models", "title": "How to Use OpenRouter Free Models Without a Credit Card", "description": "Learn how to use OpenRouter free models without a credit card: sign up, create an API key, find working :free models, and make the first OpenAI-compatible call.", "date": "2026-10-17", "readTime": "7 min read", "category": "How-To Guides", "author": "Faizan Arif", "image": "/how-to-use-openrouter-free-models_cover.webp"},
   {"slug": "free-ai-inference-apis-developers-2026", "title": "Free AI Inference APIs for Developers Compared (2026)", "description": "Free AI inference APIs compared for developers: Groq, Gemini, Cerebras, OpenRouter, Hugging Face and more \u2014 free tiers, real limits, base URLs and setup steps.", "date": "2026-10-16", "readTime": "7 min read", "category": "Developer Tools", "author": "Faizan Arif", "image": "/free-ai-inference-apis-developers-2026_cover.webp"},

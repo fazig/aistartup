@@ -268,7 +268,9 @@ import { postFreeAiContractSummarizersFreelancers } from "./articles/free-ai-con
 import { postFreeAiInferenceApisDevelopers2026 } from "./articles/free-ai-inference-apis-developers-2026";
 import { postHowToUseOpenrouterFreeModels } from "./articles/how-to-use-openrouter-free-models";
 import { postAiModelTrackerToolsCompared2026 } from "./articles/ai-model-tracker-tools-compared-2026";
+import { postGpt6SolVsLunaVsAstraExplained } from "./articles/gpt-6-sol-vs-luna-vs-astra-explained";
 export const BLOG_POSTS: BlogPost[] = [
+  postGpt6SolVsLunaVsAstraExplained,
   postAiModelTrackerToolsCompared2026,
   postHowToUseOpenrouterFreeModels,
   postFreeAiInferenceApisDevelopers2026,
