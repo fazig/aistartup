@@ -10,6 +10,7 @@ export interface BlogPostMeta {
 }
 
 export const BLOG_METADATA: BlogPostMeta[] = [
+  {"slug":"best-free-ai-coding-agents-desktop-2026","title":"Best Free AI Coding Agent Desktop Apps (2026)","description":"Best free AI coding agent desktop apps in 2026 compared: OpenCode, Kilo Code, Cline, Google Antigravity, and Void, plus how to run them at zero cost.","date":"2026-10-18","readTime":"6 min read","category":"AI Tools","author":"Faizan Arif","image":"/best-free-ai-coding-agents-desktop-2026_cover.webp"},
   {
     slug: "gpt-6-sol-vs-luna-vs-astra-explained",
     title: "GPT-6 Sol vs Luna vs Astra: Which Model Fits Your Work?",
