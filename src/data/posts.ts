@@ -271,7 +271,10 @@ import { postAiModelTrackerToolsCompared2026 } from "./articles/ai-model-tracker
 import { postGpt6SolVsLunaVsAstraExplained } from "./articles/gpt-6-sol-vs-luna-vs-astra-explained";
 import { postBestFreeAiCodingAgentsDesktop2026 } from "./articles/best-free-ai-coding-agents-desktop-2026";
 import { postClaudeFable51ReviewDevelopers } from "./articles/claude-fable-5-1-review-developers";
+import { postGemini38FlashApiTutorial } from "./articles/gemini-3-8-flash-api-tutorial";
+import { postGemini38FlashApiTutorial } from "./articles/gemini-3-8-flash-api-tutorial";
 export const BLOG_POSTS: BlogPost[] = [
+  postGemini38FlashApiTutorial,
   postClaudeFable51ReviewDevelopers,
   postBestFreeAiCodingAgentsDesktop2026,
   postGpt6SolVsLunaVsAstraExplained,
