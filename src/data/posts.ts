@@ -270,7 +270,9 @@ import { postHowToUseOpenrouterFreeModels } from "./articles/how-to-use-openrout
 import { postAiModelTrackerToolsCompared2026 } from "./articles/ai-model-tracker-tools-compared-2026";
 import { postGpt6SolVsLunaVsAstraExplained } from "./articles/gpt-6-sol-vs-luna-vs-astra-explained";
 import { postBestFreeAiCodingAgentsDesktop2026 } from "./articles/best-free-ai-coding-agents-desktop-2026";
+import { postClaudeFable51ReviewDevelopers } from "./articles/claude-fable-5-1-review-developers";
 export const BLOG_POSTS: BlogPost[] = [
+  postClaudeFable51ReviewDevelopers,
   postBestFreeAiCodingAgentsDesktop2026,
   postGpt6SolVsLunaVsAstraExplained,
   postAiModelTrackerToolsCompared2026,

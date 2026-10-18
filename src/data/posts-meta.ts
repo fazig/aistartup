@@ -10,6 +10,7 @@ export interface BlogPostMeta {
 }
 
 export const BLOG_METADATA: BlogPostMeta[] = [
+  {"slug":"claude-fable-5-1-review-developers","title":"Claude Fable 5.1 Review: A Developer's Guide (2026)","description":"Claude Fable 5.1, Anthropic's Sep 2026 model for developers: 1M-token context, 128K output, cache reads 75% cheaper, and 60% fewer safeguard interruptions.","date":"2026-10-18","readTime":"7 min read","category":"Tech News","author":"Faizan Arif","image":"/claude-fable-5-1-review-developers_cover.webp"},
   {"slug":"best-free-ai-coding-agents-desktop-2026","title":"Best Free AI Coding Agent Desktop Apps (2026)","description":"Best free AI coding agent desktop apps in 2026 compared: OpenCode, Kilo Code, Cline, Google Antigravity, and Void, plus how to run them at zero cost.","date":"2026-10-18","readTime":"6 min read","category":"AI Tools","author":"Faizan Arif","image":"/best-free-ai-coding-agents-desktop-2026_cover.webp"},
   {
     slug: "gpt-6-sol-vs-luna-vs-astra-explained",
