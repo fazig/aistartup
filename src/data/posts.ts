@@ -273,7 +273,9 @@ import { postBestFreeAiCodingAgentsDesktop2026 } from "./articles/best-free-ai-c
 import { postClaudeFable51ReviewDevelopers } from "./articles/claude-fable-5-1-review-developers";
 import { postGemini38FlashApiTutorial } from "./articles/gemini-3-8-flash-api-tutorial";
 import { postGemini38FlashApiTutorial } from "./articles/gemini-3-8-flash-api-tutorial";
+import { postGrok46BenchmarksExplained } from "./articles/grok-4-6-benchmarks-explained";
 export const BLOG_POSTS: BlogPost[] = [
+  postGrok46BenchmarksExplained,
   postGemini38FlashApiTutorial,
   postClaudeFable51ReviewDevelopers,
   postBestFreeAiCodingAgentsDesktop2026,
