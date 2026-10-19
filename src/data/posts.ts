@@ -274,7 +274,9 @@ import { postClaudeFable51ReviewDevelopers } from "./articles/claude-fable-5-1-r
 import { postGemini38FlashApiTutorial } from "./articles/gemini-3-8-flash-api-tutorial";
 import { postGemini38FlashApiTutorial } from "./articles/gemini-3-8-flash-api-tutorial";
 import { postGrok46BenchmarksExplained } from "./articles/grok-4-6-benchmarks-explained";
+import { postQwen3827bLocalInstallGuide } from "./articles/qwen3-8-27b-local-install-guide";
 export const BLOG_POSTS: BlogPost[] = [
+  postQwen3827bLocalInstallGuide,
   postGrok46BenchmarksExplained,
   postGemini38FlashApiTutorial,
   postClaudeFable51ReviewDevelopers,
