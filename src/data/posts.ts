@@ -276,8 +276,9 @@ import { postGrok46BenchmarksExplained } from "./articles/grok-4-6-benchmarks-ex
 import { postQwen3827bLocalInstallGuide } from "./articles/qwen3-8-27b-local-install-guide";
 import { postLtx25OpenWeightsVideoTutorial } from "./articles/ltx-2-5-open-weights-video-tutorial";
 import { postDeepseekV4FlashVisionExplained } from "./articles/deepseek-v4-flash-vision-explained";
+import { postLyria35AiMusicGenerationGuide } from "./articles/lyria-3-5-ai-music-generation-guide";
 export const BLOG_POSTS: BlogPost[] = [
-  postDeepseekV4FlashVisionExplained,
+  postLyria35AiMusicGenerationGuide,
   postLtx25OpenWeightsVideoTutorial,
   postQwen3827bLocalInstallGuide,
   postGrok46BenchmarksExplained,
