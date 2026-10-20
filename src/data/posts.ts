@@ -275,7 +275,9 @@ import { postGemini38FlashApiTutorial } from "./articles/gemini-3-8-flash-api-tu
 import { postGemini38FlashApiTutorial } from "./articles/gemini-3-8-flash-api-tutorial";
 import { postGrok46BenchmarksExplained } from "./articles/grok-4-6-benchmarks-explained";
 import { postQwen3827bLocalInstallGuide } from "./articles/qwen3-8-27b-local-install-guide";
+import { postLtx25OpenWeightsVideoTutorial } from "./articles/ltx-2-5-open-weights-video-tutorial";
 export const BLOG_POSTS: BlogPost[] = [
+  postLtx25OpenWeightsVideoTutorial,
   postQwen3827bLocalInstallGuide,
   postGrok46BenchmarksExplained,
   postGemini38FlashApiTutorial,
