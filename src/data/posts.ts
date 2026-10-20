@@ -272,11 +272,12 @@ import { postGpt6SolVsLunaVsAstraExplained } from "./articles/gpt-6-sol-vs-luna-
 import { postBestFreeAiCodingAgentsDesktop2026 } from "./articles/best-free-ai-coding-agents-desktop-2026";
 import { postClaudeFable51ReviewDevelopers } from "./articles/claude-fable-5-1-review-developers";
 import { postGemini38FlashApiTutorial } from "./articles/gemini-3-8-flash-api-tutorial";
-import { postGemini38FlashApiTutorial } from "./articles/gemini-3-8-flash-api-tutorial";
 import { postGrok46BenchmarksExplained } from "./articles/grok-4-6-benchmarks-explained";
 import { postQwen3827bLocalInstallGuide } from "./articles/qwen3-8-27b-local-install-guide";
 import { postLtx25OpenWeightsVideoTutorial } from "./articles/ltx-2-5-open-weights-video-tutorial";
+import { postDeepseekV4FlashVisionExplained } from "./articles/deepseek-v4-flash-vision-explained";
 export const BLOG_POSTS: BlogPost[] = [
+  postDeepseekV4FlashVisionExplained,
   postLtx25OpenWeightsVideoTutorial,
   postQwen3827bLocalInstallGuide,
   postGrok46BenchmarksExplained,
