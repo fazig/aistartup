@@ -277,7 +277,9 @@ import { postQwen3827bLocalInstallGuide } from "./articles/qwen3-8-27b-local-ins
 import { postLtx25OpenWeightsVideoTutorial } from "./articles/ltx-2-5-open-weights-video-tutorial";
 import { postDeepseekV4FlashVisionExplained } from "./articles/deepseek-v4-flash-vision-explained";
 import { postLyria35AiMusicGenerationGuide } from "./articles/lyria-3-5-ai-music-generation-guide";
+import { postFineTuneQwen38WithUnslothFree } from "./articles/fine-tune-qwen3-8-with-unsloth-free";
 export const BLOG_POSTS: BlogPost[] = [
+  postFineTuneQwen38WithUnslothFree,
   postLyria35AiMusicGenerationGuide,
   postLtx25OpenWeightsVideoTutorial,
   postQwen3827bLocalInstallGuide,
