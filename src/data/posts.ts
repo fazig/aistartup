@@ -278,7 +278,9 @@ import { postLtx25OpenWeightsVideoTutorial } from "./articles/ltx-2-5-open-weigh
 import { postDeepseekV4FlashVisionExplained } from "./articles/deepseek-v4-flash-vision-explained";
 import { postLyria35AiMusicGenerationGuide } from "./articles/lyria-3-5-ai-music-generation-guide";
 import { postFineTuneQwen38WithUnslothFree } from "./articles/fine-tune-qwen3-8-with-unsloth-free";
+import { postBestFreeAiBrowserAutomationTools2026 } from "./articles/best-free-ai-browser-automation-tools-2026";
 export const BLOG_POSTS: BlogPost[] = [
+  postBestFreeAiBrowserAutomationTools2026,
   postFineTuneQwen38WithUnslothFree,
   postLyria35AiMusicGenerationGuide,
   postLtx25OpenWeightsVideoTutorial,
