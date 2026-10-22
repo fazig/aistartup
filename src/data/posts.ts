@@ -281,7 +281,9 @@ import { postFineTuneQwen38WithUnslothFree } from "./articles/fine-tune-qwen3-8-
 import { postBestFreeAiBrowserAutomationTools2026 } from "./articles/best-free-ai-browser-automation-tools-2026";
 import { postAutomateWebScrapingWithAiFreeTools2026 } from "./articles/automate-web-scraping-with-ai-free-tools-2026";
 import { postFreeAiImageToVideoToolsCompared2026 } from "./articles/free-ai-image-to-video-tools-compared-2026";
+import { postBestFreeAiWorkflowAutomationBuilders2026 } from "./articles/best-free-ai-workflow-automation-builders-2026";
 export const BLOG_POSTS: BlogPost[] = [
+  postBestFreeAiWorkflowAutomationBuilders2026,
   postFreeAiImageToVideoToolsCompared2026,
   postAutomateWebScrapingWithAiFreeTools2026,
   postBestFreeAiBrowserAutomationTools2026,
