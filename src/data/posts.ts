@@ -279,7 +279,9 @@ import { postDeepseekV4FlashVisionExplained } from "./articles/deepseek-v4-flash
 import { postLyria35AiMusicGenerationGuide } from "./articles/lyria-3-5-ai-music-generation-guide";
 import { postFineTuneQwen38WithUnslothFree } from "./articles/fine-tune-qwen3-8-with-unsloth-free";
 import { postBestFreeAiBrowserAutomationTools2026 } from "./articles/best-free-ai-browser-automation-tools-2026";
+import { postAutomateWebScrapingWithAiFreeTools2026 } from "./articles/automate-web-scraping-with-ai-free-tools-2026";
 export const BLOG_POSTS: BlogPost[] = [
+  postAutomateWebScrapingWithAiFreeTools2026,
   postBestFreeAiBrowserAutomationTools2026,
   postFineTuneQwen38WithUnslothFree,
   postLyria35AiMusicGenerationGuide,
