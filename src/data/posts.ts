@@ -282,7 +282,9 @@ import { postBestFreeAiBrowserAutomationTools2026 } from "./articles/best-free-a
 import { postAutomateWebScrapingWithAiFreeTools2026 } from "./articles/automate-web-scraping-with-ai-free-tools-2026";
 import { postFreeAiImageToVideoToolsCompared2026 } from "./articles/free-ai-image-to-video-tools-compared-2026";
 import { postBestFreeAiWorkflowAutomationBuilders2026 } from "./articles/best-free-ai-workflow-automation-builders-2026";
+import { postHowToUseComfyuiForAiVideoWorkflows2026 } from "./articles/how-to-use-comfyui-for-ai-video-workflows-2026";
 export const BLOG_POSTS: BlogPost[] = [
+  postHowToUseComfyuiForAiVideoWorkflows2026,
   postBestFreeAiWorkflowAutomationBuilders2026,
   postFreeAiImageToVideoToolsCompared2026,
   postAutomateWebScrapingWithAiFreeTools2026,
