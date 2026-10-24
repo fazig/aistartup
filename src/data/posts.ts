@@ -286,7 +286,9 @@ import { postHowToUseComfyuiForAiVideoWorkflows2026 } from "./articles/how-to-us
 import { postBestFreeAiMusicStemSplitters2026 } from "./articles/best-free-ai-music-stem-splitters-2026";
 import { postBestFreeAiSubtitleTranslators2026 } from "./articles/best-free-ai-subtitle-translators-2026";
 import { postHowToUseCerebrasFreeCreditsFastInference } from "./articles/how-to-use-cerebras-free-credits-fast-inference";
+import { postFreeAiScriptGeneratorsYoutubeCompared } from "./articles/free-ai-script-generators-youtube-compared";
 export const BLOG_POSTS: BlogPost[] = [
+  postFreeAiScriptGeneratorsYoutubeCompared,
   postHowToUseCerebrasFreeCreditsFastInference,
   postBestFreeAiSubtitleTranslators2026,
   postBestFreeAiMusicStemSplitters2026,
