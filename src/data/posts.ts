@@ -287,7 +287,9 @@ import { postBestFreeAiMusicStemSplitters2026 } from "./articles/best-free-ai-mu
 import { postBestFreeAiSubtitleTranslators2026 } from "./articles/best-free-ai-subtitle-translators-2026";
 import { postHowToUseCerebrasFreeCreditsFastInference } from "./articles/how-to-use-cerebras-free-credits-fast-inference";
 import { postFreeAiScriptGeneratorsYoutubeCompared } from "./articles/free-ai-script-generators-youtube-compared";
+import { postHowToUseChatgptCanvasWritingWorkflow2026 } from "./articles/how-to-use-chatgpt-canvas-writing-workflow-2026";
 export const BLOG_POSTS: BlogPost[] = [
+  postHowToUseChatgptCanvasWritingWorkflow2026,
   postFreeAiScriptGeneratorsYoutubeCompared,
   postHowToUseCerebrasFreeCreditsFastInference,
   postBestFreeAiSubtitleTranslators2026,
