@@ -289,7 +289,9 @@ import { postHowToUseCerebrasFreeCreditsFastInference } from "./articles/how-to-
 import { postFreeAiScriptGeneratorsYoutubeCompared } from "./articles/free-ai-script-generators-youtube-compared";
 import { postHowToUseChatgptCanvasWritingWorkflow2026 } from "./articles/how-to-use-chatgpt-canvas-writing-workflow-2026";
 import { postHowToBuildANewsletterWithBeehiivFreePlan2026 } from "./articles/how-to-build-a-newsletter-with-beehiiv-free-plan-2026";
+import { postHowToUsePerplexityCometBrowserFreeWorkflow } from "./articles/how-to-use-perplexity-comet-browser-free-workflow";
 export const BLOG_POSTS: BlogPost[] = [
+  postHowToUsePerplexityCometBrowserFreeWorkflow,
   postHowToBuildANewsletterWithBeehiivFreePlan2026,
   postHowToUseChatgptCanvasWritingWorkflow2026,
   postFreeAiScriptGeneratorsYoutubeCompared,
